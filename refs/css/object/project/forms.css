@@ -1,0 +1,35 @@
+.p-forms {
+  margin: 0 auto;
+  width: 100%;
+}
+.p-forms h2 {
+  font-size: 1.563rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+.p-forms__input {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.p-forms__input label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.p-forms__input input, .p-forms__input textarea {
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 0.25rem 0.5rem;
+  width: 100%;
+}
+.p-forms__input select {
+  background: transparent;
+  border-radius: 0;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 2rem;
+  padding: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .p-forms {
+    width: 600px;
+  }
+}

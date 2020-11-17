@@ -1,0 +1,166 @@
+<%- include ('components/_head') %>
+<%- include ('components/_header') %>
+
+<% const timelines = [
+  {
+    datetime: "2012-10",
+    title: "新卒で大手外食チェーン店に入社",
+    description: "店長候補として入社し、都内拠点で店舗オペレーションを学んでいました。従業員マネジメンに力を入れ、アルバイトの離職率改善へ取り組みました。",
+
+  },
+  {
+    datetime: "2016-04",
+    title: "地元に戻り、喫茶店の調理職へ",
+    description: "地元食材を用いた付加価値の高い商品を提供しています。自分が独学したもののもうひとつが料理で、それが嵩じて調理職に。",
+
+  },
+  {
+    datetime: "2016-07",
+    title: "プログラミングを独学",
+    description: "以前よりクラウドソーシングでWebライティングの経験があり、よりスキルアップするためプログラミングの勉強を始めました。Javascript > jQuery > PHP > WordPress > ...",
+  },
+  {
+    datetime: "2017-01",
+    title: "Web制作の仕事を開始",
+    description: `クラウドソーシングを利用して案件を受注できるようになり、本格的にWeb制作の仕事を開始。`,
+
+  },
+  {
+    datetime: "Now",
+    title: " 現在",
+    description: "React及びモダンフロントエンド開発のエコシステム、応用情報技術者試験などの学習を継続しながら転職活動を進めています。",
+
+  },
+
+
+]
+%>
+
+<main>
+  <section>
+    <div class="module-spacer--medium"></div>
+  </section>
+
+  <section class="c-section">
+    <div class="c-section__area-title animated fadeInLeft">
+      <div class="p-headline__sub animated fadeInUp fast delay-1s">
+        <h2>About</h2>
+        <p>自己紹介</p>
+        <ul class="u-text__breadcrumbs">
+          <li><a href="/" target="_self">HOME</a><span>＞</span></li>
+          <li><a href="/about/" target="_self">ABOUT</a><span></span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-section" id="vision">
+    <div class="c-section-wrapin">
+      <h2 class="p-headline__about">Vision</h2>
+      <div class="p-grid__about">
+        <div class="left">
+          <h3>一個人の利益になる仕事より、<br>多くの人や社会全体の利益になる仕事を</h3>
+          <p class="sub">渋沢栄一 『論語と算盤』</p>
+          <p>
+            令和は、新1万円札に描かれる渋沢栄一が『論語と算盤』の中で語るような時代になるでしょう。<br>
+            利己的な企業は排他され、<b>社会全体の利益になるサービスを提供する企業が生き残ります。</b>
+          </p>
+          <p>
+            トラハックは、直接お取引させていただくクライアント様だけでなく、
+            画面の向こう側にいるエンドユーザーのためにサービスを作ります。
+          </p>
+          <p>
+            また、エンジニアの育成にも力を入れています。<br>
+            優秀なエンジニアが増えると、世の中に優れたサービスを開発する企業が増えるからです。
+          </p>
+          <p>
+            そのサービスが広まることで、社会全体が豊かになります。<br>
+            そして、エンジニアたちは報酬を受けとり、生活が豊かになります。
+          </p>
+          <p>
+            <b>「この好循環の作り手になりたい」</b>
+          </p>
+          <p>
+            そんな思いで、Webエンジニアを目指したい方向けのコミュニティを作りました。参加費は<b>無料</b>です。<br>
+          </p>
+        </div>
+        <div class="right">
+          <img src="">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-section c-bg-primary" id="profile">
+    <div class="c-section-wrapin">
+      <h2 class="p-headline__about-white">Profile</h2>
+      <div class="p-grid__profile">
+        <div class="left p-media__profile">
+          <img src="/img/icons/pandashark_icon.png" alt="Pandashark's Icon">
+          <p>パンダシャーク</p>
+        </div>
+        <div class="right">
+          <p>喫茶店の調理職×Webエンジニア。</p>
+          <p>珈琲と美味しい料理が好き。<br>得意な料理ジャンルはイタリアンです。</p>
+          <p>現在、プログラミング・情報技術者資格試験の勉強と転職活動を行っています。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="c-section" id="career">
+    <div class="c-section-wrapin">
+      <h2 class="p-headline__about">Career</h2>
+      <ul class="p-list__timeline">
+        <% for (const timeline of timelines) { %>
+          <li>
+             <time datetime="<%= timeline.datetime %>"><%= timeline.datetime %></time>
+             <div class="timeline__icon"></div>
+             <div class="timeline__box">
+               <h3><%= timeline.title %></h3>
+               <p><%- timeline.description -%></p>
+             </div>
+           </li>
+         <% } %>
+      </ul>
+    </div>
+  </section>
+
+  <section class="c-section" id="skills">
+    <div class="c-section-wrapin">
+      <h2 class="p-headline__about">Skills</h2>
+      <p>技術と開発物は以下の通りです。</p>
+      <div class="p-grid__list">
+        <article class="p-grid__list-item-floated">
+          <h3>WEBサイト制作</h3>
+          <small>Website Production</small>
+          <img class="p-media__thumb" src="/img/view/website-production.jpeg">
+          <p>
+            企業サイト、個人ポートフォリオ、LPなどWebサイト制作全般を承ります。
+            WordPressのカスタマイズ、お困り事のご相談にも対応いたします。
+          </p>
+        </article>
+      </div>
+      <ul class="p-grid__table">
+        <li>
+          <h3 class="head">マークアップ</h3>
+          <div class="data">HTML5, CSS3, BootStrap4</div>
+        </li>
+        <li>
+          <h3 class="head">フロントエンド</h3>
+          <div class="data">JavaScript(ES6), jQuery, WordPress, Sass, Webpack, Babel | 学習中：React, TypeScript</div>
+        </li>
+        <li>
+          <h3 class="head">バックエンド</h3>
+          <div class="data">PHP, MySQL(MariaDB) | 学習中：Node.js, Firebase</div>
+        </li>
+        <li>
+          <h3 class="head">その他ツール</h3>
+          <div class="data">git, npm, dockerなど</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<%- include ('components/_footer') %>

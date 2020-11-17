@@ -1,0 +1,28 @@
+.p-headline__top {
+  color: #001871;
+  font-size: 1.963rem;
+  font-weight: 300;
+}
+.p-headline__sub {
+  color: #fff;
+  text-align: left;
+}
+.p-headline__sub h2 {
+  font-size: 3.052rem;
+  font-family: 'Courgette';
+  margin-bottom: 1rem;
+}
+.p-headline__sub p {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.p-headline__about, .p-headline__about-white {
+  display: block;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1.563rem;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.p-headline__about-white {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+}

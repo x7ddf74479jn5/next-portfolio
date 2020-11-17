@@ -1,0 +1,17 @@
+.p-icon__arrow, .p-icon__arrow-next, .p-icon__arrow-back {
+  position: relative;
+  vertical-align: middle;
+  text-decoration: none;
+}
+.p-icon__arrow::before, .p-icon__arrow-next::before, .p-icon__arrow-back::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  content: "";
+  vertical-align: middle;
+}
+.p-icon__arrow-next::before {
+  right: 1rem;
+  content: "→";
+}

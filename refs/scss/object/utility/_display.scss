@@ -1,0 +1,12 @@
+.u-display {
+  &-block {
+    display: block;
+  }
+  &-inline {
+    display: inline-block;
+  }
+
+  &-none {
+    display: none;
+  }
+}

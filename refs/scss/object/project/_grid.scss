@@ -1,0 +1,329 @@
+.p-grid {
+  display: -ms-flexbox;
+  display: flex;
+
+  &__about {
+    @extend .p-grid;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    text-align: left;
+    h3 {
+      display: block;
+      font-size: $font-larger;
+      font-weight: 600;
+      line-height: 2;
+      margin-bottom: 1rem;
+    }
+    p {
+      line-height: 2.5;
+      margin-bottom: 1.5rem;
+      letter-spacing: .1rem;
+    }
+    .sub {
+      font-size: $font-small;
+      text-align: right;
+    }
+    div {
+      margin-bottom: 1rem;
+      width: 100%;
+    }
+    @include mq() {
+      -webkit-flex-direction: row;
+      flex-direction: row;
+      p {
+        line-height: 3;
+        margin-bottom: 2.5rem;
+      }
+      .left {
+        margin-left: 0;
+        margin-right: auto;
+        width: 56.25%;
+      }
+      .right {
+        margin-left: auto;
+        margin-right: 0;
+        width: 43.75%;
+      }
+    }
+  }
+
+  &__profile {
+    @extend .p-grid__about;
+    color: #fff;
+    p {
+      line-height: 1.7;
+      margin-left: auto;
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+    @include mq() {
+      .left {
+        width: 43.75%;
+      }
+      .right {
+        width: 56.25%;
+      }
+    }
+  }
+
+  &__contact {
+    h2 {
+      font-size: $font-large;
+    }
+    p {
+      color: #fff;
+      font-size: $font-small;
+      margin: 0 auto;
+      text-align: left;
+      max-width: 450px;
+    }
+  }
+
+  &__community {
+    max-width: 600px;
+    text-align: left;
+    p {
+      margin: 0 auto 1rem auto;
+    }
+    ul {
+      list-style: circle;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      li {
+        line-height: 1.7;
+      }
+    }
+  }
+
+
+  &__view-first {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+    div {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+      width: 300px;
+      text-align: center;
+      margin: 0 auto;
+      h2 {
+        color: #fff;
+        font-family: 'Courgette';
+        font-size: $font-xxlarge;
+        margin-bottom: 1rem;
+      }
+      p {
+        color: #fff;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      a {
+        margin-top: 3rem;
+      }
+    }
+  }
+
+  &__list {
+    @extend .p-grid;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    &-item {
+      @extend .p-grid;
+      box-sizing: border-box;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      h3 {
+        color: $dark;
+        font-size: $font-large;
+        margin-bottom: .5rem;
+      }
+      small {
+        color: $dark;
+        font-size: $font-small;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      img {
+        margin-bottom: 1rem;
+      }
+      p {
+        text-align: left;
+      }
+      @include mq() {
+        width: 33.3333%;
+      }
+      &-floated {
+        @extend .p-grid__list-item;
+        background: #fff;
+        border: 1px solid rgba(0,0,0,0.2);
+        border-radius: 4px;
+        box-shadow: 2px 6px 5px rgba(255,255,255,0.4);
+        margin: 1rem .5rem;
+        @include mq() {
+          width: calc(33.3333% - 1rem);
+        }
+      }
+    }
+  }
+
+  &__privacy {
+    text-align: left;
+    max-width: 768px;
+    div {
+      margin-bottom: 1rem;
+      h3 {
+        font-size: $font-medium;
+        font-weight: 600;
+        line-height: 1.7;
+        text-align: left; 
+      }
+      p {
+        font-size: $font-small;
+        line-height: 1.7;
+        text-align: left;
+      }
+      p + p {
+        margin-top: 0;
+      }
+      ol {
+        list-style: lower-latin;
+        margin-left: 2rem; 
+        li {
+          font-size: $font-small;
+        }
+      }
+    }
+  }
+
+  &__row {
+    @extend .p-grid;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+  }
+
+  &__table {
+    li {
+      @extend .p-grid;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 1rem;
+      .head {
+        background: $primary;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        color: #fff;
+        font-weight: 600;
+        padding: 1rem;
+        width: 100%;
+      }
+      .data {
+        background: $primary-light;
+        border: 2px solid #fff;
+        box-sizing: border-box;
+        padding: 1rem;
+        text-align: left;
+        width: 100%;
+      }
+      @include mq() {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        margin-bottom: 0;
+        .head {
+          line-height: 3rem;
+          width: 30%;
+        }
+        .data {
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  &__vision {
+    text-align: center;
+    div {
+      margin: 0 auto;
+      max-width: 350px;
+      width: 100%;
+    }
+    h2 {
+      font-size: $font-medium;
+      font-weight: 600;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    p {
+      margin-bottom: 1rem;
+      &.sub {
+        font-size: $font-small;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+    }
+    @include mq() {
+      h2 {
+        font-size: $font-large;
+      }
+    }
+  }
+
+  &__works {
+    img {
+      border: 1px solid rgba(0,0,0,0.3);
+      border-radius: 5px;
+      box-shadow: 2px 6px 5px rgba(255,255,255,0.4);
+      margin-bottom: 2rem;
+      width: 100%;
+      @include mq('md') {
+        max-width: 768px;
+      }
+    }
+    div {
+      @extend .p-grid;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      padding: 1rem 0;
+      margin: 0 auto;
+      height: auto;
+      max-width: 600px;
+      h3 {
+        display: block;
+        font-weight: 600;
+        line-height: 2;
+        text-align: left;
+      }
+      p, ul > li, ol > li {
+        font-size: $font-small;
+        line-height: 2;
+        text-align: left;
+      }
+      ul {
+        margin-left: 1rem;
+        margin-bottom: .25rem;
+        list-style: circle;
+      }
+      ol {
+        margin-left: 1rem;
+        margin-bottom: .25rem;
+        list-style: decimal;
+      }
+      i {
+        margin-left: .5rem;
+      }
+    }
+  }
+}

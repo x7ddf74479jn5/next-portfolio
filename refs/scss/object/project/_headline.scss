@@ -1,0 +1,31 @@
+.p-headline {
+  &__top {
+    color: $dark;
+    font-size: $font-xlarge;
+    font-weight: 300;
+  }
+  &__sub {
+    color: #fff;
+    text-align: left;
+    h2 {
+      font-size: $font-xxlarge;
+      font-family: 'Courgette';
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: $font-medium;
+      font-weight: 500;
+    }
+  }
+  &__about {
+    display: block;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    font-size: $font-large;
+    margin-bottom: 2rem;
+    text-align: left;
+    &-white {
+      @extend .p-headline__about;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+  }
+}
