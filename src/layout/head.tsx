@@ -113,11 +113,16 @@ export default ({
       <meta name="msapplication-TileColor" content="#da532c" />
       <meta name="theme-color" content="#181a1b" />
       <link rel="canonical" href={url} />
-      <link rel="stylesheet" href={"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"} />
+      {/* <link rel="stylesheet" href={"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"} /> */}
       <link rel="stylesheet" href={"https://use.fontawesome.com/releases/v5.6.1/css/all.css"} />
       <link rel="stylesheet" href={"https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext"} />
       <link rel="shortcut icon" href={icon} />
       <link rel="apple-touch-icon" href={appleTouchIcon} />
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+      ></script>
+      <script src="/js/animate.js" type="text/javascript"></script>
     </Head>
   );
 };

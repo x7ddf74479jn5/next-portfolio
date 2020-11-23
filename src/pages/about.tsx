@@ -1,18 +1,19 @@
 import Head from "next/head";
-// import Image from "next/image";
-import { Layout } from "src/components/layout";
+import Image from "next/image";
+import { Layout } from "src/layout/layout";
 
-// import  {Breadcrumbs}  from "../components/Breadcrumbs";
+import { aboutRoute } from "../static/breadcrumbs";
 import { AriaTitle } from "../components/AriaTitle";
+import { NextPage } from "next";
 // import Home from ".";
 
-type timeline = {
+type Timeline = {
   datetime: string;
   title: string;
   description: string;
 };
 
-const timelines: timeline[] = [
+const timelines: Timeline[] = [
   {
     datetime: "2012-10",
     title: "新卒で大手外食チェーン店に入社",
@@ -44,22 +45,27 @@ const timelines: timeline[] = [
   },
 ];
 
-const breadcrumbs = [
-  { index: 0, name: "Home", href: "/" },
-  { index: 1, name: "About", href: "/about/" },
-];
+const About: NextPage = () => {
+  const timelineItems: JSX.Element[] = timelines.map((timeline: Timeline, index: number) => (
+    <li key={index}>
+      <time dateTime="timeline.datetime">{timeline.datetime}</time>
+      <div className="timeline__icon"></div>
+      <div className="timeline__box">
+        <h3> {timeline.title} </h3>
+        <p> {timeline.description} </p>
+      </div>
+    </li>
+  ));
 
-const About: React.FC = () => {
   return (
     <Layout>
       <Head>
         <title>About</title>
-        <link rel="icon" href="" />
       </Head>
       <section>
         <div className="module-spacer--medium"></div>
       </section>
-      <AriaTitle breadcrumbs={breadcrumbs} />
+      <AriaTitle title="About" caption="自己紹介" breadcrumbs={aboutRoute} />
 
       {/* <section className="c-section">
         <div className="c-section__area-title animated fadeInLeft">
@@ -156,7 +162,9 @@ const About: React.FC = () => {
         <div className="c-section-wrapin">
           <h2 className="p-headline__about">Career</h2>
           <ul className="p-list__timeline">
-            {timelines.map((timeline, index) => (
+            {timelineItems}
+
+            {/* {timelines.map((timeline, index) => (
               <li key={index}>
                 <time dateTime="timeline.datetime">{timeline.datetime}</time>
                 <div className="timeline__icon"></div>
@@ -165,7 +173,7 @@ const About: React.FC = () => {
                   <p> {timeline.description} </p>
                 </div>
               </li>
-            ))}
+            ))} */}
           </ul>
         </div>
       </section>
@@ -180,15 +188,15 @@ const About: React.FC = () => {
               <small>Website Production</small>
               <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt={""} />
               <p>
-                企業サイト、個人ポートフォリオ、LPなどWebサイト制作全般を承ります。 SEOを考慮した
-                WordPressのカスタマイズ、お困り事のご相談にも対応いたします。
+                コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。
+                検索流入やSNS流入を強化する「SEOを考慮したサイト」を作成できます。
               </p>
             </article>
             <article className="p-grid__list-item-floated">
-              <h3>WordPressカスタマイズ</h3>
-              <small>WordPress Customization</small>
+              <h3>WordPress</h3>
+              <small>WordPress</small>
               <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt={""} />
-              <p>WordPressのカスタマイズ、お困り事のご相談にも対応いたします。</p>
+              <p>WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。</p>
             </article>
             <article className="p-grid__list-item-floated">
               <h3>チャットアプリ開発</h3>

@@ -77,6 +77,24 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href={headProps.icon} />
           <link rel="apple-touch-icon" href={headProps.appleTouchIcon} />
+          {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+          <script src="/js/carousel.js" type="text/javascript"></script> */}
+          {/* 
+          <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"
+          ></script> */}
+          {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/ja.js"></script>
+          <script src="/js/commonFunc.js" type="text/javascript"></script>
+          <script src="/js/menu.js" type="text/javascript"></script>
+          <script src="/js/carousel.js" type="text/javascript"></script>
+          <script src="/js/accordion.js" type="text/javascript"></script>
+          <script src="/js/contact.js" type="text/javascript"></script>
+          <script src="/js/animate.js" type="text/javascript"></script>
+          <script src="/js/index.js" type="text/javascript"></script> */}
         </Head>
 
         <body>

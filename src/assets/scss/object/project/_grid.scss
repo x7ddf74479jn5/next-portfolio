@@ -105,6 +105,7 @@
       height: 100%;
       width: 100%;
     }
+    .child{
     div {
       position: absolute;
       top: 50%;
@@ -127,6 +128,22 @@
       a {
         margin-top: 3rem;
       }
+      // img {
+      //   object-fit: cover;
+      //   height:100vh;
+      //   width:100vw;
+      // }
+    }}
+  }
+
+  &__view-first-img {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    img {
+      object-fit: cover;
+      height:100%;
+      width:100%;
     }
   }
 
@@ -164,7 +181,7 @@
         text-align: left;
       }
       @include mq() {
-        width: 33.3333%;
+        // width: 33.3333%;
       }
       &-floated {
         @extend .p-grid__list-item;

@@ -1,24 +1,31 @@
 import Link from "next/link";
 import * as React from "react";
+import { HeaderMenus } from "src/components/HeaderMenus";
 
 const items = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
 ];
 
-export const Header: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
+type HeaderProps = {
+  open: boolean;
+  toggleNav(): void;
+  closeNav(): void;
+};
+
+export const Header: React.FC<HeaderProps> = (props) => {
+  // const [open, setOpen] = React.useState(false);
   // const classes= {
   //   navOpen:"nav-open"
   // }
-  const toggleNav = () => {
-    setOpen((prevState) => !prevState);
-  };
-  const closeNav = () => {
-    setOpen(false);
-  };
+  // const toggleNav = () => {
+  //   setOpen((prevState) => !prevState);
+  // };
+  // const closeNav = () => {
+  //   setOpen(false);
+  // };
 
-  const navOpen = open ? "nav-open" : "";
+  const navOpen = props.open ? "nav-open" : "";
   return (
     <div className={navOpen}>
       <header className={navOpen + " fixed-nav " + "l-header "}>
@@ -43,7 +50,7 @@ export const Header: React.FC = () => {
             data-about-nav-toggle
             aria-label="ナビゲーション メニューの切り替え"
             id="nav-toggle-button"
-            onClick={() => toggleNav()}
+            onClick={() => props.toggleNav()}
           >
             <img
               alt="ナビゲーション メニューを開く"
@@ -60,7 +67,9 @@ export const Header: React.FC = () => {
               width="24"
             />
           </button>
-          <nav className="l-header__nav-top">
+          <HeaderMenus />
+
+          {/* <nav className="l-header__nav-top">
             <h1 className="l-product-logo">
               <a href="/" target="_self">
                 <img alt="パンダシャーク" src="/img/icons/logo.png" />
@@ -93,18 +102,13 @@ export const Header: React.FC = () => {
                   <span>Twitter</span>
                 </a>
               </li>
-              {/* <li>
-                <a className="sns" href="#" target="_self">
-                  <img src="/img/icons/youtube_logo.png" />
-                  <span>YouTubeチャンネル</span>
-                </a>
-              </li> */}
             </ul>
           </nav>
-          {/* <button>
-          <div className="black-bg" role="button" id="js-black-bg" onClick={() => closeNav()}></div>
-          </button> */}
+           */}
         </div>
+        {/* <button>
+          <div className="black-bg" role="button" id="js-black-bg" onClick={() => props.closeNav()}></div>
+          </button> */}
       </header>
     </div>
   );

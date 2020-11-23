@@ -1,6 +1,7 @@
 import Link from "next/link";
 
-import { Breadcrumbs } from "./Breadcrumbs";
+// import { Breadcrumbs } from "./MyBreadcrumbs";
+import Breadcrumbs from "src/components/BreadCrumbs";
 
 type Breadcrumb = {
   index: number;
@@ -8,18 +9,22 @@ type Breadcrumb = {
   href: string;
 };
 
-type BreadcrumbsProps = {
-  breadcrumbs: Breadcrumb[];
+type AriaTitleProps = {
+  title: string;
+  caption?: string;
+  breadcrumbs?: Breadcrumb[];
+  sampleId?: string;
 };
 
-export const AriaTitle = (props: BreadcrumbsProps) => {
+export const AriaTitle = (props: AriaTitleProps) => {
+  console.log(props);
   return (
     <section className="c-section">
       <div className="c-section__area-title animated fadeInLeft">
         <div className="p-headline__sub animated fadeInUp fast delay-1s">
-          <h2>About</h2>
-          <p>自己紹介</p>
-          <Breadcrumbs breadcrumbs={props.breadcrumbs} />
+          <h2>{props.title}</h2>
+          <p>{props.caption}</p>
+          <Breadcrumbs />
         </div>
       </div>
     </section>
