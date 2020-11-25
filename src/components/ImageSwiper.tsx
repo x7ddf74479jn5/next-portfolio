@@ -1,10 +1,10 @@
-import * as React from "react";
-// import {Swiper} as S  from "swiper/react"
-import Swiper, { ReactIdSwiperProps } from "react-id-swiper";
+import { WithRouterProps } from "next/dist/client/with-router";
 import Image from "next/image";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import { WithRouterProps } from "next/dist/client/with-router";
+import * as React from "react";
+// import {Swiper} as S  from "swiper/react"
+import Swiper, { ReactIdSwiperProps } from "react-id-swiper";
 
 // import "swiper/swiper-bundle.min.scss";
 // import 'swiper/swiper.scss';
@@ -120,7 +120,7 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
       // }}
     >
       {props.samples.map((sample, index) => (
-        <div>
+        <div key={index}>
           <article key={index} className="p-grid__list-item swiper-slide">
             <Link href={sample.href}>
               <a className="u-text__line-none" target="_self">

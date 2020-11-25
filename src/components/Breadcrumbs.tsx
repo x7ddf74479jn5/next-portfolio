@@ -1,6 +1,6 @@
+import { WithRouterProps } from "next/dist/client/with-router";
 import Link from "next/link";
 import { withRouter } from "next/router";
-import { WithRouterProps } from "next/dist/client/with-router";
 
 // type RouteMapping = [
 //   [s: string]: { title: string }];

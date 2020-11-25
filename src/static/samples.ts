@@ -9,7 +9,7 @@ type Sample = {
   description: string;
 };
 
-import { links, images } from "./links";
+import { images, links } from "./links";
 
 export const samples: Sample[] = [
   {
@@ -47,6 +47,7 @@ export const samples: Sample[] = [
 export type SampleDetail = {
   id: string;
   img: string;
+  alt: string;
   abstract: string;
   purpose: string[];
   point: string[];
@@ -61,6 +62,7 @@ export const samplesDetail: SampleDetail[] = [
   {
     id: "portfolio",
     img: images.portfolio,
+    alt: "Eye-catch of portfolio",
     abstract: "ポートフォリオサイトです。",
     purpose: ["Next.js/Typescriptの学習", "転職活動のため", "案件獲得のため"],
     point: [
@@ -79,6 +81,7 @@ export const samplesDetail: SampleDetail[] = [
   {
     id: "chat-bot",
     img: images.chat,
+    alt: "Eye-catch of chat-bot",
     abstract: "ユーザーに質問を投げて自動で応答するチャットボット",
     purpose: ["カジュアルにWebサイトへのお問い合わせをしてもらうため"],
     point: ["SPAらしい画面描画の切り替わり", "問い合わせ結果をSlackへ通知", "チャット風のデザインとアニメーション"],
@@ -91,6 +94,7 @@ export const samplesDetail: SampleDetail[] = [
   {
     id: "EC-app",
     img: images.ec,
+    alt: "Eye-catch of EC-app",
     abstract: "ECアプリ（開発中です）",
     purpose: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     point: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],

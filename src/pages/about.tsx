@@ -1,10 +1,10 @@
+import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { Layout } from "src/layout/layout";
+import { services } from "src/static/services";
 
 import { AriaTitle } from "../components/AriaTitle";
-import { NextPage } from "next";
-import { services } from "src/static/services";
 
 type Timeline = {
   datetime: string;

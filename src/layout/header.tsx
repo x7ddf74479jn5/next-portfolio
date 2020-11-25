@@ -1,8 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { HeaderMenus } from "src/components/HeaderMenus";
 import { images } from "src/static/links";
-import Image from "next/image";
 
 const items = [
   { href: "/", label: "Home" },
@@ -12,7 +12,7 @@ const items = [
 type HeaderProps = {
   open: boolean;
   toggleNav(): void;
-  closeNav(): void;
+  closeNav(e?: React.KeyboardEvent<HTMLDivElement>): void;
 };
 
 export const Header: React.FC<HeaderProps> = (props) => {
@@ -112,7 +112,13 @@ export const Header: React.FC<HeaderProps> = (props) => {
            */}
         </div>
         <div>
-          <div className="black-bg" role="button" id="js-black-bg" onClick={() => props.closeNav()}></div>
+          <div
+            className="black-bg"
+            role="button"
+            id="js-black-bg"
+            onKeyDown={(e) => props.closeNav(e)}
+            onClick={() => props.closeNav()}
+          ></div>
         </div>
       </header>
     </div>

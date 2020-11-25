@@ -1,7 +1,7 @@
 import { NextPage } from "next";
+import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
-import { AriaTitle } from "src/components/AriaTitle";
 
 const Chat = () => {
   const sample = samplesDetail.find((sample) => sample.id === "chat-bot");
@@ -13,7 +13,7 @@ const Chat = () => {
   const content = (
     <section className="c-section">
       <div className="c-section-wrapin p-grid__works">
-        <img src={sample.img} />
+        <img src={sample.img} alt={sample.alt} />
         <div className="p-grid__works__row">
           <h3>概要</h3>
           <p>{sample.abstract}</p>
@@ -48,7 +48,7 @@ const Chat = () => {
             <p>{sample.link}</p>
           ) : (
             <p>
-              <a href={sample.link.href} target="_blank">
+              <a href={sample.link.href} target="_blank" rel="noreferrer">
                 {sample.link.label}
                 <i className="fas fa-external-link-alt"></i>
               </a>

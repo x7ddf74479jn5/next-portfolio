@@ -1,7 +1,7 @@
-import * as React from "react";
-import SwiperCore, { Swiper, Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
 import Image from "next/image";
 import Link from "next/link";
+import * as React from "react";
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, Swiper } from "swiper";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
@@ -82,7 +82,7 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   }, []);
 
   // React.useEffect(() => {
-  //   　mySwiper.update();
+  //   mySwiper.update();
   // }, [samples]);
 
   const contents = samples.map((sample, index) => (
@@ -92,7 +92,7 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
           <h3>{sample.title}</h3>
           <div className="p-media__thumb" key={index}>
             <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
-            {/* <img src={sample.img.src} alt={sample.img.alt} 　key={index} /> */}
+            {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
           </div>
           <p>{sample.description}</p>
         </a>

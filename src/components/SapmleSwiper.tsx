@@ -1,9 +1,9 @@
-import * as React from "react";
-import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from "swiper";
-import { Swiper, SwiperSlide } from "swiper/react";
 // import 'src/styles/swiper.bundle.scss';
 import Image from "next/image";
+import * as React from "react";
 import { samplesDetail } from "src/static/samples";
+import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
@@ -104,7 +104,7 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //         <h3>{sample.title}</h3>
   //         <div className="p-media__thumb">
   //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={sample.id} />
-  //           {/* <img src={sample.img.src} alt={sample.img.alt} 　key={index} /> */}
+  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
   //         </div>
   //         <p>{sample.description}</p>
   //       </a>
@@ -119,7 +119,7 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
           <h3>{sample.title}</h3>
           <div className="p-media__thumb" key={index}>
             <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
-            {/* <img src={sample.img.src} alt={sample.img.alt} 　key={index} /> */}
+            {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
           </div>
           <p>{sample.description}</p>
         </a>
@@ -134,7 +134,7 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //         <h3>{sample.title}</h3>
   //         <div className="p-media__thumb" key={index}>
   //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
-  //           {/* <img src={sample.img.src} alt={sample.img.alt} 　key={index} /> */}
+  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
   //         </div>
   //         <p>{sample.description}</p>
   //       </a>

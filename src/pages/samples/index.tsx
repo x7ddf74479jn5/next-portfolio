@@ -1,3 +1,4 @@
+import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,7 +6,6 @@ import { Layout } from "src/layout/layout";
 
 import { AriaTitle } from "../../components/AriaTitle";
 import { samples } from "../../static/samples";
-import { NextPage } from "next";
 
 const Samples: NextPage = () => {
   const sampleItems = samples.map((sample, index) => (

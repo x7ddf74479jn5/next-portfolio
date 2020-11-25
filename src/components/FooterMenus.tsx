@@ -28,16 +28,18 @@ const accordions = [
 ];
 
 export const FooterMenus = () => {
-  const handle = (event: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {
+  const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
     console.log(accordionModule.toggleMenu("accordion-about"));
     console.log(accordionModule.toggleMenu("accordion-works"));
   };
 
   const accordionItems = accordions.map((accordion) => (
     <li className="p-accordion" id={accordion.id} key={accordion.id}>
-      <h4 role="button" onClick={handle}>
+      {/* <button onClick={handle} onKeyDown={(e) => handle}> */}
+      <h4 role="button" onClick={handle} onKeyDown={(e) => handle}>
         {accordion.label}
       </h4>
+      {/* </button> */}
       <input type="checkbox" id={accordion.inputId} />
       <label htmlFor={accordion.inputId}></label>
       <ul className="p-accordion__items">
