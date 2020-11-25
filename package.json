@@ -20,7 +20,6 @@
   },
   "lint-staged": {
     "*.@(ts|tsx)": [
-      "yarn lint",
       "yarn format"
     ]
   },
