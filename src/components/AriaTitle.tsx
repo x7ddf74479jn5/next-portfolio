@@ -1,5 +1,5 @@
 import Link from "next/link";
-// import Breadcrumbs from "src/components/BreadCrumbs"
+import Breadcrumbs from "src/components/BreadCrumbs";
 
 type Breadcrumb = {
   index: number;
