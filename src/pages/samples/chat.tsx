@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
+import { AriaTitle } from "src/components/AriaTitle";
 
 const Chat = () => {
   const sample = samplesDetail.find((sample) => sample.id === "chat-bot");
@@ -63,6 +64,7 @@ const Chat = () => {
       <section>
         <div className="module-spacer--medium"></div>
       </section>
+      <AriaTitle title="Chat Bot" caption="チャットボット" />
 
       {/* <section className="c-section">
         <div className="c-section__area-title animated fadeInLeft">

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { links as l } from "src/static/links";
 
 const links = {
   about: [
@@ -15,7 +16,7 @@ const links = {
   ],
   links: [
     { label: "Blog", href: "/" },
-    { label: "Twitter", href: "/" },
+    { label: "Twitter", href: l.twitter },
     // {label: "",href:""},
     // {label: "",href:""},
   ],

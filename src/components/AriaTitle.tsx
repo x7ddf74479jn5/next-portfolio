@@ -17,7 +17,6 @@ type AriaTitleProps = {
 };
 
 export const AriaTitle = (props: AriaTitleProps) => {
-  console.log(props);
   return (
     <section className="c-section">
       <div className="c-section__area-title animated fadeInLeft">

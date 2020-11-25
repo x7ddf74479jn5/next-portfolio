@@ -3,7 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { Layout } from "src/layout/layout";
 import { ImageSwiper } from "src/components/ImageSwiper";
-import { SampleSwiper } from "src/components/SapmleSwiper";
+import { SapmleSwiper } from "src/components/SapmleSwiper";
+import { SampleSwiper } from "src/components/SampleSwiper";
 
 import { Service, services } from "src/static/services";
 import { samples } from "src/static/samples";
@@ -47,7 +48,7 @@ const Home: NextPage = () => {
 
       <section>
         <div className="p-grid__view-first" data-label="first-view">
-          {/* <Image src={"/img/view/first-view.jpeg"} alt="sea coast in RJ" layout="fill" /> */}
+          <Image src={"/img/view/first-view.jpg"} alt="Ocean" layout="fill" />
           <div className="child">
             <div>
               <h2>Pandashark</h2>
@@ -60,7 +61,7 @@ const Home: NextPage = () => {
               </Link> */}
             </div>
           </div>
-          <img src="/img/view/first-view.jpeg" alt="sea coast in RJ" />
+          {/* <img src="/img/view/first-view.jpeg" alt="sea coast in RJ" /> */}
         </div>
         {/* <div className="p-grid__view-first-img">
           <Image src={"/img/view/first-view.jpeg"} alt="sea coast in RJ" width={1440} height={810} />
@@ -74,23 +75,23 @@ const Home: NextPage = () => {
       <section className="c-section">
         <div className="c-section-wrapin p-grid__vision">
           <h2 className="animated slow" data-animate="fadeInUp">
-            一個人の利益になる仕事より、
+            人性の善なるは、
             <br />
-            多くの人や社会全体の利益になる仕事を
+            猶水の下きに就くがごときなり。
           </h2>
           <p className="sub animated slow" data-animate="fadeInUp">
-            渋沢栄一 『論語と算盤』
+            孟子 『性猶湍水也』
           </p>
           <div data-label="description">
             <p className="animated slow" data-animate="fadeInUp">
-              トラハックが仕事をする上で、
+              私が生きる上で、
               <br />
-              もっとも大切にしている理念です。
+              もっとも大切にしている言葉です。
             </p>
             <p className="animated slow" data-animate="fadeInUp">
-              技術屋は楽しいし、稼ぎもいい。
+              生涯学び、生涯価値を生み出し続ける。
               <br />
-              だけど、自分が楽しいだけじゃ物足りない。
+              そして、
             </p>
             <p className="animated slow" data-animate="fadeInUp">
               クライアントのために、
@@ -142,20 +143,13 @@ const Home: NextPage = () => {
           <hr className="c-section__line" />
           <div className="module-spacer--small"></div>
           <div className="module-spacer--medium"></div>
-          {/* <section className="p-grid__list swiper-container">
-            <div className="swiper-wrapper">
-            </div> */}
-          {/* <SampleSwiper samples={samples} /> */}
-          <ImageSwiper samples={samples} />
-          {/* {sampleItems} */}
+
+          {/* <SapmleSwiper samples={samples} /> */}
+          <SampleSwiper samples={samples} />
+          {/* <ImageSwiper samples={samples} /> */}
 
           <div className="module-spacer--medium"></div>
           <IconArrowNext label="全ての事例を見る" href="/samples/" />
-          {/* <Link href="/works/">
-          <a className="p-btn-round p-icon__arrow-next"  target="_self" role="button">
-            全ての事例を見る
-          </a>
-          </Link> */}
         </div>
       </section>
 
@@ -165,7 +159,7 @@ const Home: NextPage = () => {
           <hr className="c-section__line" />
           <div className="module-spacer--medium"></div>
           <p>
-            企業HPなどのWebサイト制作、アプリ開発、システム開発などのお見積もり、ご相談はお気軽にご連絡ください。
+            企業HPなどのWebサイト制作、チャットボット開発、WordPress導入・カスタマイズなどのお見積もり、ご相談はお気軽にご連絡ください。
             お客様だけでなく、エンドユーザーにも喜んでいただけるよう技術を提供します。
           </p>
           <div className="module-spacer--small"></div>

@@ -9,6 +9,8 @@ type Sample = {
   description: string;
 };
 
+import { links, images } from "./links";
+
 export const samples: Sample[] = [
   {
     title: "ポートフォリオ",
@@ -16,7 +18,7 @@ export const samples: Sample[] = [
     description: "現在閲覧してくださっているサイトです。",
     href: "/samples/portfolio/",
     img: {
-      src: "/img/samples/portfolio-eyecatch.png",
+      src: images.portfolio,
       alt: "Thumbnail of portfolio",
     },
   },
@@ -26,7 +28,7 @@ export const samples: Sample[] = [
     description: "事前に用意したQAを使って自動応答するチャットボットです。",
     href: "/samples/chat/",
     img: {
-      src: "/img/samples/chat.jpeg",
+      src: images.chat,
       alt: "Thumbnail of Chat Bot",
     },
   },
@@ -36,7 +38,7 @@ export const samples: Sample[] = [
     description: "React学習用に開発しているデモサイトです。",
     href: "/samples/ec/",
     img: {
-      src: "/img/samples/ec-app.jpeg",
+      src: images.ec,
       alt: "Thumbnail of EC site",
     },
   },
@@ -58,9 +60,9 @@ export type SampleDetail = {
 export const samplesDetail: SampleDetail[] = [
   {
     id: "portfolio",
-    img: "/img/samples/portfolio-eyecatch.png",
+    img: images.portfolio,
     abstract: "ポートフォリオサイトです。",
-    purpose: ["Next.js/Typescriptの学習", "転職活動のため"],
+    purpose: ["Next.js/Typescriptの学習", "転職活動のため", "案件獲得のため"],
     point: [
       "Webサイト制作に必要不可欠な要素は抑えた",
       "CSSはなるべくシンプルに",
@@ -76,7 +78,7 @@ export const samplesDetail: SampleDetail[] = [
   },
   {
     id: "chat-bot",
-    img: "",
+    img: images.chat,
     abstract: "ユーザーに質問を投げて自動で応答するチャットボット",
     purpose: ["カジュアルにWebサイトへのお問い合わせをしてもらうため"],
     point: ["SPAらしい画面描画の切り替わり", "問い合わせ結果をSlackへ通知", "チャット風のデザインとアニメーション"],
@@ -88,7 +90,7 @@ export const samplesDetail: SampleDetail[] = [
   },
   {
     id: "EC-app",
-    img: "",
+    img: images.ec,
     abstract: "ECアプリ（開発中です）",
     purpose: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     point: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],

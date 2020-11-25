@@ -2,10 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { Layout } from "src/layout/layout";
 
-import { aboutRoute } from "../static/breadcrumbs";
 import { AriaTitle } from "../components/AriaTitle";
 import { NextPage } from "next";
-// import Home from ".";
+import { services } from "src/static/services";
 
 type Timeline = {
   datetime: string;
@@ -57,6 +56,16 @@ const About: NextPage = () => {
     </li>
   ));
 
+  const serviceItems = services.map((service, index) => (
+    <article className="p-grid__list-item-floated" key={index}>
+      <h3>{service.title}</h3>
+      <small>{service.caption}</small>
+      {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
+      <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
+      <p>{service.description}</p>
+    </article>
+  ));
+
   return (
     <Layout>
       <Head>
@@ -65,7 +74,7 @@ const About: NextPage = () => {
       <section>
         <div className="module-spacer--medium"></div>
       </section>
-      <AriaTitle title="About" caption="自己紹介" breadcrumbs={aboutRoute} />
+      <AriaTitle title="About" caption="自己紹介" />
 
       {/* <section className="c-section">
         <div className="c-section__area-title animated fadeInLeft">
@@ -98,6 +107,41 @@ const About: NextPage = () => {
           <div className="p-grid__about">
             <div className="left">
               <h3>
+                人性の善なるは、
+                <br />
+                猶水の下きに就くがごときなり。
+              </h3>
+              <p className="sub">孟子 『性猶湍水也』</p>
+              <p>
+                孟子は人の生き様を川の流れに喩え、外部の不可抗力によって悪を為すと説明します。
+                <br />
+                手前の解釈ですが、人生の過程をどのように生きていきたいのか、それを考えさせられる言葉です。
+              </p>
+              <p>
+                <b>生涯学習。</b>
+                <br />
+                たとえば、私がプログラミングの勉強を始めた契機でもあります。
+                <br />
+                一生を通して何かを学び続けていたい。
+              </p>
+              <p>
+                失敗と挫折を繰り返してきました。
+                <br />
+                中には途中でやめてしまったものも少なくありません。
+                <br />
+                それでも、どこかの方角に向かって日々学びを欠かさずに過ごしています。
+              </p>
+              <p>
+                私は私の人生の過程において学んだこと、その結果から生み出された価値を周りの誰かに提供できる人間になりたいと思っています。
+                <br />
+                私は直接お取引させていただくクライアント様だけでなく、
+                画面の向こう側にいるエンドユーザーのためにサービスを作ります。
+                <br />
+                調理職として厨房で働いていたときから、お客様の顔は見えませんがずっと心掛けてきました。
+              </p>
+            </div>
+            {/* <div className="left">
+              <h3>
                 一個人の利益になる仕事より、
                 <br />
                 多くの人や社会全体の利益になる仕事を
@@ -129,7 +173,7 @@ const About: NextPage = () => {
                 そんな思いで、Webエンジニアを目指したい方向けのコミュニティを作りました。参加費は<b>無料</b>です。
                 <br />
               </p>
-            </div>
+            </div> */}
             {/* <div className="right">
           <Image src="" />
         </div> */}
@@ -183,7 +227,8 @@ const About: NextPage = () => {
           <h2 className="p-headline__about">Skills</h2>
           <p>技術と開発物は以下の通りです。</p>
           <div className="p-grid__list">
-            <article className="p-grid__list-item-floated">
+            {serviceItems}
+            {/* <article className="p-grid__list-item-floated">
               <h3>WEBサイト制作</h3>
               <small>Website Production</small>
               <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt={""} />
@@ -206,7 +251,7 @@ const About: NextPage = () => {
                 リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。
                 これまで開発してきたWebアプリの一部を制作事例として公開しています。
               </p>
-            </article>
+            </article> */}
           </div>
           <ul className="p-grid__table">
             <li>

@@ -20,8 +20,14 @@ export const Footer: React.FC = () => {
             <h1 className="product-logo">
               <Link href="/">
                 <a target="_self">
-                  {/* <Image height={} width={} alt="パンダシャーク" className="logo-img" src="/img/icons/pandashark_logo.png" /> */}
-                  <img alt="パンダシャーク" className="logo-img" src="/img/icons/pandashark_logo.png" />
+                  <Image
+                    width={128}
+                    height={64}
+                    alt="パンダシャーク"
+                    className="logo-img"
+                    src="/img/icons/pandashark_logo_rectangle.png"
+                  />
+                  {/* <img alt="パンダシャーク" className="logo-img" src="/img/icons/pandashark_logo.png" /> */}
                 </a>
               </Link>
               {/* <a href="/" target="_self">

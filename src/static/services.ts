@@ -27,7 +27,7 @@ export const services: Service[] = [
     title: "WordPress",
     caption: "WordPress",
     img: {
-      src: "/img/view/website-production.jpeg",
+      src: "/img/view/wordpress-icon.png",
       alt: "WordPress",
     },
     description: "WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。",

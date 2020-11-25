@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { images, links as l } from "src/static/links";
 
 const links = [
   { label: "About", href: "/about/" },
@@ -22,8 +23,8 @@ export const HeaderMenus = () => {
       <h1 className="l-product-logo">
         <Link href={"/"}>
           <a target="_self">
-            {/* <Image height={80} width={40} alt="パンダシャーク" src="/img/icons/logo.png" /> */}
-            <img alt="パンダシャーク" src="/img/icons/pandashark_logo.png" />
+            <Image height={80} width={40} alt="パンダシャーク" src={images.pandashark_rec} />
+            {/* <img alt="パンダシャーク" src={images.pandashark_rec} /> */}
           </a>
         </Link>
         {/* <a href="/" target="_self">
@@ -33,7 +34,7 @@ export const HeaderMenus = () => {
       <ul>
         {content}
         <li>
-          <a className="sns" href="/" target="_self">
+          <a className="sns" href={l.twitter} target="_self">
             <img src="/img/icons/twitter_logo.png" alt="twitter" />
             <span>Twitter</span>
           </a>

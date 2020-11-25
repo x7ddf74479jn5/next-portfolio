@@ -1,6 +1,8 @@
 import Link from "next/link";
 import * as React from "react";
 import { HeaderMenus } from "src/components/HeaderMenus";
+import { images } from "src/static/links";
+import Image from "next/image";
 
 const items = [
   { href: "/", label: "Home" },
@@ -40,9 +42,12 @@ export const Header: React.FC<HeaderProps> = (props) => {
 
         <div className="l-header-inner">
           <h1 className="l-product-logo">
-            <a href="/" target="_self" aria-label="パンダシャーク">
-              <img alt="パンダシャーク" src="/img/icons/pandashark_logo.png" />
-            </a>
+            <Link href="/">
+              <a target="_self" aria-label="パンダシャーク">
+                {/* <img alt="パンダシャーク" src="/img/icons/pandashark_logo.png" /> */}
+                <Image width={128} height={64} alt="パンダシャーク" src={images.pandashark_rec} />
+              </a>
+            </Link>
           </h1>
           {/* <!-- Navigation toggle button for Smartphone--> */}
           <button
@@ -106,9 +111,9 @@ export const Header: React.FC<HeaderProps> = (props) => {
           </nav>
            */}
         </div>
-        {/* <button>
+        <div>
           <div className="black-bg" role="button" id="js-black-bg" onClick={() => props.closeNav()}></div>
-          </button> */}
+        </div>
       </header>
     </div>
   );

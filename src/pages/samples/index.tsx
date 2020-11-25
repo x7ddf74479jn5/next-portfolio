@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Layout } from "src/layout/layout";
 
-import { sampleRoute } from "src/static/breadcrumbs";
 import { AriaTitle } from "../../components/AriaTitle";
 import { samples } from "../../static/samples";
 import { NextPage } from "next";
@@ -35,7 +34,7 @@ const Samples: NextPage = () => {
       <section>
         <div className="module-spacer--medium"></div>
       </section>
-      <AriaTitle title="Samples" caption="制作事例" breadcrumbs={sampleRoute} />
+      <AriaTitle title="Samples" caption="制作事例" />
 
       {/* <section className="c-section">
         <div className="c-section__area-title animated fadeInLeft">

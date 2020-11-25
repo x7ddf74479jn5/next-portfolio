@@ -3,9 +3,12 @@ import * as React from "react";
 import Swiper, { ReactIdSwiperProps } from "react-id-swiper";
 import Image from "next/image";
 import Link from "next/link";
+import { withRouter } from "next/router";
+import { WithRouterProps } from "next/dist/client/with-router";
+
 // import "swiper/swiper-bundle.min.scss";
 // import 'swiper/swiper.scss';
-import "src/styles/swiper-bundle.module.css/";
+// import styles from "src/styles/swiper-bundle.module.css";
 
 type sample = {
   img: {
@@ -70,6 +73,11 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
       },
     },
   });
+
+  // const s = (
+  //   <Swiper {...{params}}
+  //   ></Swiper>
+  // )
 
   return (
     // <Swiper {...params}>
@@ -158,3 +166,4 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
 //   });
 // },
 // };
+// export default withRouter(ImageSwiper)

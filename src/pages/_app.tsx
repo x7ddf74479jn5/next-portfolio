@@ -1,5 +1,4 @@
-// import "ress";
-// import "src/styles/global.scss";
+// import "src/styles/swiper-bundle.css"
 import "src/styles/style.scss";
 import "src/styles/animate.css";
 

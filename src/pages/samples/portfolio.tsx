@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
+import { AriaTitle } from "../../components/AriaTitle";
 
 const Portfolio = () => {
   const sample = samplesDetail.find((sample) => sample.id === "portfolio");
@@ -63,6 +64,7 @@ const Portfolio = () => {
       <section>
         <div className="module-spacer--medium"></div>
       </section>
+      <AriaTitle title="Portfolio" caption="ポートフォリオ" />
 
       {/* <section className="c-section">
         <div className="c-section__area-title animated fadeInLeft">

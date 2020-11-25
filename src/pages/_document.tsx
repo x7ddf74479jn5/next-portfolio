@@ -7,14 +7,14 @@ const headProps = {
   description: "Pandasharkのポートフォリオサイトです。",
   keyword: "",
   image: "/img/icons/pandashark_logo.png",
-  url: "https://pandashark.web.app/",
+  url: "https://next-portfolio-livid.vercel.app/",
   og: {
     type: "website",
     description: "Pandasharkのポートフォリオサイトです。",
     image: "/img/icons/pandashark_logo.png",
     imageHight: "600",
     imageWidth: "315",
-    url: "https://pandashark.web.app/",
+    url: "https://next-portfolio-livid.vercel.app/",
     twitterCard: "summary_large_image",
     twitterSite: "@pandashark",
   },
@@ -77,8 +77,8 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href={headProps.icon} />
           <link rel="apple-touch-icon" href={headProps.appleTouchIcon} />
-          {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
-          <script src="/js/carousel.js" type="text/javascript"></script> */}
+          {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> */}
+          {/* <script src="/js/carousel.js" type="text/javascript"></script> */}
           {/* 
           <script
             src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
