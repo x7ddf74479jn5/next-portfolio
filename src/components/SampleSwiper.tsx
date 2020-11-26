@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import { samplesDetail } from "src/static/samples";
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, Swiper } from "swiper";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
@@ -13,6 +14,7 @@ type Sample = {
   href: string;
   title: string;
   description: string;
+  index?: string;
 };
 
 type SwiperProps = {
@@ -50,6 +52,7 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   });
 
   const [mySwiper, setMySwiper] = React.useState<SwiperCore | null>(null);
+  const [contents2, setcon] = React.useState<SwiperProps | null>(null);
 
   React.useEffect(() => {
     const mySwiper = new Swiper(".swiper-container", {
@@ -78,20 +81,41 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
         },
       },
     });
+
+    const contents = samples.map((sample, index) => {
+      return { ...sample, index: index.toString() };
+    });
+
     setMySwiper(mySwiper);
+    // setcon(contents)
   }, []);
 
   // React.useEffect(() => {
   //   mySwiper.update();
   // }, [samples]);
 
+  // const contents = contents2.map((sample) => (
+  //   <article className="p-grid__list-item swiper-slide" key={sample.index}>
+  //     <Link href={sample.href}>
+  //       <a className="u-text__line-none" target="_self">
+  //         <h3>{sample.title}</h3>
+  //         <div className="p-media__thumb" >
+  //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} />
+  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
+  //         </div>
+  //         <p>{sample.description}</p>
+  //       </a>
+  //     </Link>
+  //   </article>
+  // ));
+
   const contents = samples.map((sample, index) => (
     <article className="p-grid__list-item swiper-slide" key={index}>
       <Link href={sample.href}>
-        <a className="u-text__line-none" target="_self" key={index}>
+        <a className="u-text__line-none" target="_self">
           <h3>{sample.title}</h3>
-          <div className="p-media__thumb" key={index}>
-            <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
+          <div className="p-media__thumb">
+            <Image layout="fill" src={sample.img.src} alt={sample.img.alt} />
             {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
           </div>
           <p>{sample.description}</p>
