@@ -143,8 +143,8 @@ const Home: NextPage = () => {
           <div className="module-spacer--small"></div>
           <div className="module-spacer--medium"></div>
 
-          {/* <SapmleSwiper samples={samples} /> */}
-          <SampleSwiper samples={samples} />
+          <SapmleSwiper samples={samples} />
+          {/* <SampleSwiper samples={samples} /> */}
           {/* <ImageSwiper samples={samples} /> */}
 
           <div className="module-spacer--medium"></div>

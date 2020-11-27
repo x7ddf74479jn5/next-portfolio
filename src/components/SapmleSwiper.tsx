@@ -1,7 +1,6 @@
 // import 'src/styles/swiper.bundle.scss';
 import Image from "next/image";
 import * as React from "react";
-import { samplesDetail } from "src/static/samples";
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -114,11 +113,11 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
 
   const contents = samples.map((sample, index) => (
     <SwiperSlide key={`swiper-${index}`}>
-      <article className="p-grid__list-item" key={index}>
-        <a className="u-text__line-none" href={sample.href} target="_self" key={index}>
+      <article className="p-grid__list-item">
+        <a className="u-text__line-none" href={sample.href} target="_self">
           <h3>{sample.title}</h3>
-          <div className="p-media__thumb" key={index}>
-            <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
+          <div className="p-media__thumb">
+            <Image loading={"eager"} layout="fill" src={sample.img.src} alt={sample.img.alt} />
             {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
           </div>
           <p>{sample.description}</p>
