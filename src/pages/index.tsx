@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { IconArrowNext } from "src/components/IconArrowNext";
 import { ImageSwiper } from "src/components/ImageSwiper";
-// import { SampleSwiper } from "src/components/SampleSwiper.txt";
+import { SampleSwiper } from "src/components/SampleSwiper";
 import { SapmleSwiper } from "src/components/SapmleSwiper";
 import { Layout } from "src/layout/layout";
 import { samples } from "src/static/samples";
@@ -143,8 +143,8 @@ const Home: NextPage = () => {
           <div className="module-spacer--small"></div>
           <div className="module-spacer--medium"></div>
 
-          <SapmleSwiper samples={samples} />
-          {/* <SampleSwiper samples={samples} /> */}
+          {/* <SapmleSwiper samples={samples} /> */}
+          <SampleSwiper samples={samples} />
           {/* <ImageSwiper samples={samples} /> */}
 
           <div className="module-spacer--medium"></div>
