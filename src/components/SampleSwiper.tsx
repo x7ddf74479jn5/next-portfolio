@@ -116,15 +116,9 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
           <h3>{sample.title}</h3>
           <div className="p-media__thumb">
             {/* <Image width={960} height={540} src={sample.img.src} alt={sample.img.alt} /> */}
-            <Image loading="eager" layout="fill" src={sample.img.src} alt={sample.img.alt} />
-            {/* <Image
-              loading={"eager"}
-              layout="fill"
-              style={{ objectFit: "cover" }}
-              src={sample.img.src}
-              alt={sample.img.alt}
-            /> */}
-            {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
+            {/* <Image loading="eager" layout="fill" src={sample.img.src} alt={sample.img.alt} /> */}
+            {/* <Image loading={"eager"} unsized={true} src={sample.img.src} alt={sample.img.alt} /> */}
+            <img src={sample.img.src} alt={sample.img.alt} />
           </div>
           <p>{sample.description}</p>
         </a>

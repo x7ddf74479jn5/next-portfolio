@@ -47,7 +47,7 @@ const Home: NextPage = () => {
 
       <section>
         <div className="p-grid__view-first" data-label="first-view">
-          <Image src={"/img/view/first-view.jpg"} alt="Ocean" layout="fill" />
+          {/* <Image src={"/img/view/first-view.jpg"} alt="Ocean" layout="fill" /> */}
           <div className="child">
             <div>
               <h2>Pandashark</h2>
@@ -60,7 +60,7 @@ const Home: NextPage = () => {
               </Link> */}
             </div>
           </div>
-          {/* <img src="/img/view/first-view.jpeg" alt="sea coast in RJ" /> */}
+          <img src="/img/view/first-view.webp" alt="sea coast in RJ" />
         </div>
         {/* <div className="p-grid__view-first-img">
           <Image src={"/img/view/first-view.jpeg"} alt="sea coast in RJ" width={1440} height={810} />
