@@ -1,14 +1,8 @@
 import { AriaTitle } from "src/components/AriaTitle";
-import { Layout } from "src/layout/layout";
 import { contactModule } from "src/functions/contact";
+import { Layout } from "src/layout/layout";
 
 const Contact: React.FC = () => {
-  const handle = () => {
-    console.log("return contactModule.confirmApplication()");
-    console.log("return contactModule.cancel()");
-    console.log("return contactModule.application()");
-  };
-
   const handleConfirm = () => {
     contactModule.confirmApplication();
   };
