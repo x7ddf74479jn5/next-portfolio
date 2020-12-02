@@ -1,17 +1,28 @@
 import { AriaTitle } from "src/components/AriaTitle";
-import { contactModule } from "src/functions/contact";
+// import { contactModule } from "src/functions/contact";
+import { confirmApplication, cancel, application } from "src/functions/contact";
 import { Layout } from "src/layout/layout";
 
 const Contact: React.FC = () => {
   const handleConfirm = () => {
-    contactModule.confirmApplication();
+    confirmApplication();
   };
   const handleCancel = () => {
-    contactModule.cancel();
+    cancel();
   };
   const handleApplication = () => {
-    contactModule.application();
+    application();
   };
+  // const Contact: React.FC = () => {
+  //   const handleConfirm = () => {
+  //     contactModule.confirmApplication();
+  //   };
+  //   const handleCancel = () => {
+  //     contactModule.cancel();
+  //   };
+  //   const handleApplication = () => {
+  //     contactModule.application();
+  //   };
 
   return (
     <Layout>
