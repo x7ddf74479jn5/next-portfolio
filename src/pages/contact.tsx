@@ -1,6 +1,6 @@
 import { AriaTitle } from "src/components/AriaTitle";
 // import { contactModule } from "src/functions/contact";
-import { confirmApplication, cancel, application } from "src/functions/contact";
+import { confirmApplication, cancel, application } from "src/lib/contact";
 import { Layout } from "src/layout/layout";
 
 const Contact: React.FC = () => {
