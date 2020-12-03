@@ -62,7 +62,7 @@ const Home: NextPage = () => {
           </div>
           <picture>
             <source type="image/webp" srcSet="/img/view/first-view.webp" />
-            <img src="sample./img/view/first-view.jpg" />
+            <img src="/img/view/first-view.jpg" />
           </picture>
           {/* <img src="/img/view/first-view.webp" alt="sea coast in RJ" /> */}
         </div>
