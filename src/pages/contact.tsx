@@ -1,7 +1,9 @@
 import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
-import { contactModule } from "src/functions/contact";
+// import { contactModule } from "src/functions/contact";
 // import { confirmApplication, cancel, application } from "src/functions/contact.js";
+const contactModule = require("foobar");
+
 import { Layout } from "src/layout/layout";
 
 type contactModule = {
