@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Footer } from "src/layout/footer";
 import { Header } from "src/layout/header";
-import { ChatBot } from "src/layout/ChatBot";
+// import { ChatBot } from "src/layout/ChatBot";
 
 export const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = React.useState(false);
@@ -28,7 +28,7 @@ export const Layout: React.FC = ({ children }) => {
       <main className={navOpen}>{children}</main>
       {/* <div id="root"></div>
       <script src="/js/chat-bot.js"  /> */}
-      <ChatBot />
+      {/* <ChatBot /> */}
       <Footer />
     </>
   );
