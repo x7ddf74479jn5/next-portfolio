@@ -60,7 +60,11 @@ const Home: NextPage = () => {
               </Link> */}
             </div>
           </div>
-          <img src="/img/view/first-view.webp" alt="sea coast in RJ" />
+          <picture>
+            <source type="image/webp" srcSet="/img/view/first-view.webp" />
+            <img src="sample./img/view/first-view.jpg" />
+          </picture>
+          {/* <img src="/img/view/first-view.webp" alt="sea coast in RJ" /> */}
         </div>
         {/* <div className="p-grid__view-first-img">
           <Image src={"/img/view/first-view.jpeg"} alt="sea coast in RJ" width={1440} height={810} />

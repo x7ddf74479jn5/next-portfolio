@@ -65,9 +65,10 @@ const Contact: NextPage = () => {
     if (mailContent) {
       html = mailContent.innerHTML;
     }
-
     const sendMail = async (message: { email: string; subject: string; html: string }) => {
-      const URL = "http://localhost:3000/api/contact";
+      // const URL = "http://localhost:3000/api/contact";
+      // const URL = "https://next-portfolio-livid.vercel.app/api/contact"
+      const URL = process.env.CONTACT_API_URL as string;
       await fetch(URL, {
         method: "POST",
         headers: {
@@ -117,6 +118,7 @@ const Contact: NextPage = () => {
     const applyButton = document.getElementById("apply-btn") as HTMLInputElement;
     if (applyButton) applyButton.disabled = false;
   };
+  console.log(process.env);
 
   return (
     <Layout>
