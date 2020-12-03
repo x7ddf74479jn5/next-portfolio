@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
-import { contactModule } from "src/functions/contact";
+import { contactModule } from "src/functions/contact.js";
 // import { confirmApplication, cancel, application } from "src/functions/contact.js";
 import { Layout } from "src/layout/layout";
 
