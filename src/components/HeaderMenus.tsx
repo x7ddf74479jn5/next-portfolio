@@ -40,12 +40,12 @@ export const HeaderMenus = () => {
             <span>Twitter</span>
           </a>
         </li>
-        <li>
+        {/* <li>
           <button onClick={() => openChatBot()}>
             <img src="/img/icons/twitter_logo.png" alt="twitter" />
             <span>Twitter</span>
           </button>
-        </li>
+        </li> */}
         {/* <li>
         <a className="sns" href="#" target="_self">
           <img src="/img/icons/youtube_logo.png" />

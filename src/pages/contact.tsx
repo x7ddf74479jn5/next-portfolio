@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
-import { convertCrlfToBr } from "src/functions/commonFunc";
+// import { convertCrlfToBr } from "src/functions/commonFunc";
 import { useForm } from "react-hook-form";
 import * as React from "react";
 import { Layout } from "src/layout/layout";
@@ -10,6 +10,13 @@ type FormData = {
   email: string;
   category: "";
   description: string;
+};
+const convertCrlfToBr = (text: string) => {
+  if (text === "") {
+    return text;
+  } else {
+    return text.replace(/\r?\n/g, "<br>");
+  }
 };
 
 const Contact: NextPage = () => {
