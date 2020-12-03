@@ -13,8 +13,8 @@ const Samples: NextPage = () => {
       <Link href={sample.href}>
         <a className="u-text__line-none">
           <div className="p-media__thumb">
-            {/* <img src={sample.img.src} alt={sample.img.alt}  /> */}
-            <Image src={sample.img.src} alt={sample.img.alt} layout="fill" />
+            <img src={sample.img.src} alt={sample.img.alt} />
+            {/* <Image src={sample.img.src} alt={sample.img.alt} layout="fill" /> */}
           </div>
           <div className="p-list__works-detail">
             <h3 className="title">{sample.title}</h3>
