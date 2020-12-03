@@ -2,7 +2,7 @@ import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
 // import { contactModule } from "src/functions/contact";
 // import { confirmApplication, cancel, application } from "src/functions/contact.js";
-const contactModule = require("foobar");
+const contactModule = require("src/functions/contact");
 
 import { Layout } from "src/layout/layout";
 
