@@ -17,7 +17,7 @@ export const links: LinkMapping = {
 };
 
 export const images: LinkMapping = {
-  pandashark_rec: "/img/icons/pandashark_logo_rectangle.webp",
+  pandashark_rec: "/img/icons/pandashark_logo_rectangle.png",
   ec: "/img/samples/ec-app-eyecatch.webp",
   chat: "/img/samples/chat-bot-eyecatch.webp",
   portfolio: "/img/samples/portfolio-eyecatch.webp",

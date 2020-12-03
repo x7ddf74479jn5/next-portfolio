@@ -118,7 +118,6 @@ const Contact: NextPage = () => {
     const applyButton = document.getElementById("apply-btn") as HTMLInputElement;
     if (applyButton) applyButton.disabled = false;
   };
-  console.log(process.env);
 
   return (
     <Layout>
