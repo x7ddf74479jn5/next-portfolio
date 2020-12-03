@@ -1,28 +1,34 @@
+import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
-// import { contactModule } from "src/functions/contact";
-import { confirmApplication, cancel, application } from "src/functions/contact.js";
+import { contactModule } from "src/functions/contact";
+// import { confirmApplication, cancel, application } from "src/functions/contact.js";
 import { Layout } from "src/layout/layout";
 
-const Contact: React.FC = () => {
+type contactModule = {
+  application: () => false | Promise<void>;
+  cancel: () => void;
+  confirmApplication: () => void;
+};
+
+const Contact: NextPage = () => {
+  // const handleConfirm = () => {
+  //   confirmApplication();
+  // };
+  // const handleCancel = () => {
+  //   cancel();
+  // };
+  // const handleApplication = () => {
+  //   application();
+  // };
   const handleConfirm = () => {
-    confirmApplication();
+    contactModule.confirmApplication();
   };
   const handleCancel = () => {
-    cancel();
+    contactModule.cancel();
   };
   const handleApplication = () => {
-    application();
+    contactModule.application();
   };
-  // const Contact: React.FC = () => {
-  //   const handleConfirm = () => {
-  //     contactModule.confirmApplication();
-  //   };
-  //   const handleCancel = () => {
-  //     contactModule.cancel();
-  //   };
-  //   const handleApplication = () => {
-  //     contactModule.application();
-  //   };
 
   return (
     <Layout>

@@ -77,6 +77,7 @@ export default class MyDocument extends Document {
           />
           <link rel="shortcut icon" href={headProps.icon} />
           <link rel="apple-touch-icon" href={headProps.appleTouchIcon} />
+          {/* <script src="chat-bot.js"  /> */}
           {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script> */}
           {/* <script src="/js/carousel.js" type="text/javascript"></script> */}
           {/* 

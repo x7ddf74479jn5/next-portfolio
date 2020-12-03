@@ -17,6 +17,7 @@ export const HeaderMenus = () => {
       </Link>
     </li>
   ));
+  const openChatBot = () => {};
 
   return (
     <nav className="l-header__nav-top">
@@ -38,6 +39,12 @@ export const HeaderMenus = () => {
             <img src="/img/icons/twitter_logo.png" alt="twitter" />
             <span>Twitter</span>
           </a>
+        </li>
+        <li>
+          <button onClick={() => openChatBot()}>
+            <img src="/img/icons/twitter_logo.png" alt="twitter" />
+            <span>Twitter</span>
+          </button>
         </li>
         {/* <li>
         <a className="sns" href="#" target="_self">

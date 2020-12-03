@@ -1,7 +1,7 @@
-// import Breadcrumbs from "src/components/BreadCrumbs"
 import * as React from "react";
 import { Footer } from "src/layout/footer";
 import { Header } from "src/layout/header";
+import { ChatBot } from "src/layout/ChatBot";
 
 export const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = React.useState(false);
@@ -26,6 +26,9 @@ export const Layout: React.FC = ({ children }) => {
     <>
       <Header open={open} toggleNav={toggleNav} closeNav={closeNav} />
       <main className={navOpen}>{children}</main>
+      {/* <div id="root"></div>
+      <script src="/js/chat-bot.js"  /> */}
+      <ChatBot />
       <Footer />
     </>
   );
