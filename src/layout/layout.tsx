@@ -1,49 +1,56 @@
 import * as React from "react";
 import { Footer } from "src/layout/footer";
 import { Header } from "src/layout/header";
-// import { ChatBot } from "src/layout/ChatBot";
+import { ChatBot } from "src/layout/ChatBot";
+import { ChatBotDialog } from "src/components/ChatBotDialog";
 
 export const Layout: React.FC = ({ children }) => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState<boolean>(false);
 
-  const toggleNav = React.useCallback(() => {
+  const toggleNav: () => void = React.useCallback(() => {
     setOpen((prevState) => !prevState);
   }, [open]);
-  const closeNav = React.useCallback(
-    (event) => {
+  const closeNav: (
+    e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> | any
+  ) => void = React.useCallback(
+    (e) => {
       // if (e.type === "keydown" && e.key === "Esc") {
       //   setOpen(false);
       // }
-      // if (event.type === "onclick") {
+      // if (e.type === "onclick") {
       setOpen(false);
       // }
     },
     [setOpen]
   );
+  const navOpen: string = open ? "nav-open" : "";
 
-  const navOpen = open ? "nav-open" : "";
+  const hideDialog = React.useCallback(() => {}, []);
+
+  const [isDialogOpen, setIsDialogOpen] = React.useState<boolean>(false);
+
+  // ダイアログを開く
+  const openDialog = () => {
+    setIsDialogOpen(true);
+  };
+
+  const closeDialog = React.useCallback(() => {
+    setIsDialogOpen(false);
+  }, [setIsDialogOpen]);
+
   return (
     <>
-      <Header open={open} toggleNav={toggleNav} closeNav={closeNav} />
+      <Header
+        open={open}
+        toggleNav={toggleNav}
+        closeNav={closeNav}
+        isDialogOpen={isDialogOpen}
+        openDialog={openDialog}
+        closeDialog={closeDialog}
+      />
       <main className={navOpen}>{children}</main>
-      {/* <div id="root"></div>
-      <script src="/js/chat-bot.js"  /> */}
-      {/* <ChatBot /> */}
+      <ChatBotDialog isOpen={isDialogOpen} onClose={closeDialog} />
       <Footer />
     </>
   );
 };
-
-// const ClosableDrawer = () => {
-//   const [open, setOpen] = React.useState(false);
-
-//   const toggleNav = React.useCallback(() => {
-//     setOpen((prevState) => !prevState);
-//   }, [open]);
-//   const closeNav = React.useCallback(() => {
-//     setOpen(false);
-//   }, [setOpen]);
-
-//   const navOpen = open ? "nav-open" : "";
-
-// };

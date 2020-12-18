@@ -4,18 +4,16 @@ import * as React from "react";
 import { HeaderMenus } from "src/components/HeaderMenus";
 import { images } from "src/static/links";
 
-const items = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-];
-
 type HeaderProps = {
   open: boolean;
+  isDialogOpen: boolean;
   toggleNav(): void;
   closeNav(e?: React.KeyboardEvent<HTMLDivElement>): void;
+  closeDialog(): void;
+  openDialog(e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
 };
 
-export const Header: React.FC<HeaderProps> = (props) => {
+export const Header: React.FC<HeaderProps> = ({ open, isDialogOpen, toggleNav, closeNav, closeDialog, openDialog }) => {
   // const [open, setOpen] = React.useState(false);
   // const classes= {
   //   navOpen:"nav-open"
@@ -27,7 +25,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
   //   setOpen(false);
   // };
 
-  const navOpen = props.open ? "nav-open" : "";
+  const navOpen = open ? "nav-open" : "";
   return (
     <div className={navOpen}>
       <header className={navOpen + " fixed-nav " + "l-header "}>
@@ -55,7 +53,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
             data-about-nav-toggle
             aria-label="ナビゲーション メニューの切り替え"
             id="nav-toggle-button"
-            onClick={() => props.toggleNav()}
+            onClick={() => toggleNav()}
           >
             <img
               alt="ナビゲーション メニューを開く"
@@ -72,7 +70,7 @@ export const Header: React.FC<HeaderProps> = (props) => {
               width="24"
             />
           </button>
-          <HeaderMenus />
+          <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} openDialog={openDialog} />
 
           {/* <nav className="l-header__nav-top">
             <h1 className="l-product-logo">
@@ -116,8 +114,8 @@ export const Header: React.FC<HeaderProps> = (props) => {
             className="black-bg"
             role="button"
             id="js-black-bg"
-            onKeyDown={(e) => props.closeNav(e)}
-            onClick={() => props.closeNav()}
+            onKeyDown={(e) => closeNav(e)}
+            onClick={() => closeNav()}
           ></div>
         </div>
       </header>

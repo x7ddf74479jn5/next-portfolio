@@ -22,4 +22,5 @@ export const images: LinkMapping = {
   chat: "/img/samples/chat-bot-eyecatch.webp",
   portfolio: "/img/samples/portfolio-eyecatch.webp",
   dental: "/img/samples/dental-eyecatch.webp",
+  robot: "/img/icons/robot.png",
 };

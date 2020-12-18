@@ -17,7 +17,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 
 // Initializing the cors middleware
 const cors = Cors({
-  methods: ["GET", "HEAD", "OPTION"],
+  methods: ["GET", "HEAD", "OPTIONS"],
 });
 
 // Helper method to wait for a middleware to execute before continuing

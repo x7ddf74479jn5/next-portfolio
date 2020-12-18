@@ -1,3 +1,4 @@
+import image from "next/image";
 import Image from "next/image";
 import Link from "next/link";
 import { images, links as l } from "src/static/links";
@@ -9,7 +10,14 @@ const links = [
   { label: "Contact", href: "/contact/" },
 ];
 
-export const HeaderMenus = () => {
+type HeaderMenusProps = {
+  closeNav(): void;
+  // isDialogOpen: boolean;
+  closeDialog(): void;
+  openDialog(e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
+};
+
+export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialog, closeNav }) => {
   const content = links.map((link, index) => (
     <li key={index}>
       <Link href={link.href}>
@@ -17,7 +25,29 @@ export const HeaderMenus = () => {
       </Link>
     </li>
   ));
-  const openChatBot = () => {};
+
+  const handleClick = () => {
+    //ボタンが押された時の処理
+    console.log("opne");
+    openDialog();
+    closeNav();
+  };
+
+  const handleKeyUp = (e: any) => {
+    if (e.code === "Enter" || e.code === "Space") {
+      // openChatBot()
+      console.log("open");
+      openDialog();
+      closeNav();
+    }
+  };
+
+  // function handleKeyUp() {
+  //   if (押されたのはENTERキーかSPACEキー?) {
+  //     if (ボタンにフォーカスしている?) {
+  //       //ボタンが押された時の処理
+  //     }
+  // }
 
   return (
     <nav className="l-header__nav-top">
@@ -40,10 +70,16 @@ export const HeaderMenus = () => {
             <span>Twitter</span>
           </a>
         </li>
+        <li>
+          <a className="sns" tabIndex={0} role="button" onClick={() => handleClick()}>
+            <img src={images.robot} alt="chat-bot" />
+            <span>Chat Bot</span>
+          </a>
+        </li>
         {/* <li>
-          <button onClick={() => openChatBot()}>
+          <button onClick={() => handleClick()}>
             <img src="/img/icons/twitter_logo.png" alt="twitter" />
-            <span>Twitter</span>
+            <span>Chat Bot</span>
           </button>
         </li> */}
         {/* <li>

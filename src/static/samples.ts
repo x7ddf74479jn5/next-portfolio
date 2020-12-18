@@ -87,7 +87,7 @@ export const samplesDetail: SampleDetail[] = [
     point: ["SPAらしい画面描画の切り替わり", "問い合わせ結果をSlackへ通知", "チャット風のデザインとアニメーション"],
     lang: "JavaScript(React), JSX",
     tech: "Sass, React, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
-    link: { href: "chatbot-demo-70752.web.app", label: "チャットボット" },
+    link: { href: "https://chatbot-demo-70752.web.app/", label: "チャットボット" },
     title: "Chat App",
     caption: "",
   },
