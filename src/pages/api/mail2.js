@@ -22,8 +22,8 @@ function runMiddleware(req, res, fn) {
 export default async function handler(req, res) {
   // Run cors
   await runMiddleware(req, res, cors)
-    .then((result) => console.log("result="+result))
-    .catch((e) => console.log("e="+e));
+    .then((result) => console.log("result=" + result))
+    .catch((e) => console.log("e=" + e));
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Credentials", true);
   res.setHeader("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
