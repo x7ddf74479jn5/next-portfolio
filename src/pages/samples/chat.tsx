@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Image from "next/image";
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
