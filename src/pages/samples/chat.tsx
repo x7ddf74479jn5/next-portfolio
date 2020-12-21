@@ -14,8 +14,7 @@ const Chat = () => {
   const content = (
     <section className="c-section">
       <div className="c-section-wrapin p-grid__works">
-        <Image src={sample.img} alt={sample.alt} layout="fill" />
-        {/* <img src={sample.img} alt={sample.alt} /> */}
+        <img src={sample.img} alt={sample.alt} />
         <div className="p-grid__works__row">
           <h3>概要</h3>
           <p>{sample.abstract}</p>
