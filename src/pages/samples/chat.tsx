@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Image from "next/image";
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
@@ -13,7 +14,8 @@ const Chat = () => {
   const content = (
     <section className="c-section">
       <div className="c-section-wrapin p-grid__works">
-        <img src={sample.img} alt={sample.alt} />
+        <Image src={sample.img} alt={sample.alt} layout="fill" />
+        {/* <img src={sample.img} alt={sample.alt} /> */}
         <div className="p-grid__works__row">
           <h3>概要</h3>
           <p>{sample.abstract}</p>
