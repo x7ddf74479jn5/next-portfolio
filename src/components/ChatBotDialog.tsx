@@ -1,18 +1,17 @@
 import * as React from "react";
 import ReactModal from "react-modal";
+import styled from "styled-components";
 
 interface Props {
   /** このダイアログを表示するなら true */
   isOpen: boolean;
   /** このダイアログを閉じるときのコールバック */
   onClose?: () => void;
+  display: boolean;
+  className: string;
 }
 
-interface State {
-  username: string;
-}
-
-export const ChatBotDialog: React.FC<Props> = (props) => {
+export const ChatBotDialog: React.FC<Props> = React.memo(({ isOpen, onClose, display, className }) => {
   // 具体的に #root 要素などを指定した方がよい？
   ReactModal.setAppElement("body");
 
@@ -24,7 +23,7 @@ export const ChatBotDialog: React.FC<Props> = (props) => {
   // ダイアログ領域外のクリックや、ESCキーを押したときに呼び出される
   const handleClose = () => {
     // 親コンポーネントにダイアログを閉じてもらうためのコールバック通知
-    props.onClose?.();
+    onClose?.();
   };
 
   // スタイルのカスタマイズ
@@ -52,11 +51,14 @@ export const ChatBotDialog: React.FC<Props> = (props) => {
   //     background: "rgba(0, 0, 0, 0.2)",
   //   },
   // };
+  const StyledReactModal = styled(ReactModal)`
+    display: ${display ? "block" : "none"};
+  `;
 
   return (
-    <div>
-      <ReactModal
-        isOpen={props.isOpen}
+    <>
+      <StyledReactModal
+        isOpen={isOpen}
         onAfterOpen={handleOpen}
         onRequestClose={handleClose}
         // style={customStyles}
@@ -65,6 +67,7 @@ export const ChatBotDialog: React.FC<Props> = (props) => {
         overlayClassName="overlay"
       >
         <iframe
+          title="chat-bot"
           src="https://chatbot-demo-70752.web.app/"
           width="100%"
           height="100%"
@@ -73,7 +76,9 @@ export const ChatBotDialog: React.FC<Props> = (props) => {
         <button className="chat-close-button" onClick={() => handleClose()}>
           <img alt="チャットボットを閉じる" className="chat-close" src="/img/icons/close.png" />
         </button>
-      </ReactModal>
-    </div>
+      </StyledReactModal>
+    </>
   );
-};
+});
+
+// export const ChatBotDialog = StyledComponent;

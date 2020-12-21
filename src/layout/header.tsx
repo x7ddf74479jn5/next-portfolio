@@ -29,15 +29,6 @@ export const Header: React.FC<HeaderProps> = ({ open, isDialogOpen, toggleNav, c
   return (
     <div className={navOpen}>
       <header className={navOpen + " fixed-nav " + "l-header "}>
-        {/* <h1>Title</h1>
-    <nav>
-      {items.map((item) => (
-        <Link key={item.href} href={item.href}>
-          <a style={{ display: "inline-block", padding: 12 }}>{item.label}</a>
-        </Link>
-      ))}
-    </nav> */}
-
         <div className="l-header-inner">
           <h1 className="l-product-logo">
             <Link href="/">
@@ -71,43 +62,6 @@ export const Header: React.FC<HeaderProps> = ({ open, isDialogOpen, toggleNav, c
             />
           </button>
           <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} openDialog={openDialog} />
-
-          {/* <nav className="l-header__nav-top">
-            <h1 className="l-product-logo">
-              <a href="/" target="_self">
-                <img alt="パンダシャーク" src="/img/icons/logo.png" />
-              </a>
-            </h1>
-            <ul>
-              <li>
-                <a href="/about/" target="_self">
-                  About
-                </a>
-              </li>
-              <li>
-                <a href="/samples/" target="_self">
-                  Samples
-                </a>
-              </li>
-              <li>
-                <a href="/" target="_blank">
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a href="/contact/" target="_self">
-                  Contact
-                </a>
-              </li>
-              <li>
-                <a className="sns" href="/" target="_self">
-                  <img src="/img/icons/twitter_logo.png" alt="twitter" />
-                  <span>Twitter</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-           */}
         </div>
         <div>
           <div
