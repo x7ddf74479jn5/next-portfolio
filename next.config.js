@@ -5,4 +5,7 @@ module.exports = {
   env: {
     CONTACT_API_URL: process.env.CONTACT_API_URL,
   },
+  experimental: {
+    optimizeFonts: true,
+  },
 };

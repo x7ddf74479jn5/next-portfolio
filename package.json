@@ -8,6 +8,7 @@
     "start": "next start",
     "format": "prettier --write \"**/*.{js,ts,tsx}\"",
     "lint": "eslint . --ext ts --ext tsx --ext js",
+    "lint-fix": "eslint --fix './src/**/*.{ts,tsx}' && prettier --write './src/**/*.{ts,tsx}'",
     "type-check": "tsc --pretty --noEmit",
     "test": "jest",
     "test-all": "yarn lint && yarn type-check && yarn test"

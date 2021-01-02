@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import { AriaTitle } from "src/components/AriaTitle";
+import * as React from "react";
 // import { convertCrlfToBr } from "src/functions/commonFunc";
 import { useForm } from "react-hook-form";
-import * as React from "react";
+import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 
 type FormData = {

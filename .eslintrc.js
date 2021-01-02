@@ -26,6 +26,7 @@ module.exports = {
     "plugin:jsx-a11y/recommended",
     "prettier/@typescript-eslint",
     "plugin:prettier/recommended",
+    "prettier",
   ],
   rules: {
     "no-restricted-syntax": ["error", { selector: "TSEnumDeclaration", message: "Don't declare enums" }],
