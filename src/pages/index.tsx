@@ -42,22 +42,17 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Home</title>
+        <title>Pandashark web | Top</title>
       </Head>
 
       <section>
         <div className="p-grid__view-first" data-label="first-view">
-          <Image src={"/img/view/first-view.webp"} alt="Ocean" layout="fill" />
+          <Image src="/img/view/first-view.webp" alt="Ocean" layout="fill" priority={true} />
           <div className="child">
             <div>
               <h2>Pandashark</h2>
               <p>Web Engineer</p>
               <IconArrowNext label="Contact" href="/contact/" />
-              {/* <Link href="/contact/">
-              <a className="p-btn-round-on-dark p-icon__arrow-next" role="button" href="/contact/">
-                Contact
-              </a>
-              </Link> */}
             </div>
           </div>
           {/* <picture>
@@ -114,25 +109,8 @@ const Home: NextPage = () => {
           <hr className="c-section__line" />
           <div className="module-spacer--small"></div>
           <IconArrowNext label="事業内容" href="/about/#skills" />
-          {/* <Link href="/about/#skills">
-          <a className="p-btn-round p-icon__arrow-next"  role="button">
-            事業内容
-          </a>
-          </Link> */}
           <div className="module-spacer--medium"></div>
-          <div className="p-grid__list">
-            {serviceItems}
-
-            {/* <article className="p-grid__list-item-floated animated slow" data-animate="slideInLeft">
-              <h3>WEBサイト制作</h3>
-              <small>Website Production</small>
-              <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt="Website Production" />
-              <p>
-                企業サイト、個人ポートフォリオ、LPなどWebサイト制作全般を承ります。
-                WordPressのカスタマイズ、お困り事のご相談にも対応いたします。
-              </p>
-            </article> */}
-          </div>
+          <div className="p-grid__list">{serviceItems}</div>
         </div>
       </section>
 
@@ -167,11 +145,6 @@ const Home: NextPage = () => {
           </p>
           <div className="module-spacer--small"></div>
           <IconArrowNext label="お問い合わせ" href="/contact/" />
-          {/* <Link href="/contact/">
-          <a className="p-btn-round p-icon__arrow-next"  role="button">
-            お問い合わせ
-          </a>
-          </Link> */}
           <div className="module-spacer--medium"></div>
         </div>
       </section>

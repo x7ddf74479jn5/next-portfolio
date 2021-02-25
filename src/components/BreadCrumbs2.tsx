@@ -2,13 +2,10 @@ import { WithRouterProps } from "next/dist/client/with-router";
 import Link from "next/link";
 import { withRouter } from "next/router";
 
-// type RouteMapping = [
-//   [s: string]: { title: string }];
-
-type RouteMapping = {
+type RoutingMap = {
   [s: string]: { title: string };
 };
-const routingMapping: RouteMapping = {
+const routingMap: RoutingMap = {
   "/": { title: "HOME" },
   "/about": { title: "ABOUT" },
   "/samples": { title: "SAMPLES" },
@@ -20,20 +17,6 @@ const routingMapping: RouteMapping = {
   "/privacy": { title: "PRIVACY" },
 };
 
-// const routingMapping: RouteMapping = {
-//   "/": { title: "Home" },
-//   "/about": { title: "About" },
-//   "/samples": { title: "Samples" },
-//   "/samples/[sampleId]": { title: ""} ,
-//   "/contact": { title: "Contact" },
-//   "/terms": { title: "Terms" },
-//   "/privacy": { title: "Privacy" },
-// };
-
-// type Props = {
-//   sampleId?: string;
-// } & WithRouterProps;
-
 const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
   const pathname = router.pathname.split("/").filter((element) => element.length > 0);
   const asPath = router.asPath.split("/").filter((element) => element.length > 0);
@@ -43,7 +26,7 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
   let pathnameHierarchy = "/";
   let asPathHierarchy = "/";
   for (let i = 0; i < length; i += 1) {
-    const target = routingMapping[pathnameHierarchy];
+    const target = routingMap[pathnameHierarchy];
     links.push(
       target ? (
         <Link href={asPathHierarchy} key={asPathHierarchy}>
@@ -66,11 +49,10 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
     const sampleTitle = sample.toUpperCase();
     deepest = { title: sampleTitle };
   } else {
-    deepest = routingMapping[pathnameHierarchy]; // 最下層=現在のルーティングはクリックできないように<Typography>でリストを作成
+    deepest = routingMap[pathnameHierarchy]; // 最下層=現在のルーティングはクリックできないように<Typography>でリストを作成
   }
 
   links.push(
-    // deepest ? <Link href={asPathHierarchy} key={asPathHierarchy}>{deepest.title}</Link> : <Link href={asPathHierarchy} key={asPathHierarchy}>{asPathHierarchy}</Link>
     deepest ? <span key={asPathHierarchy}>{deepest.title}</span> : <div key={asPathHierarchy}>{asPathHierarchy}</div>
   );
 

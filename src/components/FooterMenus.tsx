@@ -27,7 +27,7 @@ const accordions = [
   { label: "リンク集", id: "footer-sitemap-links", inputId: "accordion-links", links: links.links },
 ];
 
-export const FooterMenus = () => {
+export const FooterMenus: React.FC = () => {
   const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
     console.log(accordionModule.toggleMenu("accordion-about"));
     console.log(accordionModule.toggleMenu("accordion-works"));

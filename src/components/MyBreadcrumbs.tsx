@@ -20,15 +20,5 @@ export const Breadcrumbs = (props: BreadcrumbsProps) => {
     );
   });
 
-  return (
-    <ul className="u-text__breadcrumbs">{breadcrumbsList}</ul>
-    // <section className="c-section">
-    //   <div className="c-section__area-title animated fadeInLeft">
-    //     <div className="p-headline__sub animated fadeInUp fast delay-1s">
-    //       <h2>About</h2>
-    //       <p>自己紹介</p>
-    //     </div>
-    //   </div>
-    // </section>
-  );
+  return <ul className="u-text__breadcrumbs">{breadcrumbsList}</ul>;
 };
