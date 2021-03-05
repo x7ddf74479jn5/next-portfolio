@@ -63,7 +63,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
       <AriaTitle title="Portfolio" caption="ポートフォリオ" />
 

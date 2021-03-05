@@ -8,7 +8,7 @@ const Terms: NextPage = () => {
   return (
     <Layout>
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
 
       <AriaTitle title="Terms" caption="利用規約" breadcrumbs={termsRoute} />

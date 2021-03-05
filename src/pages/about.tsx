@@ -73,7 +73,7 @@ const About: NextPage = () => {
         <title>About</title>
       </Head>
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
       <AriaTitle title="About" caption="自己紹介" />
 

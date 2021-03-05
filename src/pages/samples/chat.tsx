@@ -64,7 +64,7 @@ const Chat = () => {
   return (
     <Layout>
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
       <AriaTitle title="Chat Bot" caption="チャットボット" />
       {content}

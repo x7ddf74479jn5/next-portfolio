@@ -32,12 +32,12 @@ const Samples: NextPage = () => {
         <title>Samples</title>
       </Head>
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
       <AriaTitle title="Samples" caption="制作事例" />
 
       <section>
-        <Spacer size="medium" />
+        <Spacer size="md" />
       </section>
 
       <section className="c-section">
