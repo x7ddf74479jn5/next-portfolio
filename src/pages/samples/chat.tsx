@@ -3,6 +3,7 @@ import Image from "next/image";
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
+import Spacer from "src/components/common/Spacer";
 
 const Chat = () => {
   const sample = samplesDetail.find((sample) => sample.id === "chat-bot");

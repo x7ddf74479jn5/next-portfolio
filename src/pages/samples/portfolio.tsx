@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
 
+import Spacer from "src/components/common/Spacer";
 import { AriaTitle } from "../../components/AriaTitle";
 
 const Portfolio = () => {

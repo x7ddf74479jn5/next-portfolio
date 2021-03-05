@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Layout } from "src/layout/layout";
 
+import Spacer from "src/components/common/Spacer";
 import { AriaTitle } from "../../components/AriaTitle";
 import { samples } from "../../static/samples";
 

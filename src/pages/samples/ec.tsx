@@ -3,6 +3,7 @@ import { Layout } from "src/layout/layout";
 import { samplesDetail } from "src/static/samples";
 
 import { AriaTitle } from "../../components/AriaTitle";
+import Spacer from "src/components/common/Spacer";
 
 const EC = () => {
   const sample = samplesDetail.find((sample) => sample.id === "EC-app");

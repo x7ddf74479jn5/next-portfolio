@@ -34,9 +34,7 @@ const Contact: NextPage = () => {
 
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <section></section>
 
       <AriaTitle title="Contact" caption="お問い合わせ" />
 
