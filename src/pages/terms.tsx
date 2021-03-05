@@ -2,12 +2,13 @@ import { NextPage } from "next";
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { termsRoute } from "src/static/breadcrumbs";
+import Spacer from "src/components/common/Spacer";
 
 const Terms: NextPage = () => {
   return (
     <Layout>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="medium" />
       </section>
 
       <AriaTitle title="Terms" caption="利用規約" breadcrumbs={termsRoute} />

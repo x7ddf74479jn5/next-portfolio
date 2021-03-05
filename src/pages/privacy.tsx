@@ -1,14 +1,17 @@
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 import { privacyRoute } from "src/static/breadcrumbs";
+import { NextPage } from "next";
+
+import Spacer from "src/components/common/Spacer";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
 
-const Privacy: React.FC = () => {
+const Privacy: NextPage = () => {
   return (
     <Layout>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="md" />
       </section>
 
       <AriaTitle title="Privacy Policy" caption="プライバシーポリシー" breadcrumbs={privacyRoute} />

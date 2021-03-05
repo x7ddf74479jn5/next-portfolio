@@ -1,0 +1,197 @@
+.p-list {
+  &__works {
+    display: flex;
+    display: -ms-flex;
+    list-style: none;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    li {
+      box-sizing: border-box;
+      border: 1px solid rgba(0,0,0,0.2);
+      box-shadow: 4px 6px 6px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+      position: relative;
+      height: fit-content;
+      width: 100%;
+      @include mq() {
+        margin-bottom: 5rem;
+        width: calc(50% - 2rem);
+        &:nth-child(even) {
+          margin-top: 5rem;
+          margin-left: 4rem;
+        }
+      }
+
+      // Fade in left
+      &::before {
+        background: $secondary;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transform-origin: right top;
+        transform: scale(0, 1);
+        transition: transform .35s;
+      }
+      img {
+        transition: transform .35s;
+      }
+      &:hover {
+        .p-list__works-detail {
+          color: #fff;
+        }
+        &::before {
+          transform-origin: left top;
+          transform: scale(1, 1);
+        }
+        img {
+          transform: scale(1.1);
+        }
+        .icon::before {
+          color: #fff;
+          right: 1rem;
+        }
+      }
+    }
+
+    &-detail {
+      color: $main-dark;
+      padding: .5rem 1rem;
+      text-align: left;
+      transition: all .35s;
+      .title {
+        font-size: $font-larger;
+        font-weight: 600;
+        margin-bottom: .5rem;
+      }
+      .category {
+        font-size: $font-small;
+      }
+      @include mq() {
+        padding: 1rem 2rem;
+        .icon::before {
+          color: $main-dark;
+          content: "\f101";
+          font-family: "Font Awesome 5 Free";
+          font-weight: 700;
+          position: absolute;
+          right: 2rem;
+          bottom: 1rem;
+          transition: all .35s;
+        }
+      }
+    }
+  }
+
+  &__timeline {
+    position: relative;
+    list-style: none;
+
+    @include mq() {
+      // Vertical Line
+      &::before {
+        content: "";
+        background: $secondary-light;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 20%;
+        width: 10px;
+      }
+    }
+
+    // Boxes for describing the career
+    li {
+      time {
+        color: $main-light;
+        display: block;
+        font-size: $font-medium;
+        font-weight: 600;
+        padding: 1rem;
+        text-align: left;
+        @include mq() {
+          padding: .5rem 100px 0 0;
+          position: absolute;
+          width: 25%;
+        }
+      }
+
+      .timeline__icon {
+        background: $secondary-light;
+        border-radius: 50%;
+        float: right;
+        margin: -3.5rem 1rem 0 0;
+        position: relative;
+        height: 48px;
+        width: 48px;
+        @include mq() {
+          left: calc(20% - 19px);
+          margin: 0;
+          position: absolute;
+        }
+
+        &::before {
+          background: $secondary;
+          border-radius: 50%;
+          content: "";
+          top: 8px;
+          left: calc(20% - 2px);
+          position: absolute;
+          height: 32px;
+          width: 32px;
+        }
+      }
+
+      .timeline__box {
+        background: $secondary;
+        border-radius: 4px;
+        color: $main;
+        margin: 0 1rem 2rem 1rem;
+        padding: 1rem 2rem;
+        position: relative;
+        text-align: left;
+        @include mq() {
+          margin: 0 1rem 1rem 25%;
+          padding: 1rem 2rem;
+        }
+
+        h3 {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          font-size: $font-larger;
+          font-weight: 600;
+          padding: .5rem 0;
+          margin-bottom: 1rem;
+        }
+
+        &::after {
+          content: " ";
+          border: solid transparent;
+          border-bottom-color: $secondary;
+          border-width: 10px;
+          position: absolute;
+          pointer-events: none;
+          top: -20px;
+          right: auto;
+          left: 20px;
+          height: 0;
+          width: 0;
+          @include mq() {
+            border-bottom-color: transparent;
+            border-right-color: $secondary;
+            top: 10px;
+            right: 100%;
+            left: auto;
+          }
+        }
+      }
+    }
+  }
+
+}

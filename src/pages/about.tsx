@@ -5,6 +5,7 @@ import { Layout } from "src/layout/layout";
 import { services } from "src/static/services";
 
 import { AriaTitle } from "../components/AriaTitle";
+import Spacer from "src/components/common/Spacer";
 
 type Timeline = {
   datetime: string;
@@ -72,7 +73,7 @@ const About: NextPage = () => {
         <title>About</title>
       </Head>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="medium" />
       </section>
       <AriaTitle title="About" caption="自己紹介" />
 

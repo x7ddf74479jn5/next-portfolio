@@ -9,6 +9,7 @@ import { SapmleSwiper } from "src/components/SapmleSwiper";
 import { Layout } from "src/layout/layout";
 import { samples } from "src/static/samples";
 import { Service, services } from "src/static/services";
+import Spacer from "src/components/common/Spacer";
 
 type SlideAnimate = {
   class: string;
@@ -67,7 +68,7 @@ const Home: NextPage = () => {
       </section>
 
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="md" />
       </section>
 
       <section className="c-section">
@@ -107,29 +108,29 @@ const Home: NextPage = () => {
         <div className="c-section-wrapin">
           <h2 className="p-headline__top">Services</h2>
           <hr className="c-section__line" />
-          <div className="module-spacer--small"></div>
+          <Spacer size="sm" />
           <IconArrowNext label="事業内容" href="/about/#skills" />
-          <div className="module-spacer--medium"></div>
+          <Spacer size="md" />
           <div className="p-grid__list">{serviceItems}</div>
         </div>
       </section>
 
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="md" />
       </section>
 
       <section className="c-section">
         <div className="c-section-wrapin">
           <h2 className="p-headline__top">Samples</h2>
           <hr className="c-section__line" />
-          <div className="module-spacer--small"></div>
-          <div className="module-spacer--medium"></div>
+          <Spacer size="sm" />
+          <Spacer size="md" />
 
           {/* <SapmleSwiper samples={samples} /> */}
           <SampleSwiper samples={samples} />
           {/* <ImageSwiper samples={samples} /> */}
 
-          <div className="module-spacer--medium"></div>
+          <Spacer size="md" />
           <IconArrowNext label="全ての事例を見る" href="/samples/" />
         </div>
       </section>
@@ -138,14 +139,14 @@ const Home: NextPage = () => {
         <div className="c-section-wrapin p-grid__contact">
           <h2>お仕事のご依頼・ご相談</h2>
           <hr className="c-section__line" />
-          <div className="module-spacer--medium"></div>
+          <Spacer size="md" />
           <p>
             企業HPなどのWebサイト制作、チャットボット開発、WordPress導入・カスタマイズなどのお見積もり、ご相談はお気軽にご連絡ください。
             お客様だけでなく、エンドユーザーにも喜んでいただけるよう技術を提供します。
           </p>
-          <div className="module-spacer--small"></div>
+          <Spacer size="sm" />
           <IconArrowNext label="お問い合わせ" href="/contact/" />
-          <div className="module-spacer--medium"></div>
+          <Spacer size="md" />
         </div>
       </section>
     </Layout>

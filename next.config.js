@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   reactStrictMode: true,
   typescript: { ignoreDevErrors: true },
@@ -7,5 +9,8 @@ module.exports = {
   },
   experimental: {
     optimizeFonts: true,
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, "src/styles")],
   },
 };

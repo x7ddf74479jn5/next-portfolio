@@ -63,7 +63,7 @@ const EC = () => {
   return (
     <Layout>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="medium" />
       </section>
 
       <AriaTitle title="EC App" caption="ECアプリ" />

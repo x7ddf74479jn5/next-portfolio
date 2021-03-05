@@ -63,7 +63,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="medium" />
       </section>
       <AriaTitle title="Portfolio" caption="ポートフォリオ" />
 

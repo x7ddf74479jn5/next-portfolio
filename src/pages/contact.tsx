@@ -5,6 +5,8 @@ import { useForm } from "react-hook-form";
 import { AriaTitle } from "src/components/AriaTitle";
 import { Layout } from "src/layout/layout";
 
+import Spacer from "src/components/common/Spacer";
+
 type FormData = {
   name: string;
   email: string;
@@ -122,7 +124,7 @@ const Contact: NextPage = () => {
   return (
     <Layout>
       <section>
-        <div className="module-spacer--medium"></div>
+        <Spacer size="medium" />
       </section>
 
       <AriaTitle title="Contact" caption="お問い合わせ" />
