@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
-import { termsRoute } from "src/contents/breadcrumbs";
 import { Layout } from "src/layout/layout";
 
 const Terms: NextPage = () => {
@@ -11,7 +10,7 @@ const Terms: NextPage = () => {
         <Spacer size="md" />
       </section>
 
-      <AriaTitle title="Terms" caption="利用規約" breadcrumbs={termsRoute} />
+      <AriaTitle title="Terms" caption="利用規約" />
 
       {/* <section className="c-section">
     <div className="c-section__area-title animated fadeInLeft">

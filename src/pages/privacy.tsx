@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
-import { privacyRoute } from "src/contents/breadcrumbs";
 import { Layout } from "src/layout/layout";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
@@ -13,7 +12,7 @@ const Privacy: NextPage = () => {
         <Spacer size="md" />
       </section>
 
-      <AriaTitle title="Privacy Policy" caption="プライバシーポリシー" breadcrumbs={privacyRoute} />
+      <AriaTitle title="Privacy Policy" caption="プライバシーポリシー" />
       <section className="c-section">
         <div className="c-section-wrapin p-grid__privacy">
           <div>

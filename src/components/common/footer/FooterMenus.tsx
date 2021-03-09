@@ -27,10 +27,7 @@ const accordions = [
 ];
 
 export const FooterMenus: React.FC = () => {
-  const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    console.log(accordionModule.toggleMenu("accordion-about"));
-    console.log(accordionModule.toggleMenu("accordion-works"));
-  };
+  const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {};
 
   const accordionItems = accordions.map((accordion) => (
     <li className="p-accordion" id={accordion.id} key={accordion.id}>
