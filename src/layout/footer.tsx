@@ -1,12 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FooterMenus } from "src/components/FooterMenus";
+import { FooterMenus } from "src/components/common/footer/FooterMenus";
 
 export const Footer: React.FC = () => {
-  const handle = (event: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {
-    console.log(accordionModule.toggleMenu("accordion-about"));
-    console.log(accordionModule.toggleMenu("accordion-works"));
-  };
+  const handle = (event: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {};
 
   return (
     <footer className="footer">

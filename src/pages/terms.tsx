@@ -1,8 +1,8 @@
 import { NextPage } from "next";
-import { AriaTitle } from "src/components/AriaTitle";
-import { Layout } from "src/layout/layout";
-import { termsRoute } from "src/static/breadcrumbs";
+import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { termsRoute } from "src/contents/breadcrumbs";
+import { Layout } from "src/layout/layout";
 
 const Terms: NextPage = () => {
   return (

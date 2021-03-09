@@ -1,9 +1,7 @@
-import Image from "next/image";
-import { Layout } from "src/layout/layout";
-import { samplesDetail } from "src/static/samples";
-
 import Spacer from "src/components/common/Spacer";
-import { AriaTitle } from "../../components/AriaTitle";
+import { samplesDetail } from "src/contents/samples";
+import { Layout } from "src/layout/layout";
+import { AriaTitle } from "../../components/common/AriaTitle";
 
 const Portfolio = () => {
   const sample = samplesDetail.find((sample) => sample.id === "portfolio");

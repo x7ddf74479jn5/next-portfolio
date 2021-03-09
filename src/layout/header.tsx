@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import { HeaderMenus } from "src/components/HeaderMenus";
-import { images } from "src/static/links";
+import { HeaderMenus } from "src/components/common/header/HeaderMenus";
+import { images } from "src/paths/links";
 
 type HeaderProps = {
   open: boolean;
@@ -13,7 +13,14 @@ type HeaderProps = {
   openDialog(e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
 };
 
-export const Header: React.FC<HeaderProps> = ({ open, isDialogOpen, toggleNav, closeNav, closeDialog, openDialog }) => {
+export const Header: React.VFC<HeaderProps> = ({
+  open,
+  isDialogOpen,
+  toggleNav,
+  closeNav,
+  closeDialog,
+  openDialog,
+}) => {
   // const [open, setOpen] = React.useState(false);
   // const classes= {
   //   navOpen:"nav-open"

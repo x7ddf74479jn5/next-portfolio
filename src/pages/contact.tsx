@@ -2,10 +2,9 @@ import { NextPage } from "next";
 import * as React from "react";
 // import { convertCrlfToBr } from "src/functions/commonFunc";
 import { useForm } from "react-hook-form";
-import { AriaTitle } from "src/components/AriaTitle";
-import { Layout } from "src/layout/layout";
-
+import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { Layout } from "src/layout/layout";
 
 type FormData = {
   name: string;

@@ -1,15 +1,12 @@
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
-import { IconArrowNext } from "src/components/IconArrowNext";
-import { ImageSwiper } from "src/components/ImageSwiper";
-import { SampleSwiper } from "src/components/SampleSwiper";
-import { SapmleSwiper } from "src/components/SapmleSwiper";
-import { Layout } from "src/layout/layout";
-import { samples } from "src/static/samples";
-import { Service, services } from "src/static/services";
+import { IconArrowNext } from "src/components/common/IconArrowNext";
 import Spacer from "src/components/common/Spacer";
+import { SampleSwiper } from "src/components/SampleSwiper";
+import { samples } from "src/contents/samples";
+import { Service, services } from "src/contents/services";
+import { Layout } from "src/layout/layout";
 
 type SlideAnimate = {
   class: string;

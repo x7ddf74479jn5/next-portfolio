@@ -1,11 +1,9 @@
 import { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import { Layout } from "src/layout/layout";
-import { services } from "src/static/services";
-
-import { AriaTitle } from "../components/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { services } from "src/contents/services";
+import { Layout } from "src/layout/layout";
+import { AriaTitle } from "../components/common/AriaTitle";
 
 type Timeline = {
   datetime: string;

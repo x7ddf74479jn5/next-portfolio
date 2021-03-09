@@ -1,9 +1,8 @@
-import { AriaTitle } from "src/components/AriaTitle";
-import { Layout } from "src/layout/layout";
-import { privacyRoute } from "src/static/breadcrumbs";
 import { NextPage } from "next";
-
+import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { privacyRoute } from "src/contents/breadcrumbs";
+import { Layout } from "src/layout/layout";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
 

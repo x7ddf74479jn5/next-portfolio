@@ -1,9 +1,7 @@
-import { NextPage } from "next";
-import Image from "next/image";
-import { AriaTitle } from "src/components/AriaTitle";
-import { Layout } from "src/layout/layout";
-import { samplesDetail } from "src/static/samples";
+import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { samplesDetail } from "src/contents/samples";
+import { Layout } from "src/layout/layout";
 
 const Chat = () => {
   const sample = samplesDetail.find((sample) => sample.id === "chat-bot");

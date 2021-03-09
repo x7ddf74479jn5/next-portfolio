@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
-import { samplesDetail } from "src/static/samples";
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, Swiper } from "swiper";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);

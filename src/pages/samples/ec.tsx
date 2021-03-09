@@ -1,9 +1,7 @@
-import Image from "next/image";
-import { Layout } from "src/layout/layout";
-import { samplesDetail } from "src/static/samples";
-
-import { AriaTitle } from "../../components/AriaTitle";
 import Spacer from "src/components/common/Spacer";
+import { samplesDetail } from "src/contents/samples";
+import { Layout } from "src/layout/layout";
+import { AriaTitle } from "../../components/common/AriaTitle";
 
 const EC = () => {
   const sample = samplesDetail.find((sample) => sample.id === "EC-app");
