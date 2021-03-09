@@ -1,20 +1,19 @@
-import clsx from "clsx";
 import styles from "src/styles/object/component/Spacer.module.scss";
 
 const Spacer: React.VFC<Props> = ({ size }) => {
-  return (
-    <div
-      className={clsx({
-        [styles.xxxs]: size === "xxxs",
-        [styles.xxs]: size === "xxs",
-        [styles.xs]: size === "xs",
-        [styles.sm]: size === "sm",
-        [styles.md]: size === "md",
-        [styles.lg]: size === "lg",
-        [styles.xl]: size === "xl",
-      })}
-    ></div>
-  );
+  let style: string | undefined;
+  switch (size) {
+    case "sm":
+      style = styles.sm;
+      break;
+    case "md":
+      style = styles.md;
+      break;
+    case "lg":
+      style = styles.lg;
+      break;
+  }
+  return <div className={style}></div>;
 };
 
 export default Spacer;

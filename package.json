@@ -44,7 +44,6 @@
   },
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
-    "clsx": "^1.1.1",
     "cors": "^2.8.5",
     "install": "^0.13.0",
     "next": "^10.0.7",
