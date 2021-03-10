@@ -57,7 +57,6 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#181a1b" />
           <link rel="canonical" href={headProps.url} />
           <link rel="stylesheet" href={"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"} />
-          <link rel="stylesheet" href={"https://use.fontawesome.com/releases/v5.6.1/css/all.css"} />
           <link
             rel="stylesheet"
             href={"https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext"}

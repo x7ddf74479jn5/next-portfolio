@@ -1,4 +1,5 @@
 import { AriaTitle } from "src/components/common/AriaTitle";
+import ExternalLink from "src/components/common/samples/ExternalLink";
 import Spacer from "src/components/common/Spacer";
 import { samplesDetail } from "src/contents/samples";
 import { Layout } from "src/layout/layout";
@@ -51,10 +52,7 @@ const Chat = () => {
             <p>{sample.link}</p>
           ) : (
             <p>
-              <a href={sample.link.href} target="_blank" rel="noreferrer">
-                {sample.link.label}
-                <i className="fas fa-external-link-alt"></i>
-              </a>
+              <ExternalLink label={sample.link.label} url={sample.link.href} />
             </p>
           )}
         </div>
