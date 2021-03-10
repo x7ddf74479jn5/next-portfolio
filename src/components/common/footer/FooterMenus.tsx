@@ -29,33 +29,43 @@ const accordions = [
 export const FooterMenus: React.FC = () => {
   const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {};
 
-  const accordionItems = accordions.map((accordion) => (
-    <li className="p-accordion" id={accordion.id} key={accordion.id}>
-      {/* <button onClick={handle} onKeyDown={(e) => handle}> */}
-      <h4 role="button" onClick={handle} onKeyDown={(e) => handle}>
-        {accordion.label}
-      </h4>
-      {/* </button> */}
-      <input type="checkbox" id={accordion.inputId} />
-      <label htmlFor={accordion.inputId}></label>
-      <ul className="p-accordion__items">
-        {accordion.links.map((link, index) => (
-          <Link href={link.href} key={index}>
-            <a target="_self">
-              <li>{link.label}</li>
-            </a>
-          </Link>
-        ))}
-        {/* {accordion.links.map((link, index) => {
+  const accordionItems = accordions.map((accordion) => {
+    return (
+      <li className="p-accordion" id={accordion.id} key={accordion.id}>
+        {/* <button onClick={handle} onKeyDown={(e) => handle}> */}
+        <h4
+          role="button"
+          onClick={handle}
+          onKeyDown={(e) => {
+            return handle;
+          }}
+        >
+          {accordion.label}
+        </h4>
+        {/* </button> */}
+        <input type="checkbox" id={accordion.inputId} />
+        <label htmlFor={accordion.inputId}></label>
+        <ul className="p-accordion__items">
+          {accordion.links.map((link, index) => {
+            return (
+              <Link href={link.href} key={index}>
+                <a target="_self">
+                  <li>{link.label}</li>
+                </a>
+              </Link>
+            );
+          })}
+          {/* {accordion.links.map((link, index) => {
           <li key={index}>
             <Link href={link.href}>
               <a target="_self">{link.label}</a>
             </Link>
           </li>
         })} */}
-      </ul>
-    </li>
-  ));
+        </ul>
+      </li>
+    );
+  });
 
   return (
     <section className="sitemap">

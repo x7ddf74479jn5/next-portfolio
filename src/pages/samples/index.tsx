@@ -1,30 +1,33 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layout/layout";
+
 import { AriaTitle } from "../../components/common/AriaTitle";
 import { samples } from "../../contents/samples";
 
 const Samples: NextPage = () => {
-  const sampleItems = samples.map((sample, index) => (
-    <li key={index}>
-      <Link href={sample.href}>
-        <a className="u-text__line-none">
-          <div className="p-media__thumb">
-            {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
-            <Image src={sample.img.src} alt={sample.img.alt} layout="fill" />
-          </div>
-          <div className="p-list__works-detail">
-            <h3 className="title">{sample.title}</h3>
-            <p className="category">{sample.category}</p>
-            <span className="icon"></span>
-          </div>
-        </a>
-      </Link>
-    </li>
-  ));
+  const sampleItems = samples.map((sample, index) => {
+    return (
+      <li key={index}>
+        <Link href={sample.href}>
+          <a className="u-text__line-none">
+            <div className="p-media__thumb">
+              {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
+              <Image src={sample.img.src} alt={sample.img.alt} layout="fill" />
+            </div>
+            <div className="p-list__works-detail">
+              <h3 className="title">{sample.title}</h3>
+              <p className="category">{sample.category}</p>
+              <span className="icon"></span>
+            </div>
+          </a>
+        </Link>
+      </li>
+    );
+  });
 
   return (
     <Layout>

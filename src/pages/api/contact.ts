@@ -1,5 +1,6 @@
 const sendgrid = require("@sendgrid/mail");
-import { NowRequest, NowResponse } from "@vercel/node";
+
+import type { NowRequest, NowResponse } from "@vercel/node";
 
 const SENDGRID_API_KEY = process.env.SENDGRID_API_KEY;
 

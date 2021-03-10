@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layout/layout";

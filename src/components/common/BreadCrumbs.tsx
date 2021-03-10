@@ -1,4 +1,4 @@
-import { WithRouterProps } from "next/dist/client/with-router";
+import type { WithRouterProps } from "next/dist/client/with-router";
 import Link from "next/link";
 import { withRouter } from "next/router";
 
@@ -18,8 +18,12 @@ const routingMap: RoutingMap = {
 };
 
 const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
-  const pathname = router.pathname.split("/").filter((element) => element.length > 0);
-  const asPath = router.asPath.split("/").filter((element) => element.length > 0);
+  const pathname = router.pathname.split("/").filter((element) => {
+    return element.length > 0;
+  });
+  const asPath = router.asPath.split("/").filter((element) => {
+    return element.length > 0;
+  });
   const length = pathname.length;
 
   const links = [];
@@ -58,11 +62,13 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
 
   return (
     <ul className="u-text__breadcrumbs">
-      {links.map((link, index) => (
-        <li key={index}>
-          {link} {index !== links.length - 1 && <span>＞</span>}
-        </li>
-      ))}
+      {links.map((link, index) => {
+        return (
+          <li key={index}>
+            {link} {index !== links.length - 1 && <span>＞</span>}
+          </li>
+        );
+      })}
     </ul>
   );
 };

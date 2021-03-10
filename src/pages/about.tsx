@@ -1,8 +1,9 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import Spacer from "src/components/common/Spacer";
 import { services } from "src/contents/services";
 import { Layout } from "src/layout/layout";
+
 import { AriaTitle } from "../components/common/AriaTitle";
 
 type Timeline = {
@@ -44,26 +45,30 @@ const timelines: Timeline[] = [
 ];
 
 const About: NextPage = () => {
-  const timelineItems: JSX.Element[] = timelines.map((timeline: Timeline, index: number) => (
-    <li key={index}>
-      <time dateTime="timeline.datetime">{timeline.datetime}</time>
-      <div className="timeline__icon"></div>
-      <div className="timeline__box">
-        <h3> {timeline.title} </h3>
-        <p> {timeline.description} </p>
-      </div>
-    </li>
-  ));
+  const timelineItems: JSX.Element[] = timelines.map((timeline: Timeline, index: number) => {
+    return (
+      <li key={index}>
+        <time dateTime="timeline.datetime">{timeline.datetime}</time>
+        <div className="timeline__icon"></div>
+        <div className="timeline__box">
+          <h3> {timeline.title} </h3>
+          <p> {timeline.description} </p>
+        </div>
+      </li>
+    );
+  });
 
-  const serviceItems = services.map((service, index) => (
-    <article className="p-grid__list-item-floated" key={index}>
-      <h3>{service.title}</h3>
-      <small>{service.caption}</small>
-      {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
-      <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
-      <p>{service.description}</p>
-    </article>
-  ));
+  const serviceItems = services.map((service, index) => {
+    return (
+      <article className="p-grid__list-item-floated" key={index}>
+        <h3>{service.title}</h3>
+        <small>{service.caption}</small>
+        {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
+        <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
+        <p>{service.description}</p>
+      </article>
+    );
+  });
 
   return (
     <Layout>

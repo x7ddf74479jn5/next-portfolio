@@ -108,22 +108,24 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //   </article>
   // ));
 
-  const contents = samples.map((sample, index) => (
-    <article className="p-grid__list-item swiper-slide" key={index}>
-      <Link href={sample.href}>
-        <a className="u-text__line-none" target="_self">
-          <h3>{sample.title}</h3>
-          <div className="p-media__thumb">
-            {/* <Image width={960} height={540} src={sample.img.src} alt={sample.img.alt} /> */}
-            <Image loading="eager" layout="fill" src={sample.img.src} alt={sample.img.alt} />
-            {/* <Image loading={"eager"} unsized={true} src={sample.img.src} alt={sample.img.alt} /> */}
-            {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
-          </div>
-          <p>{sample.description}</p>
-        </a>
-      </Link>
-    </article>
-  ));
+  const contents = samples.map((sample, index) => {
+    return (
+      <article className="p-grid__list-item swiper-slide" key={index}>
+        <Link href={sample.href}>
+          <a className="u-text__line-none" target="_self">
+            <h3>{sample.title}</h3>
+            <div className="p-media__thumb">
+              {/* <Image width={960} height={540} src={sample.img.src} alt={sample.img.alt} /> */}
+              <Image loading="eager" layout="fill" src={sample.img.src} alt={sample.img.alt} />
+              {/* <Image loading={"eager"} unsized={true} src={sample.img.src} alt={sample.img.alt} /> */}
+              {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
+            </div>
+            <p>{sample.description}</p>
+          </a>
+        </Link>
+      </article>
+    );
+  });
 
   return (
     <div className="swiper-container">

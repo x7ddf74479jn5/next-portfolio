@@ -15,8 +15,9 @@ const Providers: React.ComponentType<{ children?: any }> = ({ children }) => {
   // )
 };
 
-const customRender = (ui: React.ReactElement, options = {}): RenderResult =>
-  render(ui, { wrapper: Providers, ...options });
+const customRender = (ui: React.ReactElement, options = {}): RenderResult => {
+  return render(ui, { wrapper: Providers, ...options });
+};
 
 // re-export everything
 export * from "@testing-library/react";

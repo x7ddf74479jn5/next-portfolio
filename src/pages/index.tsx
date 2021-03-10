@@ -1,11 +1,12 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { IconArrowNext } from "src/components/common/IconArrowNext";
 import Spacer from "src/components/common/Spacer";
 import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
-import { Service, services } from "src/contents/services";
+import type { Service } from "src/contents/services";
+import { services } from "src/contents/services";
 import { Layout } from "src/layout/layout";
 
 type SlideAnimate = {
@@ -23,19 +24,21 @@ const Home: NextPage = () => {
     dataAnimate: "slideInRight",
   };
 
-  const serviceItems: JSX.Element[] = services.map((service: Service, index: number) => (
-    <article
-      key={index}
-      className={index % 2 === 0 ? slideInLeft.class : slideInRight.class}
-      data-animate={index % 2 === 0 ? slideInLeft.dataAnimate : slideInRight.dataAnimate}
-    >
-      <h3>{service.title}</h3>
-      <small>{service.caption}</small>
-      {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
-      <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
-      <p>{service.description}</p>
-    </article>
-  ));
+  const serviceItems: JSX.Element[] = services.map((service: Service, index: number) => {
+    return (
+      <article
+        key={index}
+        className={index % 2 === 0 ? slideInLeft.class : slideInRight.class}
+        data-animate={index % 2 === 0 ? slideInLeft.dataAnimate : slideInRight.dataAnimate}
+      >
+        <h3>{service.title}</h3>
+        <small>{service.caption}</small>
+        {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
+        <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
+        <p>{service.description}</p>
+      </article>
+    );
+  });
 
   return (
     <Layout>

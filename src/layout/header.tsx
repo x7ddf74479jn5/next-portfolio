@@ -51,7 +51,9 @@ export const Header: React.VFC<HeaderProps> = ({
             data-about-nav-toggle
             aria-label="ナビゲーション メニューの切り替え"
             id="nav-toggle-button"
-            onClick={() => toggleNav()}
+            onClick={() => {
+              return toggleNav();
+            }}
           >
             <img
               alt="ナビゲーション メニューを開く"
@@ -75,8 +77,12 @@ export const Header: React.VFC<HeaderProps> = ({
             className="black-bg"
             role="button"
             id="js-black-bg"
-            onKeyDown={(e) => closeNav(e)}
-            onClick={() => closeNav()}
+            onKeyDown={(e) => {
+              return closeNav(e);
+            }}
+            onClick={() => {
+              return closeNav();
+            }}
           ></div>
         </div>
       </header>

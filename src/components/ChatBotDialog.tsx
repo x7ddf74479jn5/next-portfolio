@@ -73,7 +73,12 @@ export const ChatBotDialog: React.FC<Props> = React.memo(({ isOpen, onClose, dis
           height="100%"
           style={{ borderStyle: "solid", borderColor: "#ffb549" }}
         />
-        <button className="chat-close-button" onClick={() => handleClose()}>
+        <button
+          className="chat-close-button"
+          onClick={() => {
+            return handleClose();
+          }}
+        >
           <img alt="チャットボットを閉じる" className="chat-close" src="/img/icons/close.png" />
         </button>
       </StyledReactModal>

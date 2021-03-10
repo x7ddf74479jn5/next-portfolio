@@ -7,7 +7,9 @@ export const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = React.useState<boolean>(false);
 
   const toggleNav: () => void = React.useCallback(() => {
-    setOpen((prevState) => !prevState);
+    setOpen((prevState) => {
+      return !prevState;
+    });
   }, [open]);
   const closeNav: (
     e: React.MouseEvent<HTMLElement> | React.KeyboardEvent<HTMLElement> | any

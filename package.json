@@ -6,23 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write \"**/*.{js,ts,tsx}\"",
-    "lint": "eslint . --ext ts --ext tsx --ext js",
-    "lint-fix": "eslint --fix './src/**/*.{ts,tsx}' && prettier --write './src/**/*.{ts,tsx}'",
-    "type-check": "tsc --pretty --noEmit",
-    "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test"
+    "lint": "run-p -l -c --aggregate-output lint:*",
+    "lint:eslint": "eslint .",
+    "lint:prettier": "prettier --check .",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "npm run lint:eslint -- --fix",
+    "fix:prettier": "npm run lint:prettier -- --write",
+    "test": "run-p -l -c --aggregate-output lint:* unit",
+    "unit": "jest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": "yarn run type-check"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.@(ts|tsx)": [
-      "yarn format"
-    ]
+    "*.@(ts|tsx)": []
   },
   "babel": {
     "presets": [
@@ -45,7 +44,6 @@
   "dependencies": {
     "@sendgrid/mail": "^7.4.0",
     "cors": "^2.8.5",
-    "install": "^0.13.0",
     "next": "^10.0.7",
     "npm": "^7.5.6",
     "react": "^17.0.1",
@@ -63,7 +61,7 @@
     "@types/cors": "^2.8.8",
     "@types/jest": "^26.0.17",
     "@types/node": "^14.14.10",
-    "@types/react": "^16.14.2",
+    "@types/react": "^17.0.3",
     "@types/react-modal": "^3.10.6",
     "@types/styled-components": "^5.1.6",
     "@types/swiper": "^5.4.1",
@@ -74,17 +72,18 @@
     "babel-jest": "^26.6.1",
     "babel-plugin-styled-components": "^1.12.0",
     "eslint": "^7.15.0",
-    "eslint-config-prettier": "^6.15.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.2.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-simple-import-sort": "^5.0.3",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
     "husky": "^4.3.5",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.1",
     "jest-watch-typeahead": "^0.6.1",
     "lint-staged": "^10.5.3",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "typescript": "^4.1.2"
   }

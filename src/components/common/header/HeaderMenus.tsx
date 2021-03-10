@@ -17,13 +17,15 @@ type HeaderMenusProps = {
 };
 
 export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialog, closeNav }) => {
-  const content = links.map((link, index) => (
-    <li key={index}>
-      <Link href={link.href}>
-        <a target="_self">{link.label}</a>
-      </Link>
-    </li>
-  ));
+  const content = links.map((link, index) => {
+    return (
+      <li key={index}>
+        <Link href={link.href}>
+          <a target="_self">{link.label}</a>
+        </Link>
+      </li>
+    );
+  });
 
   const handleClick = () => {
     //ボタンが押された時の処理
@@ -70,7 +72,14 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
           </a>
         </li>
         <li>
-          <a className="sns" tabIndex={0} role="button" onClick={() => handleClick()}>
+          <a
+            className="sns"
+            tabIndex={0}
+            role="button"
+            onClick={() => {
+              return handleClick();
+            }}
+          >
             <img src={images.robot} alt="chat-bot" />
             <span>Chat Bot</span>
           </a>

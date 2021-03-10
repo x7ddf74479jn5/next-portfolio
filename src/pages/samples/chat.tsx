@@ -4,7 +4,9 @@ import { samplesDetail } from "src/contents/samples";
 import { Layout } from "src/layout/layout";
 
 const Chat = () => {
-  const sample = samplesDetail.find((sample) => sample.id === "chat-bot");
+  const sample = samplesDetail.find((sample) => {
+    return sample.id === "chat-bot";
+  });
 
   if (!sample) {
     return;
@@ -21,17 +23,17 @@ const Chat = () => {
         <div className="p-grid__works__row">
           <h3>用途・目的</h3>
           <ul>
-            {sample.purpose.map((p, index) => (
-              <li key={index}>{p}</li>
-            ))}
+            {sample.purpose.map((p, index) => {
+              return <li key={index}>{p}</li>;
+            })}
           </ul>
         </div>
         <div className="p-grid__works__row">
           <h3>こだわり</h3>
           <ul>
-            {sample.point.map((p, index) => (
-              <li key={index}>{p}</li>
-            ))}
+            {sample.point.map((p, index) => {
+              return <li key={index}>{p}</li>;
+            })}
           </ul>
         </div>
         <div className="p-grid__works__row">

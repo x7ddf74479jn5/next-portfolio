@@ -11,12 +11,12 @@
     padding: 0 2rem;
     text-align: center;
     width: auto;
-    @include mq('sm') {
+    @include mq("sm") {
       max-width: 1024px;
     }
     &-wide {
       @extend .c-section-wrapin;
-      @include mq('sm') {
+      @include mq("sm") {
         max-width: 1440px;
       }
     }
@@ -67,5 +67,5 @@
 .center {
   margin-left: auto;
   margin-right: auto;
-  text-align: center
+  text-align: center;
 }

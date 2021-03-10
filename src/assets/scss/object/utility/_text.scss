@@ -4,7 +4,7 @@
     text-decoration: none;
     filter: alpha(opacity=100);
     opacity: 1;
-    transition: all .5s;
+    transition: all 0.5s;
     &:hover {
       color: $main;
       text-decoration: none;
@@ -25,12 +25,12 @@
       display: inline;
       font-size: $font-small;
       span {
-        margin-left: .25rem;
-        margin-right: .25rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
       }
       a {
         text-decoration: none;
-        transition: all .5s;
+        transition: all 0.5s;
         &:hover {
           color: $main-dark;
           text-decoration: none;
@@ -47,7 +47,7 @@
   }
 
   &-small {
-    font-size: .9rem;
+    font-size: 0.9rem;
   }
 
   &-medium {
@@ -74,7 +74,7 @@
   &-xlarge {
     font-size: $font-large;
     @include mq() {
-      font-size: $font-xlarge
+      font-size: $font-xlarge;
     }
   }
 
@@ -88,7 +88,7 @@
   }
 
   &-emphasized {
-    font-size: $font-xxlarge
+    font-size: $font-xxlarge;
   }
 
   &__align-left {

@@ -119,22 +119,24 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
       //   },
       // }}
     >
-      {props.samples.map((sample, index) => (
-        <div key={index}>
-          <article key={index} className="p-grid__list-item swiper-slide">
-            <Link href={sample.href}>
-              <a className="u-text__line-none" target="_self">
-                <h3>{sample.title}</h3>
-                <div className="p-media__thumb" key={index}>
-                  {/* <Image layout="fill" src={sample.img.src} alt={sample.img.alt} /> */}
-                  <img src={sample.img.src} alt={sample.img.alt} />
-                </div>
-                <p>{sample.description}</p>
-              </a>
-            </Link>
-          </article>
-        </div>
-      ))}
+      {props.samples.map((sample, index) => {
+        return (
+          <div key={index}>
+            <article key={index} className="p-grid__list-item swiper-slide">
+              <Link href={sample.href}>
+                <a className="u-text__line-none" target="_self">
+                  <h3>{sample.title}</h3>
+                  <div className="p-media__thumb" key={index}>
+                    {/* <Image layout="fill" src={sample.img.src} alt={sample.img.alt} /> */}
+                    <img src={sample.img.src} alt={sample.img.alt} />
+                  </div>
+                  <p>{sample.description}</p>
+                </a>
+              </Link>
+            </article>
+          </div>
+        );
+      })}
     </Swiper>
   );
 };

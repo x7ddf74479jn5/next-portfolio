@@ -1,10 +1,13 @@
 import Spacer from "src/components/common/Spacer";
 import { samplesDetail } from "src/contents/samples";
 import { Layout } from "src/layout/layout";
+
 import { AriaTitle } from "../../components/common/AriaTitle";
 
 const Portfolio = () => {
-  const sample = samplesDetail.find((sample) => sample.id === "portfolio");
+  const sample = samplesDetail.find((sample) => {
+    return sample.id === "portfolio";
+  });
 
   if (!sample) {
     return;
@@ -21,17 +24,17 @@ const Portfolio = () => {
         <div className="p-grid__works__row">
           <h3>用途・目的</h3>
           <ul>
-            {sample.purpose.map((p, index) => (
-              <li key={index}>{p}</li>
-            ))}
+            {sample.purpose.map((p, index) => {
+              return <li key={index}>{p}</li>;
+            })}
           </ul>
         </div>
         <div className="p-grid__works__row">
           <h3>こだわり</h3>
           <ul>
-            {sample.point.map((p, index) => (
-              <li key={index}>{p}</li>
-            ))}
+            {sample.point.map((p, index) => {
+              return <li key={index}>{p}</li>;
+            })}
           </ul>
         </div>
         <div className="p-grid__works__row">

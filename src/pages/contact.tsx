@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import type { NextPage } from "next";
 import * as React from "react";
 // import { convertCrlfToBr } from "src/functions/commonFunc";
 import { useForm } from "react-hook-form";
@@ -162,7 +162,14 @@ const Contact: NextPage = () => {
                 <textarea name="description" rows={10} required={true} ref={register}></textarea>
               </p>
             </div>
-            <button className="p-btn-round center" id="confirm-btn" type="submit" onClick={() => onSubmit()}>
+            <button
+              className="p-btn-round center"
+              id="confirm-btn"
+              type="submit"
+              onClick={() => {
+                return onSubmit();
+              }}
+            >
               内容を確認する
             </button>
           </form>
@@ -182,10 +189,24 @@ const Contact: NextPage = () => {
           </h2>
           <div className="c-modal-popup__main" id="popup-main"></div>
           <div className="p-grid__row center">
-            <button className="p-btn-cancel mr-2" id="cancel-btn" type="button" onClick={() => cancel()}>
+            <button
+              className="p-btn-cancel mr-2"
+              id="cancel-btn"
+              type="button"
+              onClick={() => {
+                return cancel();
+              }}
+            >
               修正する
             </button>
-            <button className="p-btn-apply" id="apply-btn" type="button" onClick={() => application(getValues())}>
+            <button
+              className="p-btn-apply"
+              id="apply-btn"
+              type="button"
+              onClick={() => {
+                return application(getValues());
+              }}
+            >
               送信する
             </button>
           </div>

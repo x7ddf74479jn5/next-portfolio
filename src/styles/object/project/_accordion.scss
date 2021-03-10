@@ -8,11 +8,11 @@
   h4 {
     color: $main-dark;
     font-weight: 600;
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
     line-height: 3rem;
     width: 100%;
   }
-  input[type=checkbox] {
+  input[type="checkbox"] {
     display: none;
   }
   label {
@@ -37,17 +37,17 @@
       text-align: center;
     }
   }
-  input[type=checkbox] + label::after {
-    content: '+';
+  input[type="checkbox"] + label::after {
+    content: "+";
     font-size: $font-medium;
     font-weight: 700;
   }
-  input[type=checkbox]:checked + label::after {
+  input[type="checkbox"]:checked + label::after {
     font-size: $font-medium;
     font-weight: 700;
     transform: rotate(315deg);
   }
-  input[type=checkbox]:checked ~ .p-accordion__items li {
+  input[type="checkbox"]:checked ~ .p-accordion__items li {
     height: 3rem;
     line-height: 3rem;
   }
