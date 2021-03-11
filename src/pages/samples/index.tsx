@@ -1,10 +1,10 @@
+import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layout/layout";
-
 import { AriaTitle } from "../../components/common/AriaTitle";
 import { samples } from "../../contents/samples";
 
@@ -21,7 +21,10 @@ const Samples: NextPage = () => {
             <div className="p-list__works-detail">
               <h3 className="title">{sample.title}</h3>
               <p className="category">{sample.category}</p>
-              <span className="icon"></span>
+              {/* <span className="icon"></span> */}
+              <span>
+                <DoubleArrowIcon />
+              </span>
             </div>
           </a>
         </Link>

@@ -1,0 +1,31 @@
+$breakpoints: (
+  "sm": "screen and (min-width: 576px)",
+  "md": "screen and (min-width: 768px)",
+  "lg": "screen and (min-width: 1024px)",
+  "xl": "screen and (min-width: 1440px)",
+) !default;
+
+// 初期値はlg(tablet screen size)
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+// Base variables
+$light: #f0f0f0;
+$dark: #001871;
+$main-dark: #444;
+$main: #4c4c4c;
+$main-light: #777;
+$primary: #41b6e6;
+$primary-light: #a2dbf3;
+$secondary: #ffb549;
+$secondary-light: #ffca7c;
+$accent: #ff585d;
+$font-small: 0.9rem;
+$font-medium: 1.1rem;
+$font-larger: 1.25rem;
+$font-large: 1.563rem;
+$font-xlarge: 1.963rem;
+$font-xxlarge: 3.052rem;
