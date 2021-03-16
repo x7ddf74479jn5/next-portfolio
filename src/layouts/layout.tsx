@@ -1,7 +1,7 @@
 import * as React from "react";
 import { ChatBotDialog } from "src/components/ChatBotDialog";
-import { Footer } from "src/layout/footer";
-import { Header } from "src/layout/header";
+import { Footer } from "src/layouts/footer";
+import { Header } from "src/layouts/header";
 
 export const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = React.useState<boolean>(false);

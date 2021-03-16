@@ -1,5 +1,5 @@
 import OpenInNewIcon from "@material-ui/icons/OpenInNew";
-import styles from "./ExternalLink.module.scss";
+import styles from "src/styles/components/samples/ExternalLink.module.scss";
 
 type Props = {
   label: string;

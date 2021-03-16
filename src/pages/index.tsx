@@ -7,7 +7,7 @@ import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
-import { Layout } from "src/layout/layout";
+import { Layout } from "src/layouts/layout";
 
 type SlideAnimate = {
   class: string;

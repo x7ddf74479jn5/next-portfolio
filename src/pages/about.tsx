@@ -2,8 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Spacer from "src/components/common/Spacer";
 import { services } from "src/contents/services";
-import { Layout } from "src/layout/layout";
-
+import { Layout } from "src/layouts/layout";
 import { AriaTitle } from "../components/common/AriaTitle";
 
 type Timeline = {

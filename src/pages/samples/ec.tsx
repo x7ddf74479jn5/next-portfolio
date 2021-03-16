@@ -1,7 +1,7 @@
 import Spacer from "src/components/common/Spacer";
 import ExternalLink from "src/components/samples/ExternalLink";
 import { samplesDetail } from "src/contents/samples";
-import { Layout } from "src/layout/layout";
+import { Layout } from "src/layouts/layout";
 import { AriaTitle } from "../../components/common/AriaTitle";
 
 const EC = () => {

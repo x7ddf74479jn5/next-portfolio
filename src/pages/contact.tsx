@@ -4,7 +4,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
-import { Layout } from "src/layout/layout";
+import { Layout } from "src/layouts/layout";
 
 type FormData = {
   name: string;

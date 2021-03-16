@@ -1,4 +1,4 @@
-type Sample = {
+export type Sample = {
   img: {
     src: string;
     alt: string;

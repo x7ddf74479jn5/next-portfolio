@@ -1,7 +1,7 @@
 @import "src/styles/variables";
 
 .list {
-  &__works {
+  &Samples {
     display: flex;
     display: -ms-flex;
     -webkit-box-pack: justify;
@@ -46,7 +46,7 @@
         transition: transform 0.35s;
       }
       &:hover {
-        .p-list__works-detail {
+        .listSamplesDetail {
           color: #fff;
         }
         &::before {
@@ -56,51 +56,48 @@
         img {
           transform: scale(1.1);
         }
-        .icon::before {
+        .icon {
           color: #fff;
           right: 1rem;
         }
       }
     }
 
-    &__detail {
+    &Detail {
       color: $main-dark;
       padding: 0.5rem 1rem;
       text-align: left;
       transition: all 0.35s;
-      .title {
-        font-size: $font-larger;
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-      }
-      .category {
-        font-size: $font-small;
-      }
       @include mq() {
         padding: 1rem 2rem;
-        .icon::before {
-          color: $main-dark;
-          content: "\f101";
-          font-family: "Font Awesome 5 Free";
-          font-weight: 700;
-          position: absolute;
-          right: 2rem;
-          bottom: 1rem;
-          transition: all 0.35s;
-        }
-        .icon {
-          position: absolute;
-          right: 2rem;
-          bottom: 1rem;
-          transition: all 0.35s;
-        }
       }
     }
   }
 }
 
+.title {
+  font-size: $font-larger;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.category {
+  font-size: $font-small;
+}
+
+.icon {
+  display: none;
+  @include mq() {
+    display: block;
+    position: absolute;
+    height: 24px;
+    right: 2rem;
+    bottom: 1rem;
+    transition: all 0.35s;
+  }
+}
+
 .media {
-  &__thumb {
+  &Thumb {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -121,7 +118,7 @@
 }
 
 .text {
-  &__lineNone {
+  &LineNone {
     color: inherit;
     text-decoration: none;
     filter: alpha(opacity=100);
