@@ -2,46 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Spacer from "src/components/common/Spacer";
 import { services } from "src/contents/services";
+import { Timeline, timelines } from "src/contents/timelines";
 import { Layout } from "src/layouts/layout";
 import { AriaTitle } from "../components/common/AriaTitle";
-
-type Timeline = {
-  datetime: string;
-  title: string;
-  description: string;
-};
-
-const timelines: Timeline[] = [
-  {
-    datetime: "2012-10",
-    title: "新卒で大手外食チェーン店に入社",
-    description:
-      "店長候補として入社し、都内拠点で店舗オペレーションを学んでいました。従業員マネジメントに力を入れ、アルバイトの離職率改善へ取り組みました。",
-  },
-  {
-    datetime: "2016-04",
-    title: "地元に戻り、喫茶店の調理職へ",
-    description:
-      "地元食材を用いた付加価値の高い商品を提供しています。自分が独学したもののもうひとつが料理で、それが嵩じて調理職に。",
-  },
-  {
-    datetime: "2016-07",
-    title: "プログラミングを独学",
-    description:
-      "以前よりクラウドソーシングでWebライティングの経験があり、よりスキルアップするためプログラミングの勉強を始めました。Javascript > jQuery > PHP > WordPress > ...",
-  },
-  {
-    datetime: "2017-01",
-    title: "Web制作の仕事を開始",
-    description: `クラウドソーシングを利用して案件を受注できるようになり、本格的にWeb制作の仕事を開始。`,
-  },
-  {
-    datetime: "Now",
-    title: "現在",
-    description:
-      "React及びモダンフロントエンド開発のエコシステム、応用情報技術者試験などの学習を継続しながら転職活動を進めています。",
-  },
-];
 
 const About: NextPage = () => {
   const timelineItems: JSX.Element[] = timelines.map((timeline: Timeline, index: number) => {
@@ -72,38 +35,10 @@ const About: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>About</title>
+        <title>About | Pandashark Web</title>
       </Head>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Spacer size="md" />
       <AriaTitle title="About" caption="自己紹介" />
-
-      {/* <section className="c-section">
-        <div className="c-section__area-title animated fadeInLeft">
-          <div className="p-headline__sub animated fadeInUp fast delay-1s">
-            <h2>About</h2>
-            <p>自己紹介</p>
-            <Breadcrumbs breadcrumbs={breadcrumbs} />
-
-            <ul className="u-text__breadcrumbs">
-              <li>
-                <a href="/" target="_self">
-                  HOME
-                </a>
-                <span>＞</span>
-              </li>
-              <li>
-                <a href="/about/" target="_self">
-                  ABOUT
-                </a>
-                <span></span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section> */}
-
       <section className="c-section" id="vision">
         <div className="c-section-wrapin">
           <h2 className="p-headline__about">Vision</h2>
@@ -143,43 +78,6 @@ const About: NextPage = () => {
                 調理職として厨房で働いていたときから、お客様の顔は見えませんがずっと心掛けてきました。
               </p>
             </div>
-            {/* <div className="left">
-              <h3>
-                一個人の利益になる仕事より、
-                <br />
-                多くの人や社会全体の利益になる仕事を
-              </h3>
-              <p className="sub">渋沢栄一 『論語と算盤』</p>
-              <p>
-                令和は、新1万円札に描かれる渋沢栄一が『論語と算盤』の中で語るような時代になるでしょう。
-                <br />
-                利己的な企業は排他され、<b>社会全体の利益になるサービスを提供する企業が生き残ります。</b>
-              </p>
-              <p>
-                トラハックは、直接お取引させていただくクライアント様だけでなく、
-                画面の向こう側にいるエンドユーザーのためにサービスを作ります。
-              </p>
-              <p>
-                また、エンジニアの育成にも力を入れています。
-                <br />
-                優秀なエンジニアが増えると、世の中に優れたサービスを開発する企業が増えるからです。
-              </p>
-              <p>
-                そのサービスが広まることで、社会全体が豊かになります。
-                <br />
-                そして、エンジニアたちは報酬を受けとり、生活が豊かになります。
-              </p>
-              <p>
-                <b>「この好循環の作り手になりたい」</b>
-              </p>
-              <p>
-                そんな思いで、Webエンジニアを目指したい方向けのコミュニティを作りました。参加費は<b>無料</b>です。
-                <br />
-              </p>
-            </div> */}
-            {/* <div className="right">
-          <Image src="" />
-        </div> */}
           </div>
         </div>
       </section>
@@ -208,20 +106,7 @@ const About: NextPage = () => {
       <section className="c-section" id="career">
         <div className="c-section-wrapin">
           <h2 className="p-headline__about">Career</h2>
-          <ul className="p-list__timeline">
-            {timelineItems}
-
-            {/* {timelines.map((timeline, index) => (
-              <li key={index}>
-                <time dateTime="timeline.datetime">{timeline.datetime}</time>
-                <div className="timeline__icon"></div>
-                <div className="timeline__box">
-                  <h3> {timeline.title} </h3>
-                  <p> {timeline.description} </p>
-                </div>
-              </li>
-            ))} */}
-          </ul>
+          <ul className="p-list__timeline">{timelineItems}</ul>
         </div>
       </section>
 
@@ -229,51 +114,23 @@ const About: NextPage = () => {
         <div className="c-section-wrapin">
           <h2 className="p-headline__about">Skills</h2>
           <p>技術と開発物は以下の通りです。</p>
-          <div className="p-grid__list">
-            {serviceItems}
-            {/* <article className="p-grid__list-item-floated">
-              <h3>WEBサイト制作</h3>
-              <small>Website Production</small>
-              <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt={""} />
-              <p>
-                コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。
-                検索流入やSNS流入を強化する「SEOを考慮したサイト」を作成できます。
-              </p>
-            </article>
-            <article className="p-grid__list-item-floated">
-              <h3>WordPress</h3>
-              <small>WordPress</small>
-              <img className="p-media__thumb" src="/img/view/website-production.jpeg" alt={""} />
-              <p>WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。</p>
-            </article>
-            <article className="p-grid__list-item-floated">
-              <h3>チャットアプリ開発</h3>
-              <small>Chat APP</small>
-              <img className="p-media__thumb" src="/img/view/web-app.jpeg" alt="" />
-              <p>
-                リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。
-                これまで開発してきたWebアプリの一部を制作事例として公開しています。
-              </p>
-            </article> */}
-          </div>
+          <div className="p-grid__list">{serviceItems}</div>
           <ul className="p-grid__table">
             <li>
               <h3 className="head">マークアップ</h3>
-              <div className="data">HTML5, CSS3, BootStrap4</div>
+              <div className="data">HTML5, CSS3</div>
             </li>
             <li>
               <h3 className="head">フロントエンド</h3>
-              <div className="data">
-                JavaScript(ES6), jQuery, WordPress, Sass, Webpack, Babel | 学習中：React, TypeScript, Next.js
-              </div>
+              <div className="data">JavaScript(ES6), TypeScript, React, jQuery, Sass, Webpack, Babel</div>
             </li>
             <li>
               <h3 className="head">バックエンド</h3>
-              <div className="data">PHP, MySQL(MariaDB) | 学習中：Node.js, Firebase</div>
+              <div className="data">PHP, MySQL, Node.js, Firebase</div>
             </li>
             <li>
               <h3 className="head">その他ツール</h3>
-              <div className="data">git, npm, Dockerなど</div>
+              <div className="data">Git, npm, Dockerなど</div>
             </li>
           </ul>
         </div>

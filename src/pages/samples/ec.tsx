@@ -61,9 +61,7 @@ const EC = () => {
 
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Spacer size="md" />
 
       <AriaTitle title="EC App" caption="ECアプリ" />
 

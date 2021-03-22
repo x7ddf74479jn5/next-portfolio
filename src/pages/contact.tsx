@@ -1,23 +1,17 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import * as React from "react";
-// import { convertCrlfToBr } from "src/functions/commonFunc";
 import { useForm } from "react-hook-form";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
+import { convertCrlfToBr } from "src/lib/helper";
 
 type FormData = {
   name: string;
   email: string;
   category: "";
   description: string;
-};
-const convertCrlfToBr = (text: string) => {
-  if (text === "") {
-    return text;
-  } else {
-    return text.replace(/\r?\n/g, "<br>");
-  }
 };
 
 const Contact: NextPage = () => {
@@ -27,9 +21,6 @@ const Contact: NextPage = () => {
     const values = getValues();
     confirmApplication(values);
   };
-
-  // const [applyButton, setApplyButton] = React.useState<boolean>(false);
-  // const [modalSwitchC, setModalSwitch] = React.useState<boolean>(false);
 
   const confirmApplication = (values: FormData) => {
     const modalSwitch = document.getElementById("modal-switch") as HTMLInputElement;
@@ -122,9 +113,10 @@ const Contact: NextPage = () => {
 
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Head>
+        <title>Contact | Pandashark Web</title>
+      </Head>
+      <Spacer size="md" />
 
       <AriaTitle title="Contact" caption="お問い合わせ" />
 

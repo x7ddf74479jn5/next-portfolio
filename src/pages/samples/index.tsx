@@ -10,7 +10,7 @@ const Samples: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Samples</title>
+        <title>Samples | Pandashark Web</title>
       </Head>
       <Spacer size="md" />
       <AriaTitle title="Samples" caption="制作事例" />

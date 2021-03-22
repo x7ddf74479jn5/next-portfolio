@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
@@ -6,37 +7,11 @@ import { Layout } from "src/layouts/layout";
 const Terms: NextPage = () => {
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
-
+      <Head>
+        <title>Terms | Pandashark Web</title>
+      </Head>
+      <Spacer size="md" />
       <AriaTitle title="Terms" caption="利用規約" />
-
-      {/* <section className="c-section">
-    <div className="c-section__area-title animated fadeInLeft">
-      <div className="p-headline__sub animated fadeInUp fast delay-1s">
-        <h2>Terms</h2>
-        <p>利用規約</p>
-        <ul className="u-text__breadcrumbs">
-          <li><a href="/" target="_self">HOME</a><span>＞</span></li>
-          <li><a href="/terms/" target="_self">TERMS</a><span></span></li>
-        </ul>
-      </div>
-    </div>
-  </section> */}
-
-      {/* <section className="c-section">
-        <div className="c-section-wrapin p-grid__community">
-          <p>Webエンジニアを目指す人のためのオンライン学習コミュニティを準備中です。</p>
-          <p>以下のような方を応援するコミュニティにします。</p>
-          <ul>
-            <li>別の業種・職種からエンジニアに転職したい</li>
-            <li>Webエンジニアを目指して勉強している</li>
-            <li>Webサイトを制作できるようになりたい</li>
-          </ul>
-          <p>現在は0期生と試験的に活動しており、今後、正式に募集いたします。</p>
-        </div>
-      </section> */}
     </Layout>
   );
 };

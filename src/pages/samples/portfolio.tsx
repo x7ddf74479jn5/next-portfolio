@@ -63,9 +63,7 @@ const Portfolio = () => {
 
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Spacer size="md" />
       <AriaTitle title="Portfolio" caption="ポートフォリオ" />
 
       {content}

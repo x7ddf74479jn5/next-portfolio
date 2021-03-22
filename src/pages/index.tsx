@@ -43,7 +43,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Pandashark web | Top</title>
+        <title>Home | Pandashark Web</title>
       </Head>
 
       <section>
@@ -67,9 +67,7 @@ const Home: NextPage = () => {
         </div> */}
       </section>
 
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Spacer size="md" />
 
       <section className="c-section">
         <div className="c-section-wrapin p-grid__vision">
@@ -115,9 +113,7 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Spacer size="md" />
 
       <section className="c-section">
         <div className="c-section-wrapin">

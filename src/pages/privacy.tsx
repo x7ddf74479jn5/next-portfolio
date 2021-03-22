@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
@@ -8,9 +9,11 @@ const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analyti
 const Privacy: NextPage = () => {
   return (
     <Layout>
-      <section>
-        <Spacer size="md" />
-      </section>
+      <Head>
+        <title>Privacy | Pandashark Web</title>
+      </Head>
+
+      <Spacer size="md" />
 
       <AriaTitle title="Privacy Policy" caption="プライバシーポリシー" />
       <section className="c-section">
