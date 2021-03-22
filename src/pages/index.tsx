@@ -2,12 +2,12 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { IconArrowNext } from "src/components/common/IconArrowNext";
-import Spacer from "src/components/common/Spacer";
 import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
 import { Layout } from "src/layouts/layout";
+import Spacer from "src/layouts/Spacer";
 
 type SlideAnimate = {
   class: string;

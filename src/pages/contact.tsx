@@ -3,8 +3,8 @@ import Head from "next/head";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { AriaTitle } from "src/components/common/AriaTitle";
-import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
+import Spacer from "src/layouts/Spacer";
 import { convertCrlfToBr } from "src/lib/helper";
 
 type FormData = {

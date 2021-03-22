@@ -1,10 +1,12 @@
-.c-section {
+@import "../variables.scss";
+
+.section {
   padding: 2rem 0;
   @include mq() {
     padding: 3rem 0;
   }
 
-  &-wrapin {
+  &WrapIn {
     margin: 0 auto;
     max-width: 544px;
     position: relative;
@@ -14,22 +16,22 @@
     @include mq("sm") {
       max-width: 1024px;
     }
-    &-wide {
-      @extend .c-section-wrapin;
+    &Wide {
+      @extend .sectionWrapIn;
       @include mq("sm") {
         max-width: 1440px;
       }
     }
   }
 
-  &__line {
+  &Line {
     border-bottom: 3px solid $secondary;
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 4rem;
   }
 
-  &__area-title {
+  &AreaTitle {
     background: $primary;
     position: relative;
     height: auto;

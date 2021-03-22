@@ -1,6 +1,6 @@
-import Spacer from "src/components/common/Spacer";
 import { samplesDetail } from "src/contents/samples";
 import { Layout } from "src/layouts/layout";
+import Spacer from "src/layouts/Spacer";
 import { AriaTitle } from "../../components/common/AriaTitle";
 
 const Portfolio = () => {

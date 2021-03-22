@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AriaTitle } from "src/components/common/AriaTitle";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
+import { AriaTitle } from src / layouts / Spacer / AriaTitle;
+";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
 

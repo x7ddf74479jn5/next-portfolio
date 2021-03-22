@@ -1,4 +1,4 @@
-import styles from "src/styles/object/component/Spacer.module.scss";
+import styles from "src/styles/layouts/Spacer.module.scss";
 
 const Spacer: React.VFC<Props> = ({ size }) => {
   let style: string | undefined;

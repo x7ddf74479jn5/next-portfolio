@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import { AriaTitle } from "src/components/common/AriaTitle";
-import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
+import Spacer from "src/layouts/Spacer";
 
 const Terms: NextPage = () => {
   return (

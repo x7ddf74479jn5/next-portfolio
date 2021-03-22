@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Spacer from "src/components/common/Spacer";
 import { services } from "src/contents/services";
 import { Timeline, timelines } from "src/contents/timelines";
 import { Layout } from "src/layouts/layout";
+import Spacer from "src/layouts/Spacer";
 import { AriaTitle } from "../components/common/AriaTitle";
 
 const About: NextPage = () => {
