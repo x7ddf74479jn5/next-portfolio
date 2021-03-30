@@ -2,23 +2,23 @@ import Link from "next/link";
 import * as React from "react";
 // import {Swiper} as S  from "swiper/react"
 import Swiper from "react-id-swiper";
-
 // import "swiper/swiper-bundle.min.scss";
 // import 'swiper/swiper.scss';
 // import styles from "src/styles/swiper-bundle.module.css";
+import { Sample } from "../contents/samples";
 
-type sample = {
-  img: {
-    src: string;
-    alt: string;
-  };
-  href: string;
-  title: string;
-  description: string;
-};
+// type sample = {
+//   img: {
+//     src: string;
+//     alt: string;
+//   };
+//   href: string;
+//   title: string;
+//   description: string;
+// };
 
 type SwiperProps = {
-  samples: sample[];
+  samples: Sample[];
 };
 
 // type swiperProps = {
@@ -120,7 +120,7 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
         return (
           <div key={index}>
             <article key={index} className="p-grid__list-item swiper-slide">
-              <Link href={sample.href}>
+              <Link href={sample.link}>
                 <a className="u-text__line-none" target="_self">
                   <h3>{sample.title}</h3>
                   <div className="p-media__thumb" key={index}>
