@@ -11,10 +11,10 @@ type SampleCardProps = {
 const SampleCard: React.VFC<SampleCardProps> = ({ sample }) => {
   return (
     <li>
-      <Link href={sample.href}>
+      <Link href={sample.link}>
         <a className={styles.testLineNone}>
           <div className={styles.mediaThumb}>
-            <Image src={sample.img.src} alt={sample.img.alt} layout="fill" />
+            <Image src={sample.imgSrc} alt={sample.imgAlt} layout="fill" />
           </div>
           <div className={styles.listSamplesDetail}>
             <h3 className={styles.title}>{sample.title}</h3>

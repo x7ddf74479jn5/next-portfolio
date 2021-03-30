@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Spacer from "src/components/common/Spacer";
 import { Layout } from "src/layouts/layout";
-import { AriaTitle } from src / layouts / Spacer / AriaTitle;
+import { TitleArea } from src / layouts / Spacer / TitleArea;
 ";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
@@ -16,7 +16,7 @@ const Privacy: NextPage = () => {
 
       <Spacer size="md" />
 
-      <AriaTitle title="Privacy Policy" caption="プライバシーポリシー" />
+      <TitleArea title="Privacy Policy" caption="プライバシーポリシー" />
       <section className="c-section">
         <div className="c-section-wrapin p-grid__privacy">
           <div>

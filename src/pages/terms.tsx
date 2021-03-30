@@ -1,6 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { AriaTitle } from "src/components/common/AriaTitle";
+import { TitleArea } from "src/components/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
 
@@ -11,7 +11,7 @@ const Terms: NextPage = () => {
         <title>Terms | Pandashark Web</title>
       </Head>
       <Spacer size="md" />
-      <AriaTitle title="Terms" caption="利用規約" />
+      <TitleArea title="Terms" caption="利用規約" />
     </Layout>
   );
 };

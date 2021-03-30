@@ -6,14 +6,14 @@ type Breadcrumb = {
   href: string;
 };
 
-type AriaTitleProps = {
+type TitleAreaProps = {
   title: string;
-  caption?: string;
-  breadcrumbs?: Breadcrumb[];
-  sampleId?: string;
+  caption: string;
+  // breadcrumbs: Breadcrumb[];
+  // sampleId: string;
 };
 
-export const AriaTitle = (props: AriaTitleProps) => {
+export const TitleArea = (props: TitleAreaProps) => {
   return (
     <section className="c-section">
       <div className="c-section__area-title animated fadeInLeft">

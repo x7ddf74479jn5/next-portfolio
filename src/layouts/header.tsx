@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { HeaderMenus } from "src/components/common/header/HeaderMenus";
-import { images } from "src/paths/links";
+import { images } from "src/utils/paths";
 
 type HeaderProps = {
   open: boolean;

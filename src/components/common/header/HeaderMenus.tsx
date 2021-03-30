@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { images, links as l } from "src/paths/links";
+import { images, links as l } from "src/utils/paths";
 
 const links = [
   { label: "About", href: "/about/" },

@@ -2,10 +2,10 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { AriaTitle } from "src/components/common/AriaTitle";
+import { TitleArea } from "src/components/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
-import { convertCrlfToBr } from "src/lib/helper";
+import { convertCrlfToBr } from "src/utils/helper";
 
 type FormData = {
   name: string;
@@ -118,7 +118,7 @@ const Contact: NextPage = () => {
       </Head>
       <Spacer size="md" />
 
-      <AriaTitle title="Contact" caption="お問い合わせ" />
+      <TitleArea title="Contact" caption="お問い合わせ" />
 
       <section className="c-section">
         <div className="c-section-wrapin">

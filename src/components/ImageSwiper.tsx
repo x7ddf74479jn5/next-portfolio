@@ -1,10 +1,7 @@
-import { WithRouterProps } from "next/dist/client/with-router";
-import Image from "next/image";
 import Link from "next/link";
-import { withRouter } from "next/router";
 import * as React from "react";
 // import {Swiper} as S  from "swiper/react"
-import Swiper, { ReactIdSwiperProps } from "react-id-swiper";
+import Swiper from "react-id-swiper";
 
 // import "swiper/swiper-bundle.min.scss";
 // import 'swiper/swiper.scss';
@@ -127,8 +124,8 @@ export const ImageSwiper: React.FC<SwiperProps> = (props): JSX.Element => {
                 <a className="u-text__line-none" target="_self">
                   <h3>{sample.title}</h3>
                   <div className="p-media__thumb" key={index}>
-                    {/* <Image layout="fill" src={sample.img.src} alt={sample.img.alt} /> */}
-                    <img src={sample.img.src} alt={sample.img.alt} />
+                    {/* <Image layout="fill" src={sample.imgSrc} alt={sample.imgAlt} /> */}
+                    <img src={sample.imgSrc} alt={sample.imgAlt} />
                   </div>
                   <p>{sample.description}</p>
                 </a>

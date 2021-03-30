@@ -1,20 +1,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
+import { Sample } from "src/contents/samples";
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar, Swiper } from "swiper";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 
-type Sample = {
-  img: {
-    src: string;
-    alt: string;
-  };
-  href: string;
-  title: string;
-  description: string;
-  index?: string;
-};
+// type Sample = {
+//   img: {
+//     src: string;
+//     alt: string;
+//   };
+//   href: string;
+//   title: string;
+//   description: string;
+//   index?: string;
+// };
 
 type SwiperProps = {
   samples: Sample[];
@@ -99,8 +100,8 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //       <a className="u-text__line-none" target="_self">
   //         <h3>{sample.title}</h3>
   //         <div className="p-media__thumb" >
-  //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} />
-  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
+  //           <Image layout="fill" src={sample.imgSrc} alt={sample.imgAlt} />
+  //           {/* <img src={sample.imgSrc} alt={sample.imgAlt} key={index} /> */}
   //         </div>
   //         <p>{sample.description}</p>
   //       </a>
@@ -111,14 +112,14 @@ export const SampleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   const contents = samples.map((sample, index) => {
     return (
       <article className="p-grid__list-item swiper-slide" key={index}>
-        <Link href={sample.href}>
+        <Link href={sample.link}>
           <a className="u-text__line-none" target="_self">
             <h3>{sample.title}</h3>
             <div className="p-media__thumb">
-              {/* <Image width={960} height={540} src={sample.img.src} alt={sample.img.alt} /> */}
-              <Image loading="eager" layout="fill" src={sample.img.src} alt={sample.img.alt} />
-              {/* <Image loading={"eager"} unsized={true} src={sample.img.src} alt={sample.img.alt} /> */}
-              {/* <img src={sample.img.src} alt={sample.img.alt} /> */}
+              {/* <Image width={960} height={540} src={sample.imgSrc} alt={sample.imgAlt} /> */}
+              <Image loading="eager" layout="fill" src={sample.imgSrc} alt={sample.imgAlt} />
+              {/* <Image loading={"eager"} unsized={true} src={sample.imgSrc} alt={sample.imgAlt} /> */}
+              {/* <img src={sample.imgSrc} alt={sample.imgAlt} /> */}
             </div>
             <p>{sample.description}</p>
           </a>

@@ -1,5 +1,4 @@
 // import 'src/styles/swiper.bundle.scss';
-import Image from "next/image";
 import * as React from "react";
 import SwiperCore, { Autoplay, Navigation, Pagination, Scrollbar } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -102,8 +101,8 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //       <a className="u-text__line-none" href={sample.href} target="_self">
   //         <h3>{sample.title}</h3>
   //         <div className="p-media__thumb">
-  //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={sample.id} />
-  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
+  //           <Image layout="fill" src={sample.imgSrc} alt={sample.imgAlt} key={sample.id} />
+  //           {/* <img src={sample.imgSrc} alt={sample.imgAlt} key={index} /> */}
   //         </div>
   //         <p>{sample.description}</p>
   //       </a>
@@ -118,8 +117,8 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
           <a className="u-text__line-none" href={sample.href} target="_self">
             <h3>{sample.title}</h3>
             <div className="p-media__thumb">
-              {/* <Image loading={"eager"} layout="fill" src={sample.img.src} alt={sample.img.alt} /> */}
-              {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
+              {/* <Image loading={"eager"} layout="fill" src={sample.imgSrc} alt={sample.imgAlt} /> */}
+              {/* <img src={sample.imgSrc} alt={sample.imgAlt} key={index} /> */}
             </div>
             <p>{sample.description}</p>
           </a>
@@ -134,8 +133,8 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //       <a className="u-text__line-none" href={sample.href} target="_self" key={index}>
   //         <h3>{sample.title}</h3>
   //         <div className="p-media__thumb" key={index}>
-  //           <Image layout="fill" src={sample.img.src} alt={sample.img.alt} key={index} />
-  //           {/* <img src={sample.img.src} alt={sample.img.alt} key={index} /> */}
+  //           <Image layout="fill" src={sample.imgSrc} alt={sample.imgAlt} key={index} />
+  //           {/* <img src={sample.imgSrc} alt={sample.imgAlt} key={index} /> */}
   //         </div>
   //         <p>{sample.description}</p>
   //       </a>
@@ -148,7 +147,7 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
   //     <a className="u-text__line-none" href={sample.href} target="_self">
   //       <h3>{sample.title}</h3>
   //       <p className="p-media__thumb" key={index}>
-  //         <img src={sample.img.src} alt={sample.img.alt} />
+  //         <img src={sample.imgSrc} alt={sample.imgAlt} />
   //       </p>
   //       <p>{sample.description}</p>
   //     </a>

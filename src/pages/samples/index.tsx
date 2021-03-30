@@ -4,7 +4,7 @@ import SampleCardList from "src/components/samples/SampleCardList";
 import { Layout } from "src/layouts/layout";
 import { WrapInWideSection } from "src/layouts/Section";
 import Spacer from "src/layouts/Spacer";
-import { AriaTitle } from "../../components/common/AriaTitle";
+import { TitleArea } from "../../components/common/TitleArea";
 import { samples } from "../../contents/samples";
 
 const Samples: NextPage = () => {
@@ -14,7 +14,7 @@ const Samples: NextPage = () => {
         <title>Samples | Pandashark Web</title>
       </Head>
       <Spacer size="md" />
-      <AriaTitle title="Samples" caption="制作事例" />
+      <TitleArea title="Samples" caption="制作事例" />
       <Spacer size="md" />
       <WrapInWideSection>
         <SampleCardList samples={samples} />

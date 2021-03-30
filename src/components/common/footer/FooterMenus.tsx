@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { links as l } from "src/paths/links";
+import { links as l } from "src/utils/paths";
 
 const links = {
   about: [

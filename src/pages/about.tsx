@@ -4,7 +4,7 @@ import { services } from "src/contents/services";
 import { Timeline, timelines } from "src/contents/timelines";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
-import { AriaTitle } from "../components/common/AriaTitle";
+import { TitleArea } from "../components/common/TitleArea";
 
 const About: NextPage = () => {
   const timelineItems: JSX.Element[] = timelines.map((timeline: Timeline, index: number) => {
@@ -38,7 +38,7 @@ const About: NextPage = () => {
         <title>About | Pandashark Web</title>
       </Head>
       <Spacer size="md" />
-      <AriaTitle title="About" caption="自己紹介" />
+      <TitleArea title="About" caption="自己紹介" />
       <section className="c-section" id="vision">
         <div className="c-section-wrapin">
           <h2 className="p-headline__about">Vision</h2>
@@ -122,11 +122,15 @@ const About: NextPage = () => {
             </li>
             <li>
               <h3 className="head">フロントエンド</h3>
-              <div className="data">JavaScript(ES6), TypeScript, React, jQuery, Sass, Webpack, Babel</div>
+              <div className="data">JavaScript(ES6), TypeScript, Sass, Webpack, Babel</div>
             </li>
             <li>
               <h3 className="head">バックエンド</h3>
-              <div className="data">PHP, MySQL, Node.js, Firebase</div>
+              <div className="data">PHP, MySQL, Node.js, Firebase, Vercel</div>
+            </li>
+            <li>
+              <h3 className="head">フレームワーク</h3>
+              <div className="data">jQuery, WordPress, React, Redux, Next.js, Express.js</div>
             </li>
             <li>
               <h3 className="head">その他ツール</h3>
