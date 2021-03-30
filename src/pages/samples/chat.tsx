@@ -12,7 +12,7 @@ const Chat: NextPage = () => {
   const sample = selectSample("chat");
 
   if (!sample) {
-    return <Error statusCode={404} />;
+    return <Error statusCode={500} />;
   }
 
   return (

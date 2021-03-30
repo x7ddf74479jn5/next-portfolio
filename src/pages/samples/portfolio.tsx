@@ -12,7 +12,7 @@ const Portfolio: NextPage = () => {
   const sample = selectSample("portfolio");
 
   if (!sample) {
-    return <Error statusCode={404} />;
+    return <Error statusCode={500} />;
   }
 
   return (
