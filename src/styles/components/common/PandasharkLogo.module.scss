@@ -1,0 +1,114 @@
+@import "../../variables.scss";
+
+.productLogo {
+  padding: 0 1rem;
+  background: $primary-light;
+  display: none;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  @include mq() {
+    background: transparent;
+    display: block;
+    float: left;
+  }
+  // .productLogo {
+  //   padding: 0 1rem;
+  //   background: $primary-light;
+  //   display: none;
+  //   margin: 0;
+  //   overflow: hidden;
+  //   position: relative;
+  //   text-overflow: ellipsis;
+  //   vertical-align: top;
+  //   white-space: nowrap;
+  //   @include mq() {
+  //     background: transparent;
+  //     display: block;
+  //     float: left;
+  //     a {
+  //       height: 64px;
+  //       width: 128px;
+  //       img,
+  //       svg {
+  //         height: auto;
+  //         width: 128px;
+  //       }
+  //     }
+  //   }
+  // }
+}
+
+.l-header__nav-top {
+  right: -86%;
+  opacity: 0;
+  transition: right 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  overflow: hidden;
+  .l-product-logo {
+    display: none;
+  }
+}
+.nav-open {
+  .l-product-logo {
+    display: block;
+    // padding: 4px 30px 0;
+    padding: 4px 30px 0px 15px;
+    z-index: 1200;
+    a {
+      border-bottom: 0;
+      height: 40px;
+      padding: 0px 0px 0px 0px;
+    }
+    div {
+      width: 80px;
+      height: 40px;
+    }
+    img,
+    svg {
+      position: absolute;
+      top: 4px;
+      left: 1.1rem;
+      height: 40px;
+      width: auto;
+    }
+  }
+}
+
+//footer
+.logoArea {
+  margin: 0 auto; //
+  display: flex; //
+  justify-content: center; //
+  padding: 2rem 0;
+}
+.productlogo {
+  // line-height: 1.875rem;
+  // margin: 0 auto 1rem auto;
+  text-align: center;
+  // & a > div {
+  //   display: inline-block;
+  // }
+  // .logo-img {
+  //   height: 3rem;
+  //   width: 6rem;
+  // }
+  // add
+  @include mq() {
+    text-align: left;
+  }
+}
+// @include mq() {
+//   float: left;
+//   padding: 0;
+//   margin: 0; //
+//   .product-logo {
+//     text-align: left;
+//     .logo-img {
+//       height: 4rem;
+//       width: 8rem;
+//     }
+//   }
+// }

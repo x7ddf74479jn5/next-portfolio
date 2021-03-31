@@ -1,8 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
 import * as React from "react";
 import { HeaderMenus } from "src/components/common/header/HeaderMenus";
-import { images } from "src/utils/images";
+import PandasharkLogo from "src/components/common/PandasharkLogo";
+import styles from "src/styles/components/common/PandasharkLogo.module.scss";
 
 type HeaderProps = {
   open: boolean;
@@ -37,19 +36,10 @@ export const Header: React.VFC<HeaderProps> = ({
     <div className={navOpen}>
       <header className={navOpen + " fixed-nav " + "l-header "}>
         <div className="l-header-inner">
-          <h1 className="l-product-logo">
-            <Link href="/">
-              <a target="_self" aria-label="パンダシャーク">
-                {/* <img alt="パンダシャーク" src="/img/icons/pandashark_logo.png" /> */}
-                <Image
-                  width={128}
-                  height={64}
-                  alt={images.pandasharkRectangle.alt}
-                  src={images.pandasharkRectangle.path}
-                />
-              </a>
-            </Link>
-          </h1>
+          <div className={styles.productLogo}>
+            <PandasharkLogo width={128} height={64} />
+          </div>
+
           {/* <!-- Navigation toggle button for Smartphone--> */}
           <button
             className={navOpen + " outside " + "nav-toggle-button "}
