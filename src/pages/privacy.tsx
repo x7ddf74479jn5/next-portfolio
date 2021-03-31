@@ -3,19 +3,19 @@ import Head from "next/head";
 import { TitleArea } from "src/components/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
+import { configPage } from "../utils/page-configure";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";
 
 const Privacy: NextPage = () => {
+  const pageConfig = configPage("privacy");
   return (
     <Layout>
       <Head>
-        <title>Privacy | Pandashark Web</title>
+        <title> {pageConfig.title}</title>
       </Head>
-
       <Spacer size="md" />
-
-      <TitleArea title="Privacy Policy" caption="プライバシーポリシー" />
+      {pageConfig.titleArea && <TitleArea title={pageConfig.titleArea.title} caption={pageConfig.titleArea?.caption} />}
       <section className="c-section">
         <div className="c-section-wrapin p-grid__privacy">
           <div>

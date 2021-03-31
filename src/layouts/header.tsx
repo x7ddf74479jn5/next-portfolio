@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import * as React from "react";
 import { HeaderMenus } from "src/components/common/header/HeaderMenus";
-import { images } from "src/utils/paths";
+import { images } from "src/utils/images";
 
 type HeaderProps = {
   open: boolean;
@@ -41,7 +41,12 @@ export const Header: React.VFC<HeaderProps> = ({
             <Link href="/">
               <a target="_self" aria-label="パンダシャーク">
                 {/* <img alt="パンダシャーク" src="/img/icons/pandashark_logo.png" /> */}
-                <Image width={128} height={64} alt="パンダシャーク" src={images.pandashark_rec} />
+                <Image
+                  width={128}
+                  height={64}
+                  alt={images.pandasharkRectangle.alt}
+                  src={images.pandasharkRectangle.path}
+                />
               </a>
             </Link>
           </h1>

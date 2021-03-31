@@ -3,15 +3,18 @@ import Head from "next/head";
 import { TitleArea } from "src/components/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
+import { configPage } from "../utils/page-configure";
 
 const Terms: NextPage = () => {
+  const pageConfig = configPage("privacy");
+
   return (
     <Layout>
       <Head>
-        <title>Terms | Pandashark Web</title>
+        <title> {pageConfig.title}</title>
       </Head>
       <Spacer size="md" />
-      <TitleArea title="Terms" caption="利用規約" />
+      {pageConfig.titleArea && <TitleArea title={pageConfig.titleArea.title} caption={pageConfig.titleArea?.caption} />}
     </Layout>
   );
 };

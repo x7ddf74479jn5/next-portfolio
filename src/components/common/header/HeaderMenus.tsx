@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { images, links as l } from "src/utils/paths";
+import { images } from "src/utils/images";
+import { links as l } from "src/utils/paths";
 
 const links = [
   { label: "About", href: "/about/" },
@@ -55,7 +56,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
       <h1 className="l-product-logo">
         <Link href={"/"}>
           <a target="_self">
-            <Image height={80} width={40} alt="パンダシャーク" src={images.pandashark_rec} />
+            <Image height={80} width={40} alt={images.pandasharkRectangle.alt} src={images.pandasharkRectangle.path} />
             {/* <img alt="パンダシャーク" src={images.pandashark_rec} /> */}
           </a>
         </Link>
@@ -67,7 +68,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
         {content}
         <li>
           <a className="sns" href={l.twitter} target="_self">
-            <img src="/img/icons/twitter_logo.png" alt="twitter" />
+            <img src={images.twitter.path} alt={images.twitter.alt} />
             <span>Twitter</span>
           </a>
         </li>
@@ -80,7 +81,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
               return handleClick();
             }}
           >
-            <img src={images.robot} alt="chat-bot" />
+            <img src={images.robot.path} alt={images.robot.alt} />
             <span>Chat Bot</span>
           </a>
         </li>

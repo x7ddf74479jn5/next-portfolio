@@ -6,6 +6,7 @@ import { TitleArea } from "src/components/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
 import { convertCrlfToBr } from "src/utils/helper";
+import { configPage } from "src/utils/page-configure";
 
 type FormData = {
   name: string;
@@ -15,6 +16,8 @@ type FormData = {
 };
 
 const Contact: NextPage = () => {
+  const pageConfig = configPage("contact");
+
   const { register, getValues, handleSubmit, watch } = useForm<FormData>();
   const watcher = watch();
   const onSubmit = () => {
@@ -114,11 +117,10 @@ const Contact: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Contact | Pandashark Web</title>
+        <title>{pageConfig.title}</title>
       </Head>
       <Spacer size="md" />
-
-      <TitleArea title="Contact" caption="お問い合わせ" />
+      {pageConfig.titleArea && <TitleArea title={pageConfig.titleArea.title} caption={pageConfig.titleArea?.caption} />}
 
       <section className="c-section">
         <div className="c-section-wrapin">

@@ -1,24 +1,11 @@
-export type LinkMapIndex =
-  | "home"
-  | "about"
-  | "contact"
-  | "terms"
-  | "privacy"
-  | "samples"
-  | "portfolio"
-  | "chat"
-  | "ec"
-  | "blog"
-  | "twitter"
-  | "github";
-
-type ImageMapIndex = "pandashark_icon" | "pandashark_rec" | "ec" | "chat" | "portfolio" | "robot";
-
-type PathMap<T extends string> = {
-  [key in T]: string;
+type PathMap = {
+  [key: string]: string;
 };
 
-export const links: PathMap<LinkMapIndex> = {
+export const links: PathMap = {
+  siteURL: "https://next-portfolio-livid.vercel.app/",
+  siteRoot:
+    process.env.NODE_ENV === "production" ? "https://next-portfolio-livid.vercel.app/" : "http://localhost:3000",
   home: "/",
   about: "/about/",
   contact: "/contact/",
@@ -33,11 +20,9 @@ export const links: PathMap<LinkMapIndex> = {
   github: "https://github.com/x7ddf74479jn5",
 } as const;
 
-export const images: PathMap<ImageMapIndex> = {
-  pandashark_icon: "/img/icons/pandashark_icon.png",
-  pandashark_rec: "/img/icons/pandashark_logo_rectangle.webp",
-  ec: "/img/samples/ec-app-eyecatch.webp",
-  chat: "/img/samples/chat-bot-eyecatch.webp",
-  portfolio: "/img/samples/portfolio-eyecatch.webp",
-  robot: "/img/icons/robot.png",
+export const externalLinks: PathMap = {
+  chat: "https://chatbot-demo-70752.web.app/",
+  ec: "https://ec-app-a2f5e.web.app/",
+  twitter: "https://twitter.com/pandashark6",
+  github: "https://github.com/x7ddf74479jn5",
 } as const;

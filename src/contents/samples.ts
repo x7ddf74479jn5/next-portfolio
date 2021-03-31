@@ -1,4 +1,5 @@
-import { images, links } from "../utils/paths";
+import { images } from "../utils/images";
+import { externalLinks, links } from "../utils/paths";
 
 export type Sample = {
   id: string;
@@ -17,8 +18,8 @@ export const samples: Sample[] = [
     category: "Web制作｜デザイン｜レスポンシブ｜アニメーション",
     description: "現在閲覧してくださっているサイトです。",
     link: links.portfolio,
-    imgSrc: images.portfolio,
-    imgAlt: "Thumbnail of portfolio",
+    imgSrc: images.portfolio.path,
+    imgAlt: images.portfolio.alt,
   },
   {
     id: "chat-bot",
@@ -26,8 +27,8 @@ export const samples: Sample[] = [
     category: "Webアプリ開発｜チャット｜SPA",
     description: "事前に用意したQAを使って自動応答するチャットボットです。",
     link: links.chat,
-    imgSrc: images.chat,
-    imgAlt: "Thumbnail of Chat Bot",
+    imgSrc: images.chat.path,
+    imgAlt: images.chat.alt,
   },
   {
     id: "ec-app",
@@ -35,8 +36,8 @@ export const samples: Sample[] = [
     category: "Webアプリ開発｜EC｜SPA",
     description: "React学習用に開発しているデモサイトです。",
     link: links.ec,
-    imgSrc: images.ec,
-    imgAlt: "Thumbnail of EC site",
+    imgSrc: images.ec.path,
+    imgAlt: images.ec.alt,
   },
 ];
 
@@ -60,8 +61,8 @@ export type SampleDetail = {
 export const sampleDetails: SampleDetail[] = [
   {
     id: "portfolio",
-    img: images.portfolio,
-    alt: "Eye-catch of portfolio",
+    img: images.portfolio.path,
+    alt: images.portfolio.alt,
     summary: "ポートフォリオサイトです。",
     purposes: ["Next.js/Typescriptの学習", "転職活動のため"],
     points: [
@@ -81,30 +82,30 @@ export const sampleDetails: SampleDetail[] = [
   },
   {
     id: "chat",
-    img: images.chat,
-    alt: "Eye-catch of chat-bot",
+    img: images.chat.path,
+    alt: images.chat.alt,
     summary: "ユーザーに質問を投げて自動で応答するチャットボット",
     purposes: ["カジュアルにWebサイトへのお問い合わせをしてもらうため"],
     points: ["SPAらしい画面描画の切り替わり", "問い合わせ結果をSlackへ通知", "チャット風のデザインとアニメーション"],
     langs: "JavaScript(React), JSX",
     techs: "Sass, React, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
     link: {
-      href: "https://chatbot-demo-70752.web.app/",
+      href: externalLinks.chat,
       label: "チャットボット",
     },
     note: "ヘッダーメニューのロボットアイコンからお試しいただけます。",
   },
   {
     id: "ec",
-    img: images.ec,
-    alt: "Eye-catch of EC-app",
+    img: images.ec.path,
+    alt: images.ec.alt,
     summary: "ECアプリ（開発中です）",
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
     langs: "JavaScript(React), JSX",
     techs: "Sass, React, Redux, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
     link: {
-      href: "https://ec-app-a2f5e.web.app/",
+      href: externalLinks.ec,
       label: "ECアプリ",
     },
     note: "途中まで。TypeScriptにリファクタリング予定。",

@@ -8,6 +8,7 @@ import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
+import { configPage } from "../utils/page-configure";
 
 type SlideAnimate = {
   class: string;
@@ -15,6 +16,8 @@ type SlideAnimate = {
 };
 
 const Home: NextPage = () => {
+  const pageConfig = configPage("home");
+
   const slideInLeft: SlideAnimate = {
     class: "p-grid__list-item-floated animated slow slideInLeft",
     dataAnimate: "slideInLeft",
@@ -43,7 +46,7 @@ const Home: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Home | Pandashark Web</title>
+        <title>{pageConfig.title}</title>
       </Head>
 
       <section>

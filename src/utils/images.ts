@@ -8,8 +8,11 @@ export const images: Image = {
   ec: { path: "/img/samples/ec-app-eyecatch.webp", alt: "eye catch of EC app" },
   chat: { path: "/img/samples/chat-bot-eyecatch.webp", alt: "eye catch chat" },
   portfolio: { path: "/img/samples/portfolio-eyecatch.webp", alt: "eye catch portfolio" },
-  robot: { path: "/img/icons/robot.png", alt: "" },
-  websiteProduction: { path: "/img/icons/website-production.jpeg", alt: "Website Production" },
+  twitter: { path: "/img/icons/twitter_logo.png", alt: "twitter" },
+  robot: { path: "/img/icons/robot.png", alt: "chat bot" },
+  websiteProduction: { path: "/img/view/website-production.jpeg", alt: "Website Production" },
   wordPress: { path: "/img/view/wordpress-icon.png", alt: "WordPress" },
   webApp: { path: "/img/view/web-app.jpeg", alt: "Chat APP" },
+  favicon: { path: "/img/icons/favicon.ico", alt: "" },
+  appleTouchIcon: { path: "/img/icons/apple-touch-icon.png", alt: "" },
 } as const;
