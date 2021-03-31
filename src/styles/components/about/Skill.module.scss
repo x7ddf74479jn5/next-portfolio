@@ -1,0 +1,125 @@
+@import "../../variables.scss";
+
+.headline {
+  &About {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: $font-large;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
+
+.grid {
+  display: -ms-flexbox;
+  display: flex;
+  &List {
+    @extend .grid;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    &Item {
+      @extend .grid;
+      box-sizing: border-box;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      h3 {
+        color: $dark;
+        font-size: $font-large;
+        margin-bottom: 0.5rem;
+      }
+      small {
+        color: $dark;
+        font-size: $font-small;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+      img {
+        margin-bottom: 1rem;
+      }
+      p {
+        text-align: left;
+      }
+      @include mq() {
+        // width: 33.3333%;
+      }
+      &Floated {
+        @extend .gridListItem;
+        background: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
+        box-shadow: 2px 6px 5px rgba(255, 255, 255, 0.4);
+        margin: 1rem 0.5rem;
+        @include mq() {
+          width: calc(33.3333% - 1rem);
+        }
+      }
+    }
+  }
+  &Table {
+    li {
+      @extend .grid;
+      -webkit-flex-direction: column;
+      flex-direction: column;
+      margin-bottom: 1rem;
+
+      @include mq() {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.head {
+  background: $primary;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  color: #fff;
+  font-weight: 600;
+  padding: 1rem;
+  width: 100%;
+  @include mq() {
+    line-height: 3rem;
+    width: 30%;
+  }
+}
+.data {
+  background: $primary-light;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-align: left;
+  width: 100%;
+  @include mq() {
+    width: 70%;
+  }
+}
+
+.media {
+  &Thumb {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    &::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+    img {
+      position: absolute;
+      object-fit: cover;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+}

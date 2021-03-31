@@ -1,3 +1,5 @@
+import { images } from "../utils/images";
+
 export type Service = {
   title: string;
   caption: string;
@@ -15,8 +17,8 @@ export const services: Service[] = [
     title: "WEBサイト制作",
     caption: "Website Production",
     img: {
-      src: "/img/view/website-production.jpeg",
-      alt: "Website Production",
+      src: images.websiteProduction.path,
+      alt: images.websiteProduction.alt,
     },
     description:
       "コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。検索流入やSNS流入を強化する「SEOを意識したサイト」を作成できます。",
@@ -27,8 +29,8 @@ export const services: Service[] = [
     title: "WordPress",
     caption: "WordPress",
     img: {
-      src: "/img/view/wordpress-icon.png",
-      alt: "WordPress",
+      src: images.wordPress.path,
+      alt: images.wordPress.alt,
     },
     description: "WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。",
     classes: "p-grid__list-item-floated animated slow slideInRight",
@@ -38,8 +40,8 @@ export const services: Service[] = [
     title: "チャットアプリ開発",
     caption: "Chat APP",
     img: {
-      src: "/img/view/web-app.jpeg",
-      alt: "Chat APP",
+      src: images.webApp.path,
+      alt: images.webApp.alt,
     },
     description:
       "リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。これまで開発してきたWebアプリの一部を制作事例として公開しています。",

@@ -6,12 +6,14 @@ import { WrapInWideSection } from "src/layouts/Section";
 import Spacer from "src/layouts/Spacer";
 import { TitleArea } from "../../components/common/TitleArea";
 import { samples } from "../../contents/samples";
+import { configPage } from "../../utils/page-configure";
 
 const Samples: NextPage = () => {
+  const pageConfig = configPage("samples");
   return (
     <Layout>
       <Head>
-        <title>Samples | Pandashark Web</title>
+        <title>{pageConfig.title}</title>
       </Head>
       <Spacer size="md" />
       <TitleArea title="Samples" caption="制作事例" />

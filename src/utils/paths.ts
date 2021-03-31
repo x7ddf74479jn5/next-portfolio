@@ -12,7 +12,7 @@ export type LinkMapIndex =
   | "twitter"
   | "github";
 
-type ImageMapIndex = "pandashark_rec" | "ec" | "chat" | "portfolio" | "robot";
+type ImageMapIndex = "pandashark_icon" | "pandashark_rec" | "ec" | "chat" | "portfolio" | "robot";
 
 type PathMap<T extends string> = {
   [key in T]: string;
@@ -34,6 +34,7 @@ export const links: PathMap<LinkMapIndex> = {
 } as const;
 
 export const images: PathMap<ImageMapIndex> = {
+  pandashark_icon: "/img/icons/pandashark_icon.png",
   pandashark_rec: "/img/icons/pandashark_logo_rectangle.webp",
   ec: "/img/samples/ec-app-eyecatch.webp",
   chat: "/img/samples/chat-bot-eyecatch.webp",

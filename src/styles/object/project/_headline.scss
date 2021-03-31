@@ -29,3 +29,35 @@
     }
   }
 }
+
+.Headline {
+  &Top {
+    color: $dark;
+    font-size: $font-xlarge;
+    font-weight: 300;
+  }
+  &Sub {
+    color: #fff;
+    text-align: left;
+    h2 {
+      font-size: $font-xxlarge;
+      font-family: "Courgette";
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: $font-medium;
+      font-weight: 500;
+    }
+  }
+  &About {
+    display: block;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    font-size: $font-large;
+    margin-bottom: 2rem;
+    text-align: left;
+    &White {
+      @extend .HeadlineAbout;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    }
+  }
+}
