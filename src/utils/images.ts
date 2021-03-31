@@ -10,9 +10,9 @@ export const images: Image = {
   portfolio: { path: "/img/samples/portfolio-eyecatch.webp", alt: "eye catch portfolio" },
   twitter: { path: "/img/icons/twitter_logo.png", alt: "twitter" },
   robot: { path: "/img/icons/robot.png", alt: "chat bot" },
-  websiteProduction: { path: "/img/view/website-production.jpeg", alt: "Website Production" },
-  wordPress: { path: "/img/view/wordpress-icon.png", alt: "WordPress" },
-  webApp: { path: "/img/view/web-app.jpeg", alt: "Chat APP" },
+  websiteProduction: { path: "/img/services/website-production.jpeg", alt: "Website Production" },
+  wordPress: { path: "/img/services/wordpress-icon.png", alt: "WordPress" },
+  webApp: { path: "/img/services/web-app.jpeg", alt: "Chat APP" },
   favicon: { path: "/img/icons/favicon.ico", alt: "" },
   appleTouchIcon: { path: "/img/icons/apple-touch-icon.png", alt: "" },
 } as const;
