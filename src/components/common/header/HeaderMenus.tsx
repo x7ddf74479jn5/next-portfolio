@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import PandasharkLogo from "src/components/common/PandasharkLogo";
+import styles from "src/styles/components/common/header/HeaderMenus.module.scss";
 import { images } from "src/utils/images";
 import { links as l } from "src/utils/paths";
 
@@ -11,13 +12,14 @@ const links = [
 ];
 
 type HeaderMenusProps = {
+  isOpen: boolean;
   closeNav(): void;
   // isDialogOpen: boolean;
   closeDialog(): void;
   openDialog(e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
 };
 
-export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialog, closeNav }) => {
+export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, isOpen, openDialog, closeNav }) => {
   const content = links.map((link, index) => {
     return (
       <li key={index}>
@@ -51,15 +53,20 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
   //     }
   // }
 
+  const logoStyle = isOpen ? styles.productLogoOpen : styles.productLogo;
+  const navTopStyle = isOpen ? styles.headerNavTopOpen : styles.headerNavTop;
+
   return (
-    <nav className="l-header__nav-top">
-      <h1 className="l-product-logo">
-        <Link href={"/"}>
+    <nav className={navTopStyle}>
+      {/* <nav className="l-header__nav-top"> */}
+      <h1 className={logoStyle}>
+        <PandasharkLogo height={40} width={80} />
+        {/* <Link href={"/"}>
           <a target="_self">
             <Image height={80} width={40} alt={images.pandasharkRectangle.alt} src={images.pandasharkRectangle.path} />
-            {/* <img alt="パンダシャーク" src={images.pandashark_rec} /> */}
           </a>
         </Link>
+         */}
         {/* <a href="/" target="_self">
           <img alt="パンダシャーク" src="/img/icons/logo.png" />
         </a> */}
@@ -67,14 +74,14 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, openDialo
       <ul>
         {content}
         <li>
-          <a className="sns" href={l.twitter} target="_self">
+          <a className={styles.sns} href={l.twitter} target="_self">
             <img src={images.twitter.path} alt={images.twitter.alt} />
             <span>Twitter</span>
           </a>
         </li>
         <li>
           <a
-            className="sns"
+            className={styles.sns}
             tabIndex={0}
             role="button"
             onClick={() => {

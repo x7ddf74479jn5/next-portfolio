@@ -1,7 +1,8 @@
 import * as React from "react";
 import { ChatBotDialog } from "src/components/ChatBotDialog";
 import { Footer } from "src/layouts/footer";
-import { Header } from "src/layouts/header";
+import { Header } from "src/layouts/Header2";
+// import { Header } from "src/layouts/header";
 
 export const Layout: React.FC = ({ children }) => {
   const [open, setOpen] = React.useState<boolean>(false);
@@ -55,14 +56,15 @@ export const Layout: React.FC = ({ children }) => {
 
   return (
     <>
-      <Header
+      {/* <Header
         open={open}
         toggleNav={toggleNav}
         closeNav={closeNav}
         isDialogOpen={isDialogOpen}
         openDialog={openDialog}
         closeDialog={closeDialog}
-      />
+      /> */}
+      <Header />
       <main className={navOpen}>{children}</main>
       <ChatBotDialog isOpen={isDialogOpen} onClose={closeDialog} display={isDialogShow} className="c-modal" />
       <Footer />
