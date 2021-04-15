@@ -94,30 +94,28 @@ export const Header: React.VFC = ({}) => {
   const navImageCloseStyle = isOpen ? styles.menuBarsShow : styles.menuBarsHide;
 
   return (
-    <div className="">
-      <header className={styles.header}>
-        <div className={styles.headerInner}>
-          <div className={styles.productLogo}>
-            <PandasharkLogo width={128} height={64} />
-          </div>
-          <NavToggleButton isOpen={isOpen} toggleNav={toggleNav} />
+    <header className={styles.header}>
+      <div className={styles.headerInner}>
+        <div className={styles.productLogo}>
+          <PandasharkLogo width={128} height={64} />
+        </div>
+        <NavToggleButton isOpen={isOpen} toggleNav={toggleNav} />
 
-          <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} isOpen={isOpen} openDialog={openDialog} />
-        </div>
-        <div>
-          <div
-            className="black-bg"
-            role="button"
-            id="js-black-bg"
-            onKeyDown={(e) => {
-              return closeNav();
-            }}
-            onClick={() => {
-              return closeNav();
-            }}
-          ></div>
-        </div>
-      </header>
-    </div>
+        <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} isOpen={isOpen} openDialog={openDialog} />
+      </div>
+      <div>
+        <div
+          className="black-bg"
+          role="button"
+          id="js-black-bg"
+          onKeyDown={(e) => {
+            return closeNav();
+          }}
+          onClick={() => {
+            return closeNav();
+          }}
+        ></div>
+      </div>
+    </header>
   );
 };

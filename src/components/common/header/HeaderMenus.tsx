@@ -2,14 +2,57 @@ import Link from "next/link";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
 import styles from "src/styles/components/common/header/HeaderMenus.module.scss";
 import { images } from "src/utils/images";
-import { links as l } from "src/utils/paths";
+import { externalLinks, links } from "src/utils/paths";
 
-const links = [
-  { label: "About", href: "/about/" },
-  { label: "Samples", href: "/samples/" },
-  { label: "Blog", href: "/" },
-  { label: "Contact", href: "/contact/" },
+type NoImageItem = {
+  label: string;
+  href: string;
+};
+
+type WithImageItem = {
+  label: string;
+  href: string;
+  icon: { src: string; alt: string };
+};
+type HeaderMenuItem = NoImageItem | WithImageItem;
+
+const headerMenuItems: HeaderMenuItem[] = [
+  { label: "About", href: links.about },
+  { label: "Samples", href: links.samples },
+  { label: "Contact", href: links.contact },
+  { label: "Github", href: externalLinks.github },
+  { label: "Twitter", href: externalLinks.twitter, icon: { src: images.twitter.path, alt: images.twitter.alt } },
+  { label: "Chat bot", href: links.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
 ];
+
+type ListItemProps = {
+  items: HeaderMenuItem[];
+};
+
+const ListItem: React.VFC<ListItemProps> = ({ items }) => {
+  return (
+    <ul>
+      {items.map((item, index) => {
+        return !("icon" in item) ? (
+          <li key={index}>
+            <Link href={item.href}>
+              <a target="_self">{item.label}</a>
+            </Link>
+          </li>
+        ) : (
+          <li key={index}>
+            <Link href={item.href}>
+              <a className={styles.sns} target="_self">
+                <img src={item.icon.src} alt={item.icon.alt} />
+                <span>{item.label}</span>
+              </a>
+            </Link>
+          </li>
+        );
+      })}
+    </ul>
+  );
+};
 
 type HeaderMenusProps = {
   isOpen: boolean;
@@ -20,16 +63,6 @@ type HeaderMenusProps = {
 };
 
 export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, isOpen, openDialog, closeNav }) => {
-  const content = links.map((link, index) => {
-    return (
-      <li key={index}>
-        <Link href={link.href}>
-          <a target="_self">{link.label}</a>
-        </Link>
-      </li>
-    );
-  });
-
   const handleClick = () => {
     //ボタンが押された時の処理
     console.log("opne");
@@ -58,23 +91,14 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, isOpen, o
 
   return (
     <nav className={navTopStyle}>
-      {/* <nav className="l-header__nav-top"> */}
       <h1 className={logoStyle}>
         <PandasharkLogo height={40} width={80} />
-        {/* <Link href={"/"}>
-          <a target="_self">
-            <Image height={80} width={40} alt={images.pandasharkRectangle.alt} src={images.pandasharkRectangle.path} />
-          </a>
-        </Link>
-         */}
-        {/* <a href="/" target="_self">
-          <img alt="パンダシャーク" src="/img/icons/logo.png" />
-        </a> */}
       </h1>
-      <ul>
+      <ListItem items={headerMenuItems} />
+      {/* <ul>
         {content}
         <li>
-          <a className={styles.sns} href={l.twitter} target="_self">
+          <a className={styles.sns} href={links.twitter} target="_self">
             <img src={images.twitter.path} alt={images.twitter.alt} />
             <span>Twitter</span>
           </a>
@@ -92,19 +116,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ closeDialog, isOpen, o
             <span>Chat Bot</span>
           </a>
         </li>
-        {/* <li>
-          <button onClick={() => handleClick()}>
-            <img src="/img/icons/twitter_logo.png" alt="twitter" />
-            <span>Chat Bot</span>
-          </button>
-        </li> */}
-        {/* <li>
-        <a className="sns" href="#" target="_self">
-          <img src="/img/icons/youtube_logo.png" />
-          <span>YouTubeチャンネル</span>
-        </a>
-      </li> */}
-      </ul>
+      </ul> */}
     </nav>
   );
 };

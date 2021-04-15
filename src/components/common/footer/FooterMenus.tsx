@@ -1,35 +1,33 @@
 import Link from "next/link";
-import { links as l } from "src/utils/paths";
+import { externalLinks, links } from "src/utils/paths";
 
-const links = {
+const accordionItems = {
   about: [
-    { label: "Vision", href: "/about/#vision" },
-    { label: "Profile", href: "/about/#profile" },
-    { label: "Career", href: "/about/#career" },
-    { label: "Skills", href: "/about/#skills" },
+    { label: "Vision", href: links.about + "#vision" },
+    { label: "Profile", href: links.about + "#profile" },
+    { label: "Career", href: links.about + "#career" },
+    { label: "Skills", href: links.about + "#skills" },
   ],
   samples: [
-    { label: "ポートフォリオサイト", href: "/samples/portfolio/" },
-    { label: "ECサイト", href: "/samples/ec/" },
-    { label: "Chat App", href: "/samples/chat/" },
+    { label: "ポートフォリオサイト", href: links.portfolio },
+    { label: "ECサイト", href: links.ec },
+    { label: "Chat App", href: links.chat },
   ],
   links: [
-    { label: "Blog", href: "/" },
-    { label: "Twitter", href: l.twitter },
-    // {label: "",href:""},
-    // {label: "",href:""},
+    { label: "Twitter", href: externalLinks.twitter },
+    { label: "Github", href: externalLinks.github },
   ],
 };
 const accordions = [
-  { label: "自己紹介", id: "footer-sitemap-about", inputId: "accordion-about", links: links.about },
-  { label: "制作事例", id: "footer-sitemap-works", inputId: "accordion-works", links: links.samples },
-  { label: "リンク集", id: "footer-sitemap-links", inputId: "accordion-links", links: links.links },
+  { label: "自己紹介", id: "footer-sitemap-about", inputId: "accordion-about", links: accordionItems.about },
+  { label: "制作事例", id: "footer-sitemap-works", inputId: "accordion-works", links: accordionItems.samples },
+  { label: "リンク集", id: "footer-sitemap-links", inputId: "accordion-links", links: accordionItems.links },
 ];
 
 export const FooterMenus: React.FC = () => {
   const handle = (event: React.MouseEvent<HTMLElement, MouseEvent>) => {};
 
-  const accordionItems = accordions.map((accordion) => {
+  const accordionListItems = accordions.map((accordion) => {
     return (
       <li className="p-accordion" id={accordion.id} key={accordion.id}>
         {/* <button onClick={handle} onKeyDown={(e) => handle}> */}
@@ -70,7 +68,7 @@ export const FooterMenus: React.FC = () => {
   return (
     <section className="sitemap">
       <ul className="footer-links">
-        {accordionItems}
+        {accordionListItems}
         {/* <li className="p-accordion" id="footer-sitemap-about">
         <h4 role="button" onClick={handle}>
           自己紹介

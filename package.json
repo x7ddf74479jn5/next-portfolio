@@ -46,6 +46,7 @@
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
     "@sendgrid/mail": "^7.4.0",
+    "@types/react-dom": "^17.0.3",
     "cors": "^2.8.5",
     "next": "^10.0.7",
     "npm": "^7.5.6",
