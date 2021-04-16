@@ -1,5 +1,4 @@
 import * as React from "react";
-import { HeaderMenus } from "src/components/common/header/HeaderMenus";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
 import styles from "src/styles/components/common/PandasharkLogo.module.scss";
 
@@ -65,7 +64,7 @@ export const Header: React.VFC<HeaderProps> = ({
               width="24"
             />
           </button>
-          <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} openDialog={openDialog} />
+          {/* <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} openDialog={openDialog} /> */}
         </div>
         <div>
           <div
