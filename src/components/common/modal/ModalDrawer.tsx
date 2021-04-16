@@ -1,5 +1,11 @@
+import styles from "src/styles/components/modal/ModalContainer.module.scss";
+
 const ModalDrawer: React.FC = () => {
-  return null;
+  return (
+    <div className={styles.modalContent}>
+      <button onClick={(): void => console.log("close")}>close</button>
+    </div>
+  );
 };
 
 export default ModalDrawer;

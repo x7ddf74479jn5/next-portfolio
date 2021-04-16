@@ -1,29 +1,18 @@
 import * as React from "react";
 import { HeaderMenus } from "src/components/common/header/HeaderMenus";
+import Backdrop from "src/components/common/modal/Backdrop";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
 import styles from "src/styles/components/common/header/Header.module.scss";
-
-type HeaderProps = {
-  open: boolean;
-  isDialogOpen: boolean;
-  toggleNav(): void;
-  closeNav(e?: React.KeyboardEvent<HTMLDivElement>): void;
-  closeDialog(): void;
-  openDialog(e?: React.MouseEvent<HTMLAnchorElement, MouseEvent>): void;
-};
 
 type Props = {
   isOpen: boolean;
   toggleNav(): void;
-  // e: React.MouseEvent<HTMLButtonElement, MouseEvent> | React.KeyboardEvent<HTMLButtonElement>
 };
 
 const NavToggleButton: React.VFC<Props> = ({ isOpen, toggleNav }) => {
   /* <!-- Navigation toggle button for Smartphone--> */
 
   const navToggleButtonStyle = isOpen ? styles.navToggleButtonOpen : styles.navToggleButton;
-  const navImageOpenStyle = isOpen ? styles.menuBarsHide : styles.menuBarsShow;
-  const navImageCloseStyle = isOpen ? styles.menuBarsShow : styles.menuBarsHide;
 
   return (
     <button
@@ -31,67 +20,26 @@ const NavToggleButton: React.VFC<Props> = ({ isOpen, toggleNav }) => {
       data-about-nav-toggle
       aria-label="ナビゲーション メニューの切り替え"
       id="nav-toggle-button"
-      onClick={() => {
-        return toggleNav();
-      }}
+      onClick={() => toggleNav()}
     >
-      <img
-        alt="ナビゲーション メニューを開く"
-        className={navImageOpenStyle}
-        src="/img/icons/menu.png"
-        height="24"
-        width="24"
-      />
-      <img
-        alt="ナビゲーション メニューを閉じる"
-        className={navImageCloseStyle}
-        src="/img/icons/close.png"
-        height="24"
-        width="24"
-      />
+      {isOpen ? (
+        <img alt="ナビゲーション メニューを閉じる" src="/img/icons/close.png" height="24" width="24" />
+      ) : (
+        <img alt="ナビゲーション メニューを開く" src="/img/icons/menu.png" height="24" width="24" />
+      )}
     </button>
   );
 };
 
-export const Header: React.VFC = ({}) => {
+export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleNav = () => {
     setIsOpen((prevState) => !prevState);
   };
-  const closeNav = () => {
+  const closeNav = React.useCallback(() => {
     setIsOpen(false);
-  };
-
-  const [isDialogOpen, setIsDialogOpen] = React.useState<boolean>(false);
-  const [isDialogShow, setIsDialogShow] = React.useState<boolean>(false);
-  const mounted = React.useRef<boolean>(false);
-
-  // ダイアログを開く
-  const openDialog = React.useCallback(() => {
-    if (mounted.current) {
-      // setIsDialogShow(true);
-      setIsDialogOpen(true);
-
-      console.log("mouted");
-    } else {
-      setIsDialogOpen(true);
-      setIsDialogShow(true);
-      mounted.current = true;
-      console.log("new mouted");
-    }
-  }, [mounted]);
-  console.log(mounted.current);
-
-  const closeDialog = React.useCallback(() => {
-    // setIsDialogShow(false);
-    setIsDialogOpen(false);
-  }, [setIsDialogShow]);
-
-  const navOpen = isOpen ? "nav-open" : "";
-  const navToggleButtonStyle = isOpen ? styles.navToggleButtonOpen : styles.navToggleButton;
-  const navImageOpenStyle = isOpen ? styles.menuBarsHide : styles.menuBarsShow;
-  const navImageCloseStyle = isOpen ? styles.menuBarsShow : styles.menuBarsHide;
+  }, []);
 
   return (
     <header className={styles.header}>
@@ -101,21 +49,9 @@ export const Header: React.VFC = ({}) => {
         </div>
         <NavToggleButton isOpen={isOpen} toggleNav={toggleNav} />
 
-        <HeaderMenus closeNav={closeNav} closeDialog={closeDialog} isOpen={isOpen} openDialog={openDialog} />
+        <HeaderMenus closeNav={closeNav} isOpen={isOpen} />
       </div>
-      <div>
-        <div
-          className="black-bg"
-          role="button"
-          id="js-black-bg"
-          onKeyDown={(e) => {
-            return closeNav();
-          }}
-          onClick={() => {
-            return closeNav();
-          }}
-        ></div>
-      </div>
+      {isOpen && <Backdrop handleClick={closeNav} />}
     </header>
   );
 };

@@ -170,13 +170,22 @@
   }
 }
 
-.fixedNav {
-  overflow: visible;
+.blackBg {
+  background: rgba(0, 0, 0, 0.1);
+  height: 100vh;
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2000;
+  right: 0;
+  width: 100vw;
+  z-index: 1000;
 }
+
+// .fixedNav {
+//   overflow: visible;
+//   position: fixed;
+//   top: 0;
+//   width: 100%;
+//   z-index: 2000;
+// }
 .header {
   transition: top 0.4s ease;
   background-color: #fff;
