@@ -1,4 +1,4 @@
-import styles from "src/styles/components/modal/backdrop.module.scss";
+import styles from "src/styles/components/modal/Backdrop.module.scss";
 
 type Props = {
   handleClick: () => void;
