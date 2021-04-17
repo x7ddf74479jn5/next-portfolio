@@ -128,19 +128,22 @@ const Contact: NextPage = () => {
             <div className="p-forms__input">
               <p>
                 <label>お名前 *</label>
-                <input type="text" name="name" placeholder="名無 太郎" required ref={register} />
+                <input type="text" placeholder="名無 太郎" required {...register("name")} />
+                {/* <input type="text" name="name" placeholder="名無 太郎" required ref={register} /> */}
               </p>
             </div>
             <div className="p-forms__input">
               <p>
                 <label>メールアドレス *</label>
-                <input type="email" name="email" placeholder="your@example.com" required ref={register} />
+                <input type="email" placeholder="your@example.com" required {...register("email")} />
+                {/* <input type="email" name="email" placeholder="your@example.com" required ref={register} /> */}
               </p>
             </div>
             <div className="p-forms__input">
               <p>
                 <label>お問い合わせ種別</label>
-                <select name="category" ref={register}>
+                <select {...register("category")}>
+                  {/* <select name="category" ref={register}> */}
                   <option value=""></option>
                   <option value="Webサイト制作について">Webサイト制作について</option>
                   <option value="Webアプリ開発について">Webアプリ開発について</option>
@@ -153,7 +156,8 @@ const Contact: NextPage = () => {
             <div className="p-forms__input">
               <p>
                 <label>お問い合わせ内容 *</label>
-                <textarea name="description" rows={10} required={true} ref={register}></textarea>
+                <textarea rows={10} required={true} {...register("description")}></textarea>
+                {/* <textarea name="description" rows={10} required={true} ref={register}></textarea> */}
               </p>
             </div>
             <button

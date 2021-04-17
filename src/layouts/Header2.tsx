@@ -34,9 +34,9 @@ const NavToggleButton: React.VFC<Props> = ({ isOpen, toggleNav }) => {
 export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
-  const toggleNav = () => {
+  const toggleNav = React.useCallback(() => {
     setIsOpen((prevState) => !prevState);
-  };
+  }, []);
   const closeNav = React.useCallback(() => {
     setIsOpen(false);
   }, []);
