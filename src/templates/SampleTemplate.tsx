@@ -1,5 +1,5 @@
 import { GridRowLink, GridRowList, GridRowParagraph } from "src/components/samples/GridRow";
-import { WrapInSection } from "src/layouts/Section";
+import { WrapInSection } from "src/components/layouts/Section";
 import styles from "src/styles/components/samples/SampleGrid.module.scss";
 
 import type { SampleDetail } from "../contents/samples";

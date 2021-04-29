@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { NextArrowButton } from "src/components/common/common/NextArrowButton";
+import { NextArrowButton } from "src/components/common/NextArrowButton";
 import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
-import { Layout } from "src/layouts/layout";
-import Spacer from "src/layouts/Spacer";
+import { Layout } from "src/components/layouts/Layout";
+import Spacer from "src/components/layouts/Spacer";
 
 import { configPage } from "../utils/page-configure";
 

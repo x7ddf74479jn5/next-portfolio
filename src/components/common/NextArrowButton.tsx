@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
-import styles from "src/styles/components/common/common/NextArrowButton.module.scss";
+import styles from "src/styles/components/common/NextArrowButton.module.scss";
 
 type Props = {
   label?: string;

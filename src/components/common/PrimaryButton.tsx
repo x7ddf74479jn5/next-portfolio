@@ -1,4 +1,4 @@
-import styles from "src/styles/components/common/common/PrimaryButton.module.scss";
+import styles from "src/styles/components/common/PrimaryButton.module.scss";
 
 type Props = {
   disabled: boolean;

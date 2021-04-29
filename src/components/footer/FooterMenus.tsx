@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "src/styles/layouts/Footer.module.scss";
+import styles from "src/styles/components/footer/Footer.module.scss";
 import { externalLinks, links } from "src/utils/paths";
 
 const accordionItems = {

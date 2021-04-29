@@ -4,11 +4,11 @@ import Career from "src/components/about/Career";
 import Profile from "src/components/about/Profile";
 import Skill from "src/components/about/Skill";
 import Vision from "src/components/about/Vision";
-import { Layout } from "src/layouts/layout";
-import Spacer from "src/layouts/Spacer";
+import { Layout } from "src/components/layouts/Layout";
+import Spacer from "src/components/layouts/Spacer";
 import { configPage } from "src/utils/page-configure";
 
-import { TitleArea } from "../components/common/common/TitleArea";
+import { TitleArea } from "../components/common/TitleArea";
 
 const About: NextPage = () => {
   const pageConfig = configPage("about");

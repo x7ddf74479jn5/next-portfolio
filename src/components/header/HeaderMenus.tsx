@@ -1,10 +1,10 @@
 import Link from "next/link";
-import PandasharkLogo from "src/components/common/common/PandasharkLogo";
-import styles from "src/styles/components/common/header/HeaderMenus.module.scss";
+import PandasharkLogo from "src/components/common/PandasharkLogo";
+import styles from "src/styles/components/header/HeaderMenus.module.scss";
 import { images } from "src/utils/images";
 import { externalLinks, links } from "src/utils/paths";
 
-import { useModalDispatch } from "../../../hooks/useModalDispatch";
+import { useModalDispatch } from "../../hooks/useModalDispatch";
 
 type ItemBase = {
   label: string;

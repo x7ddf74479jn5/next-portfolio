@@ -1,4 +1,4 @@
-import Breadcrumbs from "src/components/common/common/BreadCrumbs";
+import Breadcrumbs from "src/components/common/BreadCrumbs";
 
 type Breadcrumb = {
   index: number;

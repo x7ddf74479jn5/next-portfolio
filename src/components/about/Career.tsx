@@ -1,8 +1,8 @@
-import type { Timeline} from "src/contents/timelines";
+import type { Timeline } from "src/contents/timelines";
 import { timelines } from "src/contents/timelines";
 import styles from "src/styles/components/about/Career.module.scss";
 
-import { WrapInSection } from "../../layouts/Section";
+import { WrapInSection } from "../layouts/Section";
 
 const Career: React.VFC = () => {
   return (

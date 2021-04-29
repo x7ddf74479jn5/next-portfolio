@@ -1,9 +1,9 @@
 // import Image from "next/image";
 import Link from "next/link";
-import PandasharkLogo from "src/components/common/common/PandasharkLogo";
-import { FooterMenus } from "src/components/common/footer/FooterMenus";
-import styles from "src/styles/layouts/Footer.module.scss";
-// import styles from "src/styles/components/common/PandasharkLogo.module.scss";
+import PandasharkLogo from "src/components/common/PandasharkLogo";
+import { FooterMenus } from "src/components/footer/FooterMenus";
+import styles from "src/styles/components/footer/Footer.module.scss";
+// import styles from "src/styles/components/PandasharkLogo.module.scss";
 
 export const Footer: React.FC = () => {
   const handle = (event: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {};

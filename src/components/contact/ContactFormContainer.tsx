@@ -1,11 +1,11 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import PrimaryButton from "src/components/common/common/PrimaryButton";
+import PrimaryButton from "src/components/common/PrimaryButton";
 // import type { FormData } from "src/components/contact/ContactFormBody";
 import ContactFormBody from "src/components/contact/ContactFormBody";
 import FormButton from "src/components/contact/FormButton";
-import { GridRow } from "src/layouts/Grid";
+import { GridRow } from "src/components/layouts/Grid";
 import s from "src/styles/components/contact/ContactForm.module.scss";
 import styles from "src/styles/components/modal/ConfirmModal.module.scss";
 import * as yup from "yup";

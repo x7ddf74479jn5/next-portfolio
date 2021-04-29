@@ -1,8 +1,8 @@
 import * as React from "react";
-import PandasharkLogo from "src/components/common/common/PandasharkLogo";
-import { HeaderMenus } from "src/components/common/header/HeaderMenus";
-import Backdrop from "src/components/common/modal/Backdrop";
-import styles from "src/styles/components/common/header/Header.module.scss";
+import PandasharkLogo from "src/components/common/PandasharkLogo";
+import { HeaderMenus } from "src/components/header/HeaderMenus";
+import Backdrop from "src/components/modal/Backdrop";
+import styles from "src/styles/components/header/Header.module.scss";
 
 type Props = {
   isOpen: boolean;
@@ -20,7 +20,9 @@ const NavToggleButton: React.VFC<Props> = ({ isOpen, toggleNav }) => {
       data-about-nav-toggle
       aria-label="ナビゲーション メニューの切り替え"
       id="nav-toggle-button"
-      onClick={() => {return toggleNav()}}
+      onClick={() => {
+        return toggleNav();
+      }}
     >
       {isOpen ? (
         <img alt="ナビゲーション メニューを閉じる" src="/img/icons/close.png" height="24" width="24" />
@@ -35,7 +37,9 @@ export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const toggleNav = React.useCallback(() => {
-    setIsOpen((prevState) => {return !prevState});
+    setIsOpen((prevState) => {
+      return !prevState;
+    });
   }, []);
   const closeNav = React.useCallback(() => {
     setIsOpen(false);

@@ -1,6 +1,6 @@
 import styles from "src/styles/components/about/Vision.module.scss";
 
-import { WrapInSection } from "../../layouts/Section";
+import { WrapInSection } from "../layouts/Section";
 
 const Vision: React.VFC = () => {
   return (

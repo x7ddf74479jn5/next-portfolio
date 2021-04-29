@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import { images } from "../../../utils/images";
+import { images } from "../../utils/images";
 
 type Props = {
   width: number;

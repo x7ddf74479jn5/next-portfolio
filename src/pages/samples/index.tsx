@@ -1,11 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import SampleCardList from "src/components/samples/SampleCardList";
-import { Layout } from "src/layouts/layout";
-import { WrapInWideSection } from "src/layouts/Section";
-import Spacer from "src/layouts/Spacer";
+import { Layout } from "src/components/layouts/Layout";
+import { WrapInWideSection } from "src/components/layouts/Section";
+import Spacer from "src/components/layouts/Spacer";
 
-import { TitleArea } from "../../components/common/common/TitleArea";
+import { TitleArea } from "../../components/common/TitleArea";
 import { samples } from "../../contents/samples";
 import { configPage } from "../../utils/page-configure";
 

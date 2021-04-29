@@ -1,4 +1,4 @@
-import { WrapInSection } from "src/layouts/Section";
+import { WrapInSection } from "src/components/layouts/Section";
 import styles from "src/styles/components/about/Profile.module.scss";
 import { images } from "src/utils/images";
 
