@@ -17,4 +17,6 @@ export const objectToArray = <T extends Obj>(object: T): Array<{ value: any; lab
   return newArray;
 };
 
-export const identity = <T extends Obj>(arg: T) => arg;
+export const identity = <T extends Obj>(arg: T) => {
+  return arg;
+};

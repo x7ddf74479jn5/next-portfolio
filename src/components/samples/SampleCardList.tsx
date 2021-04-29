@@ -1,7 +1,7 @@
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import Image from "next/image";
 import Link from "next/link";
-import { Sample } from "src/contents/samples";
+import type { Sample } from "src/contents/samples";
 import styles from "src/styles/components/samples/SampleCardList.module.scss";
 
 type SampleCardProps = {

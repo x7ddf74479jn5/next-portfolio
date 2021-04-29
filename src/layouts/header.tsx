@@ -1,6 +1,5 @@
 import * as React from "react";
-import PandasharkLogo from "src/components/common/PandasharkLogo";
-import styles from "src/styles/components/common/PandasharkLogo.module.scss";
+// import styles from "src/styles/components/common/PandasharkLogo.module.scss";
 
 type HeaderProps = {
   open: boolean;
@@ -35,9 +34,9 @@ export const Header: React.VFC<HeaderProps> = ({
     <div className={navOpen}>
       <header className={navOpen + " fixed-nav " + "l-header "}>
         <div className="l-header-inner">
-          <div className={styles.productLogo}>
+          {/* <div className={styles.productLogo}>
             <PandasharkLogo width={128} height={64} />
-          </div>
+          </div> */}
 
           {/* <!-- Navigation toggle button for Smartphone--> */}
           <button

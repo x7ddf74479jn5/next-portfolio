@@ -1,6 +1,7 @@
+import "./styles.css";
+
 import React from "react";
 import Modal from "react-modal";
-import "./styles.css";
 
 Modal.setAppElement("#__next");
 
@@ -9,9 +10,9 @@ export default function App() {
 
   return (
     <div className="App">
-      <button onClick={() => setIsOpen(true)}>Open Modal</button>
+      <button onClick={() => {return setIsOpen(true)}}>Open Modal</button>
       <Modal isOpen={modalIsOpen}>
-        <button onClick={() => setIsOpen(false)}>Close Modal</button>
+        <button onClick={() => {return setIsOpen(false)}}>Close Modal</button>
       </Modal>
     </div>
   );

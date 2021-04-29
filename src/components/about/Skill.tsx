@@ -1,6 +1,8 @@
 import { WrapInSection } from "src/layouts/Section";
 import styles from "src/styles/components/about/Skill.module.scss";
-import { Service, services } from "../../contents/services";
+
+import type { Service} from "../../contents/services";
+import { services } from "../../contents/services";
 import { skills } from "../../contents/skills";
 
 type ServiceItemProps = {

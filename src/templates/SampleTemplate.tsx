@@ -1,7 +1,8 @@
 import { GridRowLink, GridRowList, GridRowParagraph } from "src/components/samples/GridRow";
 import { WrapInSection } from "src/layouts/Section";
 import styles from "src/styles/components/samples/SampleGrid.module.scss";
-import { SampleDetail } from "../contents/samples";
+
+import type { SampleDetail } from "../contents/samples";
 
 type Props = {
   sample: SampleDetail;

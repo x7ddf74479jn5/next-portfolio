@@ -2,10 +2,11 @@ import Link from "next/link";
 import * as React from "react";
 // import {Swiper} as S  from "swiper/react"
 import Swiper from "react-id-swiper";
+
 // import "swiper/swiper-bundle.min.scss";
 // import 'swiper/swiper.scss';
 // import styles from "src/styles/swiper-bundle.module.css";
-import { Sample } from "../contents/samples";
+import type { Sample } from "../contents/samples";
 
 // type sample = {
 //   img: {

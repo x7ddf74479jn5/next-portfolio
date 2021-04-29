@@ -1,8 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { TitleArea } from "src/components/common/TitleArea";
+import { TitleArea } from "src/components/common/common/TitleArea";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
+
 import { configPage } from "../utils/page-configure";
 
 const googleAnalyticsTerms = "https://marketingplatform.google.com/about/analytics/terms/jp/";

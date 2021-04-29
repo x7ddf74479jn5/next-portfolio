@@ -1,0 +1,48 @@
+@import "../../../variables.scss";
+
+.btn {
+  background: $secondary;
+  border: 1px solid #fff;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  color: #fff;
+  display: block;
+  height: 3rem;
+  margin: 0 auto;
+  line-height: 3rem;
+  text-align: center;
+  transition: all 0.5s;
+
+  &Round {
+    @extend .btn;
+    border-radius: 50px;
+    font-size: $font-medium;
+    font-weight: 400;
+    margin-bottom: 0.25rem;
+    width: 16rem;
+    &:hover {
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+      opacity: 1;
+      top: -2px;
+      &:visited {
+        color: #fff;
+      }
+    }
+    &:active {
+      top: 2px;
+    }
+    &OnDark {
+      @extend .btnRound;
+      &:hover {
+        background: #fff;
+        color: $secondary;
+        border: 2px solid $secondary;
+        opacity: 1;
+        transform-origin: left top;
+        transform: scale(1, 1);
+        &:visited {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}

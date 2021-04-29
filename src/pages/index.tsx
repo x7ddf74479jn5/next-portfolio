@@ -1,13 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import { IconArrowNext } from "src/components/common/IconArrowNext";
+import { NextArrowButton } from "src/components/common/common/NextArrowButton";
 import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
+
 import { configPage } from "../utils/page-configure";
 
 type SlideAnimate = {
@@ -56,18 +57,10 @@ const Home: NextPage = () => {
             <div>
               <h2>Pandashark</h2>
               <p>Web Engineer</p>
-              <IconArrowNext label="Contact" href="/contact/" />
+              <NextArrowButton label="Contact" href="/contact/" onDark />
             </div>
           </div>
-          {/* <picture>
-            <source type="image/webp" srcSet="/img/view/first-view.webp" />
-            <img src="/img/view/first-view.jpg" />
-          </picture> */}
-          {/* <img src="/img/view/first-view.webp" alt="ocean" /> */}
         </div>
-        {/* <div className="p-grid__view-first-img">
-          <Image src={"/img/view/first-view.jpeg"} alt="sea coast in RJ" layout="fill" />
-        </div> */}
       </section>
 
       <Spacer size="md" />
@@ -110,7 +103,7 @@ const Home: NextPage = () => {
           <h2 className="p-headline__top">Services</h2>
           <hr className="c-section__line" />
           <Spacer size="sm" />
-          <IconArrowNext label="事業内容" href="/about/#skills" />
+          <NextArrowButton label="事業内容" href="/about/#skills" />
           <Spacer size="md" />
           <div className="p-grid__list">{serviceItems}</div>
         </div>
@@ -130,7 +123,7 @@ const Home: NextPage = () => {
           {/* <ImageSwiper samples={samples} /> */}
 
           <Spacer size="md" />
-          <IconArrowNext label="全ての事例を見る" href="/samples/" />
+          <NextArrowButton label="全ての事例を見る" href="/samples/" />
         </div>
       </section>
 
@@ -144,7 +137,7 @@ const Home: NextPage = () => {
             お客様だけでなく、エンドユーザーにも喜んでいただけるよう技術を提供します。
           </p>
           <Spacer size="sm" />
-          <IconArrowNext label="お問い合わせ" href="/contact/" />
+          <NextArrowButton label="お問い合わせ" href="/contact/" />
           <Spacer size="md" />
         </div>
       </section>

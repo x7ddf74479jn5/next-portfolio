@@ -44,4 +44,4 @@ const GridRowLink: React.VFC<GridRowLink> = ({ header, data }) => {
   );
 };
 
-export { GridRowList, GridRowParagraph, GridRowLink };
+export { GridRowLink,GridRowList, GridRowParagraph };

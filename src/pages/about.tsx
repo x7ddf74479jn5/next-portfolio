@@ -7,7 +7,8 @@ import Vision from "src/components/about/Vision";
 import { Layout } from "src/layouts/layout";
 import Spacer from "src/layouts/Spacer";
 import { configPage } from "src/utils/page-configure";
-import { TitleArea } from "../components/common/TitleArea";
+
+import { TitleArea } from "../components/common/common/TitleArea";
 
 const About: NextPage = () => {
   const pageConfig = configPage("about");

@@ -1,18 +1,22 @@
 // import Image from "next/image";
 import Link from "next/link";
+import PandasharkLogo from "src/components/common/common/PandasharkLogo";
 import { FooterMenus } from "src/components/common/footer/FooterMenus";
-import PandasharkLogo from "src/components/common/PandasharkLogo";
-import styles from "src/styles/components/common/PandasharkLogo.module.scss";
+import styles from "src/styles/layouts/Footer.module.scss";
+// import styles from "src/styles/components/common/PandasharkLogo.module.scss";
 
 export const Footer: React.FC = () => {
   const handle = (event: React.MouseEvent<HTMLHeadingElement, MouseEvent>) => {};
 
   return (
-    <footer className="footer">
-      <div className="main c-section">
-        <div className="main-inner">
+    <footer className={styles.footer}>
+      <div className={styles.main}>
+        {/* <div className="main c-section"> */}
+        <div className={styles.mainInner}>
           <section className={styles.logoArea}>
-            <PandasharkLogo width={128} height={64} />
+            <div className={styles.productLogo}>
+              <PandasharkLogo width={128} height={64} />
+            </div>
             {/* <h1 className={styles.productlogo}>
               <Link href="/">
                 <a target="_self">
@@ -36,7 +40,7 @@ export const Footer: React.FC = () => {
           </section>
           <FooterMenus />
 
-          <section className="foot">
+          <section className={styles.foot}>
             <ul>
               <Link href="/terms/">
                 <a>

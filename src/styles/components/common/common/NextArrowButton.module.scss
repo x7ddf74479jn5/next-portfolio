@@ -1,0 +1,24 @@
+@import "./PrimaryButton.module.scss";
+
+.icon {
+  &Arrow {
+    position: relative;
+    vertical-align: middle;
+    text-decoration: none;
+    &::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: "";
+      vertical-align: middle;
+    }
+    &Next {
+      @extend .iconArrow;
+      &::before {
+        right: 1rem;
+        content: "→";
+      }
+    }
+  }
+}

@@ -2,8 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { TitleArea } from "src/components/common/TitleArea";
+import { TitleArea } from "src/components/common/common/TitleArea";
 import { Layout } from "src/layouts/layout";
+import { WrapInSection } from "src/layouts/Section";
 import Spacer from "src/layouts/Spacer";
 import { convertCrlfToBr } from "src/utils/helper";
 import { configPage } from "src/utils/page-configure";
@@ -63,7 +64,7 @@ const Contact: NextPage = () => {
     const sendMail = async (message: { email: string; subject: string; html: string }) => {
       // const URL = "http://localhost:3000/api/contact";
       // const URL = "https://next-portfolio-livid.vercel.app/api/contact"
-      const URL = process.env.CONTACT_API_URL as string;
+      const URL = process.env.CONTACT_API_URL!;
       await fetch(URL, {
         method: "POST",
         headers: {
@@ -121,33 +122,73 @@ const Contact: NextPage = () => {
       </Head>
       <Spacer size="md" />
       {pageConfig.titleArea && <TitleArea title={pageConfig.titleArea.title} caption={pageConfig.titleArea?.caption} />}
+      <WrapInSection>
+        <form className="p-forms" name="contactForm" onSubmit={handleSubmit(onSubmit)}>
+          <div className="p-forms__input">
+            <p>
+              <label>お名前 *</label>
+              <input type="text" placeholder="名無 太郎" required {...register("name")} />
+            </p>
+          </div>
+          <div className="p-forms__input">
+            <p>
+              <label>メールアドレス *</label>
+              <input type="email" placeholder="your@example.com" required {...register("email")} />
+            </p>
+          </div>
+          <div className="p-forms__input">
+            <p>
+              <label>お問い合わせ種別</label>
+              <select {...register("category")}>
+                <option value=""></option>
+                <option value="Webサイト制作について">Webサイト制作について</option>
+                <option value="Webアプリ開発について">Webアプリ開発について</option>
+                <option value="Webサイト模写について">Webサイト模写について</option>
+                <option value="その他">その他</option>
+              </select>
+            </p>
+          </div>
+          <div className="p-forms__input">
+            <p>
+              <label>お問い合わせ内容 *</label>
+              <textarea rows={10} required={true} {...register("description")}></textarea>
+            </p>
+          </div>
+          <button
+            className="p-btn-round center"
+            id="confirm-btn"
+            type="submit"
+            onClick={() => {
+              return onSubmit();
+            }}
+          >
+            内容を確認する
+          </button>
+        </form>
+      </WrapInSection>
 
-      <section className="c-section">
+      {/* <section className="c-section">
         <div className="c-section-wrapin">
           <form className="p-forms" name="contactForm" onSubmit={handleSubmit(onSubmit)}>
             <div className="p-forms__input">
               <p>
                 <label>お名前 *</label>
                 <input type="text" placeholder="名無 太郎" required {...register("name")} />
-                {/* <input type="text" name="name" placeholder="名無 太郎" required ref={register} /> */}
               </p>
             </div>
             <div className="p-forms__input">
               <p>
                 <label>メールアドレス *</label>
                 <input type="email" placeholder="your@example.com" required {...register("email")} />
-                {/* <input type="email" name="email" placeholder="your@example.com" required ref={register} /> */}
               </p>
             </div>
             <div className="p-forms__input">
               <p>
                 <label>お問い合わせ種別</label>
                 <select {...register("category")}>
-                  {/* <select name="category" ref={register}> */}
                   <option value=""></option>
                   <option value="Webサイト制作について">Webサイト制作について</option>
                   <option value="Webアプリ開発について">Webアプリ開発について</option>
-                  {/* <option value="自動化ツール開発について">自動化ツール開発について</option> */}
                   <option value="Webサイト模写について">Webサイト模写について</option>
                   <option value="その他">その他</option>
                 </select>
@@ -157,7 +198,6 @@ const Contact: NextPage = () => {
               <p>
                 <label>お問い合わせ内容 *</label>
                 <textarea rows={10} required={true} {...register("description")}></textarea>
-                {/* <textarea name="description" rows={10} required={true} ref={register}></textarea> */}
               </p>
             </div>
             <button
@@ -172,9 +212,9 @@ const Contact: NextPage = () => {
             </button>
           </form>
         </div>
-      </section>
+      </section> */}
 
-      <div className="c-modal-popup" id="popup">
+      {/* <div className="c-modal-popup" id="popup">
         <input type="radio" name="modalPop" id="modal-switch" />
         <label className="u-display-none" htmlFor="modal-switch"></label>
         <input type="radio" name="modalPop" id="close" />
@@ -209,8 +249,50 @@ const Contact: NextPage = () => {
             </button>
           </div>
         </div>
-      </div>
+      </div> */}
+      <ConfirmModal cancel={cancel} application={application} />
     </Layout>
+  );
+};
+
+const ConfirmModal = ({ cancel, application }) => {
+  return (
+    <div className="c-modal-popup" id="popup">
+      <input type="radio" name="modalPop" id="modal-switch" />
+      <label className="u-display-none" htmlFor="modal-switch"></label>
+      <input type="radio" name="modalPop" id="close" />
+      <label htmlFor="close">CLOSE</label>
+      <input type="radio" name="modalPop" id="pop13" />
+      <label htmlFor="pop13">×</label>
+      <div className="c-modal-popup__body">
+        <h2 className="c-modal-popup__title mb-4" id="modal-title">
+          入力内容の確認
+        </h2>
+        <div className="c-modal-popup__main" id="popup-main"></div>
+        <div className="p-grid__row center">
+          <button
+            className="p-btn-cancel mr-2"
+            id="cancel-btn"
+            type="button"
+            onClick={() => {
+              return cancel();
+            }}
+          >
+            修正する
+          </button>
+          <button
+            className="p-btn-apply"
+            id="apply-btn"
+            type="button"
+            onClick={() => {
+              return application(getValues());
+            }}
+          >
+            送信する
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 

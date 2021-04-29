@@ -12,7 +12,7 @@ const Backdrop: React.VFC<Props> = ({ handleClick }) => {
       onKeyDown={(e) => {
         return;
       }}
-      onClick={() => handleClick()}
+      onClick={() => {return handleClick()}}
     ></button>
   );
 };

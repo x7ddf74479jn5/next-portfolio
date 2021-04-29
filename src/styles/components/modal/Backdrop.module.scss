@@ -7,3 +7,8 @@
   width: 100%;
   z-index: 1000;
 }
+
+.backdrop_70 {
+  @extend .backdrop;
+  background: rgba(0, 0, 0, 0.7);
+}

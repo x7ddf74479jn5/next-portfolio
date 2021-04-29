@@ -1,10 +1,11 @@
 import * as React from "react";
-import { ModalType, State, useModalCore } from "src/hooks/useModalCore";
+import type { ModalType, State } from "src/hooks/useModalCore";
+import { useModalCore } from "src/hooks/useModalCore";
 
 export const ModalStateContext = React.createContext<State | undefined>(undefined);
 
 type ModalDispatch = {
-  openModal: (modalType: ModalType) => void;
+  openModal: (modalType: ModalType, data?: any) => void;
   closeModal: () => void;
 };
 

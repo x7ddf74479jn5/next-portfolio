@@ -1,4 +1,5 @@
 import Link from "next/link";
+import styles from "src/styles/layouts/Footer.module.scss";
 import { externalLinks, links } from "src/utils/paths";
 
 const accordionItems = {
@@ -66,8 +67,8 @@ export const FooterMenus: React.FC = () => {
   });
 
   return (
-    <section className="sitemap">
-      <ul className="footer-links">
+    <section className={styles.sitemap}>
+      <ul className={styles.footerLinks}>
         {accordionListItems}
         {/* <li className="p-accordion" id="footer-sitemap-about">
         <h4 role="button" onClick={handle}>

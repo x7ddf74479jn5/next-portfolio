@@ -1,8 +1,9 @@
 import Link from "next/link";
-import PandasharkLogo from "src/components/common/PandasharkLogo";
+import PandasharkLogo from "src/components/common/common/PandasharkLogo";
 import styles from "src/styles/components/common/header/HeaderMenus.module.scss";
 import { images } from "src/utils/images";
 import { externalLinks, links } from "src/utils/paths";
+
 import { useModalDispatch } from "../../../hooks/useModalDispatch";
 
 type ItemBase = {
@@ -52,16 +53,22 @@ type ChatButtonProps = {
 };
 
 const ChatbotButton: React.VFC<ChatButtonProps> = ({ closeNav }) => {
-  const item = buttonItems.find((i) => i.type === "chat-bot");
-  if (!item) return null;
   const { openModal } = useModalDispatch();
+  const item = buttonItems.find((i) => {
+    return i.type === "chat-bot";
+  });
+  if (!item) return null;
   const handleClick = () => {
     closeNav();
     openModal("DRAWER");
   };
   return (
     <li>
-      <button onClick={() => handleClick()}>
+      <button
+        onClick={() => {
+          return handleClick();
+        }}
+      >
         {item.icon && <img src={item.icon.src} alt={item.icon.alt} />}
         <span>{item.label}</span>
       </button>

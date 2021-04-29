@@ -1,4 +1,4 @@
-import Breadcrumbs from "src/components/common/BreadCrumbs";
+import Breadcrumbs from "src/components/common/common/BreadCrumbs";
 
 type Breadcrumb = {
   index: number;
@@ -9,8 +9,6 @@ type Breadcrumb = {
 type TitleAreaProps = {
   title: string;
   caption: string;
-  // breadcrumbs: Breadcrumb[];
-  // sampleId: string;
 };
 
 export const TitleArea = (props: TitleAreaProps) => {
