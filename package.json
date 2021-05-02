@@ -42,7 +42,7 @@
     "printWidth": 120
   },
   "dependencies": {
-    "@hookform/resolvers": "^2.4.0",
+    "@hookform/resolvers": "1.2.0",
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
