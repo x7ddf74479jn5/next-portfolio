@@ -331,6 +331,7 @@
     width: 100%;
     // add
     position: relative;
+    overflow: hidden;
     &::marker {
       display: none;
     }
