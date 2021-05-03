@@ -14,7 +14,7 @@ type SwiperProps = {
   samples: Sample[];
 };
 
-export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
+const SampleCarousel: React.FC<SwiperProps> = ({ samples }) => {
   const [mounted, setMounted] = React.useState<boolean>(false);
 
   useEffect(() => {
@@ -61,3 +61,5 @@ export const SapmleSwiper: React.FC<SwiperProps> = ({ samples }) => {
     </Swiper>
   ) : null;
 };
+
+export default SampleCarousel;

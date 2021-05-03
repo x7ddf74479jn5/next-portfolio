@@ -2,9 +2,9 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { NextArrowButton } from "src/components/common/NextArrowButton";
+import SampleCarousel from "src/components/home/SapmleCarousel";
 import { Layout } from "src/components/layouts/Layout";
 import Spacer from "src/components/layouts/Spacer";
-import { SampleSwiper } from "src/components/SampleSwiper";
 import { samples } from "src/contents/samples";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
@@ -117,11 +117,7 @@ const Samples = () => {
         <hr className="c-section__line" />
         <Spacer size="sm" />
         <Spacer size="md" />
-
-        {/* <SapmleSwiper samples={samples} /> */}
-        <SampleSwiper samples={samples} />
-        {/* <ImageSwiper samples={samples} /> */}
-
+        <SampleCarousel samples={samples} />
         <Spacer size="md" />
         <NextArrowButton label="全ての事例を見る" href="/samples/" />
       </div>
