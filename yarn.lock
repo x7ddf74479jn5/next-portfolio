@@ -406,10 +406,10 @@
   resolved "https://registry.npmjs.org/@hapi/hoek/-/hoek-9.1.1.tgz"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@hookform/resolvers@^2.4.0":
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.4.0.tgz#3b454463fbb5e7a0de4da029fa34e677f32d8d8d"
-  integrity sha512-KiHc7Uwd2IJMvPTMQ9vQxfss2ulq2gRYL/HYZ90qiTs+07UgGWCikiIvE2pKjjGVltEYjq5eR8x0ITmoyEjGxQ==
+"@hookform/resolvers@1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-1.2.0.tgz#3a429b4bd3ec9981764fcdcc2491202f9f72d847"
+  integrity sha512-YCKEj/3Kdo3uNt+zrWKV8txaiuATtvgHyz+KYmun3n5JDjxdI0HcVQgfcmJabmkBXBzKuIIrYfxaV8sRuAPZ8w==
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"

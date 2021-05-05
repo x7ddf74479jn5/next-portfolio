@@ -1,23 +1,17 @@
-import type { WithRouterProps } from "next/dist/client/with-router";
 import Link from "next/link";
-import { withRouter } from "next/router";
+import { useRouter } from "next/router";
+import { links } from "src/utils/paths";
 
-type RoutingMap = {
-  [s: string]: { title: string };
-};
-const routingMap: RoutingMap = {
-  "/": { title: "HOME" },
-  "/about": { title: "ABOUT" },
-  "/samples": { title: "SAMPLES" },
-  "/samples/portfolio": { title: "PORTFOLIO" },
-  "/samples/chat": { title: "CHAT BOT" },
-  "/samples/ec": { title: "EC APP" },
-  "/contact": { title: "CONTACT" },
-  "/terms": { title: "TERMS" },
-  "/privacy": { title: "PRIVACY" },
+const routingFactory = () => {
+  return Object.fromEntries(
+    Object.entries(links).map(([k, v]) => {
+      return [v, k.toUpperCase()];
+    })
+  );
 };
 
-const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
+const Breadcrumbs: React.FC = () => {
+  const router = useRouter();
   const pathname = router.pathname.split("/").filter((element) => {
     return element.length > 0;
   });
@@ -25,16 +19,18 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
     return element.length > 0;
   });
   const length = pathname.length;
-
   const links = [];
+  const routingMap = routingFactory();
   let pathnameHierarchy = "/";
   let asPathHierarchy = "/";
+
   for (let i = 0; i < length; i += 1) {
     const target = routingMap[pathnameHierarchy];
+
     links.push(
       target ? (
         <Link href={asPathHierarchy} key={asPathHierarchy}>
-          <a>{target.title}</a>
+          <a>{target}</a>
         </Link>
       ) : (
         <Link href={asPathHierarchy} key={asPathHierarchy}>
@@ -43,25 +39,24 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
       )
     );
 
-    pathnameHierarchy += pathnameHierarchy.endsWith("/") ? pathname[i] : `/${pathname[i]}`;
-    asPathHierarchy += asPathHierarchy.endsWith("/") ? asPath[i] : `/${asPath[i]}`;
+    pathnameHierarchy += `${pathname[i]}/`;
+    asPathHierarchy += `${asPath[i]}/`;
   }
-  let deepest;
 
-  if (pathnameHierarchy === "/samples/[sampleId]") {
-    const sample = asPath[pathname.indexOf("[sampleId]")];
-    const sampleTitle = sample.toUpperCase();
-    deepest = { title: sampleTitle };
-  } else {
-    deepest = routingMap[pathnameHierarchy]; // 最下層=現在のルーティングはクリックできないように<Typography>でリストを作成
-  }
+  const deepest = routingMap[pathnameHierarchy]; // 最下層=現在のルーティングはクリックできないように<Typography>でリストを作成
 
   links.push(
-    deepest ? <span key={asPathHierarchy}>{deepest.title}</span> : <div key={asPathHierarchy}>{asPathHierarchy}</div>
+    deepest ? (
+      <span aria-current="page" key={asPathHierarchy}>
+        {deepest}
+      </span>
+    ) : (
+      <div key={asPathHierarchy}>{asPathHierarchy}</div>
+    )
   );
 
   return (
-    <ul className="u-text__breadcrumbs">
+    <ul className="u-text__breadcrumbs" aria-label="Breadcrumbs">
       {links.map((link, index) => {
         return (
           <li key={index}>
@@ -73,4 +68,4 @@ const Breadcrumbs: React.FC<WithRouterProps> = ({ router }) => {
   );
 };
 
-export default withRouter(Breadcrumbs);
+export default Breadcrumbs;
