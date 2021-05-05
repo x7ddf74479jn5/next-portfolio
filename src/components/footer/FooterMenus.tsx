@@ -38,10 +38,14 @@ type Accordion = {
   items: Array<{ label: string; href: string }>;
 };
 
-const Accordion: React.VFC<Accordion> = (accordion) => {
-  const { isPC } = useMedia();
+type Props = {
+  accordion: Accordion;
+};
 
-  return (
+const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
+  const { isPC, mounted } = useMedia();
+
+  return mounted ? (
     <details open={isPC}>
       <summary>{accordion.label}</summary>
       <ul className={styles.accordionItems}>
@@ -56,22 +60,21 @@ const Accordion: React.VFC<Accordion> = (accordion) => {
         })}
       </ul>
     </details>
-  );
-};
+  ) : null;
+});
+Accordion.displayName = "Accordion";
 
 export const FooterMenus: React.VFC = () => {
   return (
     <section className={styles.sitemap}>
       <ul className={styles.footerLinks}>
-        <li className={styles.accordion}>
-          {<Accordion label={accordions.about.label} items={accordions.about.items} />}
-        </li>
-        <li className={styles.accordion}>
-          {<Accordion label={accordions.samples.label} items={accordions.samples.items} />}
-        </li>
-        <li className={styles.accordion}>
-          {<Accordion label={accordions.links.label} items={accordions.links.items} />}
-        </li>
+        {Object.values(accordions).map((accordion, index) => {
+          return (
+            <li className={styles.accordion} key={index}>
+              {<Accordion accordion={accordion} />}
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
