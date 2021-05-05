@@ -1,6 +1,7 @@
 import React from "react";
 
 import { MIN_PC_WIDTH_PX } from "../utils/constants";
+import useMount from "./useMount";
 
 const isPCWindowSize = () => {
   if (typeof window !== "undefined") {
@@ -14,12 +15,14 @@ const isPCWindowSize = () => {
 
 export default function useMedia() {
   const [isPC, setIsPC] = React.useState(isPCWindowSize());
-
+  const { mounted } = useMount();
   const resizeEvent = React.useCallback(() => {
     setIsPC(isPCWindowSize());
   }, []);
 
   React.useEffect(() => {
+    setIsPC(isPCWindowSize());
+
     window.addEventListener("resize", resizeEvent);
     window.addEventListener("unload", resizeEvent);
     return () => {
@@ -28,5 +31,5 @@ export default function useMedia() {
     };
   }, []);
 
-  return { isPC };
+  return { isPC, mounted };
 }
