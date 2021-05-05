@@ -31,5 +31,5 @@ export default function useMedia() {
     };
   }, []);
 
-  return { isPC, mounted };
+  return { isPC, mounted } as const;
 }

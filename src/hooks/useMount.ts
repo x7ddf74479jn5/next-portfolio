@@ -6,7 +6,7 @@ const useMount = () => {
     setMounted(true);
   }, []);
 
-  return { mounted };
+  return { mounted } as const;
 };
 
 export default useMount;
