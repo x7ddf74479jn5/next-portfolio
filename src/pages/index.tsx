@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import { NextArrowButton } from "src/components/common/NextArrowButton";
-import SampleCarousel from "src/components/home/SapmleCarousel";
+import SampleCarousel from "src/components/home/SampleCarousel";
 import { Layout } from "src/components/layouts/Layout";
 import Spacer from "src/components/layouts/Spacer";
 import { samples } from "src/contents/samples";
@@ -97,7 +97,6 @@ const Services = () => {
               >
                 <h3>{service.title}</h3>
                 <small>{service.caption}</small>
-                {/* <Image layout="fill" className="p-media__thumb" src={service.img.src} alt={service.img.alt} /> */}
                 <img className="p-media__thumb" src={service.img.src} alt={service.img.alt} />
                 <p>{service.description}</p>
               </article>

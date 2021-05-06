@@ -1,4 +1,3 @@
-// import "src/styles/swiper-bundle.css"
 import "src/styles/animate.css";
 import "src/styles/style.scss";
 
@@ -10,7 +9,6 @@ const App: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <ModalProviderContainer>
       <Component {...pageProps} />
-      {/* <ModalConsumer /> */}
       <ModalPortal />
     </ModalProviderContainer>
   );
