@@ -11,12 +11,8 @@ const EC: NextPage = () => {
   const pageConfig = configPage("ec");
   const sample = selectSample("ec");
 
-  if (!sample) {
+  if (!sample || !pageConfig.titleArea) {
     return <Error statusCode={500} />;
-  }
-
-  if (!pageConfig.titleArea) {
-    return null;
   }
 
   return (
