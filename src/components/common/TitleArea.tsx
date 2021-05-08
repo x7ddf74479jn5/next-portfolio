@@ -1,10 +1,6 @@
+import clsx from "clsx";
 import Breadcrumbs from "src/components/common/BreadCrumbs";
-
-type Breadcrumb = {
-  index: number;
-  name: string;
-  href: string;
-};
+import styles from "src/styles/components/common/TitleArea.module.scss";
 
 type TitleAreaProps = {
   title: string;
@@ -12,10 +8,12 @@ type TitleAreaProps = {
 };
 
 export const TitleArea = (props: TitleAreaProps) => {
+  const wrapperStyle = clsx(styles.sectionTitleArea, "animated fadeInLeft");
+  const headlineStyle = clsx(styles.headlineSub, "animated fadeInUp fast delay-1s");
   return (
-    <section className="c-section">
-      <div className="c-section__area-title animated fadeInLeft">
-        <div className="p-headline__sub animated fadeInUp fast delay-1s">
+    <section className={styles.section}>
+      <div className={wrapperStyle}>
+        <div className={headlineStyle}>
           <h2>{props.title}</h2>
           <p>{props.caption}</p>
           <Breadcrumbs />

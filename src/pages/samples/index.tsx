@@ -17,7 +17,7 @@ const Samples: NextPage = () => {
         <title>{pageConfig.title}</title>
       </Head>
       <Spacer size="md" />
-      <TitleArea title="Samples" caption="制作事例" />
+      {pageConfig.titleArea && <TitleArea {...pageConfig.titleArea} />}
       <Spacer size="md" />
       <WrapInSection wide>
         <SampleCardList samples={samples} />

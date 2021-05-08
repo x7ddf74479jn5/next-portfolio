@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
 import Contact from "src/components/home/Contact";
 import FirstView from "src/components/home/FirstView";
 import Samples from "src/components/home/Samples";
