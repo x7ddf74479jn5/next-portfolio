@@ -1,12 +1,15 @@
 import { NextArrowButton } from "src/components/common/NextArrowButton";
+import HorizontalRule from "src/components/home/HorizontalRule";
+import { WrapInSection } from "src/components/layouts/Section";
 import Spacer from "src/components/layouts/Spacer";
+import styles from "src/styles/components/home/Contact.module.scss";
 
 const Contact = () => {
   return (
-    <section className="c-section c-bg-primary">
-      <div className="c-section-wrapin p-grid__contact">
+    <WrapInSection background="primary">
+      <div className={styles.gridContact}>
         <h2>お仕事のご依頼・ご相談</h2>
-        <hr className="c-section__line" />
+        <HorizontalRule />
         <Spacer size="md" />
         <p>
           企業HPなどのWebサイト制作、チャットボット開発、WordPress導入・カスタマイズなどのお見積もり、ご相談はお気軽にご連絡ください。
@@ -16,7 +19,7 @@ const Contact = () => {
         <NextArrowButton label="お問い合わせ" href="/contact/" />
         <Spacer size="md" />
       </div>
-    </section>
+    </WrapInSection>
   );
 };
 

@@ -1,13 +1,14 @@
 import Image from "next/image";
+import styles from "src/styles/components/home/FirstView.module.scss";
 
 import { NextArrowButton } from "../common/NextArrowButton";
 
 const FirstView = () => {
   return (
     <section>
-      <div className="p-grid__view-first" data-label="first-view">
+      <div className={styles.gridFirstView} data-label="first-view">
         <Image src="/img/view/first-view.webp" alt="first-view" layout="fill" priority={true} />
-        <div className="child">
+        <div className={styles.textArea}>
           <div>
             <h2>Pandashark</h2>
             <p>Web Engineer</p>
