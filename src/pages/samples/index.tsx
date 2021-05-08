@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import SampleCardList from "src/components/samples/SampleCardList";
 import { Layout } from "src/components/layouts/Layout";
-import { WrapInWideSection } from "src/components/layouts/Section";
+import { WrapInSection } from "src/components/layouts/Section";
 import Spacer from "src/components/layouts/Spacer";
+import SampleCardList from "src/components/samples/SampleCardList";
 
 import { TitleArea } from "../../components/common/TitleArea";
 import { samples } from "../../contents/samples";
@@ -19,9 +19,9 @@ const Samples: NextPage = () => {
       <Spacer size="md" />
       <TitleArea title="Samples" caption="制作事例" />
       <Spacer size="md" />
-      <WrapInWideSection>
+      <WrapInSection wide>
         <SampleCardList samples={samples} />
-      </WrapInWideSection>
+      </WrapInSection>
     </Layout>
   );
 };
