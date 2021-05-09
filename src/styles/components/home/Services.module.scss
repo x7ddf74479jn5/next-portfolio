@@ -50,8 +50,17 @@
     border-radius: 4px;
     box-shadow: 2px 6px 5px rgba(255, 255, 255, 0.4);
     margin: 1rem 0.5rem;
+
     @include mq() {
       width: calc(33.3333% - 1rem);
+    }
+    &Left {
+      @extend .gridListItemFloated;
+      transform: translate3d(-100%, 0, 0);
+    }
+    &Right {
+      @extend .gridListItemFloated;
+      transform: translate3d(100%, 0, 0);
     }
   }
 }

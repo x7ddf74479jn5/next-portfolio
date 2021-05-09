@@ -1,34 +1,5 @@
 @import "../../variables.scss";
 
-.bg {
-  &Primary {
-    background: $primary;
-    display: block;
-    > h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      color: #fff;
-    }
-  }
-}
-
-.headline {
-  &About {
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: $font-large;
-    margin-bottom: 2rem;
-    text-align: left;
-    &White {
-      @extend .headlineAbout;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.7);
-    }
-  }
-}
-
 .grid {
   display: -ms-flexbox;
   display: flex;
@@ -51,10 +22,6 @@
       letter-spacing: 0.1rem;
     }
 
-    // div {
-    //   margin-bottom: 1rem;
-    //   width: 100%;
-    // }
     @include mq() {
       -webkit-flex-direction: row;
       flex-direction: row;

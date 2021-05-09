@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import styles from "src/styles/components/common/BreadCrumbs.module.scss";
 import { links } from "src/utils/paths";
 
 const routingFactory = () => {
@@ -56,7 +57,7 @@ const Breadcrumbs: React.FC = () => {
   );
 
   return (
-    <ul className="u-text__breadcrumbs" aria-label="Breadcrumbs">
+    <ul className={styles.textBreadcrumbs} aria-label="Breadcrumbs">
       {links.map((link, index) => {
         return (
           <li key={index}>

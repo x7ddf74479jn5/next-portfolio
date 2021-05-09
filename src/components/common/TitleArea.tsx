@@ -8,8 +8,8 @@ type TitleAreaProps = {
 };
 
 export const TitleArea = (props: TitleAreaProps) => {
-  const wrapperStyle = clsx(styles.sectionTitleArea, "animated fadeInLeft");
-  const headlineStyle = clsx(styles.headlineSub, "animated fadeInUp fast delay-1s");
+  const wrapperStyle = clsx(styles.sectionTitleArea, styles.fadeInLeft);
+  const headlineStyle = clsx(styles.headlineSub, styles.fadeInUp);
   return (
     <section className={styles.section}>
       <div className={wrapperStyle}>

@@ -1,3 +1,4 @@
+import HeadLine from "src/components/about/HeadLine";
 import styles from "src/styles/components/about/Vision.module.scss";
 
 import { WrapInSection } from "../layouts/Section";
@@ -5,7 +6,7 @@ import { WrapInSection } from "../layouts/Section";
 const Vision: React.VFC = () => {
   return (
     <WrapInSection id={"vision"}>
-      <h2 className={styles.headlineAbout}>Vision</h2>
+      <HeadLine>Vision</HeadLine>
       <div className={styles.gridAbout}>
         <div className={styles.left}>
           <h3>

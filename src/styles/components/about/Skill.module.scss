@@ -1,15 +1,5 @@
 @import "../../variables.scss";
 
-.headline {
-  &About {
-    display: block;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    font-size: $font-large;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-}
-
 .grid {
   display: -ms-flexbox;
   display: flex;

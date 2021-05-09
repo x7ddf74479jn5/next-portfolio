@@ -1,0 +1,29 @@
+@import "../../variables.scss";
+
+.textBreadcrumbs {
+  color: $main-light;
+  list-style: none;
+  margin-top: 2rem;
+  @include mq() {
+    margin-top: 3rem;
+  }
+  li {
+    display: inline;
+    font-size: $font-small;
+    span {
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+    }
+    a {
+      text-decoration: none;
+      transition: all 0.5s;
+      &:hover {
+        color: $main-dark;
+        text-decoration: none;
+      }
+      &:visited {
+        color: $main-light;
+      }
+    }
+  }
+}
