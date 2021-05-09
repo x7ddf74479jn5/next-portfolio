@@ -114,3 +114,5 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) =>
     </nav>
   );
 };
+
+// TODO: clean and make listItem component

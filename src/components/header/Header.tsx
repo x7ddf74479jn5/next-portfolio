@@ -2,6 +2,7 @@ import * as React from "react";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
 import { HeaderMenus } from "src/components/header/HeaderMenus";
 import Backdrop from "src/components/modal/Backdrop";
+import useClickAway from "src/hooks/useClickAway";
 import styles from "src/styles/components/header/Header.module.scss";
 
 type Props = {
@@ -35,6 +36,7 @@ const NavToggleButton: React.VFC<Props> = ({ isOpen, toggleNav }) => {
 
 export const Header: React.VFC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const ref = React.useRef(null);
 
   const toggleNav = React.useCallback(() => {
     setIsOpen((prevState) => {
@@ -45,9 +47,11 @@ export const Header: React.VFC = () => {
     setIsOpen(false);
   }, []);
 
+  useClickAway(ref, closeNav);
+
   return (
     <header className={styles.header}>
-      <div className={styles.headerInner}>
+      <div className={styles.headerInner} ref={ref}>
         <div className={styles.productLogo}>
           <PandasharkLogo width={128} height={64} />
         </div>
@@ -55,7 +59,7 @@ export const Header: React.VFC = () => {
 
         <HeaderMenus closeNav={closeNav} isOpen={isOpen} />
       </div>
-      {isOpen && <Backdrop handleClick={closeNav} />}
+      {isOpen && <Backdrop />}
     </header>
   );
 };
