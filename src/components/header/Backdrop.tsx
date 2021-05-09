@@ -9,10 +9,9 @@ const Backdrop: React.VFC<Props> = ({ handleClick }) => {
     <button
       className={styles.backdrop}
       id="js-black-bg"
-      onKeyDown={(e) => {
-        return;
+      onClick={() => {
+        return handleClick();
       }}
-      onClick={() => {return handleClick()}}
     ></button>
   );
 };

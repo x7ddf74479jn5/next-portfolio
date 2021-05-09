@@ -24,11 +24,10 @@ export default function useMedia() {
     setIsPC(isPCWindowSize());
 
     window.addEventListener("resize", resizeEvent);
-    window.addEventListener("unload", resizeEvent);
     return () => {
       window.removeEventListener("resize", resizeEvent);
-      window.removeEventListener("unload", resizeEvent);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return { isPC, mounted } as const;

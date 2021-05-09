@@ -10,18 +10,16 @@ type Props = {
 
 const PandasharkLogo: React.VFC<Props> = ({ width, height }) => {
   return (
-    <>
-      <Link href="/">
-        <a target="_self" aria-label="パンダシャーク">
-          <Image
-            width={width}
-            height={height}
-            alt={images.pandasharkRectangle.alt}
-            src={images.pandasharkRectangle.path}
-          />
-        </a>
-      </Link>
-    </>
+    <Link href="/">
+      <a target="_self" aria-label="パンダシャーク">
+        <Image
+          width={width}
+          height={height}
+          alt={images.pandasharkRectangle.alt}
+          src={images.pandasharkRectangle.path}
+        />
+      </a>
+    </Link>
   );
 };
 

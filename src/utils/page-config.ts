@@ -1,8 +1,10 @@
 import { links } from "src/utils/paths";
 
-type PageConfigCollection = {
+import { identity } from "./helper";
+
+type PageConfigCollection = Readonly<{
   [key: string]: PageConfig;
-};
+}>;
 
 export type PageConfig = {
   path: string;
@@ -10,7 +12,7 @@ export type PageConfig = {
   titleArea?: { title: string; caption: string };
 };
 
-export const pageConfigCollection: PageConfigCollection = {
+export const pageConfigCollection: PageConfigCollection = identity({
   home: { path: links.home, title: "Home | Pandashark Web" },
   about: {
     path: links.about,
@@ -77,4 +79,4 @@ export const pageConfigCollection: PageConfigCollection = {
       caption: "ECアプリ",
     },
   },
-};
+});

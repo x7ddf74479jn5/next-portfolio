@@ -1,0 +1,17 @@
+@import "../../variables.scss";
+
+.gridContact {
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    font-size: $font-large;
+  }
+  p {
+    color: #fff;
+    font-size: $font-small;
+    margin: 0 auto;
+    text-align: left;
+    max-width: 450px;
+  }
+}

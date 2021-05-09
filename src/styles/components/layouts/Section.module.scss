@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.section {
+  padding: 2rem 0;
+  @include mq() {
+    padding: 3rem 0;
+  }
+  &WrapIn {
+    margin: 0 auto;
+    max-width: 544px;
+    position: relative;
+    padding: 0 2rem;
+    text-align: center;
+    width: auto;
+    @include mq("sm") {
+      max-width: 1024px;
+    }
+    &Wide {
+      @extend .sectionWrapIn;
+      @include mq("sm") {
+        max-width: 1440px;
+      }
+    }
+  }
+}
+
+.bg {
+  &Primary {
+    background: $primary;
+    display: block;
+    > h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      color: #fff;
+    }
+  }
+  &Secondary {
+    background: $secondary;
+    display: block;
+  }
+  &Light {
+    background: $light;
+    display: block;
+  }
+}

@@ -35,10 +35,10 @@ export default class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#181a1b" />
           <link rel="canonical" href={siteConfig.url} />
-          <link rel="stylesheet" href={"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css"} />
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
           <link
             rel="stylesheet"
-            href={"https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext"}
+            href="https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext"
           />
           <link rel="shortcut icon" href={siteConfig.icon} />
           <link rel="apple-touch-icon" href={siteConfig.appleTouchIcon} />

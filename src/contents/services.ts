@@ -1,3 +1,4 @@
+import { identity } from "../utils/helper";
 import { images } from "../utils/images";
 
 export type Service = {
@@ -13,7 +14,7 @@ export type Service = {
 };
 
 export const services: Service[] = [
-  {
+  identity({
     title: "WEBサイト制作",
     caption: "Website Production",
     img: {
@@ -24,8 +25,8 @@ export const services: Service[] = [
       "コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。検索流入やSNS流入を強化する「SEOを意識したサイト」を作成できます。",
     classes: "p-grid__list-item-floated animated slow slideInLeft",
     dataAnimate: "slideInLeft",
-  },
-  {
+  }),
+  identity({
     title: "WordPress",
     caption: "WordPress",
     img: {
@@ -35,8 +36,8 @@ export const services: Service[] = [
     description: "WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。",
     classes: "p-grid__list-item-floated animated slow slideInRight",
     dataAnimate: "slideInRight",
-  },
-  {
+  }),
+  identity({
     title: "チャットアプリ開発",
     caption: "Chat APP",
     img: {
@@ -47,5 +48,5 @@ export const services: Service[] = [
       "リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。これまで開発してきたWebアプリの一部を制作事例として公開しています。",
     classes: "p-grid__list-item-floated animated slow slideInLeft",
     dataAnimate: "slideInLeft",
-  },
+  }),
 ];
