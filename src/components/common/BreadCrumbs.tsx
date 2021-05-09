@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import styles from "src/styles/components/common/BreadCrumbs.module.scss";
-import { links } from "src/utils/paths";
+import { internalLinks } from "src/utils/paths";
 
 const routingFactory = () => {
   return Object.fromEntries(
-    Object.entries(links).map(([k, v]) => {
+    Object.entries(internalLinks).map(([k, v]) => {
       return [v, k.toUpperCase()];
     })
   );

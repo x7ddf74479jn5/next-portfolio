@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import styles from "src/styles/components/footer/Footer.module.scss";
-import { externalLinks, links } from "src/utils/paths";
+import { externalLinks, internalLinks } from "src/utils/paths";
 
 import useMedia from "../../hooks/useMedia";
 import { identity } from "../../utils/helper";
@@ -10,18 +10,18 @@ const accordions = identity({
   about: {
     label: "自己紹介",
     items: [
-      { label: "Vision", href: links.about + "#vision" },
-      { label: "Profile", href: links.about + "#profile" },
-      { label: "Career", href: links.about + "#career" },
-      { label: "Skills", href: links.about + "#skills" },
+      { label: "Vision", href: internalLinks.about + "#vision" },
+      { label: "Profile", href: internalLinks.about + "#profile" },
+      { label: "Career", href: internalLinks.about + "#career" },
+      { label: "Skills", href: internalLinks.about + "#skills" },
     ],
   },
   samples: {
     label: "制作事例",
     items: [
-      { label: "ポートフォリオサイト", href: links.portfolio },
-      { label: "ECサイト", href: links.ec },
-      { label: "Chat App", href: links.chat },
+      { label: "ポートフォリオサイト", href: internalLinks.portfolio },
+      { label: "ECサイト", href: internalLinks.ec },
+      { label: "Chat App", href: internalLinks.chat },
     ],
   },
   links: {

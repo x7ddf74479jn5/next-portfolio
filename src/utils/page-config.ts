@@ -1,4 +1,4 @@
-import { links } from "src/utils/paths";
+import { internalLinks } from "src/utils/paths";
 
 import { identity } from "./helper";
 
@@ -13,9 +13,9 @@ export type PageConfig = {
 };
 
 export const pageConfigCollection: PageConfigCollection = identity({
-  home: { path: links.home, title: "Home | Pandashark Web" },
+  home: { path: internalLinks.home, title: "Home | Pandashark Web" },
   about: {
-    path: links.about,
+    path: internalLinks.about,
     title: "About | Pandashark Web",
     titleArea: {
       title: "About",
@@ -24,7 +24,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
   },
 
   contact: {
-    path: links.contact,
+    path: internalLinks.contact,
     title: "Contact | Pandashark Web",
     titleArea: {
       title: "Contact",
@@ -32,7 +32,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   terms: {
-    path: links.terms,
+    path: internalLinks.terms,
     title: "Terms | Pandashark Web",
     titleArea: {
       title: "Terms",
@@ -40,7 +40,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   privacy: {
-    path: links.privacy,
+    path: internalLinks.privacy,
     title: "Privacy Policy | Pandashark Web",
     titleArea: {
       title: "Privacy Policy",
@@ -48,7 +48,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   samples: {
-    path: links.samples,
+    path: internalLinks.samples,
     title: "Samples | Pandashark Web",
     titleArea: {
       title: "Samples",
@@ -56,7 +56,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   portfolio: {
-    path: links.portfolio,
+    path: internalLinks.portfolio,
     title: "Portfolio | Pandashark Web",
     titleArea: {
       title: "Portfolio",
@@ -64,7 +64,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   chat: {
-    path: links.chat,
+    path: internalLinks.chat,
     title: "Chat Bot | Pandashark Web",
     titleArea: {
       title: "Chat Bot",
@@ -72,7 +72,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   ec: {
-    path: links.ec,
+    path: internalLinks.ec,
     title: "EC App | Pandashark Web",
     titleArea: {
       title: "EC App",

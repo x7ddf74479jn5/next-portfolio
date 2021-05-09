@@ -1,6 +1,6 @@
 import { identity } from "./helper";
 
-export const links = identity({
+export const internalLinks = identity({
   siteURL: "https://next-portfolio-livid.vercel.app/",
   siteRoot:
     process.env.NODE_ENV === "production" ? "https://next-portfolio-livid.vercel.app/" : "http://localhost:3000",

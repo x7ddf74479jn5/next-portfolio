@@ -2,7 +2,7 @@ import Link from "next/link";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
 import styles from "src/styles/components/header/HeaderMenus.module.scss";
 import { images } from "src/utils/images";
-import { externalLinks, links } from "src/utils/paths";
+import { externalLinks, internalLinks } from "src/utils/paths";
 
 import { useModalDispatch } from "../../hooks/useModalDispatch";
 
@@ -20,22 +20,22 @@ type HeaderMenuItem = LinkItem;
 // type HeaderMenuItem = NoImageItem | WithImageItem;
 
 const headerMenuItems: HeaderMenuItem[] = [
-  { label: "About", href: links.about },
-  { label: "Samples", href: links.samples },
-  { label: "Contact", href: links.contact },
+  { label: "About", href: internalLinks.about },
+  { label: "Samples", href: internalLinks.samples },
+  { label: "Contact", href: internalLinks.contact },
   { label: "Github", href: externalLinks.github },
   {
     label: "Twitter",
     href: externalLinks.twitter,
     icon: { src: images.twitter.path, alt: images.twitter.alt },
   },
-  { label: "Chat bot", href: links.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
+  { label: "Chat bot", href: internalLinks.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
 ];
 
 const linkItems: LinkItem[] = [
-  { label: "About", href: links.about },
-  { label: "Samples", href: links.samples },
-  { label: "Contact", href: links.contact },
+  { label: "About", href: internalLinks.about },
+  { label: "Samples", href: internalLinks.samples },
+  { label: "Contact", href: internalLinks.contact },
   { label: "Github", href: externalLinks.github },
   {
     label: "Twitter",
@@ -45,7 +45,12 @@ const linkItems: LinkItem[] = [
   // { label: "Chat bot", href: links.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
 ];
 const buttonItems = [
-  { type: "chat-bot", label: "Chat bot", href: links.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
+  {
+    type: "chat-bot",
+    label: "Chat bot",
+    href: internalLinks.chat,
+    icon: { src: images.robot.path, alt: images.robot.alt },
+  },
 ];
 
 type ChatButtonProps = {
