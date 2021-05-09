@@ -1,17 +1,15 @@
 import type { VFC } from "react";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { ModalPopup } from "src/components/contact/ContactFormContainer";
+import ModalPopup from "src/components/contact/ModalPopup";
 import Backdrop from "src/components/modal/Backdrop";
 import ModalDrawer from "src/components/modal/ModalDrawer";
 import styles from "src/styles/components/modal/ModalContainer.module.scss";
 
-import { useModalDispatch } from "../../hooks/useModalDispatch";
 import { useModalState } from "../../hooks/useModalState";
 
 const ModalContainer: React.VFC = () => {
   const state = useModalState();
-  const { closeModal } = useModalDispatch();
 
   if (!state.isModalOpen || !state.modalType) {
     return null;
@@ -20,7 +18,7 @@ const ModalContainer: React.VFC = () => {
   return (
     <div className={styles.modalContainer}>
       {<ModalContent />}
-      <Backdrop opacity={70} handleClick={closeModal} />
+      <Backdrop opacity={70} />
     </div>
   );
 };
