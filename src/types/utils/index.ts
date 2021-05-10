@@ -18,3 +18,15 @@ export type Frec<
     ? ElementFrec<T>
     : // ForwardRefExoticComponent 用
       T;
+
+export type ButtonType = {
+  children?: React.ReactNode;
+  label?: string;
+  onClick: () => void;
+};
+
+export type LinkType = {
+  children?: React.ReactNode;
+  label?: string;
+  href?: string;
+};

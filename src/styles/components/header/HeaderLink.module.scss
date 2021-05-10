@@ -1,0 +1,31 @@
+@import "../../variables.scss";
+
+.sns {
+  img {
+    height: 2rem;
+    width: 2rem;
+  }
+  svg {
+    height: 2rem;
+    width: 2rem;
+  }
+  @include mq() {
+    span {
+      display: none;
+    }
+  }
+}
+
+.twitter {
+  @extend .sns;
+  svg {
+    fill: $brand-twitter;
+  }
+}
+
+.github {
+  @extend .sns;
+  svg {
+    fill: $brand-github;
+  }
+}

@@ -1,83 +1,32 @@
 import Link from "next/link";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
+import GithubLink from "src/components/header/GithubLink";
+import TwitterLink from "src/components/header/TwitterLink";
 import styles from "src/styles/components/header/HeaderMenus.module.scss";
-import { images } from "src/utils/images";
-import { externalLinks, internalLinks } from "src/utils/paths";
+import { internalLinks } from "src/utils/paths";
 
-import { useModalDispatch } from "../../hooks/useModalDispatch";
+import ChatbotButton from "./ChatbotButton";
 
-type ItemBase = {
-  label: string;
-  icon?: { src: string; alt: string };
-};
-
-type LinkItem = ItemBase & {
+type InnerLinkItem = {
   href: string;
+  label: string;
 };
 
-type HeaderMenuItem = LinkItem;
-// type HeaderMenuItem = LinkItem | ButtonItem;
-// type HeaderMenuItem = NoImageItem | WithImageItem;
-
-const headerMenuItems: HeaderMenuItem[] = [
+const innerLinkItems: InnerLinkItem[] = [
   { label: "About", href: internalLinks.about },
   { label: "Samples", href: internalLinks.samples },
   { label: "Contact", href: internalLinks.contact },
-  { label: "Github", href: externalLinks.github },
-  {
-    label: "Twitter",
-    href: externalLinks.twitter,
-    icon: { src: images.twitter.path, alt: images.twitter.alt },
-  },
-  { label: "Chat bot", href: internalLinks.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
 ];
 
-const linkItems: LinkItem[] = [
-  { label: "About", href: internalLinks.about },
-  { label: "Samples", href: internalLinks.samples },
-  { label: "Contact", href: internalLinks.contact },
-  { label: "Github", href: externalLinks.github },
-  {
-    label: "Twitter",
-    href: externalLinks.twitter,
-    icon: { src: images.twitter.path, alt: images.twitter.alt },
-  },
-  // { label: "Chat bot", href: links.chat, icon: { src: images.robot.path, alt: images.robot.alt } },
-];
-const buttonItems = [
-  {
-    type: "chat-bot",
-    label: "Chat bot",
-    href: internalLinks.chat,
-    icon: { src: images.robot.path, alt: images.robot.alt },
-  },
-];
-
-type ChatButtonProps = {
-  closeNav: () => void;
+type LinkItemProp = {
+  item: InnerLinkItem;
 };
 
-const ChatbotButton: React.VFC<ChatButtonProps> = ({ closeNav }) => {
-  const { openModal } = useModalDispatch();
-  const item = buttonItems.find((i) => {
-    return i.type === "chat-bot";
-  });
-  if (!item) return null;
-  const handleClick = () => {
-    closeNav();
-    openModal("DRAWER");
-  };
+const LinkItem: React.VFC<LinkItemProp> = ({ item }) => {
   return (
-    <li>
-      <button
-        onClick={() => {
-          return handleClick();
-        }}
-      >
-        {item.icon && <img src={item.icon.src} alt={item.icon.alt} />}
-        <span>{item.label}</span>
-      </button>
-    </li>
+    <Link href={item.href}>
+      <a target="_self">{item.label}</a>
+    </Link>
   );
 };
 
@@ -96,28 +45,24 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) =>
         <PandasharkLogo height={40} width={80} />
       </h1>
       <ul>
-        {linkItems.map((item, index) => {
-          return !("icon" in item) ? (
+        {innerLinkItems.map((item, index) => {
+          return (
             <li key={index}>
-              <Link href={item.href}>
-                <a target="_self">{item.label}</a>
-              </Link>
-            </li>
-          ) : (
-            <li key={index}>
-              <Link href={item.href}>
-                <a className={styles.sns} target="_self">
-                  <img src={item.icon?.src} alt={item.icon?.alt} />
-                  <span>{item.label}</span>
-                </a>
-              </Link>
+              <LinkItem item={item} />
             </li>
           );
         })}
-        <ChatbotButton closeNav={closeNav} />
+
+        <li>
+          <TwitterLink />
+        </li>
+        <li>
+          <GithubLink />
+        </li>
+        <li>
+          <ChatbotButton onClick={closeNav} />
+        </li>
       </ul>
     </nav>
   );
 };
-
-// TODO: clean and make listItem component

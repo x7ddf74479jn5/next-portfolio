@@ -1,5 +1,5 @@
 import { images } from "../utils/images";
-import { externalLinks, links } from "../utils/paths";
+import { externalLinks, internalLinks } from "../utils/paths";
 
 export type Sample = {
   id: string;
@@ -17,7 +17,7 @@ export const samples: Sample[] = [
     title: "ポートフォリオ",
     category: "Web制作｜デザイン｜レスポンシブ｜アニメーション",
     description: "現在閲覧してくださっているサイトです。",
-    link: links.portfolio,
+    link: internalLinks.portfolio,
     imgSrc: images.portfolio.path,
     imgAlt: images.portfolio.alt,
   },
@@ -26,7 +26,7 @@ export const samples: Sample[] = [
     title: "チャットボット",
     category: "Webアプリ開発｜チャット｜SPA",
     description: "事前に用意したQAを使って自動応答するチャットボットです。",
-    link: links.chat,
+    link: internalLinks.chat,
     imgSrc: images.chat.path,
     imgAlt: images.chat.alt,
   },
@@ -35,7 +35,7 @@ export const samples: Sample[] = [
     title: "ECサイト(開発中)",
     category: "Webアプリ開発｜EC｜SPA",
     description: "React学習用に開発しているデモサイトです。",
-    link: links.ec,
+    link: internalLinks.ec,
     imgSrc: images.ec.path,
     imgAlt: images.ec.alt,
   },

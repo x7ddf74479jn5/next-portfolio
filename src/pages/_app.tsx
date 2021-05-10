@@ -1,4 +1,3 @@
-import "src/styles/animate.css";
 import "src/styles/style.scss";
 
 import type { AppProps } from "next/app";
