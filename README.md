@@ -1,4 +1,4 @@
-# Next.js starter template.
+# Pandashark's portfolio site
 
 - Next.js
 - TypeScript
@@ -9,3 +9,5 @@
 - ress (CSS reset)
 
 # next-portfolio
+
+Bm7ReA5qY8VF:16856971:96XCrRyoclA3

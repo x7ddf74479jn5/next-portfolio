@@ -3,3 +3,6 @@
 **/.next/*
 **/refs/*
 **/js/*
+**/storybook-static/*
+**/.storybook/*
+**/stories/*
