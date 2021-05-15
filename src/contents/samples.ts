@@ -64,7 +64,7 @@ export const sampleDetails: SampleDetail[] = [
     img: images.portfolio.path,
     alt: images.portfolio.alt,
     summary: "ポートフォリオサイトです。",
-    purposes: ["Next.js/Typescriptの学習", "転職活動のため"],
+    purposes: ["Next.js/TypeScriptの学習", "転職活動のため"],
     points: [
       "Webサイト制作に必要不可欠な要素は抑えた",
       "CSSはなるべくシンプルに",
@@ -72,13 +72,12 @@ export const sampleDetails: SampleDetail[] = [
       "見ていて飽きさせないためのCSSアニメーション",
       "SEOを意識したHTML構造",
     ],
-    langs: "HTML5, CSS3, JavaScript(ES6) Typescript ",
+    langs: "HTML5, CSS3, JavaScript TypeScript ",
     techs: "React Next.js Vercel Sass",
     link: {
       description: "このサイトなので省略。",
     },
-    note:
-      " 実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
+    note: " 実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
   },
   {
     id: "chat",
@@ -103,7 +102,7 @@ export const sampleDetails: SampleDetail[] = [
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
     langs: "JavaScript(React), JSX",
-    techs: "Sass, React, Redux, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
+    techs: "Sass,  Redux, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
     link: {
       href: externalLinks.ec,
       label: "ECアプリ",
