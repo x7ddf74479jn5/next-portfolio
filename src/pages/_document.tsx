@@ -18,6 +18,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
+          <meta property="description" content={siteConfig.description} />
           <meta property="og:title" content={siteConfig.title} />
           <meta property="og:description" content={siteConfig.description} />
           <meta property="og:type" content="website" />
@@ -34,7 +35,6 @@ export default class MyDocument extends Document {
           <meta name="twitter:image" content={siteConfig.image} />
           <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#181a1b" />
-          <link rel="canonical" href={siteConfig.url} />
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css" />
           <link
             rel="stylesheet"
