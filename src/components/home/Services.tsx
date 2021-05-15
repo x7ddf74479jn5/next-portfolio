@@ -31,7 +31,7 @@ const ServiceItems: React.VFC<ServiceItem> = ({ service, index }) => {
     >
       <h3>{service.title}</h3>
       <small>{service.caption}</small>
-      <img className={styles.mediaThumb} src={service.img.src} alt={service.img.alt} />
+      <img className={styles.mediaThumb} src={service.img.src} alt={service.img.alt} width={512} height={288} />
       <p>{service.description}</p>
     </article>
   );

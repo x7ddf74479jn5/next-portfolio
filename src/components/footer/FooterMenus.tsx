@@ -51,11 +51,11 @@ const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
       <ul className={styles.accordionItems}>
         {accordion.items.map((item, index) => {
           return (
-            <Link href={item.href} key={index}>
-              <li>
-                <a target="_self">{item.label}</a>
-              </li>
-            </Link>
+            <li key={index}>
+              <Link href={item.href}>
+                <a>{item.label}</a>
+              </Link>
+            </li>
           );
         })}
       </ul>

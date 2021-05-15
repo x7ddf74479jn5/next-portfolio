@@ -6,10 +6,17 @@
   &-next {
     @extend .swiper-button;
     background-image: url("/img/icons/swiper-arrow.png") !important;
+    &::after {
+      content: "" !important;
+    }
   }
+
   &-prev {
     @extend .swiper-button;
     background-image: url("/img/icons/swiper-arrow.png") !important;
     transform: scale(-1, 1);
+    &::after {
+      content: "" !important;
+    }
   }
 }
