@@ -9,7 +9,7 @@
 
 ### 概要
 
-転職活動のため作成したポートフォリオサイトです。  Next.jsとTypeScriptの学習を兼ねています。
+転職活動のため作成したポートフォリオサイトです。Next.jsとTypeScriptの学習を兼ねています。
 
 ### URL
 
@@ -27,8 +27,7 @@ https://next-portfolio-livid.vercel.app/
 ![ec-app-eyecatch](./public/img/samples/ec-app-eyecatch.webp)
 ### 概要
 
-React-ReduxでWebアプリケーションの作り方を学習するため作成しました。  途中まで作成し、TypeScriptにリファクタリングしたくなったため開発中止。
-
+React-ReduxでWebアプリケーションの作り方を学習するため作成しました。
 ### URL
 
 https://ec-app-a2f5e.web.app/
