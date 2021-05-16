@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import type { FormData } from "src/types/api";
-import { schema } from "src/types/api";
 
+// import type { FormData } from "src/types/api";
+// import { schema } from "src/types/api";
 import { convertCrlfToBr } from "../../utils/helper";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -18,18 +18,20 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400).json({ message: `Request body is nothing` });
   }
 
+  const { name, email, category, description } = JSON.parse(req.body);
+
   // Process a POST request
-  const isNotNullish = (data: unknown): data is Record<string, unknown> => {
-    return data != null;
-  };
+  // const isNotNullish = (data: unknown): data is Record<string, unknown> => {
+  //   return data != null;
+  // };
 
-  const isFormData = (data: unknown): data is FormData => {
-    if (!isNotNullish(data)) {
-      return false;
-    }
+  // const isFormData = (data: unknown): data is FormData => {
+  //   if (!isNotNullish(data)) {
+  //     return false;
+  //   }
 
-    return schema.isValidSync(data);
-  };
+  //   return schema.isValidSync(data);
+  // };
 
   interface SendMail {
     email: string;
@@ -54,18 +56,18 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     //   return res.status(500).json({ message: "Validation Error" });
     // }
 
-    const description = convertCrlfToBr(req.body.description);
+    const _description = convertCrlfToBr(description);
     const html = `<div id="mail-content">
-                          <p>お名前：<br>${req.body.name}</p>
-                          <p>メールアドレス：<br>${req.body.email}</p>
-                          <p>お問い合わせ種別：<br>${req.body.category}</p>
-                          <p>お問い合わせ内容：<br>${description}</p>
+                          <p>お名前：<br>${name}</p>
+                          <p>メールアドレス：<br>${email}</p>
+                          <p>お問い合わせ種別：<br>${category}</p>
+                          <p>お問い合わせ内容：<br>${_description}</p>
                         </div>`;
 
     const autoReply = {
-      email: req.body.email,
+      email: email,
       subject: "お問い合わせいただきありがとうございます【自動返信】",
-      html: `<p>${req.body.name}様</p>
+      html: `<p>${name}様</p>
                        <p>
                         お問い合わせいただきありがとうございます。<br>
                         追って、当メールアドレスからご連絡いたします。

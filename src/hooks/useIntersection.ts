@@ -23,7 +23,7 @@ const useIntersection = (ref: RefObject<HTMLElement>, options: IntersectionObser
     }
     // eslint-disable-next-line @typescript-eslint/no-empty-function
     return () => {};
-  }, [ref.current, options.threshold, options.root, options.rootMargin]);
+  }, [ref, options]);
 
   return isIntersect;
 };

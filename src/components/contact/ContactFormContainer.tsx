@@ -1,6 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as React from "react";
-import { SubmitHandler, useForm } from "react-hook-form";
+import type { SubmitHandler } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import PrimaryButton from "src/components/common/PrimaryButton";
 import ContactFormBody from "src/components/contact/ContactFormBody";
 import * as yup from "yup";
@@ -49,26 +50,7 @@ export const ContactFormContainer = () => {
     return false;
   }, [isModalOpen, isFetching]);
 
-  const onSubmit = React.useCallback<SubmitHandler<FormData>>(
-    (formData: FormData) => {
-      openModal("CONTACT", { formData, cancel, apply, isApplyButtonDisabled });
-    },
-    [openModal]
-  );
-
-  const sendMessage = async (data: FormData) => {
-    const url = process.env.NEXT_PUBLIC_CONTACT_API_URL;
-    if (!url) return;
-    return await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-  };
-
-  const apply = async (data: FormData) => {
+  const apply = React.useCallback(async (data: FormData) => {
     setIsFetching(true);
     await sendMessage(data)
       .then(() => {
@@ -81,10 +63,31 @@ export const ContactFormContainer = () => {
       });
     setIsFetching(false);
     closeModal();
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const cancel = () => {
+  const cancel = React.useCallback(() => {
     closeModal();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const onSubmit = React.useCallback<SubmitHandler<FormData>>(
+    (formData: FormData) => {
+      openModal("CONTACT", { formData, cancel, apply, isApplyButtonDisabled });
+    },
+    [apply, cancel, isApplyButtonDisabled, openModal]
+  );
+
+  const sendMessage = async (data: FormData) => {
+    const url = process.env.NEXT_PUBLIC_CONTACT_API_URL;
+    if (!url) return;
+    return await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
   };
 
   return (
