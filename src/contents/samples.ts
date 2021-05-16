@@ -1,3 +1,4 @@
+import { identity } from "../utils/helper";
 import { images } from "../utils/images";
 import { externalLinks, internalLinks } from "../utils/paths";
 
@@ -12,7 +13,7 @@ export type Sample = {
 };
 
 export const samples: Sample[] = [
-  {
+  identity({
     id: "portfolio",
     title: "ポートフォリオ",
     category: "Web制作｜デザイン｜レスポンシブ｜アニメーション",
@@ -20,8 +21,8 @@ export const samples: Sample[] = [
     link: internalLinks.portfolio,
     imgSrc: images.portfolio.path,
     imgAlt: images.portfolio.alt,
-  },
-  {
+  }),
+  identity({
     id: "chat-bot",
     title: "チャットボット",
     category: "Webアプリ開発｜チャット｜SPA",
@@ -29,8 +30,8 @@ export const samples: Sample[] = [
     link: internalLinks.chat,
     imgSrc: images.chat.path,
     imgAlt: images.chat.alt,
-  },
-  {
+  }),
+  identity({
     id: "ec-app",
     title: "ECサイト(開発中)",
     category: "Webアプリ開発｜EC｜SPA",
@@ -38,7 +39,7 @@ export const samples: Sample[] = [
     link: internalLinks.ec,
     imgSrc: images.ec.path,
     imgAlt: images.ec.alt,
-  },
+  }),
 ];
 
 export type SampleDetail = {
@@ -59,7 +60,7 @@ export type SampleDetail = {
 };
 
 export const sampleDetails: SampleDetail[] = [
-  {
+  identity({
     id: "portfolio",
     img: images.portfolio.path,
     alt: images.portfolio.alt,
@@ -71,42 +72,43 @@ export const sampleDetails: SampleDetail[] = [
       "JavaScriptの使用も最小限に",
       "見ていて飽きさせないためのCSSアニメーション",
       "SEOを意識したHTML構造",
+      "StorybookやCIを使ったモダンな開発環境",
     ],
-    langs: "HTML5, CSS3, JavaScript TypeScript ",
-    techs: "React Next.js Vercel Sass",
+    langs: "React, TypeScript, Sass",
+    techs: "Next.js, Vercel, CSS Modules, Storybook, GitHub Actions",
     link: {
       description: "このサイトなので省略。",
     },
     note: " 実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
-  },
-  {
+  }),
+  identity({
     id: "chat",
     img: images.chat.path,
     alt: images.chat.alt,
     summary: "ユーザーに質問を投げて自動で応答するチャットボット",
     purposes: ["カジュアルにWebサイトへのお問い合わせをしてもらうため"],
     points: ["SPAらしい画面描画の切り替わり", "問い合わせ結果をSlackへ通知", "チャット風のデザインとアニメーション"],
-    langs: "JavaScript(React), JSX",
-    techs: "Sass, React, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
+    langs: "React, Sass",
+    techs: "Material-UI, Firebase Hosting, Firestore, Cloud Functions",
     link: {
       href: externalLinks.chat,
       label: "チャットボット",
     },
     note: "ヘッダーメニューのロボットアイコンからお試しいただけます。",
-  },
-  {
+  }),
+  identity({
     id: "ec",
     img: images.ec.path,
     alt: images.ec.alt,
     summary: "ECアプリ（開発中です）",
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
-    langs: "JavaScript(React), JSX",
-    techs: "Sass,  Redux, Material-ui, Firebase Hosting, Firestore, Cloud Functions",
+    langs: "React, Sass",
+    techs: "Redux, Material-UI, Firebase Hosting, Firestore, Cloud Functions",
     link: {
       href: externalLinks.ec,
       label: "ECアプリ",
     },
     note: "途中まで。TypeScriptにリファクタリング予定。",
-  },
+  }),
 ];
