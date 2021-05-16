@@ -1,14 +1,6 @@
-// import type { DetailedHTMLProps, InputHTMLAttributes } from "react";
 import { forwardRef } from "react";
 
 import type { Frec } from "../../types/utils/index";
-
-// export type TextFieldProps = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement>;
-
-// const TextField = forwardRef<HTMLInputElement, TextFieldProps>(({ ...props }, ref) => {
-//   return <input {...props} ref={ref} className="" />;
-// });
-// TextField.displayName = "TextField";
 
 const TagNameInput = "input";
 export const TextField: Frec<typeof TagNameInput> = forwardRef((props, ref) => {

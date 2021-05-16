@@ -30,9 +30,16 @@
       // height: 2.5rem;
       padding: 0.5rem;
     }
+    p {
+      margin-top: 0.25rem;
+    }
   }
 
   @include mq("md") {
     width: 600px;
   }
+}
+
+.error {
+  color: $accent;
 }

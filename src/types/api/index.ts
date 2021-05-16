@@ -1,16 +1,19 @@
-import * as yup from "yup";
+import * as z from "zod";
 
-export const schema = yup.object().shape({
-  name: yup.string().required("お名前が未入力です。"),
-  email: yup
+export const schema = z.object({
+  name: z.string().nonempty({ message: "お名前が未入力です。" }),
+  email: z
     .string()
-    .required("メールアドレスが未入力です。")
-    .matches(
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      "メールアドレスの形式に誤りがあります。"
-    ),
-  category: yup.string(),
-  describe: yup.string().required("お問い合わせ内容が未入力です。"),
+    .email({ message: "メールアドレスの形式に誤りがあります。" })
+    .nonempty({ message: "メールアドレスが未入力です。" }),
+  category: z.union([
+    z.literal(""),
+    z.literal("Webサイト制作について"),
+    z.literal("Webアプリ開発について"),
+    z.literal("Webサイト模写について"),
+    z.literal("その他"),
+  ]),
+  description: z.string().nonempty({ message: "お問い合わせ内容が未入力です。" }),
 });
 
-export type FormData = yup.InferType<typeof schema>;
+export type FormData = z.infer<typeof schema>;

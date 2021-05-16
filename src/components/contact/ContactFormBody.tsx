@@ -1,16 +1,9 @@
 import type { UseFormReturn } from "react-hook-form";
-import TextField from "src/components/contact/TextField";
+import ErrorMessage from "src/components/contact/ErrorMessage";
 import styles from "src/styles/components/contact/ContactForm.module.scss";
 
-// import type { FormData } from "./ContactFormContainer";
-import { Select, TextArea } from "./TextField";
-
-export type FormData = {
-  name: string;
-  email: string;
-  category?: string;
-  description: string;
-};
+import type { FormData } from "../../types/api/index";
+import { Select, TextArea, TextField } from "./FormInputs";
 
 type Props = {
   methods: UseFormReturn<FormData>;
@@ -30,13 +23,14 @@ const ContactFormBody: React.VFC<Props> = ({ methods }) => {
           <label htmlFor="name">お名前 *</label>
           <TextField type="text" id="name" {...register("name")} />
         </p>
+        {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
       </div>
       <div className={styles.formsInput}>
         <p>
           <label htmlFor="email">メールアドレス *</label>
           <TextField type="email" id="email" {...register("email", { required: true })} />
         </p>
-        {errors.email && <span>This field is required</span>}
+        {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
       </div>
       <div className={styles.formsInput}>
         <p>
@@ -51,12 +45,14 @@ const ContactFormBody: React.VFC<Props> = ({ methods }) => {
             })}
           </Select>
         </p>
+        {errors.category && <ErrorMessage>{errors.category.message}</ErrorMessage>}
       </div>
       <div className={styles.formsInput}>
         <p>
           <label htmlFor="description">お問い合わせ内容 *</label>
           <TextArea id="description" rows={10} {...register("description")} />
         </p>
+        {errors.description && <ErrorMessage>{errors.description.message}</ErrorMessage>}
       </div>
     </>
   );

@@ -1,34 +1,18 @@
-import { yupResolver } from "@hookform/resolvers/yup";
+import { zodResolver } from "@hookform/resolvers/zod";
 import * as React from "react";
 import type { SubmitHandler } from "react-hook-form";
 import { useForm } from "react-hook-form";
 import PrimaryButton from "src/components/common/PrimaryButton";
 import ContactFormBody from "src/components/contact/ContactFormBody";
-import * as yup from "yup";
+import type { FormData } from "src/types/api";
+import { schema } from "src/types/api";
 
 import { useModalDispatch } from "../../hooks/useModalDispatch";
 import { useModalState } from "../../hooks/useModalState";
-import type { FormData } from "./ContactFormBody";
-
-const schema = yup.object().shape({
-  name: yup.string().required("お名前が未入力です。"),
-  email: yup
-    .string()
-    .required("メールアドレスが未入力です。")
-    .matches(
-      /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-      "メールアドレスの形式に誤りがあります。"
-    ),
-  category: yup.string(),
-  describe: yup.string().required("お問い合わせ内容が未入力です。"),
-});
-// export type FormData = yup.InferType<typeof schema>;
 
 export const ContactFormContainer = () => {
-  const methods = useForm<FormData>();
-  // const methods = useForm<FormData>({ mode: "onBlur", resolver: yupResolver(schema) });
-  const { handleSubmit, watch } = methods;
-  const watcher = watch();
+  const methods = useForm<FormData>({ mode: "onBlur", resolver: zodResolver(schema) });
+  const { handleSubmit } = methods;
 
   const { isModalOpen } = useModalState();
   const { openModal, closeModal } = useModalDispatch();
@@ -93,7 +77,6 @@ export const ContactFormContainer = () => {
   return (
     <form className="p-forms" name="contactForm" onSubmit={handleSubmit(onSubmit)}>
       <ContactFormBody methods={methods} />
-
       <PrimaryButton id="confirm-btn" type="submit" disabled={isConfirmButtonDisabled}>
         内容を確認する
       </PrimaryButton>

@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import { schema } from "src/types/api";
 
-// import type { FormData } from "src/types/api";
-// import { schema } from "src/types/api";
 import { convertCrlfToBr } from "../../utils/helper";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
@@ -18,20 +17,13 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400).json({ message: `Request body is nothing` });
   }
 
-  const { name, email, category, description } = JSON.parse(req.body);
+  try {
+    schema.parse(req.body);
+  } catch (e) {
+    return res.status(500).send(e);
+  }
 
-  // Process a POST request
-  // const isNotNullish = (data: unknown): data is Record<string, unknown> => {
-  //   return data != null;
-  // };
-
-  // const isFormData = (data: unknown): data is FormData => {
-  //   if (!isNotNullish(data)) {
-  //     return false;
-  //   }
-
-  //   return schema.isValidSync(data);
-  // };
+  const { name, email, category, description } = req.body;
 
   interface SendMail {
     email: string;
@@ -52,10 +44,6 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   };
 
   const response = async () => {
-    // if (!isFormData(req.body)) {
-    //   return res.status(500).json({ message: "Validation Error" });
-    // }
-
     const _description = convertCrlfToBr(description);
     const html = `<div id="mail-content">
                           <p>お名前：<br>${name}</p>
@@ -89,7 +77,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
         return res.status(200).end();
       })
       .catch((e) => {
-        res.status(500).send(e);
+        return res.status(500).send(e);
       });
   };
 
