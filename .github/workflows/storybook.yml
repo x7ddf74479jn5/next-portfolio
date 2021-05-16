@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: install packages
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: build storybook
         run: yarn build-storybook
       - name: deploy storybook
