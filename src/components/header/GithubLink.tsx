@@ -1,14 +1,13 @@
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Link from "next/link";
 import styles from "src/styles/components/header/HeaderLink.module.scss";
-import { externalLinks } from "src/utils/paths";
 
 import type { LinkType } from "../../types/utils/index";
 
-const GithubLink: React.VFC<LinkType> = () => {
+const GithubLink: React.VFC<LinkType> = (props) => {
   return (
-    <Link href={externalLinks.github}>
-      <a className={styles.github} target="_self">
+    <Link href={props.href}>
+      <a className={styles.github}>
         <GitHubIcon />
         <span>Github</span>
       </a>

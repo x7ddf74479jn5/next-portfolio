@@ -28,5 +28,5 @@ export type ButtonType = {
 export type LinkType = {
   children?: React.ReactNode;
   label?: string;
-  href?: string;
+  href: string;
 };
