@@ -6,15 +6,7 @@ type Props = {
 };
 
 const Spacer: React.VFC<Props> = ({ size = "md" }) => {
-  return (
-    <div
-      className={clsx({
-        [styles.sm]: size === "sm",
-        [styles.md]: size === "md",
-        [styles.lg]: size === "lg",
-      })}
-    ></div>
-  );
+  return <div className={clsx(styles[size])}></div>;
 };
 
 export default Spacer;

@@ -1,11 +1,9 @@
 import styles from "src/styles/components/common/PrimaryButton.module.scss";
 
-type Props = {
-  disabled: boolean;
+import type { ButtonType } from "../../types/utils/index";
+
+export type Props = ButtonType & {
   label?: string;
-  id: string;
-  type?: "button" | "submit" | "reset" | undefined;
-  onClick?: () => void;
 };
 
 const PrimaryButton: React.FC<Props> = ({ children, disabled = false, label, ...rest }) => {

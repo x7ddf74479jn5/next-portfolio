@@ -19,14 +19,6 @@ export type Frec<
     : // ForwardRefExoticComponent 用
       T;
 
-export type ButtonType = {
-  children?: React.ReactNode;
-  label?: string;
-  onClick: () => void;
-};
+export type ButtonType = JSX.IntrinsicElements["button"];
 
-export type LinkType = {
-  children?: React.ReactNode;
-  label?: string;
-  href: string;
-};
+export type LinkType = JSX.IntrinsicElements["a"];

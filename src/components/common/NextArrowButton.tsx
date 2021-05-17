@@ -1,8 +1,9 @@
 import clsx from "clsx";
 import Link from "next/link";
 import styles from "src/styles/components/common/NextArrowButton.module.scss";
+import type { LinkType } from "src/types/utils";
 
-type Props = {
+export type Props = LinkType & {
   label?: string;
   href: string;
   onDark?: boolean;

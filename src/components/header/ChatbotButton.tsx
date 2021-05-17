@@ -5,12 +5,7 @@ import type { ButtonType } from "../../types/utils/index";
 
 const ChatbotButton: React.VFC<ButtonType> = ({ onClick }) => {
   return (
-    <button
-      className={styles.chatBot}
-      onClick={() => {
-        return onClick();
-      }}
-    >
+    <button className={styles.chatBot} onClick={onClick}>
       <ChatIcon />
       <span>Chat Bot</span>
     </button>
