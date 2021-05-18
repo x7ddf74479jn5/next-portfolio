@@ -16,7 +16,6 @@ const Samples: NextPage = () => {
       <Head>
         <title>{pageConfig.title}</title>
       </Head>
-      <Spacer size="md" />
       {pageConfig.titleArea && <TitleArea {...pageConfig.titleArea} />}
       <Spacer size="md" />
       <WrapInSection wide>

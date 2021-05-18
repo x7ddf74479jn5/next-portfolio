@@ -19,7 +19,6 @@ const Home: NextPage = () => {
         <title>{pageConfig.title}</title>
       </Head>
       <FirstView />
-      <Spacer size="md" />
       <Vision />
       <Services />
       <Spacer size="md" />
