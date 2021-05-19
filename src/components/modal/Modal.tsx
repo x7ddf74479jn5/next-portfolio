@@ -17,8 +17,8 @@ const ModalContainer: React.VFC = () => {
 
   return (
     <div className={styles.modalContainer}>
-      {<ModalContent />}
       <Backdrop opacity={70} />
+      <ModalContent />
     </div>
   );
 };

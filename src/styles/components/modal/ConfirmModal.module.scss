@@ -28,9 +28,8 @@
   overflow: hidden;
   transform: translate(-50%, -50%);
   width: 90%;
-  // z-index: 998;
   // add
-  z-index: 1100;
+  z-index: 1;
   animation: fadeIn 1s ease 0s 1 normal;
   @include mq() {
     width: 600px;
