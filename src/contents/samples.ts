@@ -109,6 +109,6 @@ export const sampleDetails: SampleDetail[] = [
       href: externalLinks.ec,
       label: "ECアプリ",
     },
-    note: "ログイン時に入力してください。\nemail: psexample86@gmail.com\npassword: 8ox2lkmw",
+    note: "【一般ユーザー】\nemail: psexample86@gmail.com\npassword: 8ox2lkmw\n【管理者】\nemail: psexample+admin86@gmail.com\npassword: 8ox2lkmw",
   }),
 ];
