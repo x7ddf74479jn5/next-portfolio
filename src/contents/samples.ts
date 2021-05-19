@@ -109,6 +109,6 @@ export const sampleDetails: SampleDetail[] = [
       href: externalLinks.ec,
       label: "ECアプリ",
     },
-    note: "途中まで。TypeScriptにリファクタリング予定。",
+    note: "ログイン時に入力してください。\nemail: psexample86@gmail.com\npassword: 8ox2lkmw",
   }),
 ];

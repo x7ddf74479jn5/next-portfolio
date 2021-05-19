@@ -9,8 +9,6 @@ export type Service = {
     alt: string;
   };
   description: string;
-  classes?: string;
-  dataAnimate?: string;
 };
 
 export const services: Service[] = [
@@ -23,8 +21,6 @@ export const services: Service[] = [
     },
     description:
       "コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。検索流入やSNS流入を強化する「SEOを意識したサイト」を作成できます。",
-    classes: "p-grid__list-item-floated animated slow slideInLeft",
-    dataAnimate: "slideInLeft",
   }),
   identity({
     title: "WordPress",
@@ -34,8 +30,6 @@ export const services: Service[] = [
       alt: images.wordPress.alt,
     },
     description: "WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。",
-    classes: "p-grid__list-item-floated animated slow slideInRight",
-    dataAnimate: "slideInRight",
   }),
   identity({
     title: "チャットアプリ開発",
@@ -46,7 +40,5 @@ export const services: Service[] = [
     },
     description:
       "リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。これまで開発してきたWebアプリの一部を制作事例として公開しています。",
-    classes: "p-grid__list-item-floated animated slow slideInLeft",
-    dataAnimate: "slideInLeft",
   }),
 ];
