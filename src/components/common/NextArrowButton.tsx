@@ -3,7 +3,7 @@ import Link from "next/link";
 import styles from "src/styles/components/common/NextArrowButton.module.scss";
 import type { LinkType } from "src/types/utils";
 
-export type Props = LinkType & {
+type Props = LinkType & {
   label?: string;
   href: string;
   onDark?: boolean;
