@@ -14,10 +14,7 @@ const mockDispatchContextValue = {
     // eslint-disable-next-line no-console
     console.log("Modal is open");
   },
-  closeModal: () => {
-    // eslint-disable-next-line no-console
-    console.log("Modal is closed");
-  },
+  closeModal: () => {},
 };
 
 export const withContext = (storyFn: () => StoryFnReactReturnType) => {
