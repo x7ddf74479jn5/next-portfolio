@@ -1,13 +1,12 @@
-import clsx from "clsx";
 import React from "react";
 import Headline from "src/components/home/Headline";
 import { WrapInSection } from "src/components/layouts/Section";
 import Spacer from "src/components/layouts/Spacer";
+import ServiceItem from "src/components/projects/ServiceItem";
 import type { Service } from "src/contents/services";
 import { services } from "src/contents/services";
 import styles from "src/styles/components/home/Services.module.scss";
 
-import useIntersection from "../../hooks/useIntersection";
 import { NextArrowButton } from "../common/NextArrowButton";
 import HorizontalRule from "./HorizontalRule";
 
@@ -16,25 +15,15 @@ type ServiceItem = {
   service: Service;
 };
 
-const ServiceItems: React.VFC<ServiceItem> = ({ service, index }) => {
-  const ref = React.useRef(null);
-  const isIntersect = useIntersection(ref, { root: null, rootMargin: "0px", threshold: 0 });
-  const styleSlideInLeft = clsx(styles.gridListItemFloatedLeft, { [styles.slideInLeft]: isIntersect });
-  const styleSlideInRight = clsx(styles.gridListItemFloatedRight, { [styles.slideInRight]: isIntersect });
+type ContainerProps = {
+  index: number;
+  service: Service;
+};
 
-  return (
-    <article
-      key={index}
-      className={index % 2 === 0 ? styleSlideInLeft : styleSlideInRight}
-      data-animate={index % 2 === 0 ? "slideInLeft" : "slideInRight"}
-      ref={ref}
-    >
-      <h3>{service.title}</h3>
-      <small>{service.caption}</small>
-      <img className={styles.mediaThumb} src={service.img.src} alt={service.img.alt} width={512} height={288} />
-      <p>{service.description}</p>
-    </article>
-  );
+const ServiceItemContainer: React.VFC<ContainerProps> = ({ index, service }) => {
+  const animation = index % 2 === 0 ? "slideInLeft" : "slideInRight";
+
+  return <ServiceItem animation={animation} service={service} />;
 };
 
 const Services: React.VFC = () => {
@@ -47,7 +36,7 @@ const Services: React.VFC = () => {
       <Spacer size="md" />
       <div className={styles.gridList}>
         {services.map((service, index) => {
-          return <ServiceItems service={service} index={index} key={index} />;
+          return <ServiceItemContainer key={index} index={index} service={service} />;
         })}
       </div>
     </WrapInSection>

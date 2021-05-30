@@ -5,7 +5,7 @@ import useClickAway from "src/hooks/useClickAway";
 import { useModalDispatch } from "src/hooks/useModalDispatch";
 import styles from "src/styles/components/modal/ConfirmModal.module.scss";
 
-import type { FormData } from "./ContactFormBody";
+import type { FormData } from "../../types/api/index";
 
 export type ModalPopup = FormData & ModalPopupAction;
 type ModalPopupAction = {
