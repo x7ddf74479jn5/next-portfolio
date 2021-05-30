@@ -1,0 +1,33 @@
+@import "../../variables.scss";
+.foot {
+  padding-top: 1rem;
+
+  ul {
+    margin: 0.5rem 1rem;
+    li {
+      //add
+      display: inline-block;
+      font-size: $font-small;
+      font-weight: 600;
+      margin-right: 1rem;
+      &:visited {
+        color: $main-light;
+      }
+      a {
+        color: $main-light;
+        text-decoration: none;
+      }
+    }
+  }
+  @include mq() {
+    -ms-flex-align: center;
+    align-items: center;
+    border-top: 2px solid $main;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 2rem;
+    li {
+      margin-top: 0.125rem;
+    }
+  }
+}
