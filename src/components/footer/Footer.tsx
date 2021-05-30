@@ -1,5 +1,5 @@
-import Link from "next/link";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
+import Foot from "src/components/footer/Foot";
 import { FooterMenus } from "src/components/footer/FooterMenus";
 import styles from "src/styles/components/footer/Footer.module.scss";
 
@@ -17,15 +17,11 @@ export const Footer: React.VFC = () => {
           <section className={styles.foot}>
             <ul>
               <li>
-                <Link href="/terms/">
-                  <a>利用規約</a>
-                </Link>
+                <Foot href="/terms/" label="利用規約" />
               </li>
-              <Link href="/privacy/">
-                <li>
-                  <a>プライバシーポリシー</a>
-                </li>
-              </Link>
+              <li>
+                <Foot href="/privacy/" label="プライバシーポリシー" />
+              </li>
             </ul>
           </section>
         </div>
