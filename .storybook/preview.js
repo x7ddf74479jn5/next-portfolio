@@ -3,6 +3,7 @@ import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import * as nextImage from "next/image";
 import "src/styles/style.scss";
 
+// Mock for Next Image
 Object.defineProperty(nextImage, "default", {
   configurable: true,
   value: (props) => <img {...props} />,
