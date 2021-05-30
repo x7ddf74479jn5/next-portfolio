@@ -8,7 +8,7 @@ module.exports = {
     "@storybook/addon-a11y",
     "@storybook/addon-storyshots",
   ],
-  webpackFinal: async (baseConfig, { configType }) => {
+  webpackFinal: async (baseConfig) => {
     baseConfig.resolve.modules = [...(baseConfig.resolve.modules || []), path.resolve("./")];
     baseConfig.module.rules.push({
       test: /\.scss$/,

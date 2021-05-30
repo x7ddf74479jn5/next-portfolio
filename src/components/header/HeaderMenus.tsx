@@ -1,23 +1,19 @@
-import Link from "next/link";
 import { useCallback } from "react";
 import PandasharkLogo from "src/components/common/PandasharkLogo";
-import GithubLink from "src/components/header/GithubLink";
-import TwitterLink from "src/components/header/TwitterLink";
+import HeaderLinkItem from "src/components/header/HeaderLinkItem";
 import { useModalDispatch } from "src/hooks/useModalDispatch";
 import styles from "src/styles/components/header/HeaderMenus.module.scss";
+import { icons } from "src/utils/images";
 import { externalLinks, internalLinks } from "src/utils/paths";
 
 import ChatbotButton from "./ChatbotButton";
 
-type InnerLinkItem = {
-  href: string;
-  label: string;
-};
-
-const innerLinkItems: InnerLinkItem[] = [
+const headerLinkItem = [
   { label: "About", href: internalLinks.about },
   { label: "Samples", href: internalLinks.samples },
   { label: "Contact", href: internalLinks.contact },
+  { label: "Twitter", href: externalLinks.twitter, icon: { src: icons.twitter.path, alt: icons.twitter.alt } },
+  { label: "GitHub", href: externalLinks.github, icon: { src: icons.github.path, alt: icons.github.alt } },
 ];
 
 type HeaderMenusProps = {
@@ -45,23 +41,15 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) =>
         <PandasharkLogo height={40} width={80} />
       </h1>
       <ul>
-        {innerLinkItems.map((item, index) => {
+        {headerLinkItem.map((item, index) => {
           return (
             <li key={index}>
-              <Link href={item.href}>
-                <a>{item.label}</a>
-              </Link>
+              <HeaderLinkItem item={item} />
             </li>
           );
         })}
         <li>
-          <TwitterLink href={externalLinks.twitter} />
-        </li>
-        <li>
-          <GithubLink href={externalLinks.github} />
-        </li>
-        <li>
-          <ChatbotButton onClick={handleChatBotButton} />
+          <ChatbotButton label="Chat Bot" onClick={handleChatBotButton} icon={icons.chatBot} />
         </li>
       </ul>
     </nav>

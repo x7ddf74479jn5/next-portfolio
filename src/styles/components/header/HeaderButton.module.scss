@@ -1,12 +1,31 @@
 @import "../../variables.scss";
 
-.chatBot {
-  svg {
+.buttonItem {
+  background-color: transparent;
+  border: none;
+  color: $main;
+  font-weight: 300;
+  letter-spacing: 0.01562rem;
+  line-height: 1.375rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  outline: 0;
+  padding: 13px 24px;
+  width: 100%;
+  &:hover {
+    color: #777;
+    opacity: 0.6;
+  }
+
+  img {
     height: 2rem;
     width: 2rem;
-    fill: #00c300;
   }
   @include mq() {
+    display: inline-block;
+    outline: none;
+    padding: 21px 0 19px;
     span {
       display: none;
     }

@@ -1,13 +1,20 @@
-import ChatIcon from "@material-ui/icons/Chat";
 import styles from "src/styles/components/header/HeaderButton.module.scss";
 
 import type { ButtonType } from "../../types/utils/index";
 
-const ChatbotButton: React.VFC<ButtonType> = ({ onClick }) => {
+type Props = ButtonType & {
+  label: string;
+  icon: {
+    path: string;
+    alt: string;
+  };
+};
+
+const ChatbotButton: React.VFC<Props> = ({ onClick, icon, label }) => {
   return (
-    <button className={styles.chatBot} onClick={onClick}>
-      <ChatIcon />
-      <span>Chat Bot</span>
+    <button className={styles.buttonItem} onClick={onClick}>
+      <img src={icon?.path} alt={icon?.alt} />
+      <span>{label}</span>
     </button>
   );
 };

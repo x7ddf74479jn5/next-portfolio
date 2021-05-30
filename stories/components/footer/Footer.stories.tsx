@@ -7,11 +7,6 @@ type Props = ComponentProps<typeof Footer>;
 export default {
   title: "footer/Footer",
   component: Footer,
-  decorator: [
-    (story: () => Story) => {
-      return <div style={{ width: "500px" }}>{story()}</div>;
-    },
-  ],
 } as Meta;
 
 const Template: Story<Props> = (args) => {
@@ -19,5 +14,3 @@ const Template: Story<Props> = (args) => {
 };
 
 export const Default = Template.bind({});
-
-Default.args = {};
