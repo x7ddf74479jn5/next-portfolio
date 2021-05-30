@@ -55,16 +55,22 @@
   &Table {
     li {
       @extend .grid;
-      -webkit-flex-direction: column;
-      flex-direction: column;
       margin-bottom: 1rem;
-
       @include mq() {
-        -webkit-flex-direction: row;
-        flex-direction: row;
         margin-bottom: 0;
       }
     }
+  }
+}
+
+.wrapper {
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+  @include mq() {
+    -webkit-flex-direction: row;
+    flex-direction: row;
   }
 }
 

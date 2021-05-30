@@ -11,7 +11,6 @@
   line-height: 3rem;
   text-align: center;
   transition: all 0.5s;
-
   &Round {
     @extend .btn;
     border-radius: 50px;
@@ -29,6 +28,9 @@
     }
     &:active {
       top: 2px;
+    }
+    &:disabled {
+      background: $main-light;
     }
     &OnDark {
       @extend .btnRound;
