@@ -2,7 +2,7 @@ import styles from "src/styles/components/common/PrimaryButton.module.scss";
 
 import type { ButtonType } from "../../types/utils/index";
 
-export type Props = ButtonType & {
+type Props = ButtonType & {
   label?: string;
 };
 

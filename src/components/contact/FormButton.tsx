@@ -1,16 +1,14 @@
 import clsx from "clsx";
 import styles from "src/styles/components/contact/FormButton.module.scss";
 
-type Props = {
+import type { ButtonType } from "../../types/utils/index";
+
+type Props = ButtonType & {
   buttonType: "apply" | "cancel";
-  disabled?: boolean;
   label?: string;
-  id: string;
-  type?: "button" | "submit" | "reset" | undefined;
-  onClick: () => void;
 };
 
-const FormButton: React.FC<Props> = ({ children, buttonType, disabled = false, ...rest }) => {
+const FormButton: React.FC<Props> = ({ children, buttonType, label, disabled = false, ...rest }) => {
   return (
     <button
       className={clsx({
@@ -20,7 +18,7 @@ const FormButton: React.FC<Props> = ({ children, buttonType, disabled = false, .
       disabled={disabled}
       {...rest}
     >
-      {children}
+      {children || label}
     </button>
   );
 };

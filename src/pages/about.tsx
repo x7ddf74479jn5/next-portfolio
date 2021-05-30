@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Career from "src/components/about/Career";
 import Profile from "src/components/about/Profile";
-import Skill from "src/components/about/Skill";
+import Skills from "src/components/about/Skills";
 import Vision from "src/components/about/Vision";
 import { Layout } from "src/components/layouts/Layout";
 import { configPage } from "src/utils/page-configure";
@@ -21,7 +21,7 @@ const About: NextPage = () => {
       <Vision />
       <Profile />
       <Career />
-      <Skill />
+      <Skills />
     </Layout>
   );
 };

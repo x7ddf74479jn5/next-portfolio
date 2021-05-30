@@ -42,11 +42,11 @@ type Props = {
   accordion: Accordion;
 };
 
-const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
+export const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
   const { isPC, mounted } = useMedia();
 
   return mounted ? (
-    <details open={isPC}>
+    <details open={isPC} className={styles.accordion}>
       <summary>{accordion.label}</summary>
       <ul className={styles.accordionItems}>
         {accordion.items.map((item, index) => {
@@ -69,11 +69,7 @@ export const FooterMenus: React.VFC = () => {
     <section className={styles.sitemap}>
       <ul className={styles.footerLinks}>
         {Object.values(accordions).map((accordion, index) => {
-          return (
-            <li className={styles.accordion} key={index}>
-              {<Accordion accordion={accordion} />}
-            </li>
-          );
+          return <li key={index}>{<Accordion accordion={accordion} />}</li>;
         })}
       </ul>
     </section>
