@@ -18,9 +18,7 @@ const NavToggleButton: React.VFC<Props> = ({ isOpen, onClick }) => {
       data-about-nav-toggle
       aria-label="ナビゲーション メニューの切り替え"
       id="nav-toggle-button"
-      onClick={() => {
-        return onClick();
-      }}
+      onClick={onClick}
     >
       {isOpen ? (
         <CloseIcon aria-label="ナビゲーション メニューを閉じる" />
