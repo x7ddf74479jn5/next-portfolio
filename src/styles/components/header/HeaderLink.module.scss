@@ -1,6 +1,20 @@
 @import "../../variables.scss";
 
-.sns {
+.linkItem {
+  color: $main;
+  font-weight: 300;
+  letter-spacing: 0.01562rem;
+  line-height: 1.375rem;
+
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 13px 24px;
+  &:hover {
+    color: #777;
+  }
+
   img {
     height: 2rem;
     width: 2rem;
@@ -10,22 +24,10 @@
     width: 2rem;
   }
   @include mq() {
+    display: inline-block;
+    padding: 21px 0 19px;
     span {
       display: none;
     }
-  }
-}
-
-.twitter {
-  @extend .sns;
-  svg {
-    fill: $brand-twitter;
-  }
-}
-
-.github {
-  @extend .sns;
-  svg {
-    fill: $brand-github;
   }
 }
