@@ -10,7 +10,7 @@ type Props = ButtonType & {
   };
 };
 
-const ChatbotButton: React.VFC<Props> = ({ onClick, icon, label }) => {
+const HeaderButtonItem: React.VFC<Props> = ({ onClick, icon, label }) => {
   return (
     <button className={styles.buttonItem} onClick={onClick}>
       <img src={icon?.path} alt={icon?.alt} />
@@ -19,4 +19,4 @@ const ChatbotButton: React.VFC<Props> = ({ onClick, icon, label }) => {
   );
 };
 
-export default ChatbotButton;
+export default HeaderButtonItem;

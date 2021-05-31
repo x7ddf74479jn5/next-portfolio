@@ -6,7 +6,7 @@ import styles from "src/styles/components/header/HeaderMenus.module.scss";
 import { icons } from "src/utils/images";
 import { externalLinks, internalLinks } from "src/utils/paths";
 
-import ChatbotButton from "./ChatbotButton";
+import HeaderButtonItem from "./HeaderButtonItem";
 
 const headerLinkItem = [
   { label: "About", href: internalLinks.about },
@@ -49,7 +49,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) =>
           );
         })}
         <li>
-          <ChatbotButton label="Chat Bot" onClick={handleChatBotButton} icon={icons.chatBot} />
+          <HeaderButtonItem label="Chat Bot" onClick={handleChatBotButton} icon={icons.chatBot} />
         </li>
       </ul>
     </nav>

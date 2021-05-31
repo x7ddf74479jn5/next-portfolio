@@ -1,23 +1,23 @@
 import type { Meta, Story } from "@storybook/react";
 import type { ComponentProps } from "react";
-import ChatBotButton from "src/components/header/ChatbotButton";
+import HeaderButtonItem from "src/components/header/HeaderButtonItem";
 import { icons } from "src/utils/images";
 
-type Props = ComponentProps<typeof ChatBotButton>;
+type Props = ComponentProps<typeof HeaderButtonItem>;
 
 export default {
-  title: "header/ChatBotButton",
-  component: ChatBotButton,
+  title: "header/HeaderButtonItem",
+  component: HeaderButtonItem,
   argTypes: { onClick: { action: "clicked" } },
 } as Meta;
 
 const Template: Story<Props> = (args) => {
-  return <ChatBotButton {...args} />;
+  return <HeaderButtonItem {...args} />;
 };
 
-export const Default = Template.bind({});
+export const ChatBot = Template.bind({});
 
-Default.args = {
+ChatBot.args = {
   label: "Chat Bot",
   icon: icons.chatBot,
 };
