@@ -39,7 +39,7 @@
   }
 }
 
-.test {
+.wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -125,7 +125,7 @@
     font-weight: 700;
     transform: rotate(315deg);
   }
-  summary::-webkit-details-marker {
+  summary::marker {
     display: none;
   }
 

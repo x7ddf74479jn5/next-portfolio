@@ -21,7 +21,7 @@ export const Footer: React.VFC = () => {
     <footer className={styles.footer}>
       <div className={styles.main}>
         <div className={styles.mainInner}>
-          <div className={styles.test}>
+          <div className={styles.wrapper}>
             <section className={styles.logoArea}>
               <div className={styles.productLogo}>
                 <PandasharkLogo width={128} height={64} />
