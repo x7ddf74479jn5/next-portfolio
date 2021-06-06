@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BreadCrumbs matches snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Breadcrumbs"
+    class="textBreadcrumbs"
+  >
+    <li>
+      <a
+        href="/"
+      >
+        HOME
+      </a>
+       
+      <span>
+        ＞
+      </span>
+    </li>
+    <li>
+      <a
+        href="/samples"
+      >
+        SAMPLES
+      </a>
+       
+      <span>
+        ＞
+      </span>
+    </li>
+    <li>
+      <span
+        aria-current="page"
+      >
+        PORTFOLIO
+      </span>
+       
+    </li>
+  </ul>
+</DocumentFragment>
+`;
