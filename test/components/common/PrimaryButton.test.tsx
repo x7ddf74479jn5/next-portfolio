@@ -1,7 +1,7 @@
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import PrimaryButton from "src/components/common/PrimaryButton";
 
-beforeEach(cleanup);
+afterEach(cleanup);
 
 describe("PrimaryButton", () => {
   it("matches snapshot", () => {
