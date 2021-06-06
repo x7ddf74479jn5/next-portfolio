@@ -6,10 +6,8 @@ describe("PandasharkLogo", () => {
     const { asFragment } = render(<PandasharkLogo width={128} height={64} />, {});
     expect(asFragment()).toMatchSnapshot();
   });
-  // it("clicking button triggers alert", () => {
-  //   const { getByText } = render(<PandasharkLogo width={128} height={64} />, {});
-  //   window.alert = jest.fn();
-  //   fireEvent.click(getByText("Button"));
-  //   expect(window.alert).toHaveBeenCalledWith("Hello, World!");
-  // });
+  it("Next Link component compiles is transformed the anchor element with appropriate href", () => {
+    const { container } = render(<PandasharkLogo width={128} height={64} />, {});
+    expect(container.firstChild).toHaveAttribute("href", "/");
+  });
 });
