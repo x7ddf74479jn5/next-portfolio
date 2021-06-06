@@ -6,6 +6,8 @@ exports[`NextArrowButton matches snapshot 1`] = `
     class="btnRound iconArrowNext"
     href="/"
     role="button"
-  />
+  >
+    hoge
+  </a>
 </DocumentFragment>
 `;

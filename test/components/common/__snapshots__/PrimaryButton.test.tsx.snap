@@ -4,6 +4,8 @@ exports[`PrimaryButton matches snapshot 1`] = `
 <DocumentFragment>
   <button
     class="btnRound"
-  />
+  >
+    hoge
+  </button>
 </DocumentFragment>
 `;

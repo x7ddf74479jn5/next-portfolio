@@ -4,10 +4,23 @@ import PrimaryButton from "src/components/common/PrimaryButton";
 afterEach(cleanup);
 
 describe("PrimaryButton", () => {
+  const buttonLabel = "hoge";
+
   it("matches snapshot", () => {
-    const { asFragment } = render(<PrimaryButton />, {});
+    const { asFragment } = render(<PrimaryButton label={buttonLabel} />);
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("has text by label", () => {
+    const { container } = render(<PrimaryButton label={buttonLabel} />, {});
+    expect(container).toHaveTextContent(buttonLabel);
+  });
+
+  it("has text by children", () => {
+    const { container } = render(<PrimaryButton>{buttonLabel}</PrimaryButton>);
+    expect(container).toHaveTextContent(buttonLabel);
+  });
+
   it("onClick", () => {
     const handleClick = jest.fn();
     const { getByText } = render(
@@ -16,10 +29,10 @@ describe("PrimaryButton", () => {
           return handleClick();
         }}
       >
-        hoge
+        {buttonLabel}
       </PrimaryButton>
     );
-    fireEvent.click(getByText("hoge"));
+    fireEvent.click(getByText(buttonLabel));
     expect(handleClick).toHaveBeenCalledTimes(1);
   });
   it("disabled", () => {
@@ -31,11 +44,11 @@ describe("PrimaryButton", () => {
         }}
         disabled
       >
-        hoge
+        {buttonLabel}
       </PrimaryButton>
     );
-    expect(getByText("hoge")).toBeDisabled;
-    fireEvent.click(getByText("hoge"));
+    expect(getByText(buttonLabel)).toBeDisabled;
+    fireEvent.click(getByText(buttonLabel));
     expect(handleClick).toHaveBeenCalledTimes(0);
   });
 });
