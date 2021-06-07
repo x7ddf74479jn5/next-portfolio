@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SampleCard matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sampleCard"
+  >
+    <a
+      class="testLineNone"
+      href="/link"
+    >
+      <div
+        class="mediaThumb"
+      >
+        <div
+          style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+        >
+          <noscript />
+          <img
+            alt="alt"
+            decoding="async"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+          />
+        </div>
+      </div>
+      <div
+        class="listSamplesDetail"
+      >
+        <h3
+          class="title"
+        >
+          title
+        </h3>
+        <p
+          class="category"
+        >
+          category
+        </p>
+        <div
+          class="icon"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 5H11l5 7-5 7h4.5l5-7z"
+            />
+            <path
+              d="M8.5 5H4l5 7-5 7h4.5l5-7z"
+            />
+          </svg>
+        </div>
+      </div>
+    </a>
+  </div>
+</DocumentFragment>
+`;

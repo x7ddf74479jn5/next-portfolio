@@ -1,9 +1,9 @@
 import { cleanup, fireEvent, render } from "@testing-library/react";
 import PrimaryButton from "src/components/common/PrimaryButton";
 
-afterEach(cleanup);
-
 describe("PrimaryButton", () => {
+  afterEach(cleanup);
+
   const buttonLabel = "hoge";
 
   it("matches snapshot", () => {

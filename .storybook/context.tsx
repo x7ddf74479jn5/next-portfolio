@@ -10,10 +10,7 @@ const initialState = {
 };
 
 const mockDispatchContextValue = {
-  openModal: () => {
-    // eslint-disable-next-line no-console
-    console.log("Modal is open");
-  },
+  openModal: () => {},
   closeModal: () => {},
 };
 

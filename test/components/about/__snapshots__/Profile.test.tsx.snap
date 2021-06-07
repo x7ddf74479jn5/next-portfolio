@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgPrimary"
+    id="profile"
+  >
+    <div
+      class="sectionWrapIn"
+    >
+      <h2
+        class="headlineAboutWhite"
+      >
+        Profile
+      </h2>
+      <div
+        class="gridProfile"
+      >
+        <div
+          class="left"
+        >
+          <div
+            class="mediaProfile"
+          >
+            <img
+              alt="Pandashark's icon"
+              src="/img/icons/pandashark_icon.png"
+            />
+            <p>
+              パンダシャーク
+            </p>
+          </div>
+        </div>
+        <div
+          class="right"
+        >
+          <p>
+            喫茶店の調理職×Webエンジニア。
+          </p>
+          <p>
+            珈琲と美味しい料理が好き。
+            <br />
+            得意な料理ジャンルはイタリアンです。
+          </p>
+          <p>
+            現在、プログラミング・情報技術者資格試験の勉強と転職活動を行っています。
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

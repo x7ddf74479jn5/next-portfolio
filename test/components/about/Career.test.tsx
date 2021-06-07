@@ -15,7 +15,7 @@ describe("Career", () => {
     expect(targetElement).toHaveAttribute("id", "career");
   });
 
-  it("timeline lists have over one item", () => {
+  it("timeline list has over one item", () => {
     const { container } = render(<Career />);
     const targetElement = container.getElementsByClassName("timeline");
     expect(targetElement.length).toBeGreaterThan(0);
