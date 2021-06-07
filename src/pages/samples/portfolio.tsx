@@ -5,7 +5,7 @@ import { Layout } from "src/components/layouts/Layout";
 import SampleTemplate from "src/templates/SampleTemplate";
 
 import { configPage } from "../../utils/page-configure";
-import { selectSample } from "../../utils/sample-select";
+import { selectSample } from "../../utils/page-configure";
 
 const Portfolio: NextPage = () => {
   const pageConfig = configPage("portfolio");
