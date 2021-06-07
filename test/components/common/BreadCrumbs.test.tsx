@@ -14,19 +14,19 @@ describe("BreadCrumbs", () => {
     const { container, getByText } = render(
       withMockedRouter({ pathname: "/samples/portfolio", asPath: "/samples/portfolio" }, <Breadcrumbs />)
     );
-    const listNode = container.firstElementChild;
-    const lastSpanNode = getByText("PORTFOLIO");
+    const listElement = container.getElementsByClassName("textBreadcrumbs")[0];
+    const lastSpanElement = getByText("PORTFOLIO");
 
-    expect(listNode).toHaveAttribute("aria-label");
-    expect(lastSpanNode).toHaveAttribute("aria-current");
+    expect(listElement).toHaveAttribute("aria-label");
+    expect(lastSpanElement).toHaveAttribute("aria-current");
   });
 
   it("anchor list item", () => {
     const { getByText } = render(
       withMockedRouter({ pathname: "/samples/portfolio", asPath: "/samples/portfolio" }, <Breadcrumbs />)
     );
-    const targetNode = getByText("SAMPLES");
+    const targetElement = getByText("SAMPLES");
 
-    expect(targetNode).toHaveAttribute("href", "/samples");
+    expect(targetElement).toHaveAttribute("href", "/samples");
   });
 });

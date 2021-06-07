@@ -26,13 +26,13 @@ describe("PandasharkLogo", () => {
 
   it("Next Link component compiles is transformed the anchor element with appropriate href", () => {
     const { container } = render(<PandasharkLogo width={128} height={64} />, {});
-    expect(container.firstChild).toHaveAttribute("href", "/");
+    const targetElement = container.getElementsByTagName("a")[0];
+    expect(targetElement).toHaveAttribute("href", "/");
   });
 
   it("has alt", () => {
-    const { container, debug } = render(<PandasharkLogo width={128} height={64} />, {});
-    const targetNode = container.firstChild?.firstChild;
-    expect(targetNode).toHaveAttribute("alt", expect.stringContaining("Pandashark"));
-    debug();
+    const { container } = render(<PandasharkLogo width={128} height={64} />, {});
+    const targetElement = container.getElementsByTagName("img")[0];
+    expect(targetElement).toHaveAttribute("alt", expect.stringContaining("Pandashark"));
   });
 });
