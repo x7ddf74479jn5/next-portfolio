@@ -21,14 +21,19 @@ const ContactFormBody: React.VFC<Props> = ({ methods }) => {
       <div className={styles.formsInput}>
         <p>
           <label htmlFor="name">お名前 *</label>
-          <TextField type="text" id="name" {...register("name")} />
+          <TextField type="text" id="name" placeholder="熊猫 鮫" {...register("name")} />
         </p>
         {errors.name && <ErrorMessage>{errors.name.message}</ErrorMessage>}
       </div>
       <div className={styles.formsInput}>
         <p>
           <label htmlFor="email">メールアドレス *</label>
-          <TextField type="email" id="email" {...register("email", { required: true })} />
+          <TextField
+            type="email"
+            id="email"
+            placeholder="your@example.com"
+            {...register("email", { required: true })}
+          />
         </p>
         {errors.email && <ErrorMessage>{errors.email.message}</ErrorMessage>}
       </div>
