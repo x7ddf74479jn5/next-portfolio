@@ -166,7 +166,9 @@ exports[`Layout matches snapshot 1`] = `
   <div
     class="md"
   />
-  <main />
+  <main>
+    children
+  </main>
   <footer
     class="footer"
   >

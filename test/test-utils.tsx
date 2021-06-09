@@ -112,8 +112,14 @@ const customRender = (ui: React.ReactElement, options = {}): RenderResult<typeof
   return render(ui, { wrapper: Providers, ...options });
 };
 
+const reTestCase = {
+  anyWord: expect.stringMatching(/\w+/),
+  anyImage: expect.stringMatching(/^(data:image\/gif)|\.(png|webp|jpeg|jpg|svg)$/),
+  // |\.(png|webp|jpeg|jpg|svg)$
+};
+
 // re-export everything
 export * from "@testing-library/react";
 
 // override render method
-export { customRender, setupWindow, withMockedRouter };
+export { customRender as render, reTestCase, setupWindow, withMockedRouter };

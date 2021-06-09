@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactFormContainer matches snapshot 1`] = `
+<DocumentFragment>
+  <form
+    class="p-forms"
+    name="contactForm"
+  >
+    <div
+      class="formsInput"
+    >
+      <p>
+        <label
+          for="name"
+        >
+          お名前 *
+        </label>
+        <input
+          id="name"
+          name="name"
+          placeholder="熊猫 鮫"
+          type="text"
+        />
+      </p>
+    </div>
+    <div
+      class="formsInput"
+    >
+      <p>
+        <label
+          for="email"
+        >
+          メールアドレス *
+        </label>
+        <input
+          id="email"
+          name="email"
+          placeholder="your@example.com"
+          type="email"
+        />
+      </p>
+    </div>
+    <div
+      class="formsInput"
+    >
+      <p>
+        <label
+          for="category"
+        >
+          お問い合わせ種別
+        </label>
+        <select
+          id="category"
+          name="category"
+        >
+          <option
+            value=""
+          />
+          <option
+            value="Webサイト制作について"
+          >
+            Webサイト制作について
+          </option>
+          <option
+            value="Webアプリ開発について"
+          >
+            Webアプリ開発について
+          </option>
+          <option
+            value="Webサイト模写について"
+          >
+            Webサイト模写について
+          </option>
+          <option
+            value="その他"
+          >
+            その他
+          </option>
+        </select>
+      </p>
+    </div>
+    <div
+      class="formsInput"
+    >
+      <p>
+        <label
+          for="description"
+        >
+          お問い合わせ内容 *
+        </label>
+        <textarea
+          id="description"
+          name="description"
+          rows="10"
+        />
+      </p>
+    </div>
+    <button
+      class="btnRound"
+      id="confirm-btn"
+      type="submit"
+    >
+      内容を確認する
+    </button>
+  </form>
+</DocumentFragment>
+`;

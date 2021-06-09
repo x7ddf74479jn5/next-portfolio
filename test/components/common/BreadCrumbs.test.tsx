@@ -10,23 +10,19 @@ describe("BreadCrumbs", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("ally", () => {
-    const { container, getByText } = render(
+  it("rendered correctly", () => {
+    const { getByText, getByRole } = render(
       withMockedRouter({ pathname: "/samples/portfolio", asPath: "/samples/portfolio" }, <Breadcrumbs />)
     );
-    const listElement = container.getElementsByClassName("textBreadcrumbs")[0];
-    const lastSpanElement = getByText("PORTFOLIO");
 
+    const listElement = getByRole("list");
+    expect(listElement.childElementCount).toBeGreaterThan(0);
     expect(listElement).toHaveAttribute("aria-label");
+
+    const lastSpanElement = getByText("PORTFOLIO");
     expect(lastSpanElement).toHaveAttribute("aria-current");
-  });
 
-  it("anchor list item", () => {
-    const { getByText } = render(
-      withMockedRouter({ pathname: "/samples/portfolio", asPath: "/samples/portfolio" }, <Breadcrumbs />)
-    );
-    const targetElement = getByText("SAMPLES");
-
-    expect(targetElement).toHaveAttribute("href", "/samples");
+    const anchorElement = getByText("SAMPLES");
+    expect(anchorElement).toHaveAttribute("href", "/samples");
   });
 });

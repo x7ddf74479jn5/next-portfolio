@@ -4,6 +4,8 @@ exports[`HeadLine matches snapshot 1`] = `
 <DocumentFragment>
   <h2
     class="headlineAbout"
-  />
+  >
+    test
+  </h2>
 </DocumentFragment>
 `;

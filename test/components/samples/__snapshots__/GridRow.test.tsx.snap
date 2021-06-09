@@ -1,24 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GridRow matches snapshot 1`] = `
+exports[`GridRow GridRowLink matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h3>
-      test
+      header
     </h3>
     <p>
-      test
+      description
     </p>
     <p>
       <a
-        href="test"
+        href="href"
         rel="noreferrer"
         target="_blank"
       >
         <span
           class="externalLink"
         >
-          test
+          label
           <svg
             aria-hidden="true"
             class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
@@ -36,29 +36,35 @@ exports[`GridRow matches snapshot 1`] = `
 </DocumentFragment>
 `;
 
-exports[`GridRow matches snapshot 2`] = `
+exports[`GridRow GridRowList matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h3>
-      test
+      header
     </h3>
     <ul>
       <li>
-        test
+        data-1
+      </li>
+      <li>
+        data-2
+      </li>
+      <li>
+        data-3
       </li>
     </ul>
   </div>
 </DocumentFragment>
 `;
 
-exports[`GridRow matches snapshot 3`] = `
+exports[`GridRow GridRowParagraph matches snapshot 1`] = `
 <DocumentFragment>
   <div>
     <h3>
-      test
+      header
     </h3>
     <p>
-      test
+      data
     </p>
   </div>
 </DocumentFragment>
