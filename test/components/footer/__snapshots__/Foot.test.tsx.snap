@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Foot matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="foot"
+  >
+    <ul>
+      <li>
+        <a
+          href="/item%201"
+        >
+          item 1
+        </a>
+      </li>
+      <li>
+        <a
+          href="/item%202"
+        >
+          item 2
+        </a>
+      </li>
+      <li>
+        <a
+          href="/item%203"
+        >
+          item 3
+        </a>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
