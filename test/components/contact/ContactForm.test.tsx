@@ -1,3 +1,4 @@
+import { waitFor } from "@testing-library/dom";
 import userEvent from "@testing-library/user-event";
 import ContactFormContainer from "src/components/contact/ContactFormContainer";
 import { fireEvent, render, screen } from "test/test-utils";
@@ -8,7 +9,7 @@ describe("ContactFormContainer", () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it("rendered correctly", () => {
+  it("first-rendered correctly", () => {
     render(<ContactFormContainer />);
     const formElement = screen.getByRole("form");
     expect(formElement).toBeInTheDocument();
@@ -44,19 +45,23 @@ describe("ContactFormContainer", () => {
     const submitButton = screen.getByRole("button");
     expect(submitButton).toHaveTextContent("内容を確認する");
     expect(submitButton).toHaveAttribute("type", "submit");
-    expect(submitButton).toBeEnabled();
+    expect(submitButton).toBeDisabled();
   });
 
-  describe("logic", () => {
+  describe("user interaction", () => {
+    let nameInput: HTMLElement;
+    let emailInput: HTMLElement;
+    let descriptionInput: HTMLElement;
+    let submitButton: HTMLElement;
     beforeEach(() => {
       render(<ContactFormContainer />);
+      nameInput = screen.getByRole("textbox", { name: "お名前 *" });
+      emailInput = screen.getByRole("textbox", { name: "メールアドレス *" });
+      descriptionInput = screen.getByRole("textbox", { name: "お問い合わせ内容 *" });
+      submitButton = screen.getByRole("button");
     });
 
     it("should display required error when value is invalid", async () => {
-      const nameInput = screen.getByRole("textbox", { name: "お名前 *" });
-      const emailInput = screen.getByRole("textbox", { name: "メールアドレス *" });
-      const descriptionInput = screen.getByRole("textbox", { name: "お問い合わせ内容 *" });
-
       userEvent.click(nameInput);
       expect(nameInput).toHaveFocus();
       userEvent.click(emailInput);
@@ -68,11 +73,10 @@ describe("ContactFormContainer", () => {
       expect(await screen.findByText("お名前が未入力です。")).toBeInTheDocument();
       expect(await screen.findByText("メールアドレスの形式に誤りがあります。")).toBeInTheDocument();
       expect(await screen.findByText("お問い合わせ内容が未入力です。")).toBeInTheDocument();
+      expect(submitButton).toBeDisabled();
     });
 
     it("should display matching error when email is invalid", async () => {
-      const emailInput = screen.getByRole("textbox", { name: "メールアドレス *" });
-
       userEvent.type(emailInput, "email");
       fireEvent.blur(emailInput);
 
@@ -81,10 +85,6 @@ describe("ContactFormContainer", () => {
     });
 
     it("should not display error when value is valid", async () => {
-      const nameInput = screen.getByRole("textbox", { name: "お名前 *" });
-      const emailInput = screen.getByRole("textbox", { name: "メールアドレス *" });
-      const descriptionInput = screen.getByRole("textbox", { name: "お問い合わせ内容 *" });
-
       userEvent.type(nameInput, "name");
       userEvent.type(emailInput, "email@test.com");
       userEvent.type(descriptionInput, "description");
@@ -97,13 +97,12 @@ describe("ContactFormContainer", () => {
       expect(nameInput).toHaveValue("name");
       expect(emailInput).toHaveValue("email@test.com");
       expect(descriptionInput).toHaveValue("description");
+      await waitFor(() => {
+        expect(submitButton).toBeEnabled();
+      });
     });
 
     it("should not display error when value change from invalid to valid", async () => {
-      const nameInput = screen.getByRole("textbox", { name: "お名前 *" });
-      const emailInput = screen.getByRole("textbox", { name: "メールアドレス *" });
-      const descriptionInput = screen.getByRole("textbox", { name: "お問い合わせ内容 *" });
-
       userEvent.click(nameInput);
       expect(nameInput).toHaveFocus();
       userEvent.click(emailInput);
@@ -115,6 +114,7 @@ describe("ContactFormContainer", () => {
       expect(await screen.findByText("お名前が未入力です。")).toBeInTheDocument();
       expect(await screen.findByText("メールアドレスの形式に誤りがあります。")).toBeInTheDocument();
       expect(await screen.findByText("お問い合わせ内容が未入力です。")).toBeInTheDocument();
+      expect(submitButton).toBeDisabled();
 
       userEvent.type(nameInput, "name");
       userEvent.type(emailInput, "email@test.com");
@@ -128,6 +128,9 @@ describe("ContactFormContainer", () => {
       expect(nameInput).toHaveValue("name");
       expect(emailInput).toHaveValue("email@test.com");
       expect(descriptionInput).toHaveValue("description");
+      await waitFor(() => {
+        expect(submitButton).toBeEnabled();
+      });
     });
   });
 });

@@ -12,30 +12,23 @@ import { useModalState } from "../../hooks/useModalState";
 
 export const ContactFormContainer = () => {
   const methods = useForm<FormData>({ mode: "onBlur", resolver: zodResolver(schema) });
-  const { handleSubmit } = methods;
+  const {
+    handleSubmit,
+    formState: { isDirty, isSubmitting, isValid, isValidating },
+  } = methods;
 
   const { isModalOpen } = useModalState();
   const { openModal, closeModal } = useModalDispatch();
-  const [isFetching, setIsFetching] = React.useState(false);
 
   const isApplyButtonDisabled = React.useMemo(() => {
-    if (isFetching) {
-      return true;
-    }
-
-    return false;
-  }, [isFetching]);
+    return !isDirty || isSubmitting || !isValid || isValidating;
+  }, [isDirty, isSubmitting, isValid, isValidating]);
 
   const isConfirmButtonDisabled = React.useMemo(() => {
-    if (isModalOpen || isFetching) {
-      return true;
-    }
-
-    return false;
-  }, [isModalOpen, isFetching]);
+    return !isDirty || isSubmitting || !isValid || isValidating || isModalOpen;
+  }, [isDirty, isSubmitting, isValid, isValidating, isModalOpen]);
 
   const apply = React.useCallback(async (data: FormData) => {
-    setIsFetching(true);
     await sendMessage(data)
       .then(() => {
         alert(
@@ -45,7 +38,6 @@ export const ContactFormContainer = () => {
       .catch(() => {
         alert("エラーが発生しました。恐れ入りますが再度送信してください。");
       });
-    setIsFetching(false);
     closeModal();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
