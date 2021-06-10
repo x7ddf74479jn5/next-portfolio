@@ -4,6 +4,7 @@ import { GridRow } from "src/components/layouts/Grid";
 import useClickAway from "src/hooks/useClickAway";
 import { useModalDispatch } from "src/hooks/useModalDispatch";
 import styles from "src/styles/components/modal/ConfirmModal.module.scss";
+import type { ButtonType } from "src/types/utils";
 
 import type { FormData } from "../../types/api/index";
 
@@ -65,20 +66,16 @@ const ModalPopup: React.VFC<Props> = ({ formData, cancel, apply, isApplyButtonDi
           </FormButton>
         </GridRow>
       </div>
-      <ModalCloseButton />
+      <ModalCloseButton onClick={closeModal} />
     </div>
   );
 };
 
-const ModalCloseButton: React.VFC = () => {
-  const { closeModal } = useModalDispatch();
+type ModalCloseButtonProps = ButtonType;
+
+const ModalCloseButton: React.VFC<ModalCloseButtonProps> = (props) => {
   return (
-    <button
-      className={styles.closeButton}
-      onClick={() => {
-        return closeModal();
-      }}
-    >
+    <button className={styles.closeButton} {...props}>
       ×
     </button>
   );
