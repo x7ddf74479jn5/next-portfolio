@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FormButton apply matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="btnApply"
+  >
+    test
+  </button>
+</DocumentFragment>
+`;
+
+exports[`FormButton cancel matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    class="btnCancel"
+  >
+    test
+  </button>
+</DocumentFragment>
+`;
