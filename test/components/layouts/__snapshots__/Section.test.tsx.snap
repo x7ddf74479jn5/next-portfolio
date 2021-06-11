@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Section primary matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgPrimary"
+  >
+    <div
+      class="sectionWrapIn"
+    >
+      children
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Section secondary matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgSecondary"
+  >
+    <div
+      class="sectionWrapIn"
+    >
+      children
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Section section bgPrimary matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgLight"
+  >
+    <div
+      class="sectionWrapIn"
+    >
+      children
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`Section wide and primary matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgPrimary"
+  >
+    <div
+      class="sectionWrapInWide"
+    >
+      children
+    </div>
+  </section>
+</DocumentFragment>
+`;
