@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderLinkItem no icon matches snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class="linkItem"
+    href="/href"
+  >
+    label
+  </a>
+</DocumentFragment>
+`;
+
+exports[`HeaderLinkItem with icon matches snapshot 1`] = `
+<DocumentFragment>
+  <a
+    class="linkItem"
+    href="/href"
+  >
+    <img
+      alt="alt"
+      src="img.png"
+    />
+    <span>
+      label
+    </span>
+  </a>
+</DocumentFragment>
+`;
