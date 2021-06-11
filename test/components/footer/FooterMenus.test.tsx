@@ -63,6 +63,7 @@ describe("Accordion", () => {
 
     const listItemElement = renderResult.getAllByRole("listitem");
     expect(listItemElement[0]).toHaveTextContent("label");
+    expect(listItemElement[0]).not.toBeVisible();
 
     const anchorElement = renderResult.getAllByRole("link");
     expect(anchorElement).toHaveLength(3);
@@ -76,7 +77,6 @@ describe("Accordion", () => {
     it("opens when clicked", () => {
       detailsElement = renderResult.getByRole("group") as HTMLDetailsElement;
       summaryElement = renderResult.getByText("summary");
-
       expect(detailsElement.open).not.toBe(true);
       userEvent.click(summaryElement);
       expect(detailsElement.open).toBe(true);

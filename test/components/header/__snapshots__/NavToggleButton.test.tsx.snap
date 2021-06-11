@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavToggleButton closed matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="ナビゲーション メニューの切り替え"
+    class="navToggleButton"
+    data-about-nav-toggle="true"
+    id="nav-toggle-button"
+  >
+    <svg
+      aria-hidden="true"
+      aria-label="ナビゲーション メニューを開く\\""
+      class="MuiSvgIcon-root"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`NavToggleButton open matches snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="ナビゲーション メニューの切り替え"
+    class="navToggleButtonOpen"
+    data-about-nav-toggle="true"
+    id="nav-toggle-button"
+  >
+    <svg
+      aria-hidden="true"
+      aria-label="ナビゲーション メニューを閉じる"
+      class="MuiSvgIcon-root"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+      />
+    </svg>
+  </button>
+</DocumentFragment>
+`;
