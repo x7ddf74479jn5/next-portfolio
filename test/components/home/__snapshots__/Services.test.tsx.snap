@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Services matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section bgPrimary"
+  >
+    <div
+      class="sectionWrapIn"
+    >
+      <h2
+        class="headlineTop"
+      >
+        Services
+      </h2>
+      <hr
+        class="sectionLine"
+      />
+      <div
+        class="sm"
+      />
+      <a
+        class="btnRound iconArrowNext"
+        href="/about#skills"
+        role="button"
+      >
+        事業内容
+      </a>
+      <div
+        class="md"
+      />
+      <div
+        class="gridList"
+      >
+        <article
+          class="gridListItemFloated"
+        >
+          <h3>
+            WEBサイト制作
+          </h3>
+          <small>
+            Website Production
+          </small>
+          <img
+            alt="Website Production"
+            class="mediaThumb"
+            height="288"
+            src="/img/services/website-production.jpeg"
+            width="512"
+          />
+          <p>
+            コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。検索流入やSNS流入を強化する「SEOを意識したサイト」を作成できます。
+          </p>
+        </article>
+        <article
+          class="gridListItemFloated"
+        >
+          <h3>
+            WordPress
+          </h3>
+          <small>
+            WordPress
+          </small>
+          <img
+            alt="WordPress"
+            class="mediaThumb"
+            height="288"
+            src="/img/services/wordpress-icon.png"
+            width="512"
+          />
+          <p>
+            WordPress導入サポートやカスタマイズ、その他お困り事のご相談にも対応いたします。
+          </p>
+        </article>
+        <article
+          class="gridListItemFloated"
+        >
+          <h3>
+            チャットアプリ開発
+          </h3>
+          <small>
+            Chat APP
+          </small>
+          <img
+            alt="Chat APP"
+            class="mediaThumb"
+            height="288"
+            src="/img/services/web-app.jpeg"
+            width="512"
+          />
+          <p>
+            リアルタイム性が重視されるSNSアプリやチャットアプリなどを開発できます。これまで開発してきたWebアプリの一部を制作事例として公開しています。
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
