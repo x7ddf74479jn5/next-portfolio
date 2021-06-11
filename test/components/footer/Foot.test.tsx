@@ -1,5 +1,5 @@
-import type { RenderResult } from "@testing-library/react";
 import Foot from "src/components/footer/Foot";
+import type { RenderResult } from "test/test-utils";
 import { render, setupWindow } from "test/test-utils";
 
 describe("Foot", () => {

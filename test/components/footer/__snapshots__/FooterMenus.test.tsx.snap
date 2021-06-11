@@ -1,0 +1,153 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion matches snapshot 1`] = `
+<DocumentFragment>
+  <details
+    class="accordion"
+  >
+    <summary>
+      summary
+    </summary>
+    <ul
+      class="accordionItems"
+    >
+      <li>
+        <a
+          href="/href%201"
+        >
+          label 1
+        </a>
+      </li>
+      <li>
+        <a
+          href="/href%202"
+        >
+          label 2
+        </a>
+      </li>
+      <li>
+        <a
+          href="/href%203"
+        >
+          label 3
+        </a>
+      </li>
+    </ul>
+  </details>
+</DocumentFragment>
+`;
+
+exports[`FooterMenus matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="sitemap"
+  >
+    <ul
+      class="footerLinks"
+    >
+      <li>
+        <details
+          class="accordion"
+        >
+          <summary>
+            自己紹介
+          </summary>
+          <ul
+            class="accordionItems"
+          >
+            <li>
+              <a
+                href="/about#vision"
+              >
+                Vision
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about#profile"
+              >
+                Profile
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about#career"
+              >
+                Career
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about#skills"
+              >
+                Skills
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details
+          class="accordion"
+        >
+          <summary>
+            制作事例
+          </summary>
+          <ul
+            class="accordionItems"
+          >
+            <li>
+              <a
+                href="/samples/portfolio"
+              >
+                ポートフォリオサイト
+              </a>
+            </li>
+            <li>
+              <a
+                href="/samples/ec"
+              >
+                ECサイト
+              </a>
+            </li>
+            <li>
+              <a
+                href="/samples/chat"
+              >
+                Chat App
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+      <li>
+        <details
+          class="accordion"
+        >
+          <summary>
+            リンク集
+          </summary>
+          <ul
+            class="accordionItems"
+          >
+            <li>
+              <a
+                href="https://twitter.com/pandashark6"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/x7ddf74479jn5"
+              >
+                Github
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </section>
+</DocumentFragment>
+`;
