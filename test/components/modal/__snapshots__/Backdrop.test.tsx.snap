@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Backdrop default matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="backdrop"
+  />
+</DocumentFragment>
+`;
+
+exports[`Backdrop opacity 10 matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="backdrop"
+  />
+</DocumentFragment>
+`;
+
+exports[`Backdrop opacity 10 matches snapshot 2`] = `
+<DocumentFragment>
+  <div
+    class="backdrop_70"
+  />
+</DocumentFragment>
+`;
