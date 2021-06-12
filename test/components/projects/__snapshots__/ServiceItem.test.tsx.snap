@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceItem matches snapshot 1`] = `
+<DocumentFragment>
+  <article
+    class="gridListItemFloated"
+  >
+    <h3>
+      title
+    </h3>
+    <small>
+      caption
+    </small>
+    <img
+      alt="alt"
+      class="mediaThumb"
+      height="288"
+      src="src.png"
+      width="512"
+    />
+    <p>
+      description
+    </p>
+  </article>
+</DocumentFragment>
+`;
