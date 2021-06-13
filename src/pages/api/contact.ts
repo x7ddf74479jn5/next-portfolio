@@ -10,7 +10,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST") {
     // Handle any other HTTP method
     res.setHeader("Allow", "POST");
-    res.status(405).json({ message: `Method ${req.method} Not Allowed` });
+    return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
   }
 
   if (!req.body) {
@@ -25,13 +25,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
 
   const { name, email, category, description } = req.body;
 
-  interface SendMail {
-    email: string;
-    subject: string;
-    html: string;
-  }
-
-  const sendMail = async (data: SendMail) => {
+  const sendMail = async (data: { email: string; subject: string; html: string }): Promise<void> => {
     const apiKey = process.env.SENDGRID_API_KEY;
     sendgrid.setApiKey(apiKey);
     const message = {
@@ -43,7 +37,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     await sendgrid.send(message);
   };
 
-  const response = async () => {
+  const response = async (): Promise<void> => {
     const _description = convertCrlfToBr(description);
     const html = `<div id="mail-content">
                           <p>お名前：<br>${name}</p>
@@ -64,7 +58,7 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     };
 
     const myEmail = process.env.MY_EMAIL_ADDRESS;
-    if (!myEmail) return;
+    if (!myEmail) return res.status(500).end();
 
     const notifyApplication = {
       email: myEmail,
