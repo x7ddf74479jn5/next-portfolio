@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-function */
 import type { RenderResult } from "@testing-library/react";
 import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import ModalPortal from "src/components/modal/Modal";
 import { ModalDispatchContext, ModalStateContext } from "src/context/ModalProviderContainer";
 import type { State } from "src/hooks/useModalCore";
@@ -40,5 +41,16 @@ describe("ModalPortal", () => {
 
   it("matches snapshot", () => {
     expect(renderResult.asFragment()).toMatchSnapshot();
+  });
+
+  it("closes modal when backdrop is clicked", () => {
+    const backdrop = renderResult.container.getElementsByClassName("backdrop_70")[0];
+    expect(backdrop).toBeInTheDocument();
+    expect(renderResult.container.childElementCount).toBeGreaterThan(0);
+
+    userEvent.click(backdrop);
+    renderResult.rerender(<ModalPortal />);
+
+    expect(renderResult.container.childElementCount).toBe(0);
   });
 });

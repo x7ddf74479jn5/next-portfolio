@@ -19,7 +19,8 @@ describe("Header", () => {
       const navElement = renderResult.getByRole("banner");
       expect(navElement).toBeInTheDocument();
     });
-    it("toggle header menu when SP", () => {
+
+    it("toggles header menus when SP", () => {
       const navToggleButton = renderResult.getAllByRole("button")[0];
       expect(navToggleButton).toHaveClass("navToggleButton");
       const nav = renderResult.getByRole("navigation");
@@ -36,6 +37,29 @@ describe("Header", () => {
 
       expect(navToggleButton).toHaveClass("navToggleButton");
       expect(nav).toHaveClass("headerNavTop");
+    });
+
+    it("closes header menus when backdrop is clicked backdrop", () => {
+      const navToggleButton = renderResult.getAllByRole("button")[0];
+      expect(navToggleButton).toHaveClass("navToggleButton");
+      const nav = renderResult.getByRole("navigation");
+      expect(nav).toHaveClass("headerNavTop");
+
+      userEvent.click(navToggleButton);
+      renderResult.rerender(<Header />);
+
+      expect(nav).toHaveClass("headerNavTopOpen");
+      expect(navToggleButton).toHaveClass("navToggleButtonOpen");
+
+      const backdrop = renderResult.container.getElementsByClassName("backdrop")[0];
+      expect(backdrop).toBeInTheDocument();
+
+      userEvent.click(backdrop);
+      renderResult.rerender(<Header />);
+
+      expect(navToggleButton).toHaveClass("navToggleButton");
+      expect(nav).toHaveClass("headerNavTop");
+      expect(backdrop).toBeEmptyDOMElement();
     });
   });
 });
