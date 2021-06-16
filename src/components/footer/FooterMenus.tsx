@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import useMount from "src/hooks/useMount";
 import styles from "src/styles/components/footer/Footer.module.scss";
 import { externalLinks, internalLinks } from "src/utils/paths";
 
@@ -43,7 +44,8 @@ type Props = {
 };
 
 export const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
-  const { isPC, mounted } = useMedia();
+  const { isPC } = useMedia();
+  const { mounted } = useMount();
 
   return mounted ? (
     <details open={isPC} className={styles.accordion}>
