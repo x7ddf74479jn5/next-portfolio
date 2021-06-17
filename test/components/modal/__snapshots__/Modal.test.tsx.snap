@@ -1,6 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ModalPortal Drawer modal matches snapshot 1`] = `
+exports[`ModalPortal contact modal matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="__next"
+  >
+    <div
+      class="modalContainer"
+    >
+      <div
+        class="backdrop_70"
+      />
+      <div
+        class="c-modal-popup"
+        id="popup"
+      >
+        <div
+          class="modalPopupBody"
+        >
+          <h2
+            class="modalPopupTitle"
+            id="modal-title"
+          >
+            入力内容の確認
+          </h2>
+          <div
+            class="modalPopupMain"
+            id="popup-main"
+          >
+            <div
+              id="mail-content"
+            >
+              <p>
+                お名前：
+              </p>
+              <p>
+                name
+              </p>
+              <p>
+                メールアドレス：
+              </p>
+              <p>
+                email@test.com
+              </p>
+              <p>
+                お問い合わせ種別：
+              </p>
+              <p />
+              <p>
+                お問い合わせ内容：
+              </p>
+              <p>
+                description
+              </p>
+            </div>
+          </div>
+          <div
+            class="gridRow"
+          >
+            <button
+              class="btnCancel"
+              id="cancel-btn"
+              type="button"
+            >
+              修正する
+            </button>
+            <button
+              class="btnApply"
+              id="apply-btn"
+              type="button"
+            >
+              送信する
+            </button>
+          </div>
+        </div>
+        <button
+          class="closeButton"
+        >
+          ×
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalPortal drawer modal matches snapshot 1`] = `
 <DocumentFragment>
   <div
     id="__next"

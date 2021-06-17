@@ -42,11 +42,28 @@ describe("ModalPortal", () => {
     expect(renderResult.asFragment()).toMatchSnapshot();
   });
 
-  it("Drawer modal matches snapshot", () => {
+  it("drawer modal matches snapshot", () => {
     newState = {
       isModalOpen: true,
       modalType: "DRAWER",
       data: null,
+    };
+    renderResult = customRender(<ModalPortal />, newState);
+    expect(renderResult.asFragment()).toMatchSnapshot();
+  });
+
+  it("contact modal matches snapshot", () => {
+    newState = {
+      isModalOpen: true,
+      modalType: "CONTACT",
+      data: {
+        formData: {
+          name: "name",
+          email: "email@test.com",
+          category: "",
+          description: "description",
+        },
+      },
     };
     renderResult = customRender(<ModalPortal />, newState);
     expect(renderResult.asFragment()).toMatchSnapshot();
