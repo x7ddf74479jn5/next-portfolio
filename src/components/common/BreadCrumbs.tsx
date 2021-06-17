@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 import styles from "src/styles/components/common/BreadCrumbs.module.scss";
 import { internalLinks } from "src/utils/paths";
 
-const routingFactory = () => {
+const createRoutingMap = (links: typeof internalLinks): { [k: string]: string } => {
   return Object.fromEntries(
-    Object.entries(internalLinks).map(([k, v]) => {
+    Object.entries(links).map(([k, v]) => {
       return [v, k.toUpperCase()];
     })
   );
@@ -21,7 +21,7 @@ const Breadcrumbs: React.FC = () => {
   });
   const length = pathname.length;
   const links = [];
-  const routingMap = routingFactory();
+  const routingMap = createRoutingMap(internalLinks);
   let pathnameHierarchy = "/";
   let asPathHierarchy = "/";
 
