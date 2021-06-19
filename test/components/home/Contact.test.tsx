@@ -17,6 +17,6 @@ describe("Contact", () => {
     expect(renderResult.getByRole("heading")).toHaveTextContent("お仕事");
     expect(renderResult.getByRole("separator")).toBeInTheDocument();
     expect(renderResult.getByRole("button")).toHaveTextContent("お問い合わせ");
-    expect(renderResult.getByRole("button")).toHaveAttribute("href", "/contact/");
+    expect(renderResult.getByRole("button")).toHaveAttribute("href", "/contact");
   });
 });
