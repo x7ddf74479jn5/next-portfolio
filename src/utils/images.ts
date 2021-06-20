@@ -1,10 +1,6 @@
 import { identity } from "./helper";
 
-type Image = {
-  [key: string]: { path: string; alt: string };
-};
-
-export const images: Image = identity({
+export const images = identity({
   pandasharkIcon: { path: "/img/icons/pandashark_icon.png", alt: "Pandashark's icon" },
   pandasharkRectangle: { path: "/img/icons/pandashark_logo_rectangle.webp", alt: "Pandashark's icon" },
   ec: { path: "/img/samples/ec-app-eyecatch.webp", alt: "eye catch of EC app" },
@@ -15,10 +11,13 @@ export const images: Image = identity({
   webApp: { path: "/img/services/web-app.jpeg", alt: "Chat APP" },
   favicon: { path: "/img/icons/favicon.ico", alt: "" },
   appleTouchIcon: { path: "/img/icons/apple-touch-icon.png", alt: "" },
+  noImage: { path: "src/assets/img/utils/no_image.png", alt: "no-image" },
 });
 
 export const icons = identity({
   twitter: { path: "/img/icons/twitter-logo.svg", alt: "twitter" },
   github: { path: "/img/icons/github-logo.svg", alt: "github" },
   chatBot: { path: "/img/icons/question_answer_black.svg", alt: "chatBot" },
+  noProfile: { path: "src/assets/img/icons/no-profile.png", alt: "noo-profile" },
+  pandashark: { path: "src/assets/img/icons/pandashark.png", alt: "pandashark" },
 });
