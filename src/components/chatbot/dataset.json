@@ -1,0 +1,211 @@
+{
+  "init": {
+    "answers": [
+      { "content": "仕事を依頼したい", "nextId": "job_offer" },
+      { "content": "あなたについて知りたい", "nextId": "about" },
+      { "content": "献立を提案してほしい", "nextId": "menu" },
+      { "content": "その他の問い合わせがしたい", "nextId": "other" }
+    ],
+    "question": "こんにちは！ご用件はなんでしょうか？"
+  },
+  "job_offer": {
+    "answers": [
+      { "content": "Webサイトを制作してほしい", "nextId": "website" },
+      { "content": "チャットボットを開発してほしい", "nextId": "webapp" },
+      { "content": "WordPressについて質問したい", "nextId": "wordpress" },
+      { "content": "その他", "nextId": "other_jobs" }
+    ],
+    "question": "どのようなお仕事でしょうか？"
+  },
+  "website": {
+    "answers": [
+      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "Webサイト制作についてですね。コチラからお問い合わせできます。"
+  },
+  "webapp": {
+    "answers": [
+      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "チャットボット開発についてですね。コチラからお問い合わせできます。"
+  },
+  "wordpress": {
+    "answers": [
+      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "WordPressについてですね。コチラからお問い合わせできます。"
+  },
+  "other_jobs": {
+    "answers": [
+      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "その他についてですね。コチラからお問い合わせできます。"
+  },
+  "about": {
+    "answers": [
+      { "content": "職業", "nextId": "job" },
+      { "content": "好きなもの・こと", "nextId": "favorite" },
+      { "content": "SNS", "nextId": "sns" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "私についてですね。"
+  },
+  "job": {
+    "answers": [
+      { "content": "もっと詳しく", "nextId": "detail" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "喫茶店の調理職とWebサイト制作を主にやっています。"
+  },
+  "favorite": {
+    "answers": [
+      { "content": "もっと詳しく", "nextId": "detail" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "ゲーム・料理・勉強などですね。"
+  },
+  "sns": {
+    "answers": [
+      { "content": "Twitter", "nextId": "https://twitter.com/pandashark6" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "SNS得意じゃないです。すみません。"
+  },
+  "detail": {
+    "answers": [
+      { "content": "Webサイトを見る", "nextId": "https://next-portfolio-livid.vercel.app/" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "もっと詳しくですね。コチラを御覧ください。"
+  },
+  "menu": {
+    "answers": [
+      { "content": "おすすめのレシピサイトを知りたい", "nextId": "recipe_sites" },
+      { "content": "和食", "nextId": "japanese" },
+      { "content": "洋食", "nextId": "western" },
+      { "content": "中華", "nextId": "chinese" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "大まかな希望を教えてください。"
+  },
+  "recipe_sites": {
+    "answers": [
+      { "content": "白ごはん.com", "nextId": "https://www.sirogohan.com/" },
+      { "content": "E・レシピ", "nextId": "https://erecipe.woman.excite.co.jp/" },
+      { "content": "Nadia", "nextId": "https://oceans-nadia.com/" },
+      { "content": "おいしい健康", "nextId": "https://oishi-kenko.com/" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "よく参考にしているレシピサイトを載せました。"
+  },
+  "japanese": {
+    "answers": [
+      { "content": "簡単に済ませたい", "nextId": "jp_simple" },
+      { "content": "しっかり作りたい", "nextId": "jp_normal" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "献立を作るのって思っているより悩みますよね。"
+  },
+  "jp_simple": {
+    "answers": [
+      { "content": "水炊き", "nextId": "https://www.sirogohan.com/recipe/mizutaki/" },
+      { "content": "さつまいもごはん", "nextId": "https://www.sirogohan.com/recipe/satumaimogohan/" },
+      { "content": "豚汁", "nextId": "https://www.sirogohan.com/recipe/tonjiru/" },
+      {
+        "content": "肉団子",
+        "nextId": "https://erecipe.woman.excite.co.jp/detail/574c999b86fae3517121dc6c61999dc4.html"
+      },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "簡単に作れるメニューでしたら、このようなものはいかがでしょうか。"
+  },
+  "jp_normal": {
+    "answers": [
+      { "content": "和風ハンバーグ", "nextId": "https://oishi-kenko.com/recipes/7752" },
+      { "content": "豚肉の生姜焼き", "nextId": "https://www.sirogohan.com/recipe/tonjiru/" },
+      { "content": "豚の角煮", "nextId": "https://www.sirogohan.com/recipe/kakuni/" },
+      { "content": "ぶりの照り焼き", "nextId": "https://www.sirogohan.com/recipe/buriteri/" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "少し手間はかかりますが、がんばってください。"
+  },
+  "western": {
+    "answers": [
+      { "content": "簡単に済ませたい", "nextId": "we_simple" },
+      { "content": "しっかり作りたい", "nextId": "we_normal" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "献立を作るのって思っているより悩みますよね。"
+  },
+  "we_simple": {
+    "answers": [
+      { "content": "ツナとキノコのパスタ", "nextId": "https://oishi-kenko.com/recipes/9042" },
+      {
+        "content": "オムレツトースト",
+        "nextId": "https://erecipe.woman.excite.co.jp/detail/5e701ebd254bd25820984fb734751957.html"
+      },
+      {
+        "content": "トマトリゾット",
+        "nextId": "https://erecipe.woman.excite.co.jp/detail/85ae7e63aff25511e2a5c184a45511fa.html"
+      },
+      {
+        "content": "ポテトサラダ",
+        "nextId": "https://erecipe.woman.excite.co.jp/detail/89955c9630fc806baacca0bb36595c47.html"
+      },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "簡単に作れるメニューでしたら、このようなものはいかがでしょうか。"
+  },
+  "we_normal": {
+    "answers": [
+      { "content": "鮭のムニエル", "nextId": "https://oishi-kenko.com/recipes/5233" },
+      { "content": "トマトのファルシ", "nextId": "https://oceans-nadia.com/user/40170/recipe/310824" },
+      { "content": "マカロニグラタン", "nextId": "https://www.sirogohan.com/recipe/makaronigura/" },
+      { "content": "ビーフストロガノフ", "nextId": "https://oceans-nadia.com/user/31349/recipe/400545" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "少し手間はかかりますが、がんばってください。"
+  },
+  "chinese": {
+    "answers": [
+      { "content": "簡単に済ませたい", "nextId": "ch_simple" },
+      { "content": "しっかり作りたい", "nextId": "ch_normal" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "献立を作るのって思っているより悩みますよね。"
+  },
+  "ch_simple": {
+    "answers": [
+      { "content": "炒飯", "nextId": "https://oceans-nadia.com/user/320681/recipe/400488" },
+      { "content": "キャベツの肉味噌炒め", "nextId": "https://oceans-nadia.com/user/89000/recipe/374169" },
+      { "content": "中華丼", "nextId": "https://www.kurashiru.com/recipes/2dfaa86b-9407-40bb-b770-94d84e950276" },
+      { "content": "エビチリ", "nextId": "https://oishi-kenko.com/recipes/606" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "簡単に作れるメニューでしたら、このようなものはいかがでしょうか。"
+  },
+  "ch_normal": {
+    "answers": [
+      { "content": "青椒肉絲", "nextId": "https://oishi-kenko.com/recipes/4174" },
+      { "content": "餃子", "nextId": "https://www.sirogohan.com/recipe/gyouza/" },
+      { "content": "春巻き", "nextId": "https://oishi-kenko.com/recipes/3216" },
+      {
+        "content": "回鍋肉",
+        "nextId": "https://erecipe.woman.excite.co.jp/detail/933363a42036ba5a6064a40d1dac908a.html"
+      },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "少し手間はかかりますが、がんばってください。"
+  },
+  "other": {
+    "answers": [
+      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "最初の質問に戻る", "nextId": "init" }
+    ],
+    "question": "その他についてですね。コチラからお問い合わせできます。"
+  }
+}

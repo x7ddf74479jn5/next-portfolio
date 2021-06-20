@@ -7,6 +7,7 @@ import ModalDrawer from "src/components/modal/ModalDrawer";
 import styles from "src/styles/components/modal/ModalContainer.module.scss";
 
 import { useModalState } from "../../hooks/useModalState";
+import ChatBotModal from "../chatbot/components/ChatBotModal";
 
 const ModalContainer: React.VFC = () => {
   const state = useModalState();
@@ -28,7 +29,8 @@ const ModalContent: React.VFC = () => {
 
   switch (state.modalType) {
     case "CHAT_BOT":
-      return <ModalDrawer />;
+      return <ChatBotModal />;
+    // return <ModalDrawer />;
     case "CONTACT":
       return <ModalPopup {...state.data} />;
     case "DRAWER":
