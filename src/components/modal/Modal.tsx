@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic";
 import type { VFC } from "react";
 import React, { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
@@ -7,7 +8,6 @@ import ModalDrawer from "src/components/modal/ModalDrawer";
 import styles from "src/styles/components/modal/ModalContainer.module.scss";
 
 import { useModalState } from "../../hooks/useModalState";
-import ChatBotModal from "../chatbot/components/ChatBotModal";
 
 const ModalContainer: React.VFC = () => {
   const state = useModalState();
@@ -28,9 +28,12 @@ const ModalContent: React.VFC = () => {
   const state = useModalState();
 
   switch (state.modalType) {
-    case "CHAT_BOT":
-      return <ChatBotModal />;
-    // return <ModalDrawer />;
+    case "CHAT_BOT": {
+      const ChatBot = dynamic(() => {
+        return import("src/components/chatbot/components/ChatBotDialog");
+      });
+      return <ChatBot />;
+    }
     case "CONTACT":
       return <ModalPopup {...state.data} />;
     case "DRAWER":

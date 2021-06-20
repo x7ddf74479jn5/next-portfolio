@@ -1,6 +1,5 @@
-// import "./assets/styles/style.css";
-
 import React, { useCallback, useEffect, useState } from "react";
+import styles from "src/styles/components/chatbot/ChatBot.module.scss";
 
 import type { Answer, Chat, ChatData, Dataset, NextQuestionId } from "../../types/chatbot/index";
 import FormDialog from "./components/Forms/FormDialog";
@@ -24,32 +23,38 @@ const ChatBot = () => {
     setCurrentId(nextQuestionId);
   };
 
-  const selectAnswer = (selectedAnswer: Answer["content"], nextQuestionId: NextQuestionId) => {
-    switch (true) {
-      case nextQuestionId === "contact":
-        handleClickOpen();
-        break;
-      case /^https:*/.test(nextQuestionId.toString()): {
-        const a = document.createElement("a");
-        a.href = nextQuestionId.toString();
-        a.target = "_blank";
-        a.click();
-        break;
+  const selectAnswer = useCallback(
+    (selectedAnswer: Answer["content"], nextQuestionId: NextQuestionId) => {
+      if (typeof nextQuestionId !== "string") {
+        throw new TypeError("Invalid arguments");
       }
-      default:
-        addChats({
-          text: selectedAnswer,
-          type: "answer",
-        });
-        setTimeout(() => {
-          if (dataset === undefined) {
-            return;
-          }
-          return displayNextQuestion(nextQuestionId, dataset[nextQuestionId]);
-        }, 1000);
-        break;
-    }
-  };
+      switch (true) {
+        case nextQuestionId === "contact":
+          handleClickOpen();
+          break;
+        case /^https:*/.test(nextQuestionId): {
+          const a = document.createElement("a");
+          a.href = nextQuestionId;
+          a.target = "_blank";
+          a.click();
+          break;
+        }
+        default:
+          addChats({
+            text: selectedAnswer,
+            type: "answer",
+          });
+          setTimeout(() => {
+            if (dataset === undefined) {
+              throw new Error("Not initialized");
+            }
+            return displayNextQuestion(nextQuestionId, dataset[nextQuestionId]);
+          }, 1000);
+          break;
+      }
+    },
+    [dataset]
+  );
 
   const addChats = (chat: Chat) => {
     setChats((prevChats) => {
@@ -81,8 +86,8 @@ const ChatBot = () => {
   });
 
   return (
-    <section className={"c-section"}>
-      <div className={"c-box"}>
+    <section className={styles.section}>
+      <div className={styles.box}>
         <Chats chats={chats} />
         <AnswersList answers={answers} select={selectAnswer} />
         <FormDialog open={open} handleClose={handleClose} />
