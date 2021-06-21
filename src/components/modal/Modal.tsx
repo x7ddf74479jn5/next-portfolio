@@ -29,7 +29,7 @@ const ModalContainer: React.VFC = () => {
       <ModalContent state={state} closeModal={closeModal} />
       <ModalCloseButton onClick={closeModal} />
     </div>
-  );
+  ); // TODO: TEST
 };
 
 type Props = { state: State; closeModal: () => void };
@@ -51,7 +51,7 @@ const ModalContent: React.VFC<Props> = ({ state, closeModal }) => {
     default:
       throw new Error("未定義");
   }
-};
+}; // TODO: TEST
 
 const ModalPortal: VFC = () => {
   const ref = useRef<HTMLElement | null>(null);
