@@ -2,6 +2,7 @@ import List from "@material-ui/core/List";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import React from "react";
 
+import type { Chat as ChatType } from "../../../types/chatbot/index";
 import { Chat } from "./index";
 
 const useStyles = makeStyles(() => {
@@ -14,7 +15,9 @@ const useStyles = makeStyles(() => {
   });
 });
 
-const Chats = (props) => {
+type Props = { chats: ChatType[] };
+
+const Chats: React.VFC<Props> = (props) => {
   const classes = useStyles();
 
   return (
