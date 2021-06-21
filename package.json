@@ -18,7 +18,10 @@
     "build-storybook": "build-storybook -s ./public"
   },
   "lint-staged": {
-    "*.@(ts|tsx)": []
+    "*.@(ts|tsx)": [
+      "npm run fix:eslint",
+      "npm run fix:prettier"
+    ]
   },
   "babel": {
     "presets": [
