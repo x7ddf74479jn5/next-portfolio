@@ -24,11 +24,10 @@ export const Header: React.VFC = () => {
   return (
     <header className={styles.header}>
       <div className={styles.headerInner} ref={ref}>
-        <div className={styles.productLogo}>
+        <h1 className={styles.productLogo}>
           <PandasharkLogo width={128} height={64} />
-        </div>
+        </h1>
         <NavToggleButton isOpen={isOpen} onClick={toggleNav} />
-
         <HeaderMenus closeNav={closeNav} isOpen={isOpen} />
       </div>
       {isOpen && <Backdrop />}
