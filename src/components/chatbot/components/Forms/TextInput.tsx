@@ -1,7 +1,10 @@
+import type { TextFieldProps } from "@material-ui/core/TextField";
 import TextField from "@material-ui/core/TextField";
 import React from "react";
 
-const TextInput = (props) => {
+type Props = TextFieldProps;
+
+const TextInput: React.VFC<Props> = (props) => {
   return (
     <TextField
       fullWidth={true}

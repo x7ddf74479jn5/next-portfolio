@@ -7,7 +7,12 @@ import React, { useCallback, useState } from "react";
 
 import TextInput from "./TextInput";
 
-const FormDialog = (props) => {
+type Props = {
+  open: boolean;
+  handleClose: () => void;
+};
+
+const FormDialog: React.VFC<Props> = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
@@ -31,12 +36,12 @@ const FormDialog = (props) => {
     [setDescription]
   );
 
-  const validateEmailFormat = (email) => {
+  const validateEmailFormat = (email: string) => {
     const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     return regex.test(email);
   };
 
-  const validateRequiredInput = (...args) => {
+  const validateRequiredInput = (...args: string[]) => {
     let isBlank = false;
     for (let i = 0; i < args.length; i = (i + 1) | 0) {
       if (args[i] === "") {
