@@ -9,3 +9,17 @@
   max-width: 80%;
   width: auto;
 }
+
+.chatRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding-right: 0 !important;
+}
+
+.chatReverse {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding-right: 0 !important;
+}

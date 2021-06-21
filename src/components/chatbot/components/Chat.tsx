@@ -11,7 +11,7 @@ type Props = ChatType;
 
 const Chat: React.VFC<Props> = (props) => {
   const isQuestion = props.type === "question";
-  const classes = isQuestion ? "p-chat__row" : "p-chat__reverse";
+  const classes = isQuestion ? styles.chatRow : styles.chatReverse;
 
   return (
     <ListItem className={classes}>
