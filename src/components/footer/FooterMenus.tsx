@@ -45,9 +45,9 @@ type Props = {
 
 export const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
   const { isPC } = useMedia();
-  const { mounted } = useMount();
+  const { isMounted } = useMount();
 
-  return mounted ? (
+  return isMounted ? (
     <details open={isPC} className={styles.accordion}>
       <summary>{accordion.label}</summary>
       <ul className={styles.accordionItems}>
