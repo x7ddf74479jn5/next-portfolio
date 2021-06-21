@@ -38,3 +38,7 @@ export interface Answer {
 export type NextQuestionId = keyof Dataset | "contact";
 
 export type Chat = { text: string; type: "question" | "answer" };
+
+export interface SelectAnswer {
+  (selectedAnswer: Answer["content"], nextQuestionId: NextQuestionId): void;
+}

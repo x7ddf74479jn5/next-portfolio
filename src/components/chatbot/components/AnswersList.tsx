@@ -1,8 +1,14 @@
 import React from "react";
+import type { SelectAnswer } from "src/types/chatbot";
 
 import { Answer } from "./index";
 
-const AnswersList = (props) => {
+type Props = {
+  answers: Answer[];
+  select: SelectAnswer;
+};
+
+const AnswersList: React.VFC<Props> = (props) => {
   return (
     <div className={"c-grid__answer"}>
       {props.answers.map((value, index) => {

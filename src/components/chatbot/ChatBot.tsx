@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import styles from "src/styles/components/chatbot/Chatbot.module.scss";
 
-import type { Answer, Chat, ChatData, Dataset, NextQuestionId } from "../../types/chatbot/index";
+import type { Answer, Chat, ChatData, Dataset, NextQuestionId, SelectAnswer } from "../../types/chatbot/index";
 import FormDialog from "./components/Forms/FormDialog";
 import { AnswersList, Chats } from "./components/index";
 import datasetJson from "./dataset.json";
@@ -23,8 +23,8 @@ const Chatbot = () => {
     setCurrentId(nextQuestionId);
   };
 
-  const selectAnswer = useCallback(
-    (selectedAnswer: Answer["content"], nextQuestionId: NextQuestionId) => {
+  const selectAnswer: SelectAnswer = useCallback(
+    (selectedAnswer, nextQuestionId) => {
       if (typeof nextQuestionId !== "string") {
         throw new TypeError("Invalid arguments");
       }

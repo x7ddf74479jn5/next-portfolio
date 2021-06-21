@@ -1,6 +1,8 @@
 import Button from "@material-ui/core/Button";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import type { SelectAnswer } from "src/types/chatbot";
+import { Answer } from "src/types/chatbot";
 
 const useStyles = makeStyles(() => {
   return createStyles({
@@ -17,7 +19,11 @@ const useStyles = makeStyles(() => {
   });
 });
 
-const Answer = (props) => {
+type Props = Answer & {
+  select: SelectAnswer;
+};
+
+const Answer: React.VFC<Props> = (props) => {
   const classes = useStyles();
 
   return (
