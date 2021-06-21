@@ -2,7 +2,7 @@ import Button from "@material-ui/core/Button";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import type { SelectAnswer } from "src/types/chatbot";
-import { Answer } from "src/types/chatbot";
+import type { Answer as AnswerType } from "src/types/chatbot";
 
 const useStyles = makeStyles(() => {
   return createStyles({
@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => {
   });
 });
 
-type Props = Answer & {
+type Props = AnswerType & {
   select: SelectAnswer;
 };
 
