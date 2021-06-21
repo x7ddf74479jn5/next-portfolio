@@ -15,9 +15,9 @@ const Template: Story<Props> = (args) => {
   return <HeaderButtonItem {...args} />;
 };
 
-export const ChatBot = Template.bind({});
+export const Chatbot = Template.bind({});
 
-ChatBot.args = {
+Chatbot.args = {
   label: "Chat Bot",
-  icon: icons.chatBot,
+  icon: icons.chatbot,
 };

@@ -1,12 +1,12 @@
 import React, { useCallback, useEffect, useState } from "react";
-import styles from "src/styles/components/chatbot/ChatBot.module.scss";
+import styles from "src/styles/components/chatbot/Chatbot.module.scss";
 
 import type { Answer, Chat, ChatData, Dataset, NextQuestionId } from "../../types/chatbot/index";
 import FormDialog from "./components/Forms/FormDialog";
 import { AnswersList, Chats } from "./components/index";
 import datasetJson from "./dataset.json";
 
-const ChatBot = () => {
+const Chatbot = () => {
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentId, setCurrentId] = useState<NextQuestionId>("init");
@@ -71,8 +71,7 @@ const ChatBot = () => {
   }, [setOpen]);
 
   useEffect(() => {
-    const initialDataset = Object.fromEntries(Object.entries(datasetJson)) as Dataset;
-
+    const initialDataset = datasetJson as Dataset;
     setDataset(initialDataset);
     displayNextQuestion(currentId, initialDataset[currentId]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -96,4 +95,4 @@ const ChatBot = () => {
   );
 };
 
-export default ChatBot;
+export default Chatbot;

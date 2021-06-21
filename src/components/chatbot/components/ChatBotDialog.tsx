@@ -1,17 +1,17 @@
 import React from "react";
-import ChatBot from "src/components/chatbot/ChatBot";
+import Chatbot from "src/components/chatbot/Chatbot";
 import useClickAway from "src/hooks/useClickAway";
 import { useModalDispatch } from "src/hooks/useModalDispatch";
 
-const ChatBotDialog: React.FC = () => {
+const ChatbotDialog: React.FC = () => {
   const { closeModal } = useModalDispatch();
   const ref = React.useRef<HTMLDivElement>(null);
   useClickAway(ref, closeModal);
   return (
     <div ref={ref}>
-      <ChatBot />
+      <Chatbot />
     </div>
   );
 };
 
-export default ChatBotDialog;
+export default ChatbotDialog;

@@ -17,7 +17,7 @@ export const images = identity({
 export const icons = identity({
   twitter: { path: "/img/icons/twitter-logo.svg", alt: "twitter" },
   github: { path: "/img/icons/github-logo.svg", alt: "github" },
-  chatBot: { path: "/img/icons/question_answer_black.svg", alt: "chatBot" },
+  chatbot: { path: "/img/icons/question_answer_black.svg", alt: "chatbot" },
   noProfile: { path: "src/assets/img/icons/no-profile.png", alt: "noo-profile" },
   pandashark: { path: "src/assets/img/icons/pandashark.png", alt: "pandashark" },
 });

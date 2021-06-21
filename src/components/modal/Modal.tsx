@@ -28,11 +28,11 @@ const ModalContent: React.VFC = () => {
   const state = useModalState();
 
   switch (state.modalType) {
-    case "CHAT_BOT": {
-      const ChatBot = dynamic(() => {
-        return import("src/components/chatbot/components/ChatBotDialog");
+    case "CHATBOT": {
+      const Chatbot = dynamic(() => {
+        return import("src/components/chatbot/components/ChatbotDialog");
       });
-      return <ChatBot />;
+      return <Chatbot />;
     }
     case "CONTACT":
       return <ModalPopup {...state.data} />;

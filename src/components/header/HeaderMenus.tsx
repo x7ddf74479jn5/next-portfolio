@@ -23,9 +23,9 @@ type HeaderMenusProps = {
 
 export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) => {
   const { openModal } = useModalDispatch();
-  const handleChatBotButton = useCallback(
+  const handleChatbotButton = useCallback(
     () => {
-      openModal("CHAT_BOT");
+      openModal("CHATBOT");
       closeNav();
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -49,7 +49,7 @@ export const HeaderMenus: React.FC<HeaderMenusProps> = ({ isOpen, closeNav }) =>
           );
         })}
         <li>
-          <HeaderButtonItem label="Chat Bot" onClick={handleChatBotButton} icon={icons.chatBot} />
+          <HeaderButtonItem label="Chatbot" onClick={handleChatbotButton} icon={icons.chatbot} />
         </li>
       </ul>
     </nav>

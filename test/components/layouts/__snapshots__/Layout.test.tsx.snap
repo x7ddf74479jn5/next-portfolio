@@ -151,7 +151,7 @@ exports[`Layout matches snapshot 1`] = `
               class="buttonItem"
             >
               <img
-                alt="chatBot"
+                alt="chatbot"
                 src="/img/icons/question_answer_black.svg"
               />
               <span>

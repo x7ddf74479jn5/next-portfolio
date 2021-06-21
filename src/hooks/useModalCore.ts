@@ -1,6 +1,6 @@
 import * as React from "react";
 
-export type ModalType = "CHAT_BOT" | "CONTACT" | "DRAWER" | null;
+export type ModalType = "CHATBOT" | "CONTACT" | "DRAWER" | null;
 
 export type State = {
   isModalOpen: boolean;

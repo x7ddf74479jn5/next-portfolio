@@ -4,12 +4,12 @@ import "./assets/styles/style.css";
 import React from "react";
 import ReactDOM from "react-dom";
 
-import ChatBot from "./ChatBot";
+import Chatbot from "./Chatbot";
 import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ChatBot />
+    <Chatbot />
   </React.StrictMode>,
   document.getElementById("root")
 );
