@@ -4,8 +4,8 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import React from "react";
 import styles from "src/styles/components/chatbot/Chat.module.scss";
 
-import type { Chat as ChatType } from "../../../types/chatbot/index";
-import { icons } from "../../../utils/images";
+import type { Chat as ChatType } from "../../types/chatbot/index";
+import { icons } from "../../utils/images";
 
 type Props = ChatType;
 

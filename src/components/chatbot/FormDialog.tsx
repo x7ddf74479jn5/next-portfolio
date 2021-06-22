@@ -1,14 +1,14 @@
 import Button from "@material-ui/core/Button";
-import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import React, { useCallback, useState } from "react";
+import useClickAway from "src/hooks/useClickAway";
+import styles from "src/styles/components/chatbot/FormDialog.module.scss";
 
 import TextInput from "./TextInput";
 
 type Props = {
-  open: boolean;
   handleClose: () => void;
 };
 
@@ -16,7 +16,8 @@ const FormDialog: React.VFC<Props> = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
-
+  const ref = React.useRef<HTMLDivElement>(null);
+  useClickAway(ref, props.handleClose);
   const inputName = useCallback(
     (event) => {
       setName(event.target.value);
@@ -90,17 +91,21 @@ const FormDialog: React.VFC<Props> = (props) => {
   };
 
   return (
-    <Dialog
-      open={props.open}
-      onClose={props.handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
-    >
+    <div className={styles.formDialog} ref={ref}>
       <DialogTitle id="alert-dialog-title">お問い合わせフォーム</DialogTitle>
       <DialogContent>
-        <TextInput label={"件名（必須）"} multiline={false} rows={1} value={name} type={"text"} onChange={inputName} />
+        <TextInput
+          label={"件名（必須）"}
+          id="name"
+          multiline={false}
+          rows={1}
+          value={name}
+          type={"text"}
+          onChange={inputName}
+        />
         <TextInput
           label={"メールアドレス（必須）"}
+          id="email"
           multiline={false}
           rows={1}
           value={email}
@@ -109,6 +114,7 @@ const FormDialog: React.VFC<Props> = (props) => {
         />
         <TextInput
           label={"お問い合わせ内容（必須）"}
+          id="description"
           multiline={true}
           rows={5}
           value={description}
@@ -124,7 +130,7 @@ const FormDialog: React.VFC<Props> = (props) => {
           送信する
         </Button>
       </DialogActions>
-    </Dialog>
+    </div>
   );
 };
 

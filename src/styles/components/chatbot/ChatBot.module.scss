@@ -2,6 +2,10 @@
 
 .section {
   position: relative;
+  // ADD
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100vw;
   background: #fff;
@@ -18,10 +22,4 @@
   box-sizing: border-box;
   padding: 0 1rem;
   width: 100%;
-
-  /* Vertical and horizontal center alignment */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

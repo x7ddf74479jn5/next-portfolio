@@ -1,9 +1,9 @@
 import List from "@material-ui/core/List";
 import { createStyles, makeStyles } from "@material-ui/core/styles";
 import React from "react";
+import type { Chat as ChatType } from "src/types/chatbot";
 
-import type { Chat as ChatType } from "../../../types/chatbot/index";
-import { Chat } from "./index";
+import Chat from "./Chat";
 
 const useStyles = makeStyles(() => {
   return createStyles({

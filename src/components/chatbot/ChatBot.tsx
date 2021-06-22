@@ -1,10 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
+import FormModalContainer from "src/components/chatbot/FormModalContainer";
+import datasetJson from "src/contents/dataset.json";
 import styles from "src/styles/components/chatbot/Chatbot.module.scss";
 
 import type { Answer, Chat, ChatData, Dataset, NextQuestionId, SelectAnswer } from "../../types/chatbot/index";
-import FormDialog from "./components/Forms/FormDialog";
-import { AnswersList, Chats } from "./components/index";
-import datasetJson from "./dataset.json";
+import AnswersList from "./AnswersList";
+import Chats from "./Chats";
 
 const Chatbot = () => {
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -74,6 +75,7 @@ const Chatbot = () => {
     const initialDataset = datasetJson as Dataset;
     setDataset(initialDataset);
     displayNextQuestion(currentId, initialDataset[currentId]);
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -89,7 +91,7 @@ const Chatbot = () => {
       <div className={styles.box}>
         <Chats chats={chats} />
         <AnswersList answers={answers} select={selectAnswer} />
-        <FormDialog open={open} handleClose={handleClose} />
+        {open && <FormModalContainer handleClose={handleClose} />}
       </div>
     </section>
   );

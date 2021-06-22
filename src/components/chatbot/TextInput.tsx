@@ -8,7 +8,7 @@ const TextInput: React.VFC<Props> = (props) => {
   return (
     <TextField
       fullWidth={true}
-      id="standard-basic"
+      id={props.id}
       label={props.label}
       margin={"dense"}
       multiline={props.multiline}

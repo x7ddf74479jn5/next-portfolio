@@ -6,14 +6,13 @@ import ModalPopup from "src/components/contact/ModalPopup";
 import Backdrop from "src/components/modal/Backdrop";
 import ModalCloseButton from "src/components/modal/ModalCloseButton";
 import ModalDrawer from "src/components/modal/ModalDrawer";
-import useLockBodyScroll from "src/hooks/useBodyLockscroll";
+import useLockBodyScroll from "src/hooks/useBodyLockScroll";
 import { useModalDispatch } from "src/hooks/useModalDispatch";
 import useMount from "src/hooks/useMount";
 import styles from "src/styles/components/modal/ModalContainer.module.scss";
 
 import type { State } from "../../hooks/useModalCore";
 import { useModalState } from "../../hooks/useModalState";
-import FormDialog from "../chatbot/components/Forms/FormDialog";
 
 const ModalContainer: React.VFC = () => {
   const state = useModalState();
@@ -26,19 +25,19 @@ const ModalContainer: React.VFC = () => {
   return (
     <div className={styles.modalContainer}>
       <Backdrop opacity={70} />
-      <ModalContent state={state} closeModal={closeModal} />
+      <ModalContent state={state} />
       <ModalCloseButton onClick={closeModal} />
     </div>
   ); // TODO: TEST
 };
 
-type Props = { state: State; closeModal: () => void };
+type Props = { state: State };
 
-const ModalContent: React.VFC<Props> = ({ state, closeModal }) => {
+const ModalContent: React.VFC<Props> = ({ state }) => {
   switch (state.modalType) {
     case "CHATBOT": {
       const Chatbot = dynamic(() => {
-        return import("src/components/chatbot/components/ChatbotDialog");
+        return import("src/components/chatbot/ChatbotDialog");
       });
       return <Chatbot />;
     }
@@ -46,8 +45,6 @@ const ModalContent: React.VFC<Props> = ({ state, closeModal }) => {
       return <ModalPopup {...state.data} />;
     case "DRAWER":
       return <ModalDrawer />;
-    case "CHATBOT_CONTACT":
-      return <FormDialog open={true} handleClose={closeModal} />;
     default:
       throw new Error("未定義");
   }

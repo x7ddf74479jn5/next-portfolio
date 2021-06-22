@@ -65,7 +65,6 @@ const ModalPopup: React.VFC<Props> = ({ formData, cancel, apply, isApplyButtonDi
           </FormButton>
         </GridRow>
       </div>
-      {/* <ModalCloseButton onClick={closeModal} /> */}
     </div>
   );
 };

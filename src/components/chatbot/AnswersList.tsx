@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "src/styles/components/chatbot/AnswerList.module.scss";
 import type { SelectAnswer } from "src/types/chatbot";
+import type { Answer as AnswerType } from "src/types/chatbot";
 
-import { Answer } from "./index";
+import Answer from "./Answer";
 
 type Props = {
-  answers: Answer[];
+  answers: AnswerType[];
   select: SelectAnswer;
 };
 

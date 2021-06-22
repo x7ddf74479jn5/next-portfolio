@@ -25,7 +25,7 @@ const initialStateFactory = (initialState?: Partial<State>): State => {
   };
 };
 
-const reducer = (state: State, action: Action): State => {
+const reducer = (_: State, action: Action): State => {
   switch (action.type) {
     case "OPEN":
       return {
@@ -53,7 +53,7 @@ export const useModalCore = (initialState?: Partial<State>) => {
   const closeModal = React.useCallback(() => {
     dispatch({ type: "CLOSE" });
   }, [dispatch]);
-  //
+
   return {
     state,
     openModal,
