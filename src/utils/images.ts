@@ -11,13 +11,13 @@ export const images = identity({
   webApp: { path: "/img/services/web-app.jpeg", alt: "Chat APP" },
   favicon: { path: "/img/icons/favicon.ico", alt: "" },
   appleTouchIcon: { path: "/img/icons/apple-touch-icon.png", alt: "" },
-  noImage: { path: "src/assets/img/utils/no_image.png", alt: "no-image" },
+  noImage: { path: "img/utils/no_image.png", alt: "no-image" },
 });
 
 export const icons = identity({
   twitter: { path: "/img/icons/twitter-logo.svg", alt: "twitter" },
   github: { path: "/img/icons/github-logo.svg", alt: "github" },
   chatbot: { path: "/img/icons/question_answer_black.svg", alt: "chatbot" },
-  noProfile: { path: "src/assets/img/icons/no-profile.png", alt: "noo-profile" },
-  pandashark: { path: "src/assets/img/icons/pandashark.png", alt: "pandashark" },
+  noProfile: { path: "/img/icons/no-profile.png", alt: "noo-profile" },
+  pandashark: { path: "/img/icons/pandashark_180-180.png", alt: "pandashark" },
 });
