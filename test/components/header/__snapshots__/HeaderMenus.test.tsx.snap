@@ -99,7 +99,7 @@ exports[`HeaderMenus closed matches snapshot 1`] = `
             src="/img/icons/question_answer_black.svg"
           />
           <span>
-            Chat Bot
+            Chatbot
           </span>
         </button>
       </li>
@@ -207,7 +207,7 @@ exports[`HeaderMenus open matches snapshot 1`] = `
             src="/img/icons/question_answer_black.svg"
           />
           <span>
-            Chat Bot
+            Chatbot
           </span>
         </button>
       </li>

@@ -67,11 +67,6 @@ exports[`ModalPopup matches snapshot 1`] = `
         </button>
       </div>
     </div>
-    <button
-      class="closeButton"
-    >
-      ×
-    </button>
   </div>
 </DocumentFragment>
 `;
@@ -144,11 +139,6 @@ exports[`ModalPopup matches snapshot 2`] = `
         </button>
       </div>
     </div>
-    <button
-      class="closeButton"
-    >
-      ×
-    </button>
   </div>
 </DocumentFragment>
 `;

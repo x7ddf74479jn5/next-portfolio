@@ -59,9 +59,9 @@ exports[`Career matches snapshot 1`] = `
         </li>
         <li>
           <time
-            datetime="2016-07"
+            datetime="2018-07"
           >
-            2016-07
+            2018-07
           </time>
           <div
             class="timelineIcon"
@@ -79,9 +79,9 @@ exports[`Career matches snapshot 1`] = `
         </li>
         <li>
           <time
-            datetime="2017-01"
+            datetime="2019-01"
           >
-            2017-01
+            2019-01
           </time>
           <div
             class="timelineIcon"
@@ -113,7 +113,7 @@ exports[`Career matches snapshot 1`] = `
                現在 
             </h3>
             <p>
-               React及びモダンフロントエンド開発のエコシステム、応用情報技術者試験などの学習を継続しながら転職活動を進めています。 
+               React及びモダンフロントエンド開発の学習を継続しながら転職活動を進めています。 
             </p>
           </div>
         </li>

@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalPortal Drawer modal matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="__next"
+  >
+    <div
+      class="modalContainer"
+    >
+      <div
+        class="backdrop_70"
+      />
+      <div
+        class="modalContent"
+      >
+        <button>
+          close
+        </button>
+      </div>
+      <button
+        class="closeButton"
+      >
+        ×
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalPortal initial render matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    id="__next"
+  />
+</DocumentFragment>
+`;

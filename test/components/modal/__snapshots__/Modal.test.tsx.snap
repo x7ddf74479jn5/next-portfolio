@@ -74,12 +74,12 @@ exports[`ModalPortal contact modal matches snapshot 1`] = `
             </button>
           </div>
         </div>
-        <button
-          class="closeButton"
-        >
-          ×
-        </button>
       </div>
+      <button
+        class="closeButton"
+      >
+        ×
+      </button>
     </div>
   </div>
 </DocumentFragment>
@@ -103,6 +103,11 @@ exports[`ModalPortal drawer modal matches snapshot 1`] = `
           close
         </button>
       </div>
+      <button
+        class="closeButton"
+      >
+        ×
+      </button>
     </div>
   </div>
 </DocumentFragment>

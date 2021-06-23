@@ -1,7 +1,6 @@
-import { waitFor } from "@testing-library/dom";
 import userEvent from "@testing-library/user-event";
 import ContactFormContainer from "src/components/contact/ContactFormContainer";
-import { fireEvent, render, screen } from "test/test-utils";
+import { fireEvent, render, screen, waitFor } from "test/test-utils";
 
 describe("ContactFormContainer", () => {
   it("matches snapshot", () => {

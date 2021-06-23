@@ -49,9 +49,8 @@ describe("ModalPopup", () => {
     const buttonElements = renderResult.getAllByRole("button");
     const cancelButton = buttonElements[0];
     const applyButton = buttonElements[1];
-    const modalCloseButton = buttonElements[2];
 
-    expect(buttonElements).toHaveLength(3);
+    expect(buttonElements).toHaveLength(2);
 
     expect(cancelButton).toHaveAttribute("id", "cancel-btn");
     expect(cancelButton).toBeEnabled();
@@ -60,8 +59,6 @@ describe("ModalPopup", () => {
     expect(applyButton).toHaveAttribute("id", "apply-btn");
     expect(applyButton).toBeEnabled();
     expect(applyButton).toHaveTextContent("送信する");
-
-    expect(modalCloseButton).toBeEnabled();
   });
 
   describe("user interaction", () => {

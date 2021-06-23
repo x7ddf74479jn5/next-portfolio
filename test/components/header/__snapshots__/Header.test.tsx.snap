@@ -8,7 +8,7 @@ exports[`Header closed matches snapshot 1`] = `
     <div
       class="headerInner"
     >
-      <div
+      <h1
         class="productLogo"
       >
         <a
@@ -39,7 +39,7 @@ exports[`Header closed matches snapshot 1`] = `
             />
           </div>
         </a>
-      </div>
+      </h1>
       <button
         aria-label="ナビゲーション メニューの切り替え"
         class="navToggleButton"
@@ -155,7 +155,7 @@ exports[`Header closed matches snapshot 1`] = `
                 src="/img/icons/question_answer_black.svg"
               />
               <span>
-                Chat Bot
+                Chatbot
               </span>
             </button>
           </li>
