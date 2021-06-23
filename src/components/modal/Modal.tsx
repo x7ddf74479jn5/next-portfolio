@@ -17,7 +17,6 @@ import { useModalState } from "../../hooks/useModalState";
 const ModalContainer: React.VFC = () => {
   const state = useModalState();
   const { closeModal } = useModalDispatch();
-  useLockBodyScroll();
   if (!state.isModalOpen || !state.modalType) {
     return null;
   }
@@ -34,6 +33,8 @@ const ModalContainer: React.VFC = () => {
 type Props = { state: State };
 
 const ModalContent: React.VFC<Props> = ({ state }) => {
+  useLockBodyScroll();
+
   switch (state.modalType) {
     case "CHATBOT": {
       return <ChatbotDialog />;
