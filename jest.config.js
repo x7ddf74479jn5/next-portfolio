@@ -7,6 +7,7 @@ module.exports = {
 
   transformIgnorePatterns: ["[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$"],
   moduleNameMapper: {
+    "\\.(css|scss)$": "<rootDir>/test/__mocks__/styleMock.js",
     "^.+\\.module\\.(css|scss)$": "identity-obj-proxy",
     "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
       "<rootDir>/test/__mocks__/fileMock.js",
@@ -15,5 +16,5 @@ module.exports = {
   },
   verbose: true,
   setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  globalSetup: "<rootDir>/jest.setupEnv.js",
+  globalSetup: "<rootDir>/test/setupEnv.ts",
 };

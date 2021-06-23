@@ -1,0 +1,1481 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots about/SkillItem Default 1`] = `
+<div>
+  <h3>
+    ヘッダー
+  </h3>
+  <div>
+    テキスト欄
+  </div>
+</div>
+`;
+
+exports[`Storyshots about/TimelineList Default 1`] = `
+<ul>
+  <li>
+    <time
+      dateTime="Time 1"
+    >
+      Time 1
+    </time>
+    <div />
+    <div>
+      <h3>
+         
+        Title 1
+         
+      </h3>
+      <p>
+         
+         Description 1
+         
+      </p>
+    </div>
+  </li>
+  <li>
+    <time
+      dateTime="Time 2"
+    >
+      Time 2
+    </time>
+    <div />
+    <div>
+      <h3>
+         
+        Title 2
+         
+      </h3>
+      <p>
+         
+         Description 2
+         
+      </p>
+    </div>
+  </li>
+  <li>
+    <time
+      dateTime="Time 3"
+    >
+      Time 3
+    </time>
+    <div />
+    <div>
+      <h3>
+         
+        Title 3
+         
+      </h3>
+      <p>
+         
+         Description 3
+         
+      </p>
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots chatbot/Answer Default 1`] = `
+<button
+  className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-1"
+  disabled={false}
+  onBlur={[Function]}
+  onClick={[Function]}
+  onDragLeave={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onKeyUp={[Function]}
+  onMouseDown={[Function]}
+  onMouseLeave={[Function]}
+  onMouseUp={[Function]}
+  onTouchEnd={[Function]}
+  onTouchMove={[Function]}
+  onTouchStart={[Function]}
+  tabIndex={0}
+  type="button"
+>
+  <span
+    className="MuiButton-label"
+  >
+    Content
+  </span>
+</button>
+`;
+
+exports[`Storyshots chatbot/AnswersList Default 1`] = `
+<div>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Content 1
+    </span>
+  </button>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Content 2
+    </span>
+  </button>
+  <button
+    className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+    disabled={false}
+    onBlur={[Function]}
+    onClick={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <span
+      className="MuiButton-label"
+    >
+      Content 3
+    </span>
+  </button>
+</div>
+`;
+
+exports[`Storyshots chatbot/Chat Answer 1`] = `
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  disabled={false}
+>
+  <div
+    className="MuiListItemAvatar-root"
+  >
+    <div
+      className="MuiAvatar-root MuiAvatar-circle"
+    >
+      <img
+        alt="icon"
+        className="MuiAvatar-img"
+        src="/img/icons/no-profile.png"
+      />
+    </div>
+  </div>
+  <div>
+    This text is an answer
+  </div>
+</li>
+`;
+
+exports[`Storyshots chatbot/Chat Question 1`] = `
+<li
+  className="MuiListItem-root MuiListItem-gutters"
+  disabled={false}
+>
+  <div
+    className="MuiListItemAvatar-root"
+  >
+    <div
+      className="MuiAvatar-root MuiAvatar-circle"
+    >
+      <img
+        alt="icon"
+        className="MuiAvatar-img"
+        src="/img/icons/pandashark_180-180.png"
+      />
+    </div>
+  </div>
+  <div>
+    This text is a question
+  </div>
+</li>
+`;
+
+exports[`Storyshots chatbot/Chatbot Chatbot 1`] = `
+<section>
+  <div>
+    <ul
+      className="MuiList-root makeStyles-chats-3 MuiList-padding"
+      id="scroll-area"
+    />
+    <div />
+  </div>
+</section>
+`;
+
+exports[`Storyshots chatbot/Chats Default 1`] = `
+<ul
+  className="MuiList-root makeStyles-chats-4 MuiList-padding"
+  id="scroll-area"
+>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          className="MuiAvatar-img"
+          src="/img/icons/pandashark_180-180.png"
+        />
+      </div>
+    </div>
+    <div>
+      This text is the first question
+    </div>
+  </li>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          className="MuiAvatar-img"
+          src="/img/icons/no-profile.png"
+        />
+      </div>
+    </div>
+    <div>
+      This text is the first answer
+    </div>
+  </li>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          className="MuiAvatar-img"
+          src="/img/icons/pandashark_180-180.png"
+        />
+      </div>
+    </div>
+    <div>
+      This text is the second question
+    </div>
+  </li>
+  <li
+    className="MuiListItem-root MuiListItem-gutters"
+    disabled={false}
+  >
+    <div
+      className="MuiListItemAvatar-root"
+    >
+      <div
+        className="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          className="MuiAvatar-img"
+          src="/img/icons/no-profile.png"
+        />
+      </div>
+    </div>
+    <div>
+      This text is the second answer
+    </div>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots chatbot/FormDialog Default 1`] = `
+<div>
+  <div
+    className="MuiDialogTitle-root"
+    id="alert-dialog-title"
+  >
+    <h2
+      className="MuiTypography-root MuiTypography-h6"
+    >
+      お問い合わせフォーム
+    </h2>
+  </div>
+  <div
+    className="MuiDialogContent-root"
+  >
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+        data-shrink={false}
+        htmlFor="name"
+        id="name-label"
+      >
+        件名（必須）
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+          disabled={false}
+          id="name"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          rows={1}
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+        data-shrink={false}
+        htmlFor="email"
+        id="email-label"
+      >
+        メールアドレス（必須）
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
+        onClick={[Function]}
+      >
+        <input
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+          disabled={false}
+          id="email"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          rows={1}
+          type="email"
+          value=""
+        />
+      </div>
+    </div>
+    <div
+      className="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+    >
+      <label
+        className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-marginDense"
+        data-shrink={false}
+        htmlFor="description"
+        id="description-label"
+      >
+        お問い合わせ内容（必須）
+      </label>
+      <div
+        className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline MuiInputBase-marginDense MuiInput-marginDense"
+        onClick={[Function]}
+      >
+        <textarea
+          aria-invalid={false}
+          autoFocus={false}
+          className="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+          disabled={false}
+          id="description"
+          onAnimationStart={[Function]}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          required={false}
+          rows={5}
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="MuiDialogActions-root MuiDialogActions-spacing"
+  >
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        キャンセル
+      </span>
+    </button>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary"
+      disabled={false}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        送信する
+      </span>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots chatbot/TextInput Default 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiFormLabel-filled"
+    data-shrink={true}
+    htmlFor="id"
+    id="id-label"
+  >
+    Label
+  </label>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-marginDense MuiInput-marginDense"
+    onClick={[Function]}
+  >
+    <input
+      aria-invalid={false}
+      autoFocus={false}
+      className="MuiInputBase-input MuiInput-input MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+      disabled={false}
+      id="id"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      rows={1}
+      type="text"
+      value="Value"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots chatbot/TextInput Multi Line 1`] = `
+<div
+  className="MuiFormControl-root MuiTextField-root MuiFormControl-marginDense MuiFormControl-fullWidth"
+>
+  <label
+    className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-marginDense MuiFormLabel-filled"
+    data-shrink={true}
+    htmlFor="id"
+    id="id-label"
+  >
+    Label
+  </label>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl MuiInputBase-multiline MuiInput-multiline MuiInputBase-marginDense MuiInput-marginDense"
+    onClick={[Function]}
+  >
+    <textarea
+      aria-invalid={false}
+      autoFocus={false}
+      className="MuiInputBase-input MuiInput-input MuiInputBase-inputMultiline MuiInput-inputMultiline MuiInputBase-inputMarginDense MuiInput-inputMarginDense"
+      disabled={false}
+      id="id"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      required={false}
+      rows={5}
+      value="Value"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots common/BreadCrumbs Portfolio 1`] = `
+<ul
+  aria-label="Breadcrumbs"
+>
+  <li>
+    <a
+      href="/"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      HOME
+    </a>
+     
+    <span>
+      ＞
+    </span>
+  </li>
+  <li>
+    <a
+      href="/samples"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      SAMPLES
+    </a>
+     
+    <span>
+      ＞
+    </span>
+  </li>
+  <li>
+    <span
+      aria-current="page"
+    >
+      PORTFOLIO
+    </span>
+     
+  </li>
+</ul>
+`;
+
+exports[`Storyshots common/NextArrowButton Default 1`] = `
+<a
+  className=""
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  role="button"
+>
+  Button
+</a>
+`;
+
+exports[`Storyshots common/NextArrowButton On Dark 1`] = `
+<a
+  className=""
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  role="button"
+>
+  Button
+</a>
+`;
+
+exports[`Storyshots common/PandasharkLogo Default 1`] = `
+<a
+  aria-label="パンダシャーク"
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+  target="_self"
+>
+  <img
+    alt="Pandashark's icon"
+    height={64}
+    src="/img/icons/pandashark_logo_rectangle.webp"
+    width={128}
+  />
+</a>
+`;
+
+exports[`Storyshots common/PrimaryButton Default 1`] = `
+<button
+  disabled={false}
+>
+  Button
+</button>
+`;
+
+exports[`Storyshots common/TitleArea Portfolio 1`] = `
+<section>
+  <div
+    className=""
+  >
+    <div
+      className=""
+    >
+      <h2>
+        Portfolio
+      </h2>
+      <p>
+        ポートフォリオ
+      </p>
+      <ul
+        aria-label="Breadcrumbs"
+      >
+        <li>
+          <a
+            href="/"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            HOME
+          </a>
+           
+          <span>
+            ＞
+          </span>
+        </li>
+        <li>
+          <a
+            href="/samples"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            SAMPLES
+          </a>
+           
+          <span>
+            ＞
+          </span>
+        </li>
+        <li>
+          <span
+            aria-current="page"
+          >
+            PORTFOLIO
+          </span>
+           
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`Storyshots contact/ContactFormContainer Default 1`] = `
+<form
+  className="p-forms"
+  name="contactForm"
+  onSubmit={[Function]}
+>
+  <div>
+    <p>
+      <label
+        htmlFor="name"
+      >
+        お名前 *
+      </label>
+      <input
+        id="name"
+        name="name"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="熊猫 鮫"
+        type="text"
+      />
+    </p>
+  </div>
+  <div>
+    <p>
+      <label
+        htmlFor="email"
+      >
+        メールアドレス *
+      </label>
+      <input
+        id="email"
+        name="email"
+        onBlur={[Function]}
+        onChange={[Function]}
+        placeholder="your@example.com"
+        type="email"
+      />
+    </p>
+  </div>
+  <div>
+    <p>
+      <label
+        htmlFor="category"
+      >
+        お問い合わせ種別
+      </label>
+      <select
+        id="category"
+        name="category"
+        onBlur={[Function]}
+        onChange={[Function]}
+      >
+        <option
+          value=""
+        >
+          
+        </option>
+        <option
+          value="Webサイト制作について"
+        >
+          Webサイト制作について
+        </option>
+        <option
+          value="Webアプリ開発について"
+        >
+          Webアプリ開発について
+        </option>
+        <option
+          value="Webサイト模写について"
+        >
+          Webサイト模写について
+        </option>
+        <option
+          value="その他"
+        >
+          その他
+        </option>
+      </select>
+    </p>
+  </div>
+  <div>
+    <p>
+      <label
+        htmlFor="description"
+      >
+        お問い合わせ内容 *
+      </label>
+      <textarea
+        id="description"
+        name="description"
+        onBlur={[Function]}
+        onChange={[Function]}
+        rows={10}
+      />
+    </p>
+  </div>
+  <button
+    disabled={true}
+    id="confirm-btn"
+    type="submit"
+  >
+    内容を確認する
+  </button>
+</form>
+`;
+
+exports[`Storyshots contact/FormButton Apply 1`] = `
+<button
+  className=""
+  disabled={false}
+>
+  送信する
+</button>
+`;
+
+exports[`Storyshots contact/FormButton Cancel 1`] = `
+<button
+  className="undefined"
+  disabled={false}
+>
+  修正する
+</button>
+`;
+
+exports[`Storyshots contact/ModalPopup Default 1`] = `
+<div
+  className="c-modal-popup"
+  id="popup"
+>
+  <div>
+    <h2
+      id="modal-title"
+    >
+      入力内容の確認
+    </h2>
+    <div
+      id="popup-main"
+    >
+      <div
+        id="mail-content"
+      >
+        <p>
+          お名前：
+        </p>
+        <p>
+          Name
+        </p>
+        <p>
+          メールアドレス：
+        </p>
+        <p>
+          test@email.com
+        </p>
+        <p>
+          お問い合わせ種別：
+        </p>
+        <p>
+          その他
+        </p>
+        <p>
+          お問い合わせ内容：
+        </p>
+        <p>
+          これはテストです。
+        </p>
+      </div>
+    </div>
+    <div>
+      <button
+        className="undefined"
+        disabled={false}
+        id="cancel-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        修正する
+      </button>
+      <button
+        className=""
+        disabled={false}
+        id="apply-btn"
+        onClick={[Function]}
+        type="button"
+      >
+        送信する
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots footer/Accordion Default 1`] = `null`;
+
+exports[`Storyshots footer/Foot Default 1`] = `
+<section>
+  <ul>
+    <li>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Item 1
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Item 2
+      </a>
+    </li>
+    <li>
+      <a
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+      >
+        Item 3
+      </a>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Storyshots footer/Footer Default 1`] = `
+<footer>
+  <div>
+    <div>
+      <div>
+        <section>
+          <div>
+            <a
+              aria-label="パンダシャーク"
+              href="/"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+              target="_self"
+            >
+              <img
+                alt="Pandashark's icon"
+                height={64}
+                src="/img/icons/pandashark_logo_rectangle.webp"
+                width={128}
+              />
+            </a>
+          </div>
+        </section>
+        <section>
+          <ul>
+            <li />
+            <li />
+            <li />
+          </ul>
+        </section>
+      </div>
+      <section>
+        <ul>
+          <li>
+            <a
+              href="/terms"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              利用規約
+            </a>
+          </li>
+          <li>
+            <a
+              href="/privacy"
+              onClick={[Function]}
+              onMouseEnter={[Function]}
+            >
+              プライバシーポリシー
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</footer>
+`;
+
+exports[`Storyshots header/Header Header 1`] = `
+<header>
+  <div>
+    <h1>
+      <a
+        aria-label="パンダシャーク"
+        href="/"
+        onClick={[Function]}
+        onMouseEnter={[Function]}
+        target="_self"
+      >
+        <img
+          alt="Pandashark's icon"
+          height={64}
+          src="/img/icons/pandashark_logo_rectangle.webp"
+          width={128}
+        />
+      </a>
+    </h1>
+    <button
+      aria-label="ナビゲーション メニューの切り替え"
+      data-about-nav-toggle={true}
+      id="nav-toggle-button"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden={true}
+        aria-label="ナビゲーション メニューを開く\\""
+        className="MuiSvgIcon-root"
+        focusable="false"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+        />
+      </svg>
+    </button>
+    <nav>
+      <h1>
+        <a
+          aria-label="パンダシャーク"
+          href="/"
+          onClick={[Function]}
+          onMouseEnter={[Function]}
+          target="_self"
+        >
+          <img
+            alt="Pandashark's icon"
+            height={40}
+            src="/img/icons/pandashark_logo_rectangle.webp"
+            width={80}
+          />
+        </a>
+      </h1>
+      <ul>
+        <li>
+          <a
+            href="/about"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="/samples"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Samples
+          </a>
+        </li>
+        <li>
+          <a
+            href="/contact"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            Contact
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/pandashark6"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <img
+              alt="twitter"
+              src="/img/icons/twitter-logo.svg"
+            />
+            <span>
+              Twitter
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/x7ddf74479jn5"
+            onClick={[Function]}
+            onMouseEnter={[Function]}
+          >
+            <img
+              alt="github"
+              src="/img/icons/github-logo.svg"
+            />
+            <span>
+              GitHub
+            </span>
+          </a>
+        </li>
+        <li>
+          <button
+            onClick={[Function]}
+          >
+            <img
+              alt="chatbot"
+              src="/img/icons/question_answer_black.svg"
+            />
+            <span>
+              Chatbot
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+`;
+
+exports[`Storyshots header/HeaderButtonItem Chatbot 1`] = `
+<button>
+  <img
+    alt="chatbot"
+    src="/img/icons/question_answer_black.svg"
+  />
+  <span>
+    Chat Bot
+  </span>
+</button>
+`;
+
+exports[`Storyshots header/HeaderLinkItem Default 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  Item
+</a>
+`;
+
+exports[`Storyshots header/HeaderLinkItem Git Hub 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <img
+    alt="github"
+    src="/img/icons/github-logo.svg"
+  />
+  <span>
+    GitHub
+  </span>
+</a>
+`;
+
+exports[`Storyshots header/HeaderLinkItem Twitter 1`] = `
+<a
+  href="/"
+  onClick={[Function]}
+  onMouseEnter={[Function]}
+>
+  <img
+    alt="twitter"
+    src="/img/icons/twitter-logo.svg"
+  />
+  <span>
+    Twitter
+  </span>
+</a>
+`;
+
+exports[`Storyshots header/NavToggleButton Close 1`] = `
+<button
+  aria-label="ナビゲーション メニューの切り替え"
+  data-about-nav-toggle={true}
+  id="nav-toggle-button"
+>
+  <svg
+    aria-hidden={true}
+    aria-label="ナビゲーション メニューを開く\\""
+    className="MuiSvgIcon-root"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots header/NavToggleButton Open 1`] = `
+<button
+  aria-label="ナビゲーション メニューの切り替え"
+  data-about-nav-toggle={true}
+  id="nav-toggle-button"
+>
+  <svg
+    aria-hidden={true}
+    aria-label="ナビゲーション メニューを閉じる"
+    className="MuiSvgIcon-root"
+    focusable="false"
+    viewBox="0 0 24 24"
+  >
+    <path
+      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+    />
+  </svg>
+</button>
+`;
+
+exports[`Storyshots layouts/Spacer LG 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots layouts/Spacer MD 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots layouts/Spacer SM 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots layouts/Spacer XL 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots layouts/Spacer XS 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots layouts/Spacer XXS 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+  <div
+    className=""
+  />
+  <div
+    style={
+      Object {
+        "backgroundColor": "#41b6e6",
+        "height": "100px",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`Storyshots modal/Backdrop Opacity 10 1`] = `
+<div
+  className="undefined"
+/>
+`;
+
+exports[`Storyshots modal/Backdrop Opacity 70 1`] = `
+<div
+  className=""
+/>
+`;
+
+exports[`Storyshots projects/ServiceItem Default 1`] = `
+<div
+  style={
+    Object {
+      "textAlign": "center",
+    }
+  }
+>
+  <article>
+    <h3>
+      WEBサイト制作
+    </h3>
+    <small>
+      Website Production
+    </small>
+    <img
+      alt="Website Production"
+      height={288}
+      src="/img/services/website-production.jpeg"
+      width={512}
+    />
+    <p>
+      コーポレートサイト、個人ポートフォリオ、ランディングページなどWebサイト制作全般を承ります。検索流入やSNS流入を強化する「SEOを意識したサイト」を作成できます。
+    </p>
+  </article>
+</div>
+`;
+
+exports[`Storyshots samples/ExternalLink Default 1`] = `
+<a
+  href=""
+  rel="noreferrer"
+  target="_blank"
+>
+  <span>
+    Label
+    <svg
+      aria-hidden={true}
+      className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+      focusable="false"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+      />
+    </svg>
+  </span>
+</a>
+`;
+
+exports[`Storyshots samples/SampleCard Portfolio 1`] = `
+<div
+  style={
+    Object {
+      "maxWidth": "500px",
+    }
+  }
+>
+  <div>
+    <a
+      href="/samples/portfolio"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+    >
+      <div>
+        <img
+          alt="eye catch portfolio"
+          layout="fill"
+          src="/img/samples/portfolio-eyecatch.webp"
+        />
+      </div>
+      <div>
+        <h3>
+          ポートフォリオ
+        </h3>
+        <p>
+          Web制作｜デザイン｜レスポンシブ｜アニメーション
+        </p>
+        <div>
+          <svg
+            aria-hidden={true}
+            className="MuiSvgIcon-root"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M15.5 5H11l5 7-5 7h4.5l5-7z"
+            />
+            <path
+              d="M8.5 5H4l5 7-5 7h4.5l5-7z"
+            />
+          </svg>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+`;
