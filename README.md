@@ -19,7 +19,7 @@ https://next-portfolio-livid.vercel.app/
 
 - React, Next.js, TypeScript, CSS Modules
 - Vercel
-- Storybook, GitHub Actions
+- Storybook, Jest, GitHub Actions
 
 ---
 ## EC App:star:

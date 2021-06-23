@@ -69,13 +69,13 @@ export const sampleDetails: SampleDetail[] = [
     points: [
       "Webサイト制作に必要不可欠な要素は抑えた",
       "CSSはなるべくシンプルに",
-      "JavaScriptの使用も最小限に",
+      "SPAらしい画面描画の切り替わり",
       "見ていて飽きさせないためのCSSアニメーション",
       "SEOを意識したHTML構造",
-      "StorybookやCIを使ったモダンな開発環境",
+      "Storybookや自動テストを使ったモダンな開発環境",
     ],
     langs: "React, TypeScript, Sass",
-    techs: "Next.js, Vercel, CSS Modules, Storybook, GitHub Actions",
+    techs: "Next.js, Vercel, CSS Modules, Storybook, Jest, GitHub Actions",
     link: {
       description: "このサイトなので省略。",
     },
@@ -94,7 +94,7 @@ export const sampleDetails: SampleDetail[] = [
       href: externalLinks.chat,
       label: "チャットボット",
     },
-    note: "ヘッダーメニューのロボットアイコンからお試しいただけます。",
+    note: "ヘッダーメニューのチャットアイコンからお試しいただけます。",
   }),
   identity({
     id: "ec",
