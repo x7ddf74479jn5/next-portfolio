@@ -1,7 +1,7 @@
-import dynamic from "next/dynamic";
 import type { VFC } from "react";
 import React, { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import ChatbotDialog from "src/components/chatbot/ChatbotDialog";
 import ModalPopup from "src/components/contact/ModalPopup";
 import Backdrop from "src/components/modal/Backdrop";
 import ModalCloseButton from "src/components/modal/ModalCloseButton";
@@ -36,10 +36,7 @@ type Props = { state: State };
 const ModalContent: React.VFC<Props> = ({ state }) => {
   switch (state.modalType) {
     case "CHATBOT": {
-      const Chatbot = dynamic(() => {
-        return import("src/components/chatbot/ChatbotDialog");
-      });
-      return <Chatbot />;
+      return <ChatbotDialog />;
     }
     case "CONTACT":
       return <ModalPopup {...state.data} />;
