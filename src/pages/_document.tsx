@@ -33,13 +33,12 @@ export default class MyDocument extends Document {
           <meta name="twitter:title" content={siteConfig.title} />
           <meta name="twitter:description" content={siteConfig.description} />
           <meta name="twitter:image" content={siteConfig.image} />
-          <meta name="msapplication-TileColor" content="#da532c" />
           <meta name="theme-color" content="#181a1b" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Courgette&display=swap&subset=latin-ext"
           />
-          <link rel="shortcut icon" href={siteConfig.icon} />
+          <link rel="icon" href={siteConfig.icon} />
           <link rel="apple-touch-icon" href={siteConfig.appleTouchIcon} />
         </Head>
         <body>
