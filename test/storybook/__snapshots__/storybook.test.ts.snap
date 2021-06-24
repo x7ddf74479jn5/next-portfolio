@@ -1,26 +1,38 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots about/SkillItem Default 1`] = `
-<div>
-  <h3>
+<div
+  className="wrapper"
+>
+  <h3
+    className="head"
+  >
     ヘッダー
   </h3>
-  <div>
+  <div
+    className="data"
+  >
     テキスト欄
   </div>
 </div>
 `;
 
 exports[`Storyshots about/TimelineList Default 1`] = `
-<ul>
+<ul
+  className="timeline"
+>
   <li>
     <time
       dateTime="Time 1"
     >
       Time 1
     </time>
-    <div />
-    <div>
+    <div
+      className="timelineIcon"
+    />
+    <div
+      className="timelineBox"
+    >
       <h3>
          
         Title 1
@@ -39,8 +51,12 @@ exports[`Storyshots about/TimelineList Default 1`] = `
     >
       Time 2
     </time>
-    <div />
-    <div>
+    <div
+      className="timelineIcon"
+    />
+    <div
+      className="timelineBox"
+    >
       <h3>
          
         Title 2
@@ -59,8 +75,12 @@ exports[`Storyshots about/TimelineList Default 1`] = `
     >
       Time 3
     </time>
-    <div />
-    <div>
+    <div
+      className="timelineIcon"
+    />
+    <div
+      className="timelineBox"
+    >
       <h3>
          
         Title 3
@@ -104,7 +124,9 @@ exports[`Storyshots chatbot/Answer Default 1`] = `
 `;
 
 exports[`Storyshots chatbot/AnswersList Default 1`] = `
-<div>
+<div
+  className="gridAnswer"
+>
   <button
     className="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
     disabled={false}
@@ -182,7 +204,7 @@ exports[`Storyshots chatbot/AnswersList Default 1`] = `
 
 exports[`Storyshots chatbot/Chat Answer 1`] = `
 <li
-  className="MuiListItem-root MuiListItem-gutters"
+  className="MuiListItem-root chatReverse MuiListItem-gutters"
   disabled={false}
 >
   <div
@@ -198,7 +220,9 @@ exports[`Storyshots chatbot/Chat Answer 1`] = `
       />
     </div>
   </div>
-  <div>
+  <div
+    className="chatBubble"
+  >
     This text is an answer
   </div>
 </li>
@@ -206,7 +230,7 @@ exports[`Storyshots chatbot/Chat Answer 1`] = `
 
 exports[`Storyshots chatbot/Chat Question 1`] = `
 <li
-  className="MuiListItem-root MuiListItem-gutters"
+  className="MuiListItem-root chatRow MuiListItem-gutters"
   disabled={false}
 >
   <div
@@ -222,20 +246,28 @@ exports[`Storyshots chatbot/Chat Question 1`] = `
       />
     </div>
   </div>
-  <div>
+  <div
+    className="chatBubble"
+  >
     This text is a question
   </div>
 </li>
 `;
 
 exports[`Storyshots chatbot/Chatbot Chatbot 1`] = `
-<section>
-  <div>
+<section
+  className="section"
+>
+  <div
+    className="box"
+  >
     <ul
       className="MuiList-root makeStyles-chats-3 MuiList-padding"
       id="scroll-area"
     />
-    <div />
+    <div
+      className="gridAnswer"
+    />
   </div>
 </section>
 `;
@@ -246,7 +278,7 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
   id="scroll-area"
 >
   <li
-    className="MuiListItem-root MuiListItem-gutters"
+    className="MuiListItem-root chatRow MuiListItem-gutters"
     disabled={false}
   >
     <div
@@ -262,12 +294,14 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
         />
       </div>
     </div>
-    <div>
+    <div
+      className="chatBubble"
+    >
       This text is the first question
     </div>
   </li>
   <li
-    className="MuiListItem-root MuiListItem-gutters"
+    className="MuiListItem-root chatReverse MuiListItem-gutters"
     disabled={false}
   >
     <div
@@ -283,12 +317,14 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
         />
       </div>
     </div>
-    <div>
+    <div
+      className="chatBubble"
+    >
       This text is the first answer
     </div>
   </li>
   <li
-    className="MuiListItem-root MuiListItem-gutters"
+    className="MuiListItem-root chatRow MuiListItem-gutters"
     disabled={false}
   >
     <div
@@ -304,12 +340,14 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
         />
       </div>
     </div>
-    <div>
+    <div
+      className="chatBubble"
+    >
       This text is the second question
     </div>
   </li>
   <li
-    className="MuiListItem-root MuiListItem-gutters"
+    className="MuiListItem-root chatReverse MuiListItem-gutters"
     disabled={false}
   >
     <div
@@ -325,7 +363,9 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
         />
       </div>
     </div>
-    <div>
+    <div
+      className="chatBubble"
+    >
       This text is the second answer
     </div>
   </li>
@@ -333,7 +373,9 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
 `;
 
 exports[`Storyshots chatbot/FormDialog Default 1`] = `
-<div>
+<div
+  className="formDialog"
+>
   <div
     className="MuiDialogTitle-root"
     id="alert-dialog-title"
@@ -570,6 +612,7 @@ exports[`Storyshots chatbot/TextInput Multi Line 1`] = `
 exports[`Storyshots common/BreadCrumbs Portfolio 1`] = `
 <ul
   aria-label="Breadcrumbs"
+  className="textBreadcrumbs"
 >
   <li>
     <a
@@ -610,7 +653,7 @@ exports[`Storyshots common/BreadCrumbs Portfolio 1`] = `
 
 exports[`Storyshots common/NextArrowButton Default 1`] = `
 <a
-  className=""
+  className="btnRound iconArrowNext"
   href="/"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -622,7 +665,7 @@ exports[`Storyshots common/NextArrowButton Default 1`] = `
 
 exports[`Storyshots common/NextArrowButton On Dark 1`] = `
 <a
-  className=""
+  className="btnRoundOnDark iconArrowNext"
   href="/"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -651,6 +694,7 @@ exports[`Storyshots common/PandasharkLogo Default 1`] = `
 
 exports[`Storyshots common/PrimaryButton Default 1`] = `
 <button
+  className="btnRound"
   disabled={false}
 >
   Button
@@ -658,12 +702,14 @@ exports[`Storyshots common/PrimaryButton Default 1`] = `
 `;
 
 exports[`Storyshots common/TitleArea Portfolio 1`] = `
-<section>
+<section
+  className="section"
+>
   <div
-    className=""
+    className="sectionTitleArea fadeInLeft"
   >
     <div
-      className=""
+      className="headlineSub fadeInUp"
     >
       <h2>
         Portfolio
@@ -673,6 +719,7 @@ exports[`Storyshots common/TitleArea Portfolio 1`] = `
       </p>
       <ul
         aria-label="Breadcrumbs"
+        className="textBreadcrumbs"
       >
         <li>
           <a
@@ -720,7 +767,9 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
   name="contactForm"
   onSubmit={[Function]}
 >
-  <div>
+  <div
+    className="formsInput"
+  >
     <p>
       <label
         htmlFor="name"
@@ -737,7 +786,9 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
       />
     </p>
   </div>
-  <div>
+  <div
+    className="formsInput"
+  >
     <p>
       <label
         htmlFor="email"
@@ -754,7 +805,9 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
       />
     </p>
   </div>
-  <div>
+  <div
+    className="formsInput"
+  >
     <p>
       <label
         htmlFor="category"
@@ -795,7 +848,9 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
       </select>
     </p>
   </div>
-  <div>
+  <div
+    className="formsInput"
+  >
     <p>
       <label
         htmlFor="description"
@@ -812,6 +867,7 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
     </p>
   </div>
   <button
+    className="btnRound"
     disabled={true}
     id="confirm-btn"
     type="submit"
@@ -823,7 +879,7 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
 
 exports[`Storyshots contact/FormButton Apply 1`] = `
 <button
-  className=""
+  className="btnApply"
   disabled={false}
 >
   送信する
@@ -832,7 +888,7 @@ exports[`Storyshots contact/FormButton Apply 1`] = `
 
 exports[`Storyshots contact/FormButton Cancel 1`] = `
 <button
-  className="undefined"
+  className="btnCancel"
   disabled={false}
 >
   修正する
@@ -844,13 +900,17 @@ exports[`Storyshots contact/ModalPopup Default 1`] = `
   className="c-modal-popup"
   id="popup"
 >
-  <div>
+  <div
+    className="modalPopupBody"
+  >
     <h2
+      className="modalPopupTitle"
       id="modal-title"
     >
       入力内容の確認
     </h2>
     <div
+      className="modalPopupMain"
       id="popup-main"
     >
       <div
@@ -882,9 +942,11 @@ exports[`Storyshots contact/ModalPopup Default 1`] = `
         </p>
       </div>
     </div>
-    <div>
+    <div
+      className="gridRow"
+    >
       <button
-        className="undefined"
+        className="btnCancel"
         disabled={false}
         id="cancel-btn"
         onClick={[Function]}
@@ -893,7 +955,7 @@ exports[`Storyshots contact/ModalPopup Default 1`] = `
         修正する
       </button>
       <button
-        className=""
+        className="btnApply"
         disabled={false}
         id="apply-btn"
         onClick={[Function]}
@@ -909,7 +971,9 @@ exports[`Storyshots contact/ModalPopup Default 1`] = `
 exports[`Storyshots footer/Accordion Default 1`] = `null`;
 
 exports[`Storyshots footer/Foot Default 1`] = `
-<section>
+<section
+  className="foot"
+>
   <ul>
     <li>
       <a
@@ -943,12 +1007,24 @@ exports[`Storyshots footer/Foot Default 1`] = `
 `;
 
 exports[`Storyshots footer/Footer Default 1`] = `
-<footer>
-  <div>
-    <div>
-      <div>
-        <section>
-          <div>
+<footer
+  className="footer"
+>
+  <div
+    className="main"
+  >
+    <div
+      className="mainInner"
+    >
+      <div
+        className="wrapper"
+      >
+        <section
+          className="logoArea"
+        >
+          <div
+            className="productLogo"
+          >
             <a
               aria-label="パンダシャーク"
               href="/"
@@ -965,15 +1041,21 @@ exports[`Storyshots footer/Footer Default 1`] = `
             </a>
           </div>
         </section>
-        <section>
-          <ul>
+        <section
+          className="sitemap"
+        >
+          <ul
+            className="footerLinks"
+          >
             <li />
             <li />
             <li />
           </ul>
         </section>
       </div>
-      <section>
+      <section
+        className="foot"
+      >
         <ul>
           <li>
             <a
@@ -1001,9 +1083,15 @@ exports[`Storyshots footer/Footer Default 1`] = `
 `;
 
 exports[`Storyshots header/Header Header 1`] = `
-<header>
-  <div>
-    <h1>
+<header
+  className="header"
+>
+  <div
+    className="headerInner"
+  >
+    <h1
+      className="productLogo"
+    >
       <a
         aria-label="パンダシャーク"
         href="/"
@@ -1021,6 +1109,7 @@ exports[`Storyshots header/Header Header 1`] = `
     </h1>
     <button
       aria-label="ナビゲーション メニューの切り替え"
+      className="navToggleButton"
       data-about-nav-toggle={true}
       id="nav-toggle-button"
       onClick={[Function]}
@@ -1037,8 +1126,12 @@ exports[`Storyshots header/Header Header 1`] = `
         />
       </svg>
     </button>
-    <nav>
-      <h1>
+    <nav
+      className="headerNavTop"
+    >
+      <h1
+        className="productLogo"
+      >
         <a
           aria-label="パンダシャーク"
           href="/"
@@ -1057,6 +1150,7 @@ exports[`Storyshots header/Header Header 1`] = `
       <ul>
         <li>
           <a
+            className="linkItem"
             href="/about"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1066,6 +1160,7 @@ exports[`Storyshots header/Header Header 1`] = `
         </li>
         <li>
           <a
+            className="linkItem"
             href="/samples"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1075,6 +1170,7 @@ exports[`Storyshots header/Header Header 1`] = `
         </li>
         <li>
           <a
+            className="linkItem"
             href="/contact"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1084,6 +1180,7 @@ exports[`Storyshots header/Header Header 1`] = `
         </li>
         <li>
           <a
+            className="linkItem"
             href="https://twitter.com/pandashark6"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1099,6 +1196,7 @@ exports[`Storyshots header/Header Header 1`] = `
         </li>
         <li>
           <a
+            className="linkItem"
             href="https://github.com/x7ddf74479jn5"
             onClick={[Function]}
             onMouseEnter={[Function]}
@@ -1114,6 +1212,7 @@ exports[`Storyshots header/Header Header 1`] = `
         </li>
         <li>
           <button
+            className="buttonItem"
             onClick={[Function]}
           >
             <img
@@ -1132,7 +1231,9 @@ exports[`Storyshots header/Header Header 1`] = `
 `;
 
 exports[`Storyshots header/HeaderButtonItem Chatbot 1`] = `
-<button>
+<button
+  className="buttonItem"
+>
   <img
     alt="chatbot"
     src="/img/icons/question_answer_black.svg"
@@ -1145,6 +1246,7 @@ exports[`Storyshots header/HeaderButtonItem Chatbot 1`] = `
 
 exports[`Storyshots header/HeaderLinkItem Default 1`] = `
 <a
+  className="linkItem"
   href="/"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -1155,6 +1257,7 @@ exports[`Storyshots header/HeaderLinkItem Default 1`] = `
 
 exports[`Storyshots header/HeaderLinkItem Git Hub 1`] = `
 <a
+  className="linkItem"
   href="/"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -1171,6 +1274,7 @@ exports[`Storyshots header/HeaderLinkItem Git Hub 1`] = `
 
 exports[`Storyshots header/HeaderLinkItem Twitter 1`] = `
 <a
+  className="linkItem"
   href="/"
   onClick={[Function]}
   onMouseEnter={[Function]}
@@ -1188,6 +1292,7 @@ exports[`Storyshots header/HeaderLinkItem Twitter 1`] = `
 exports[`Storyshots header/NavToggleButton Close 1`] = `
 <button
   aria-label="ナビゲーション メニューの切り替え"
+  className="navToggleButton"
   data-about-nav-toggle={true}
   id="nav-toggle-button"
 >
@@ -1208,6 +1313,7 @@ exports[`Storyshots header/NavToggleButton Close 1`] = `
 exports[`Storyshots header/NavToggleButton Open 1`] = `
 <button
   aria-label="ナビゲーション メニューの切り替え"
+  className="navToggleButtonOpen"
   data-about-nav-toggle={true}
   id="nav-toggle-button"
 >
@@ -1236,7 +1342,7 @@ exports[`Storyshots layouts/Spacer LG 1`] = `
     }
   />
   <div
-    className=""
+    className="lg"
   />
   <div
     style={
@@ -1260,7 +1366,7 @@ exports[`Storyshots layouts/Spacer MD 1`] = `
     }
   />
   <div
-    className=""
+    className="md"
   />
   <div
     style={
@@ -1284,7 +1390,7 @@ exports[`Storyshots layouts/Spacer SM 1`] = `
     }
   />
   <div
-    className=""
+    className="sm"
   />
   <div
     style={
@@ -1308,7 +1414,7 @@ exports[`Storyshots layouts/Spacer XL 1`] = `
     }
   />
   <div
-    className=""
+    className="xl"
   />
   <div
     style={
@@ -1332,7 +1438,7 @@ exports[`Storyshots layouts/Spacer XS 1`] = `
     }
   />
   <div
-    className=""
+    className="xs"
   />
   <div
     style={
@@ -1356,7 +1462,7 @@ exports[`Storyshots layouts/Spacer XXS 1`] = `
     }
   />
   <div
-    className=""
+    className="xxs"
   />
   <div
     style={
@@ -1371,14 +1477,22 @@ exports[`Storyshots layouts/Spacer XXS 1`] = `
 
 exports[`Storyshots modal/Backdrop Opacity 10 1`] = `
 <div
-  className="undefined"
+  className="backdrop"
 />
 `;
 
 exports[`Storyshots modal/Backdrop Opacity 70 1`] = `
 <div
-  className=""
+  className="backdrop_70"
 />
+`;
+
+exports[`Storyshots modal/ModalCloseButton Default 1`] = `
+<button
+  className="closeButton"
+>
+  ×
+</button>
 `;
 
 exports[`Storyshots projects/ServiceItem Default 1`] = `
@@ -1389,7 +1503,9 @@ exports[`Storyshots projects/ServiceItem Default 1`] = `
     }
   }
 >
-  <article>
+  <article
+    className="gridListItemFloated"
+  >
     <h3>
       WEBサイト制作
     </h3>
@@ -1398,6 +1514,7 @@ exports[`Storyshots projects/ServiceItem Default 1`] = `
     </small>
     <img
       alt="Website Production"
+      className="mediaThumb"
       height={288}
       src="/img/services/website-production.jpeg"
       width={512}
@@ -1415,7 +1532,9 @@ exports[`Storyshots samples/ExternalLink Default 1`] = `
   rel="noreferrer"
   target="_blank"
 >
-  <span>
+  <span
+    className="externalLink"
+  >
     Label
     <svg
       aria-hidden={true}
@@ -1439,27 +1558,40 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
     }
   }
 >
-  <div>
+  <div
+    className="sampleCard"
+  >
     <a
+      className="testLineNone"
       href="/samples/portfolio"
       onClick={[Function]}
       onMouseEnter={[Function]}
     >
-      <div>
+      <div
+        className="mediaThumb"
+      >
         <img
           alt="eye catch portfolio"
           layout="fill"
           src="/img/samples/portfolio-eyecatch.webp"
         />
       </div>
-      <div>
-        <h3>
+      <div
+        className="listSamplesDetail"
+      >
+        <h3
+          className="title"
+        >
           ポートフォリオ
         </h3>
-        <p>
+        <p
+          className="category"
+        >
           Web制作｜デザイン｜レスポンシブ｜アニメーション
         </p>
-        <div>
+        <div
+          className="icon"
+        >
           <svg
             aria-hidden={true}
             className="MuiSvgIcon-root"
@@ -1476,6 +1608,309 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
         </div>
       </div>
     </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots utils/ColorChart Color Chart 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "flexWrap": "wrap",
+      "gap": "10px",
+    }
+  }
+>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      light
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #f0f0f0
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#f0f0f0",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      dark
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #001871
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#001871",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      mainDark
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #444
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#444",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      main
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #4c4c4c
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#4c4c4c",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      mainLight
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #777
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#777",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      primary
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #41b6e6
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#41b6e6",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      primaryLight
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #a2dbf3
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#a2dbf3",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      secondary
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #ffb549
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffb549",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      secondaryLight
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #ffca7c
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ffca7c",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
+  </div>
+  <div>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      accent
+    </p>
+    <p
+      style={
+        Object {
+          "margin": "0",
+        }
+      }
+    >
+      #ff585d
+    </p>
+    <div
+      style={
+        Object {
+          "backgroundColor": "#ff585d",
+          "height": "120px",
+          "width": "120px",
+        }
+      }
+    />
   </div>
 </div>
 `;
