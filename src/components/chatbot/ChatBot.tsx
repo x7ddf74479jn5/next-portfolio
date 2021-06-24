@@ -15,13 +15,12 @@ const Chatbot = () => {
   const handleClose = useCallback(() => {
     setOpen(false);
   }, [setOpen]);
-  const { answers, chats, selectAnswer } = useChatbot(datasetJson, handleClickOpen);
-
+  const { answers, chats, selectAnswer, isSelectReady } = useChatbot(datasetJson, handleClickOpen);
   return (
     <section className={styles.section}>
       <div className={styles.box}>
         <Chats chats={chats} />
-        <AnswersList answers={answers} select={selectAnswer} />
+        <AnswersList answers={answers} select={selectAnswer} isSelectReady={isSelectReady} />
         {open && <FormModalContainer handleClose={handleClose} />}
       </div>
     </section>

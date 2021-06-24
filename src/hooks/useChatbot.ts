@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { Answer, Chat, ChatData, Dataset, NextQuestionId, SelectAnswer } from "src/types/chatbot/index";
 
 const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
@@ -6,6 +6,10 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentId, setCurrentId] = useState<NextQuestionId>("init");
   const [dataset, setDataset] = useState<Dataset>();
+  const ready = useRef(true);
+  const isSelectReady = useCallback(() => {
+    return ready.current;
+  }, []);
 
   const displayNextQuestion = useCallback((nextQuestionId: NextQuestionId, nextDataset: ChatData) => {
     addChats({
@@ -22,6 +26,7 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
       if (typeof nextQuestionId !== "string") {
         throw new TypeError("Invalid arguments");
       }
+
       switch (true) {
         case nextQuestionId === "contact":
           callbackFn();
@@ -34,6 +39,8 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
           break;
         }
         default:
+          ready.current = false;
+
           addChats({
             text: selectedAnswer,
             type: "answer",
@@ -42,7 +49,8 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
             if (dataset === undefined) {
               throw new Error("Not initialized");
             }
-            return displayNextQuestion(nextQuestionId, dataset[nextQuestionId]);
+            displayNextQuestion(nextQuestionId, dataset[nextQuestionId]);
+            ready.current = true;
           }, 1000);
           break;
       }
@@ -70,7 +78,7 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
     }
   });
 
-  return { answers, chats, selectAnswer } as const;
+  return { answers, chats, selectAnswer, isSelectReady } as const;
 };
 
 export default useChatbot;

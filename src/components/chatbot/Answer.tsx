@@ -21,19 +21,21 @@ const useStyles = makeStyles(() => {
 
 type Props = AnswerType & {
   select: SelectAnswer;
+  isSelectReady: () => boolean;
 };
 
 const Answer: React.VFC<Props> = (props) => {
   const classes = useStyles();
+  const handleClick = () => {
+    if (!props.isSelectReady()) {
+      return;
+    }
+
+    return props.select(props.content, props.nextId);
+  };
 
   return (
-    <Button
-      className={classes.button}
-      variant="outlined"
-      onClick={() => {
-        return props.select(props.content, props.nextId);
-      }}
-    >
+    <Button className={classes.button} variant="outlined" onClick={handleClick}>
       {props.content}
     </Button>
   );
