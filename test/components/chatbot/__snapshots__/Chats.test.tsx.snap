@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chats question matches snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="MuiList-root makeStyles-chats-1 MuiList-padding"
+    id="scroll-area"
+  >
+    <li
+      class="MuiListItem-root chatRow MuiListItem-gutters"
+    >
+      <div
+        class="MuiListItemAvatar-root"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-circle"
+        >
+          <img
+            alt="icon"
+            class="MuiAvatar-img"
+            src="/img/icons/pandashark_180-180.png"
+          />
+        </div>
+      </div>
+      <div
+        class="chatBubble"
+      >
+        text
+      </div>
+    </li>
+    <li
+      class="MuiListItem-root chatReverse MuiListItem-gutters"
+    >
+      <div
+        class="MuiListItemAvatar-root"
+      >
+        <div
+          class="MuiAvatar-root MuiAvatar-circle"
+        >
+          <img
+            alt="icon"
+            class="MuiAvatar-img"
+            src="/img/icons/no-profile.png"
+          />
+        </div>
+      </div>
+      <div
+        class="chatBubble"
+      >
+        text
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;
