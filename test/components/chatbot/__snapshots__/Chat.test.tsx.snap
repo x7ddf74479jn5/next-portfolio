@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat answer matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="MuiListItem-root chatReverse MuiListItem-gutters"
+  >
+    <div
+      class="MuiListItemAvatar-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          class="MuiAvatar-img"
+          src="/img/icons/no-profile.png"
+        />
+      </div>
+    </div>
+    <div
+      class="chatBubble"
+    >
+      text
+    </div>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`Chat question matches snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="MuiListItem-root chatRow MuiListItem-gutters"
+  >
+    <div
+      class="MuiListItemAvatar-root"
+    >
+      <div
+        class="MuiAvatar-root MuiAvatar-circle"
+      >
+        <img
+          alt="icon"
+          class="MuiAvatar-img"
+          src="/img/icons/pandashark_180-180.png"
+        />
+      </div>
+    </div>
+    <div
+      class="chatBubble"
+    >
+      text
+    </div>
+  </li>
+</DocumentFragment>
+`;
