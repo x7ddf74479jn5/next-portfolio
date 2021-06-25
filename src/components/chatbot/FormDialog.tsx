@@ -6,6 +6,7 @@ import React, { useCallback, useState } from "react";
 import useClickAway from "src/hooks/useClickAway";
 import styles from "src/styles/components/chatbot/FormDialog.module.scss";
 
+import { validateEmailFormat, validateRequiredInput } from "../../utils/helper";
 import TextInput from "./TextInput";
 
 type Props = {
@@ -37,21 +38,6 @@ const FormDialog: React.VFC<Props> = (props) => {
     [setDescription]
   );
 
-  const validateEmailFormat = (email: string) => {
-    const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    return regex.test(email);
-  };
-
-  const validateRequiredInput = (...args: string[]) => {
-    let isBlank = false;
-    for (let i = 0; i < args.length; i = (i + 1) | 0) {
-      if (args[i] === "") {
-        isBlank = true;
-      }
-    }
-    return isBlank;
-  };
-
   const submitForm = () => {
     const isBlank = validateRequiredInput(name, email, description);
     const isValidEmail = validateEmailFormat(email);
@@ -75,7 +61,10 @@ const FormDialog: React.VFC<Props> = (props) => {
           "お問い合わせ内容:\n" +
           description,
       };
-      const url = "https://hooks.slack.com/services/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";
+      const url = process.env.SLACK_API_ENDPOINT;
+      if (!url) {
+        throw new Error("API endpoint is undefined");
+      }
 
       fetch(url, {
         method: "POST",
