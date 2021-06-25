@@ -12,7 +12,7 @@ const FormModalContainer: React.VFC<Props> = ({ handleClose }) => {
       <Backdrop opacity={10} />
       <FormDialog handleClose={handleClose} />
     </div>
-  ); // TODO: TEST
+  );
 };
 
 export default FormModalContainer;
