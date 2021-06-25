@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chatbot matches snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="section"
+  >
+    <div
+      class="box"
+    >
+      <ul
+        class="MuiList-root makeStyles-chats-1 MuiList-padding"
+        id="scroll-area"
+      >
+        <li
+          class="MuiListItem-root chatRow MuiListItem-gutters"
+        >
+          <div
+            class="MuiListItemAvatar-root"
+          >
+            <div
+              class="MuiAvatar-root MuiAvatar-circle"
+            >
+              <img
+                alt="icon"
+                class="MuiAvatar-img"
+                src="/img/icons/pandashark_180-180.png"
+              />
+            </div>
+          </div>
+          <div
+            class="chatBubble"
+          >
+            こんにちは！ご用件はなんでしょうか？
+          </div>
+        </li>
+      </ul>
+      <div
+        class="gridAnswer"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            仕事を依頼したい
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            あなたについて知りたい
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            献立を提案してほしい
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-outlined makeStyles-button-2"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            その他の問い合わせがしたい
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;
