@@ -1,7 +1,7 @@
 import type { Meta } from "@storybook/react";
 import type { StoryFnReactReturnType } from "@storybook/react/dist/ts3.9/client/preview/types";
 import React from "react";
-import Chatbot from "src/components/chatbot/Chatbot2";
+import Chatbot from "src/components/chatbot/Chatbot";
 
 import { withContext } from ".storybook/context";
 

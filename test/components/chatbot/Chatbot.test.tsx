@@ -1,4 +1,4 @@
-import Chatbot from "src/components/chatbot/Chatbot2";
+import Chatbot from "src/components/chatbot/Chatbot";
 import type { RenderResult } from "test/test-utils";
 import { render } from "test/test-utils";
 
