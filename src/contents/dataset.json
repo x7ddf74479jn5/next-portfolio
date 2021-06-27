@@ -19,28 +19,28 @@
   },
   "website": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "問い合わせる", "nextId": "/contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "Webサイト制作についてですね。コチラからお問い合わせできます。"
   },
   "webapp": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "問い合わせる", "nextId": "/contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "チャットボット開発についてですね。コチラからお問い合わせできます。"
   },
   "wordpress": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "問い合わせる", "nextId": "/contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "WordPressについてですね。コチラからお問い合わせできます。"
   },
   "other_jobs": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "問い合わせる", "nextId": "/contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "その他についてですね。コチラからお問い合わせできます。"
@@ -77,7 +77,7 @@
   },
   "detail": {
     "answers": [
-      { "content": "Webサイトを見る", "nextId": "https://next-portfolio-livid.vercel.app/" },
+      { "content": "Webサイトを見る", "nextId": "/about" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "もっと詳しくですね。コチラを御覧ください。"
@@ -203,7 +203,7 @@
   },
   "other": {
     "answers": [
-      { "content": "問い合わせる", "nextId": "contact" },
+      { "content": "問い合わせる", "nextId": "/contact" },
       { "content": "最初の質問に戻る", "nextId": "init" }
     ],
     "question": "その他についてですね。コチラからお問い合わせできます。"

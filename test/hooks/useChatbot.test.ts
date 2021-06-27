@@ -1,9 +1,40 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { act, renderHook } from "@testing-library/react-hooks";
 import dataset from "src/contents/dataset.json";
+import useChatbot from "src/hooks/useChatbot";
+import { Providers } from "test/test-utils";
 
-import useChatbot from "../../src/hooks/useChatbot";
+const mockPush = jest.fn().mockImplementation((path) => {
+  return path;
+});
 
+jest.mock("next/router", () => {
+  return {
+    useRouter() {
+      return {
+        route: "/",
+        pathname: "/",
+        query: {},
+        asPath: "/",
+        basePath: "/",
+        isLocaleDomain: true,
+        isReady: true,
+        push: mockPush,
+        prefetch: jest.fn(),
+        replace: jest.fn(),
+        reload: jest.fn(),
+        back: jest.fn(),
+        beforePopState: jest.fn(),
+        events: {
+          on: jest.fn(),
+          off: jest.fn(),
+          emit: jest.fn(),
+        },
+        isFallback: false,
+        isPreview: false,
+      };
+    },
+  };
+});
 describe("useChatbot", () => {
   beforeAll(() => {
     jest.useFakeTimers();
@@ -15,8 +46,6 @@ describe("useChatbot", () => {
     jest.clearAllTimers();
   });
 
-  const mockFn = jest.fn();
-
   it("should be defined", () => {
     expect(useChatbot).toBeDefined();
   });
@@ -26,9 +55,12 @@ describe("useChatbot", () => {
     scrollArea.setAttribute("id", "scroll-area");
     document.body.appendChild(scrollArea);
 
-    const { result } = renderHook(() => {
-      return useChatbot(dataset, mockFn);
-    });
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
 
     expect(result.current.answers).toHaveLength(4);
     expect(result.current.chats).toHaveLength(1);
@@ -38,9 +70,12 @@ describe("useChatbot", () => {
   });
 
   it("should add charts alternately, question and answer", async () => {
-    const { result } = renderHook(() => {
-      return useChatbot(dataset, mockFn);
-    });
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
 
     await act(async () => {
       await result.current.selectAnswer("あなたについて知りたい", "about");
@@ -50,10 +85,13 @@ describe("useChatbot", () => {
     });
   });
 
-  it("should set interval to avoid firing multiple events", async () => {
-    const { result } = renderHook(() => {
-      return useChatbot(dataset, mockFn);
-    });
+  it("should set interval to avoid firing multiple click events", async () => {
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
 
     await act(async () => {
       await result.current.selectAnswer("あなたについて知りたい", "about");
@@ -74,10 +112,12 @@ describe("useChatbot", () => {
       };
     });
 
-    const { result } = renderHook(() => {
-      return useChatbot(dataset, mockFn);
-    });
-
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
     await act(async () => {
       await result.current.selectAnswer("あなたについて知りたい", "about");
       jest.advanceTimersByTime(1000);
@@ -88,16 +128,38 @@ describe("useChatbot", () => {
     });
   });
 
-  it("should go to open FormDialog", async () => {
-    const { result } = renderHook(() => {
-      return useChatbot(dataset, mockFn);
-    });
-
+  it("should go to the contact page", async () => {
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
     await act(async () => {
       await result.current.selectAnswer("その他の問い合わせがしたい", "other");
       jest.advanceTimersByTime(1000);
       await result.current.selectAnswer("問い合わせる", "contact");
-      expect(mockFn).toBeCalled();
+      expect(mockPush).toBeCalledWith("/contact");
+    });
+  });
+
+  it("should go to the about page", async () => {
+    const result = renderHook(
+      () => {
+        return useChatbot(dataset);
+      },
+      { wrapper: Providers }
+    ).result;
+
+    await act(async () => {
+      await result.current.selectAnswer("あなたについて知りたい", "about");
+      jest.advanceTimersByTime(1000);
+      await result.current.selectAnswer("職業", "job");
+      jest.advanceTimersByTime(1000);
+      await result.current.selectAnswer("もっと詳しく", "detail");
+      jest.advanceTimersByTime(1000);
+      await result.current.selectAnswer("Webサイトを見る", "/about");
+      expect(mockPush).toBeCalledWith("/about");
     });
   });
 });

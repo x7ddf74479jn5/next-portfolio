@@ -1,7 +1,3 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-// import { ThemeProvider } from "my-ui-lib"
-// import { TranslationProvider } from "my-i18n-lib"
-// import defaultStrings from "i18n/en-x-default"
 import type Queries from "@testing-library/dom/types/queries";
 import type { RenderResult } from "@testing-library/react";
 import { render } from "@testing-library/react";
@@ -86,19 +82,15 @@ const initialState = {
 };
 
 const mockDispatchContextValue = {
-  openModal: () => {},
-  closeModal: () => {},
+  openModal: () => {
+    return;
+  },
+  closeModal: () => {
+    return;
+  },
 };
 
-const Providers: React.ComponentType<{ children?: any }> = ({ children }) => {
-  // return children;
-  // return (
-  //   <ThemeProvider theme="light">
-  //     <TranslationProvider messages={defaultStrings}>
-  //       {children}
-  //     </TranslationProvider>
-  //   </ThemeProvider>
-  // )
+export const Providers: React.ComponentType<{ children?: any }> = ({ children }) => {
   return (
     <ModalStateContext.Provider value={initialState}>
       <ModalDispatchContext.Provider value={mockDispatchContextValue}>
@@ -115,7 +107,6 @@ const customRender = (ui: React.ReactElement, options = {}): RenderResult<typeof
 const reTestCase = {
   anyWord: expect.stringMatching(/\w+/),
   anyImage: expect.stringMatching(/^(data:image\/gif)|\.(png|webp|jpeg|jpg|svg)$/),
-  // |\.(png|webp|jpeg|jpg|svg)$
 };
 
 // re-export everything

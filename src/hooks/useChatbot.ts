@@ -1,7 +1,10 @@
+import { useRouter } from "next/router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import type { Answer, Chat, ChatData, Dataset, NextQuestionId, SelectAnswer } from "src/types/chatbot/index";
 
-const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
+import { useModalDispatch } from "./useModalDispatch";
+
+const useChatbot = (initialDataset: Dataset) => {
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [chats, setChats] = useState<Chat[]>([]);
   const [currentId, setCurrentId] = useState<NextQuestionId>("init");
@@ -10,6 +13,8 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
   const isSelectReady = useCallback(() => {
     return ready.current;
   }, []);
+  const router = useRouter();
+  const { closeModal } = useModalDispatch();
 
   const displayNextQuestion = useCallback((nextQuestionId: NextQuestionId, nextDataset: ChatData) => {
     addChats({
@@ -29,7 +34,8 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
 
       switch (true) {
         case nextQuestionId === "contact":
-          callbackFn();
+          closeModal();
+          router.push("/contact");
           break;
         case /^https:*/.test(nextQuestionId): {
           const a = document.createElement("a");
@@ -38,9 +44,13 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
           a.click();
           break;
         }
+        case /^\/.*/.test(nextQuestionId): {
+          closeModal();
+          router.push(nextQuestionId);
+          break;
+        }
         default:
           ready.current = false;
-
           addChats({
             text: selectedAnswer,
             type: "answer",
@@ -55,7 +65,7 @@ const useChatbot = (initialDataset: Dataset, callbackFn: () => void) => {
           break;
       }
     },
-    [dataset, callbackFn, displayNextQuestion]
+    [closeModal, router, dataset, displayNextQuestion]
   );
 
   const addChats = (chat: Chat) => {
