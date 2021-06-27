@@ -2,7 +2,6 @@
 
 ご覧いただきありがとうございます。Pandasharkの作成物の簡易まとめです。詳細はポートフォリオサイトを閲覧ください。
 
----
 ## Portfolio:star::star::star:
 
 ![portfolio-eyecatch](./public/img/samples/portfolio-eyecatch.webp)
@@ -21,7 +20,6 @@ https://next-portfolio-livid.vercel.app/
 - Vercel
 - Storybook, Jest, GitHub Actions
 
----
 ## EC App:star:
 
 ![ec-app-eyecatch](./public/img/samples/ec-app-eyecatch.webp)
@@ -36,8 +34,6 @@ https://ec-app-a2f5e.web.app/
 
 - React, Redux, Material-UI
 - Firebase Hosting, Firestore, Cloud Functions
-
----
 
 ## Chat Bot:star:
 
@@ -54,8 +50,6 @@ https://chatbot-demo-70752.web.app/
 
 - React, Material-UI
 - Firebase Hosting, Firestore, Cloud Functions
-
----
 
 ## Author
 
