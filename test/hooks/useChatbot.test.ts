@@ -53,6 +53,9 @@ describe("useChatbot", () => {
   it("should initialize correctly", () => {
     const scrollArea = document.createElement("div");
     scrollArea.setAttribute("id", "scroll-area");
+    const scrollHeightSpy = jest.spyOn(scrollArea, "scrollHeight", "get").mockImplementation(() => {
+      return 100;
+    });
     document.body.appendChild(scrollArea);
 
     const result = renderHook(
@@ -66,6 +69,7 @@ describe("useChatbot", () => {
     expect(result.current.chats).toHaveLength(1);
     expect(result.current.selectAnswer).toBeDefined();
     expect(result.current.isSelectReady).toBeTruthy();
+    expect(scrollHeightSpy).toBeCalled();
     expect(scrollArea.scrollTop).toBe(scrollArea.scrollHeight);
   });
 
