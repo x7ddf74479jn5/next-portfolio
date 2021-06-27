@@ -8,7 +8,7 @@ export const ColorChart = () => {
   });
 
   return (
-    <div style={styles.wrapper}>
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
       {colors.map((color) => {
         return (
           <div key={color.key}>
