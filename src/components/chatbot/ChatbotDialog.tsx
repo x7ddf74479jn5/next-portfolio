@@ -8,7 +8,7 @@ const ChatbotDialog: React.FC = () => {
   const ref = React.useRef<HTMLDivElement>(null);
   useClickAway(ref, closeModal);
   const Chatbot = dynamic(() => {
-    return import("src/components/chatbot/Chatbot");
+    return import("src/components/chatbot/Chatbot2");
   });
 
   return (
