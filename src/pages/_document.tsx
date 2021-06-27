@@ -18,7 +18,7 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          <meta property="description" content={siteConfig.description} />
+          <meta name="description" content={siteConfig.description} />
           <meta property="og:title" content={siteConfig.title} />
           <meta property="og:description" content={siteConfig.description} />
           <meta property="og:type" content="website" />
