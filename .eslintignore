@@ -1,8 +1,0 @@
-**/node_modules/*
-**/out/*
-**/.next/*
-**/refs/*
-**/js/*
-**/storybook-static/*
-**/.storybook/*
-**/stories/*
