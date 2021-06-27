@@ -1,10 +1,63 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import type { FormData } from "src/types/api";
 import { schema } from "src/types/api";
 
 import { convertCrlfToBr } from "../../utils/helper";
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const sendgrid = require("@sendgrid/mail");
+
+const response = async ({ name, email, category, description }: FormData): Promise<[void, void]> => {
+  const _description = convertCrlfToBr(description);
+  const html = `<div id="mail-content">
+                          <p>お名前：<br>${name}</p>
+                          <p>メールアドレス：<br>${email}</p>
+                          <p>お問い合わせ種別：<br>${category}</p>
+                          <p>お問い合わせ内容：<br>${_description}</p>
+                        </div>`;
+
+  const autoReply = {
+    email: email,
+    subject: "お問い合わせいただきありがとうございます【自動返信】",
+    html: `<p>${name}様</p>
+                       <p>
+                        お問い合わせいただきありがとうございます。<br>
+                        追って、当メールアドレスからご連絡いたします。
+                       </p>
+                       ${html}`,
+  };
+
+  const myEmail = process.env.MY_EMAIL_ADDRESS;
+  if (!myEmail) throw new Error("Server Error");
+
+  const notifyApplication = {
+    email: myEmail,
+    subject: "【自動転送】お問い合わせがありました",
+    html: `<p>以下の内容でお問い合わせがありました。</p>` + html,
+  };
+
+  const sendMail = async ({
+    email,
+    subject,
+    html,
+  }: {
+    email: string;
+    subject: string;
+    html: string;
+  }): Promise<void> => {
+    const apiKey = process.env.SENDGRID_API_KEY;
+    sendgrid.setApiKey(apiKey);
+    const message = {
+      to: email,
+      from: process.env.MY_EMAIL_ADDRESS,
+      subject: subject,
+      html: html,
+    };
+    await sendgrid.send(message);
+  };
+
+  return await Promise.all([sendMail(autoReply), sendMail(notifyApplication)]);
+};
 
 module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST") {
@@ -23,57 +76,11 @@ module.exports = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(500).send(e);
   }
 
-  const { name, email, category, description } = req.body;
-
-  const sendMail = async (data: { email: string; subject: string; html: string }): Promise<void> => {
-    const apiKey = process.env.SENDGRID_API_KEY;
-    sendgrid.setApiKey(apiKey);
-    const message = {
-      to: data.email,
-      from: process.env.MY_EMAIL_ADDRESS,
-      subject: data.subject,
-      html: data.html,
-    };
-    await sendgrid.send(message);
-  };
-
-  const response = async (): Promise<void> => {
-    const _description = convertCrlfToBr(description);
-    const html = `<div id="mail-content">
-                          <p>お名前：<br>${name}</p>
-                          <p>メールアドレス：<br>${email}</p>
-                          <p>お問い合わせ種別：<br>${category}</p>
-                          <p>お問い合わせ内容：<br>${_description}</p>
-                        </div>`;
-
-    const autoReply = {
-      email: email,
-      subject: "お問い合わせいただきありがとうございます【自動返信】",
-      html: `<p>${name}様</p>
-                       <p>
-                        お問い合わせいただきありがとうございます。<br>
-                        追って、当メールアドレスからご連絡いたします。
-                       </p>
-                       ${html}`,
-    };
-
-    const myEmail = process.env.MY_EMAIL_ADDRESS;
-    if (!myEmail) return res.status(500).end();
-
-    const notifyApplication = {
-      email: myEmail,
-      subject: "【自動転送】お問い合わせがありました",
-      html: `<p>以下の内容でお問い合わせがありました。</p>` + html,
-    };
-
-    return await Promise.all([sendMail(autoReply), sendMail(notifyApplication)])
-      .then(() => {
-        return res.status(200).end();
-      })
-      .catch((e) => {
-        return res.status(500).send(e);
-      });
-  };
-
-  await response();
+  await response(req.body)
+    .then(() => {
+      return res.status(200).end();
+    })
+    .catch((e) => {
+      return res.status(500).send(e);
+    });
 };
