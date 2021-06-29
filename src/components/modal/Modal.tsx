@@ -22,7 +22,7 @@ const ModalContainer: React.VFC = () => {
   }
 
   return (
-    <div className={styles.modalContainer}>
+    <div className={styles.modalContainer} role="dialog">
       <Backdrop opacity={70} />
       <ModalContent state={state} />
       <ModalCloseButton onClick={closeModal} />
