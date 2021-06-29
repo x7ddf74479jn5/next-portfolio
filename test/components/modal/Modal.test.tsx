@@ -69,6 +69,17 @@ describe("ModalPortal", () => {
     expect(renderResult.asFragment()).toMatchSnapshot();
   });
 
+  it("contains an element which has a property role = dialog", () => {
+    newState = {
+      isModalOpen: true,
+      modalType: "DRAWER",
+      data: null,
+    };
+    renderResult = customRender(<ModalPortal />, newState);
+    const dialog = renderResult.getByRole("dialog");
+    expect(dialog).toBeInTheDocument();
+  });
+
   it("closes modal when backdrop is clicked", () => {
     newState = {
       isModalOpen: true,
@@ -76,7 +87,8 @@ describe("ModalPortal", () => {
       data: null,
     };
     renderResult = customRender(<ModalPortal />, newState);
-
+    const dialog = renderResult.getByRole("dialog");
+    expect(dialog).toBeInTheDocument();
     const backdrop = renderResult.container.getElementsByClassName("backdrop_70")[0];
     expect(backdrop).toBeInTheDocument();
     expect(renderResult.container.childElementCount).toBeGreaterThan(0);

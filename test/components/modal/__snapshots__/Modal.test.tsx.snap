@@ -7,6 +7,7 @@ exports[`ModalPortal contact modal matches snapshot 1`] = `
   >
     <div
       class="modalContainer"
+      role="dialog"
     >
       <div
         class="backdrop_70"
@@ -92,6 +93,7 @@ exports[`ModalPortal drawer modal matches snapshot 1`] = `
   >
     <div
       class="modalContainer"
+      role="dialog"
     >
       <div
         class="backdrop_70"

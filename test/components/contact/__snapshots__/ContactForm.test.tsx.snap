@@ -97,7 +97,6 @@ exports[`ContactFormContainer matches snapshot 1`] = `
     </div>
     <button
       class="btnRound"
-      disabled=""
       id="confirm-btn"
       type="submit"
     >

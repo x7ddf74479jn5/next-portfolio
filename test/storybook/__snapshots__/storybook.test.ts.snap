@@ -613,7 +613,7 @@ exports[`Storyshots contact/ContactFormContainer Default 1`] = `
   </div>
   <button
     className="btnRound"
-    disabled={true}
+    disabled={false}
     id="confirm-btn"
     type="submit"
   >
