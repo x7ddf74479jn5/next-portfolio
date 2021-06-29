@@ -44,7 +44,7 @@ describe("ContactFormContainer", () => {
     const submitButton = screen.getByRole("button");
     expect(submitButton).toHaveTextContent("内容を確認する");
     expect(submitButton).toHaveAttribute("type", "submit");
-    expect(submitButton).toBeDisabled();
+    expect(submitButton).toBeEnabled();
   });
 
   describe("user interaction", () => {
@@ -72,7 +72,7 @@ describe("ContactFormContainer", () => {
       expect(await screen.findByText("お名前が未入力です。")).toBeInTheDocument();
       expect(await screen.findByText("メールアドレスの形式に誤りがあります。")).toBeInTheDocument();
       expect(await screen.findByText("お問い合わせ内容が未入力です。")).toBeInTheDocument();
-      expect(submitButton).toBeDisabled();
+      expect(submitButton).toBeEnabled();
     });
 
     it("should display matching error when email is invalid", async () => {
@@ -113,7 +113,7 @@ describe("ContactFormContainer", () => {
       expect(await screen.findByText("お名前が未入力です。")).toBeInTheDocument();
       expect(await screen.findByText("メールアドレスの形式に誤りがあります。")).toBeInTheDocument();
       expect(await screen.findByText("お問い合わせ内容が未入力です。")).toBeInTheDocument();
-      expect(submitButton).toBeDisabled();
+      expect(submitButton).toBeEnabled();
 
       userEvent.type(nameInput, "name");
       userEvent.type(emailInput, "email@test.com");

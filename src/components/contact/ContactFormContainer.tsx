@@ -14,19 +14,19 @@ export const ContactFormContainer = () => {
   const methods = useForm<FormData>({ mode: "onBlur", resolver: zodResolver(schema) });
   const {
     handleSubmit,
-    formState: { isDirty, isSubmitting, isValid, isValidating },
+    formState: { isSubmitting, isValid, isValidating },
   } = methods;
 
   const { isModalOpen } = useModalState();
   const { openModal, closeModal } = useModalDispatch();
 
   const isApplyButtonDisabled = React.useMemo(() => {
-    return !isDirty || isSubmitting || !isValid || isValidating;
-  }, [isDirty, isSubmitting, isValid, isValidating]);
+    return isSubmitting || isValid || isValidating;
+  }, [isSubmitting, isValid, isValidating]);
 
   const isConfirmButtonDisabled = React.useMemo(() => {
-    return !isDirty || isSubmitting || !isValid || isValidating || isModalOpen;
-  }, [isDirty, isSubmitting, isValid, isValidating, isModalOpen]);
+    return isSubmitting || isValidating || isModalOpen;
+  }, [isSubmitting, isValidating, isModalOpen]);
 
   const apply = React.useCallback(async (data: FormData) => {
     await sendMessage(data)
