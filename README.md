@@ -20,6 +20,25 @@ https://next-portfolio-livid.vercel.app/
 - Vercel
 - Storybook, Jest, GitHub Actions
 
+<!--TODO: my favorite gear  -->
+## My Favorite Gear:star::star::star:
+
+![portfolio-eyecatch](./public/img/samples/portfolio-eyecatch.webp)
+
+### 概要
+
+自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。
+
+### URL
+
+https://next-portfolio-livid.vercel.app/
+
+### 使用技術・言語
+
+- React, TypeScript, Material-UI
+- Firebase Hosting, Firebase Auth, Firebase Firestore, Cloud Functions
+- webpack 5, Jest
+
 ## EC App:star:
 
 ![ec-app-eyecatch](./public/img/samples/ec-app-eyecatch.webp)

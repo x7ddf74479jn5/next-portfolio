@@ -63,6 +63,14 @@ export const pageConfigCollection: PageConfigCollection = identity({
       caption: "ポートフォリオ",
     },
   },
+  myFavoriteGear: {
+    path: internalLinks.myFavoriteGear,
+    title: "My Favorite Gear | Pandashark Web",
+    titleArea: {
+      title: "My Favorite Gear",
+      caption: "My Favorite Gear",
+    },
+  },
   chat: {
     path: internalLinks.chat,
     title: "Chat Bot | Pandashark Web",
