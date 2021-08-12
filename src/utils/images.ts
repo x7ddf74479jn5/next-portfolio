@@ -6,7 +6,7 @@ export const images = identity({
   ec: { path: "/img/samples/ec-app-eyecatch.webp", alt: "eye catch of EC app" },
   chat: { path: "/img/samples/chat-bot-eyecatch.webp", alt: "eye catch of chat" },
   portfolio: { path: "/img/samples/portfolio-eyecatch.webp", alt: "eye catch of portfolio" },
-  myFavoriteGear: { path: "/img/samples/portfolio-eyecatch.webp", alt: "eye catch of my-favorite-gear" },
+  myFavoriteGear: { path: "/img/samples/my-favorite-gear-eyecatch.webp", alt: "eye catch of my-favorite-gear" },
   websiteProduction: { path: "/img/services/website-production.jpeg", alt: "Website Production" },
   wordPress: { path: "/img/services/wordpress-icon.png", alt: "WordPress" },
   webApp: { path: "/img/services/web-app.jpeg", alt: "Chat APP" },
@@ -22,4 +22,3 @@ export const icons = identity({
   noProfile: { path: "/img/icons/no-profile.png", alt: "noo-profile" },
   pandashark: { path: "/img/icons/pandashark_180-180.png", alt: "pandashark" },
 });
-// TODO: my favorite geawr

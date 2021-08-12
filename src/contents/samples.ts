@@ -91,7 +91,7 @@ export const sampleDetails: SampleDetail[] = [
     note: "実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
   }),
   identity({
-    id: "my-favorite-gear",
+    id: "myFavoriteGear",
     img: images.myFavoriteGear.path,
     alt: images.myFavoriteGear.alt,
     summary: "自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。",

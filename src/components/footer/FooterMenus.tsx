@@ -21,6 +21,7 @@ const accordions = identity({
     label: "制作事例",
     items: [
       { label: "ポートフォリオサイト", href: internalLinks.portfolio },
+      { label: "My Favorite Gear", href: internalLinks.myFavoriteGear },
       { label: "ECサイト", href: internalLinks.ec },
       { label: "Chat App", href: internalLinks.chat },
     ],
@@ -43,7 +44,7 @@ type Props = {
   accordion: Accordion;
 };
 
-export const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
+export const Accordion: React.VFC<Props> = ({ accordion }) => {
   const { isPC } = useMedia();
   const { isMounted } = useMount();
 
@@ -63,8 +64,7 @@ export const Accordion: React.VFC<Props> = React.memo(({ accordion }) => {
       </ul>
     </details>
   ) : null;
-});
-Accordion.displayName = "Accordion";
+};
 
 export const FooterMenus: React.VFC = () => {
   return (
