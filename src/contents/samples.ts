@@ -98,7 +98,7 @@ export const sampleDetails: SampleDetail[] = [
     purposes: ["環境構築の練習", "Firebaseの理解を深めるため"],
     points: [
       "Twitter・アプリケーション・商品サイトへの導線を構築",
-      "webpack 5を使用し複数環境をマニュアルで構築した",
+      "webpack 5を使った複数環境をマニュアルで構築した",
       "Firestoreを含む複雑なテストを書いた",
     ],
     langs: "React, TypeScript",
@@ -128,7 +128,7 @@ export const sampleDetails: SampleDetail[] = [
     id: "ec",
     img: images.ec.path,
     alt: images.ec.alt,
-    summary: "ECアプリ（開発中です）",
+    summary: "ECアプリ",
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
     langs: "React, Sass",
