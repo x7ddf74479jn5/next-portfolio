@@ -21,7 +21,14 @@ const SampleTemplate: React.VFC<Props> = ({ sample, titleArea }) => {
       <WrapInSection>
         <div className={styles.gridSamples}>
           <div className={styles.imageWrapper}>
-            <Image src={sample.img} alt={sample.alt} width={768} height={443} className={styles.sampleImage} />
+            <Image
+              src={sample.img}
+              alt={sample.alt}
+              width={768}
+              height={443}
+              className={styles.sampleImage}
+              objectFit="contain"
+            />
           </div>
           <GridRowParagraph header={"概要"} data={sample.summary} />
           <GridRowList header={"用途・目的"} data={sample.purposes} />
