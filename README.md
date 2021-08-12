@@ -30,7 +30,7 @@ https://next-portfolio-livid.vercel.app/
 
 ### URL
 
-https://next-portfolio-livid.vercel.app/
+https://my-favorite-gear.firebaseapp.com/
 
 ### 使用技術・言語
 
