@@ -1316,7 +1316,7 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
         className="mediaThumb"
       >
         <img
-          alt="eye catch portfolio"
+          alt="eye catch of portfolio"
           layout="fill"
           src="/img/samples/portfolio-eyecatch.webp"
         />

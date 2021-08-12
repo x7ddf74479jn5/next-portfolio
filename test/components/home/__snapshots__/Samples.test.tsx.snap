@@ -40,18 +40,18 @@ exports[`Samples matches snapshot 1`] = `
         >
           <div
             class="swiper-slide swiper-slide-duplicate"
-            data-swiper-slide-index="0"
+            data-swiper-slide-index="1"
           >
             <article
               class="gridListItem"
             >
               <a
                 class="textLineNone"
-                href="/samples/portfolio"
+                href="/samples/my-favorite-gear"
                 target="_self"
               >
                 <h3>
-                  ポートフォリオ
+                  My Favorite Gear
                 </h3>
                 <div
                   class="mediaThumb"
@@ -60,24 +60,24 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch portfolio"
+                      alt="eye catch of my-favorite-gear"
                       decoding="async"
                       sizes="100vw"
-                      src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
-                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      src="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75 3840w"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
                 <p>
-                  現在閲覧してくださっているサイトです。
+                  自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。
                 </p>
               </a>
             </article>
           </div>
           <div
             class="swiper-slide swiper-slide-duplicate"
-            data-swiper-slide-index="1"
+            data-swiper-slide-index="2"
           >
             <article
               class="gridListItem"
@@ -97,12 +97,12 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch chat"
+                      alt="eye catch of chat"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -113,8 +113,8 @@ exports[`Samples matches snapshot 1`] = `
             </article>
           </div>
           <div
-            class="swiper-slide swiper-slide-duplicate"
-            data-swiper-slide-index="2"
+            class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+            data-swiper-slide-index="3"
           >
             <article
               class="gridListItem"
@@ -139,7 +139,7 @@ exports[`Samples matches snapshot 1`] = `
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -171,12 +171,12 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch portfolio"
+                      alt="eye catch of portfolio"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -189,6 +189,43 @@ exports[`Samples matches snapshot 1`] = `
           <div
             class="swiper-slide"
             data-swiper-slide-index="1"
+          >
+            <article
+              class="gridListItem"
+            >
+              <a
+                class="textLineNone"
+                href="/samples/my-favorite-gear"
+                target="_self"
+              >
+                <h3>
+                  My Favorite Gear
+                </h3>
+                <div
+                  class="mediaThumb"
+                >
+                  <div
+                    style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+                  >
+                    <img
+                      alt="eye catch of my-favorite-gear"
+                      decoding="async"
+                      sizes="100vw"
+                      src="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75 3840w"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                    />
+                  </div>
+                </div>
+                <p>
+                  自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。
+                </p>
+              </a>
+            </article>
+          </div>
+          <div
+            class="swiper-slide"
+            data-swiper-slide-index="2"
           >
             <article
               class="gridListItem"
@@ -208,12 +245,12 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch chat"
+                      alt="eye catch of chat"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -225,7 +262,7 @@ exports[`Samples matches snapshot 1`] = `
           </div>
           <div
             class="swiper-slide"
-            data-swiper-slide-index="2"
+            data-swiper-slide-index="3"
           >
             <article
               class="gridListItem"
@@ -250,7 +287,7 @@ exports[`Samples matches snapshot 1`] = `
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -282,12 +319,12 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch portfolio"
+                      alt="eye catch of portfolio"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
@@ -300,6 +337,43 @@ exports[`Samples matches snapshot 1`] = `
           <div
             class="swiper-slide swiper-slide-duplicate"
             data-swiper-slide-index="1"
+          >
+            <article
+              class="gridListItem"
+            >
+              <a
+                class="textLineNone"
+                href="/samples/my-favorite-gear"
+                target="_self"
+              >
+                <h3>
+                  My Favorite Gear
+                </h3>
+                <div
+                  class="mediaThumb"
+                >
+                  <div
+                    style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+                  >
+                    <img
+                      alt="eye catch of my-favorite-gear"
+                      decoding="async"
+                      sizes="100vw"
+                      src="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75 3840w"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                    />
+                  </div>
+                </div>
+                <p>
+                  自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。
+                </p>
+              </a>
+            </article>
+          </div>
+          <div
+            class="swiper-slide swiper-slide-duplicate"
+            data-swiper-slide-index="2"
           >
             <article
               class="gridListItem"
@@ -319,54 +393,17 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch chat"
+                      alt="eye catch of chat"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75"
                       srcset="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
                 <p>
                   事前に用意したQAを使って自動応答するチャットボットです。
-                </p>
-              </a>
-            </article>
-          </div>
-          <div
-            class="swiper-slide swiper-slide-duplicate"
-            data-swiper-slide-index="2"
-          >
-            <article
-              class="gridListItem"
-            >
-              <a
-                class="textLineNone"
-                href="/samples/ec"
-                target="_self"
-              >
-                <h3>
-                  ECサイト(開発中)
-                </h3>
-                <div
-                  class="mediaThumb"
-                >
-                  <div
-                    style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
-                  >
-                    <img
-                      alt="eye catch of EC app"
-                      decoding="async"
-                      sizes="100vw"
-                      src="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75"
-                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75 3840w"
-                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-                    />
-                  </div>
-                </div>
-                <p>
-                  React学習用に開発しているデモサイトです。
                 </p>
               </a>
             </article>

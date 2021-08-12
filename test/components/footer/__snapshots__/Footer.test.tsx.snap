@@ -116,6 +116,13 @@ exports[`Footer matches snapshot 1`] = `
                     </li>
                     <li>
                       <a
+                        href="/samples/my-favorite-gear"
+                      >
+                        My Favorite Gear
+                      </a>
+                    </li>
+                    <li>
+                      <a
                         href="/samples/ec"
                       >
                         ECサイト
