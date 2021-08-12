@@ -2,7 +2,7 @@
 
 ご覧いただきありがとうございます。Pandasharkの作成物の簡易まとめです。詳細はポートフォリオサイトを閲覧ください。
 
-## Portfolio:star ::star::star:
+## Portfolio　:star::star::star:
 
 ![portfolio-eyecatch](./public/img/samples/portfolio-eyecatch.webp)
 
