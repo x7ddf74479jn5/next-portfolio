@@ -96,7 +96,7 @@ exports[`Skills matches snapshot 1`] = `
             <div
               class="data"
             >
-              HTML5, CSS3, Sass, CSS in JS
+              HTML Living Standard, CSS3, Sass, CSS in JS
             </div>
           </div>
         </li>
@@ -112,7 +112,7 @@ exports[`Skills matches snapshot 1`] = `
             <div
               class="data"
             >
-              JavaScript, TypeScript, Webpack, Babel
+              JavaScript, TypeScript, webpack, Babel
             </div>
           </div>
         </li>
