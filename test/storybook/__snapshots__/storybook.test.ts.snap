@@ -211,7 +211,7 @@ exports[`Storyshots chatbot/Chat Answer 1`] = `
     className="MuiListItemAvatar-root"
   >
     <div
-      className="MuiAvatar-root MuiAvatar-circle"
+      className="MuiAvatar-root MuiAvatar-circular"
     >
       <img
         alt="icon"
@@ -237,7 +237,7 @@ exports[`Storyshots chatbot/Chat Question 1`] = `
     className="MuiListItemAvatar-root"
   >
     <div
-      className="MuiAvatar-root MuiAvatar-circle"
+      className="MuiAvatar-root MuiAvatar-circular"
     >
       <img
         alt="icon"
@@ -254,9 +254,27 @@ exports[`Storyshots chatbot/Chat Question 1`] = `
 </li>
 `;
 
+exports[`Storyshots chatbot/Chatbot Chatbot 1`] = `
+<section
+  className="section"
+>
+  <div
+    className="box"
+  >
+    <ul
+      className="MuiList-root makeStyles-chats-3 MuiList-padding"
+      id="scroll-area"
+    />
+    <div
+      className="gridAnswer"
+    />
+  </div>
+</section>
+`;
+
 exports[`Storyshots chatbot/Chats Default 1`] = `
 <ul
-  className="MuiList-root makeStyles-chats-3 MuiList-padding"
+  className="MuiList-root makeStyles-chats-4 MuiList-padding"
   id="scroll-area"
 >
   <li
@@ -267,7 +285,7 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
       className="MuiListItemAvatar-root"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle"
+        className="MuiAvatar-root MuiAvatar-circular"
       >
         <img
           alt="icon"
@@ -290,7 +308,7 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
       className="MuiListItemAvatar-root"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle"
+        className="MuiAvatar-root MuiAvatar-circular"
       >
         <img
           alt="icon"
@@ -313,7 +331,7 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
       className="MuiListItemAvatar-root"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle"
+        className="MuiAvatar-root MuiAvatar-circular"
       >
         <img
           alt="icon"
@@ -336,7 +354,7 @@ exports[`Storyshots chatbot/Chats Default 1`] = `
       className="MuiListItemAvatar-root"
     >
       <div
-        className="MuiAvatar-root MuiAvatar-circle"
+        className="MuiAvatar-root MuiAvatar-circular"
       >
         <img
           alt="icon"
@@ -1316,7 +1334,7 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
         className="mediaThumb"
       >
         <img
-          alt="eye catch portfolio"
+          alt="eye catch of portfolio"
           layout="fill"
           src="/img/samples/portfolio-eyecatch.webp"
         />

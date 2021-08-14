@@ -23,6 +23,15 @@ export const samples: Sample[] = [
     imgAlt: images.portfolio.alt,
   }),
   identity({
+    id: "my-favorite-gear",
+    title: "My Favorite Gear",
+    category: "Webアプリ開発|twitter|SPA",
+    description: "自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。",
+    link: internalLinks.myFavoriteGear,
+    imgSrc: images.myFavoriteGear.path,
+    imgAlt: images.myFavoriteGear.alt,
+  }),
+  identity({
     id: "chat-bot",
     title: "チャットボット",
     category: "Webアプリ開発｜チャット｜SPA",
@@ -79,7 +88,26 @@ export const sampleDetails: SampleDetail[] = [
     link: {
       description: "このサイトなので省略。",
     },
-    note: " 実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
+    note: "実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
+  }),
+  identity({
+    id: "myFavoriteGear",
+    img: images.myFavoriteGear.path,
+    alt: images.myFavoriteGear.alt,
+    summary: "自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。",
+    purposes: ["環境構築の練習", "Firebaseの理解を深めるため"],
+    points: [
+      "Twitter・アプリケーション・商品サイトへの導線を構築",
+      "webpack 5を使った複数環境をマニュアルで構築した",
+      "Firestoreを含む複雑なテストを書いた",
+    ],
+    langs: "React, TypeScript",
+    techs: "Material-UI, Firebase Hosting, Firestore, Cloud Functions, webpack 5, Jest",
+    link: {
+      href: externalLinks.myFavoriteGear,
+      label: "My Favorite Gear",
+    },
+    note: "Twitterアカウントが必要です。",
   }),
   identity({
     id: "chat",
@@ -100,7 +128,7 @@ export const sampleDetails: SampleDetail[] = [
     id: "ec",
     img: images.ec.path,
     alt: images.ec.alt,
-    summary: "ECアプリ（開発中です）",
+    summary: "ECアプリ",
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
     points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
     langs: "React, Sass",

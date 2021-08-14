@@ -3,7 +3,7 @@ import type { StoryFnReactReturnType } from "@storybook/react/dist/ts3.9/client/
 import React from "react";
 import Chatbot from "src/components/chatbot/Chatbot";
 
-import { withContext } from ".storybook/context";
+import { withContext } from "../../../.storybook/context";
 
 export default {
   title: "chatbot/Chatbot",

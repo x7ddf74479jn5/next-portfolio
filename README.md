@@ -2,7 +2,7 @@
 
 ご覧いただきありがとうございます。Pandasharkの作成物の簡易まとめです。詳細はポートフォリオサイトを閲覧ください。
 
-## Portfolio:star::star::star:
+## Portfolio :star::star::star:
 
 ![portfolio-eyecatch](./public/img/samples/portfolio-eyecatch.webp)
 
@@ -20,7 +20,25 @@ https://next-portfolio-livid.vercel.app/
 - Vercel
 - Storybook, Jest, GitHub Actions
 
-## EC App:star:
+## My Favorite Gear :star::star::star:
+
+<img src="./public/img/samples/my-favorite-gear-eyecatch.webp" alt="my-favorite-gear-eyecatch" height="480" />
+
+### 概要
+
+自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。
+
+### URL
+
+https://my-favorite-gear.firebaseapp.com/
+
+### 使用技術・言語
+
+- React, TypeScript, Material-UI
+- Firebase Hosting, Firestore, Cloud Functions
+- webpack 5, Jest
+
+## EC App :star:
 
 ![ec-app-eyecatch](./public/img/samples/ec-app-eyecatch.webp)
 ### 概要
@@ -35,7 +53,7 @@ https://ec-app-a2f5e.web.app/
 - React, Redux, Material-UI
 - Firebase Hosting, Firestore, Cloud Functions
 
-## Chat Bot:star:
+## Chat Bot :star:
 
 ![chat-bot-eyecatch](./public/img/samples/chat-bot-eyecatch.webp)
 ### 概要

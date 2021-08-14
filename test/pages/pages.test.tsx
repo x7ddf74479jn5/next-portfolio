@@ -22,7 +22,7 @@ describe("Home", () => {
   setupWindow();
 
   it("metadata check", () => {
-    render(<Home />, { container: document.head });
+    render(<Home />);
     expect(document.title).toMatch(/Home/);
   });
 });

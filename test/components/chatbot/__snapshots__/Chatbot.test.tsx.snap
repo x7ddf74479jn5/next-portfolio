@@ -19,7 +19,7 @@ exports[`Chatbot matches snapshot 1`] = `
             class="MuiListItemAvatar-root"
           >
             <div
-              class="MuiAvatar-root MuiAvatar-circle"
+              class="MuiAvatar-root MuiAvatar-circular"
             >
               <img
                 alt="icon"

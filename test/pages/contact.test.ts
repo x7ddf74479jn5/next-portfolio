@@ -1,7 +1,11 @@
+/*
+ * testEnvironment:"node"
+ */
+
 import * as sendgrid from "@sendgrid/mail";
 import type { IncomingMessage, ServerResponse } from "http";
 import http from "http";
-import { apiResolver } from "next/dist/next-server/server/api-utils";
+import { apiResolver } from "next/dist/server/api-utils";
 import * as handler from "src/pages/api/contact";
 import type { FormData } from "src/types/api";
 import request from "supertest";

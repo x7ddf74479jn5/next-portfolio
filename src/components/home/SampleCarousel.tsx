@@ -49,7 +49,7 @@ const SampleCarousel: React.FC<SwiperProps> = ({ samples }) => {
                 <a className={styles.textLineNone} target="_self">
                   <h3>{sample.title}</h3>
                   <div className={styles.mediaThumb}>
-                    <Image loading="eager" layout="fill" src={sample.imgSrc} alt={sample.imgAlt} />
+                    <Image loading="eager" layout="fill" src={sample.imgSrc} alt={sample.imgAlt} objectFit="contain" />
                   </div>
                   <p>{sample.description}</p>
                 </a>

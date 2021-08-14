@@ -6,9 +6,9 @@ import SampleTemplate from "src/templates/SampleTemplate";
 
 import { configPage, selectSample } from "../../utils/page-configure";
 
-const EC: NextPage = () => {
-  const pageConfig = configPage("ec");
-  const sample = selectSample("ec");
+const MyFavoriteGear: NextPage = () => {
+  const pageConfig = configPage("myFavoriteGear");
+  const sample = selectSample("myFavoriteGear");
 
   if (!sample || !pageConfig.titleArea) {
     return <Error statusCode={500} />;
@@ -24,4 +24,4 @@ const EC: NextPage = () => {
   );
 };
 
-export default EC;
+export default MyFavoriteGear;
