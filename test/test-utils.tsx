@@ -1,7 +1,7 @@
 import type Queries from "@testing-library/dom/types/queries";
 import type { RenderResult } from "@testing-library/react";
 import { render } from "@testing-library/react";
-import { RouterContext } from "next/dist/next-server/lib/router-context";
+import { RouterContext } from "next/dist/shared/lib/router-context";
 import type { NextRouter } from "next/router";
 import React from "react";
 import { ModalDispatchContext, ModalStateContext } from "src/context/ModalProviderContainer";

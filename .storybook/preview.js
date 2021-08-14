@@ -1,6 +1,7 @@
 const addParameters = require("@storybook/react").addParameters;
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 import * as nextImage from "next/image";
+
 import "src/styles/style.scss";
 
 // Mock for Next Image

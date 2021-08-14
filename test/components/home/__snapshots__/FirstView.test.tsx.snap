@@ -12,6 +12,7 @@ exports[`FirstView matches snapshot 1`] = `
       >
         <img
           alt="first-view"
+          data-nimg="true"
           decoding="async"
           sizes="100vw"
           src="/_next/image?url=%2Fimg%2Fview%2Ffirst-view.webp&w=3840&q=75"

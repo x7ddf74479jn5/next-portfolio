@@ -61,6 +61,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of EC app"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75"
@@ -98,6 +99,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of portfolio"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
@@ -135,6 +137,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of my-favorite-gear"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fmy-favorite-gear-eyecatch.webp&w=3840&q=75"
@@ -172,6 +175,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of chat"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fchat-bot-eyecatch.webp&w=3840&q=75"
@@ -209,6 +213,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of EC app"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fec-app-eyecatch.webp&w=3840&q=75"
@@ -246,6 +251,7 @@ exports[`Samples matches snapshot 1`] = `
                   >
                     <img
                       alt="eye catch of portfolio"
+                      data-nimg="true"
                       decoding="async"
                       sizes="100vw"
                       src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
