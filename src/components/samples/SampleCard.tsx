@@ -13,7 +13,7 @@ const SampleCard: React.VFC<Props> = ({ sample }) => {
       <Link href={sample.link}>
         <a className={styles.testLineNone}>
           <div className={styles.mediaThumb}>
-            <Image src={sample.imgSrc} alt={sample.imgAlt} layout="fill" />
+            <Image src={sample.imgSrc} alt={sample.imgAlt} layout="fill" objectFit="contain" />
           </div>
           <div className={styles.listSamplesDetail}>
             <h3 className={styles.title}>{sample.title}</h3>
