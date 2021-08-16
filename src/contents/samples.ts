@@ -27,7 +27,7 @@ export const samples: Sample[] = [
     title: "My Favorite Gear",
     category: "Webアプリ開発|twitter|SPA",
     description: "自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。",
-    link: internalLinks.myFavoriteGear,
+    link: internalLinks["my-favorite-gear"],
     imgSrc: images.myFavoriteGear.path,
     imgAlt: images.myFavoriteGear.alt,
   }),

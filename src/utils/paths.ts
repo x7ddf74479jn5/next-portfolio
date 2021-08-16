@@ -13,7 +13,7 @@ export const internalLinks = identity({
   portfolio: "/samples/portfolio/",
   chat: "/samples/chat/",
   ec: "/samples/ec/",
-  myFavoriteGear: "/samples/my-favorite-gear/",
+  "my-favorite-gear": "/samples/my-favorite-gear/",
 } as const);
 
 export const externalLinks = identity({
