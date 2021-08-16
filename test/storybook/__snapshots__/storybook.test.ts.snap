@@ -1336,6 +1336,7 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
         <img
           alt="eye catch of portfolio"
           layout="fill"
+          objectFit="contain"
           src="/img/samples/portfolio-eyecatch.webp"
         />
       </div>

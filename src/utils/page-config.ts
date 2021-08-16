@@ -64,7 +64,7 @@ export const pageConfigCollection: PageConfigCollection = identity({
     },
   },
   myFavoriteGear: {
-    path: internalLinks.myFavoriteGear,
+    path: internalLinks["my-favorite-gear"],
     title: "My Favorite Gear | Pandashark Web",
     titleArea: {
       title: "My Favorite Gear",

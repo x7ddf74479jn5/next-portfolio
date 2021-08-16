@@ -21,7 +21,7 @@ const accordions = identity({
     label: "制作事例",
     items: [
       { label: "ポートフォリオサイト", href: internalLinks.portfolio },
-      { label: "My Favorite Gear", href: internalLinks.myFavoriteGear },
+      { label: "My Favorite Gear", href: internalLinks["my-favorite-gear"] },
       { label: "ECサイト", href: internalLinks.ec },
       { label: "Chat App", href: internalLinks.chat },
     ],
