@@ -40,7 +40,7 @@ exports[`Samples matches snapshot 1`] = `
         >
           <div
             class="swiper-slide swiper-slide-duplicate"
-            data-swiper-slide-index="3"
+            data-swiper-slide-index="4"
           >
             <article
               class="gridListItem"
@@ -85,6 +85,44 @@ exports[`Samples matches snapshot 1`] = `
             >
               <a
                 class="textLineNone"
+                href="/samples/food-blog"
+                target="_self"
+              >
+                <h3>
+                  Food Blog
+                </h3>
+                <div
+                  class="mediaThumb"
+                >
+                  <div
+                    style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+                  >
+                    <img
+                      alt="eye catch of food-blog"
+                      data-nimg="true"
+                      decoding="async"
+                      sizes="100vw"
+                      src="/_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=3840&q=75 3840w"
+                      style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                    />
+                  </div>
+                </div>
+                <p>
+                  Next.js, MDX, microCMSを使ったレシピブログです。
+                </p>
+              </a>
+            </article>
+          </div>
+          <div
+            class="swiper-slide"
+            data-swiper-slide-index="1"
+          >
+            <article
+              class="gridListItem"
+            >
+              <a
+                class="textLineNone"
                 href="/samples/portfolio"
                 target="_self"
               >
@@ -116,7 +154,7 @@ exports[`Samples matches snapshot 1`] = `
           </div>
           <div
             class="swiper-slide"
-            data-swiper-slide-index="1"
+            data-swiper-slide-index="2"
           >
             <article
               class="gridListItem"
@@ -154,7 +192,7 @@ exports[`Samples matches snapshot 1`] = `
           </div>
           <div
             class="swiper-slide"
-            data-swiper-slide-index="2"
+            data-swiper-slide-index="3"
           >
             <article
               class="gridListItem"
@@ -192,7 +230,7 @@ exports[`Samples matches snapshot 1`] = `
           </div>
           <div
             class="swiper-slide"
-            data-swiper-slide-index="3"
+            data-swiper-slide-index="4"
           >
             <article
               class="gridListItem"
@@ -237,11 +275,11 @@ exports[`Samples matches snapshot 1`] = `
             >
               <a
                 class="textLineNone"
-                href="/samples/portfolio"
+                href="/samples/food-blog"
                 target="_self"
               >
                 <h3>
-                  ポートフォリオ
+                  Food Blog
                 </h3>
                 <div
                   class="mediaThumb"
@@ -250,18 +288,18 @@ exports[`Samples matches snapshot 1`] = `
                     style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
                   >
                     <img
-                      alt="eye catch of portfolio"
+                      alt="eye catch of food-blog"
                       data-nimg="true"
                       decoding="async"
                       sizes="100vw"
-                      src="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75"
-                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Fportfolio-eyecatch.webp&w=3840&q=75 3840w"
+                      src="/_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=3840&q=75"
+                      srcset="/_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=640&q=75 640w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=750&q=75 750w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=828&q=75 828w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1080&q=75 1080w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1200&q=75 1200w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=1920&q=75 1920w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=2048&q=75 2048w, /_next/image?url=%2Fimg%2Fsamples%2Ffood-blog-eyecatch.webp&w=3840&q=75 3840w"
                       style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
                     />
                   </div>
                 </div>
                 <p>
-                  現在閲覧してくださっているサイトです。
+                  Next.js, MDX, microCMSを使ったレシピブログです。
                 </p>
               </a>
             </article>
