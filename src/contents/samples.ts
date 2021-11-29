@@ -14,9 +14,18 @@ export type Sample = {
 
 export const samples: Sample[] = [
   identity({
+    id: "food-blog",
+    title: "Food Blog",
+    category: "Web制作｜デザイン",
+    description: "Next.js, MDX, microCMSを使ったレシピブログです。",
+    link: internalLinks["food-blog"],
+    imgSrc: images.foodBlog.path,
+    imgAlt: images.foodBlog.alt,
+  }),
+  identity({
     id: "portfolio",
     title: "ポートフォリオ",
-    category: "Web制作｜デザイン｜レスポンシブ｜アニメーション",
+    category: "Web制作｜デザイン",
     description: "現在閲覧してくださっているサイトです。",
     link: internalLinks.portfolio,
     imgSrc: images.portfolio.path,
@@ -69,6 +78,27 @@ export type SampleDetail = {
 };
 
 export const sampleDetails: SampleDetail[] = [
+  identity({
+    id: "foodBlog",
+    img: images.foodBlog.path,
+    alt: images.foodBlog.alt,
+    summary: "Next.js, MDX, microCMSを使ったレシピブログです。",
+    purposes: ["フロントエンドの学習"],
+    points: [
+      "CMS側から非エンジニアがコンテンツの投稿とサイトの基本設定ができる",
+      "Atomic Design, Tailwind CSSで設計",
+      "SWRを使ったキャッシュの最適化",
+      "SEO/Core Web Vitalの向上を意識した",
+      "Storybookや自動テストを使ったモダンな開発環境",
+    ],
+    langs: "React, TypeScript",
+    techs: "Next.js, MDX, Atomic Design, Tailwind CSS, Vercel, microCMS, Storybook, Jest",
+    link: {
+      href: externalLinks.FoodBlog,
+      label: "Food Blog",
+    },
+    note: "",
+  }),
   identity({
     id: "portfolio",
     img: images.portfolio.path,

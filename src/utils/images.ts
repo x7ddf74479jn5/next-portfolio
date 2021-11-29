@@ -7,6 +7,7 @@ export const images = identity({
   chat: { path: "/img/samples/chat-bot-eyecatch.webp", alt: "eye catch of chat" },
   portfolio: { path: "/img/samples/portfolio-eyecatch.webp", alt: "eye catch of portfolio" },
   myFavoriteGear: { path: "/img/samples/my-favorite-gear-eyecatch.webp", alt: "eye catch of my-favorite-gear" },
+  foodBlog: { path: "/img/samples/food-blog-eyecatch.webp", alt: "eye catch of food-blog" },
   websiteProduction: { path: "/img/services/website-production.jpeg", alt: "Website Production" },
   wordPress: { path: "/img/services/wordpress-icon.png", alt: "WordPress" },
   webApp: { path: "/img/services/web-app.jpeg", alt: "Chat APP" },

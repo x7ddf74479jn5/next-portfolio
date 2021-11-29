@@ -2,7 +2,25 @@
 
 ご覧いただきありがとうございます。Pandasharkの作成物の簡易まとめです。詳細はポートフォリオサイトを閲覧ください。
 
-## Portfolio :star::star::star:
+## Food Blog :star::star::star:
+
+![portfolio-eyecatch](./public/img/samples/food-blog-eyecatch.webp)
+
+### 概要
+
+Next.jsで作ったレシピブログです。要件として非エンジニアの方がCMSから入稿とサイトの基本設定の変更ができることを想定しています。
+
+### URL
+
+https://food-blog-chi.vercel.app/
+
+### 使用技術・言語
+
+- React, Next.js, TypeScript, Tailwind CSS
+- Vercel, microCMS
+- MDX, Storybook, Jest
+
+## Portfolio :star::star:
 
 ![portfolio-eyecatch](./public/img/samples/portfolio-eyecatch.webp)
 
