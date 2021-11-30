@@ -34,7 +34,7 @@ export const samples: Sample[] = [
   identity({
     id: "my-favorite-gear",
     title: "My Favorite Gear",
-    category: "Webアプリ開発|twitter|SPA",
+    category: "Webアプリ開発|twitter",
     description: "自分のお気に入りのアイテムを8つ選んでTwitterに投稿できます。",
     link: internalLinks["my-favorite-gear"],
     imgSrc: images.myFavoriteGear.path,
@@ -43,7 +43,7 @@ export const samples: Sample[] = [
   identity({
     id: "chat-bot",
     title: "チャットボット",
-    category: "Webアプリ開発｜チャット｜SPA",
+    category: "Webアプリ開発｜チャット",
     description: "事前に用意したQAを使って自動応答するチャットボットです。",
     link: internalLinks.chat,
     imgSrc: images.chat.path,
@@ -51,8 +51,8 @@ export const samples: Sample[] = [
   }),
   identity({
     id: "ec-app",
-    title: "ECサイト(開発中)",
-    category: "Webアプリ開発｜EC｜SPA",
+    title: "ECサイト",
+    category: "Webアプリ開発｜EC",
     description: "React学習用に開発しているデモサイトです。",
     link: internalLinks.ec,
     imgSrc: images.ec.path,
@@ -118,7 +118,7 @@ export const sampleDetails: SampleDetail[] = [
     link: {
       description: "このサイトなので省略。",
     },
-    note: "実験的な変更を含め、日々改良中です。もしデザイン崩れや機能不調が確認できましたら、お問い合わせページからご一報くださると助かります。",
+    note: "Next.jsとTypeScriptを学習したての頃開発したため実装が汚くなってしまいました。刷新予定。",
   }),
   identity({
     id: "myFavoriteGear",
@@ -160,7 +160,7 @@ export const sampleDetails: SampleDetail[] = [
     alt: images.ec.alt,
     summary: "ECアプリ",
     purposes: ["React-ReduxでWebアプリケーションの作り方を学習するため"],
-    points: ["SPAらしい画面描画の切り替わり", "ECアプリとしての機能を順次追加中"],
+    points: ["SPAらしい画面描画の切り替わり", "Reduxでの状態管理とキャッシュ機構の実装"],
     langs: "React, Sass",
     techs: "Redux, Material-UI, Firebase Hosting, Firestore, Cloud Functions",
     link: {
