@@ -123,6 +123,13 @@ exports[`Footer matches snapshot 1`] = `
                     </li>
                     <li>
                       <a
+                        href="/samples/food-blog"
+                      >
+                        Food Blog
+                      </a>
+                    </li>
+                    <li>
+                      <a
                         href="/samples/ec"
                       >
                         ECサイト

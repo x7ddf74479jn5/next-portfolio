@@ -14,9 +14,11 @@ export const internalLinks = identity({
   chat: "/samples/chat/",
   ec: "/samples/ec/",
   "my-favorite-gear": "/samples/my-favorite-gear/",
+  "food-blog": "/samples/food-blog/",
 } as const);
 
 export const externalLinks = identity({
+  FoodBlog: "https://food-blog-chi.vercel.app/",
   myFavoriteGear: "https://my-favorite-gear.firebaseapp.com/",
   chat: "https://chatbot-demo-70752.web.app/",
   ec: "https://ec-app-a2f5e.web.app/",

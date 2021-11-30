@@ -1351,7 +1351,7 @@ exports[`Storyshots samples/SampleCard Portfolio 1`] = `
         <p
           className="category"
         >
-          Web制作｜デザイン｜レスポンシブ｜アニメーション
+          Web制作｜デザイン
         </p>
         <div
           className="icon"

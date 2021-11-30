@@ -71,6 +71,14 @@ export const pageConfigCollection: PageConfigCollection = identity({
       caption: "My Favorite Gear",
     },
   },
+  foodBlog: {
+    path: internalLinks["food-blog"],
+    title: "Food Blog | Pandashark Web",
+    titleArea: {
+      title: "Food Blog",
+      caption: "Food Blog",
+    },
+  },
   chat: {
     path: internalLinks.chat,
     title: "Chat Bot | Pandashark Web",
