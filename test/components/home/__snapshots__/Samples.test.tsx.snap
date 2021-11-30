@@ -51,7 +51,7 @@ exports[`Samples matches snapshot 1`] = `
                 target="_self"
               >
                 <h3>
-                  ECサイト(開発中)
+                  ECサイト
                 </h3>
                 <div
                   class="mediaThumb"
@@ -241,7 +241,7 @@ exports[`Samples matches snapshot 1`] = `
                 target="_self"
               >
                 <h3>
-                  ECサイト(開発中)
+                  ECサイト
                 </h3>
                 <div
                   class="mediaThumb"

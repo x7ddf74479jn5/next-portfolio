@@ -112,7 +112,7 @@ exports[`Skills matches snapshot 1`] = `
             <div
               class="data"
             >
-              JavaScript, TypeScript, webpack, Babel
+              JavaScript, TypeScript, webpack, Babel, Jest, Storybook
             </div>
           </div>
         </li>
@@ -128,7 +128,7 @@ exports[`Skills matches snapshot 1`] = `
             <div
               class="data"
             >
-              Firebase, Vercel, Node.js, PHP, MySQL
+              Firebase, Amplify
             </div>
           </div>
         </li>
@@ -144,7 +144,7 @@ exports[`Skills matches snapshot 1`] = `
             <div
               class="data"
             >
-              React, Redux, Next.js, jQuery, WordPress
+              React, Redux, Next.js, Tailwind CSS, MUI, Chakra UI
             </div>
           </div>
         </li>
